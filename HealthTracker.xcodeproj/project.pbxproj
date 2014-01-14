@@ -21,6 +21,25 @@
 		E04C6AB018849986005E90B2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E04C6A9218849986005E90B2 /* UIKit.framework */; };
 		E04C6AB818849986005E90B2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E04C6AB618849986005E90B2 /* InfoPlist.strings */; };
 		E04C6ABA18849986005E90B2 /* HealthTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E04C6AB918849986005E90B2 /* HealthTrackerTests.m */; };
+		E04C6AC518849B5B005E90B2 /* SummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E04C6AC418849B5B005E90B2 /* SummaryViewController.m */; };
+		E04C6AC818849BCB005E90B2 /* FoodTrackerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E04C6AC718849BCB005E90B2 /* FoodTrackerViewController.m */; };
+		E04C6ACB18849C32005E90B2 /* BMIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E04C6ACA18849C32005E90B2 /* BMIViewController.m */; };
+		E04C6ACE18849C51005E90B2 /* FitnessActivityLogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E04C6ACD18849C51005E90B2 /* FitnessActivityLogViewController.m */; };
+		E04C6AD118849C72005E90B2 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E04C6AD018849C72005E90B2 /* ProfileViewController.m */; };
+		E04C6AD41884A0AF005E90B2 /* BMI.png in Resources */ = {isa = PBXBuildFile; fileRef = E04C6AD21884A0AF005E90B2 /* BMI.png */; };
+		E04C6AD51884A0AF005E90B2 /* BMI@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E04C6AD31884A0AF005E90B2 /* BMI@2x.png */; };
+		E0CFF07B1885E817003A4D47 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0CFF07A1885E817003A4D47 /* MapKit.framework */; };
+		E0F8B70C18855CB9000E1BC8 /* FitnessActivityLog.png in Resources */ = {isa = PBXBuildFile; fileRef = E0F8B70A18855CB9000E1BC8 /* FitnessActivityLog.png */; };
+		E0F8B70D18855CB9000E1BC8 /* FitnessActivityLog@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E0F8B70B18855CB9000E1BC8 /* FitnessActivityLog@2x.png */; };
+		E0F8B71018855D32000E1BC8 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0F8B70F18855D32000E1BC8 /* MapViewController.m */; };
+		E0F8B7191885611F000E1BC8 /* FoodTracker.png in Resources */ = {isa = PBXBuildFile; fileRef = E0F8B7111885611F000E1BC8 /* FoodTracker.png */; };
+		E0F8B71A1885611F000E1BC8 /* FoodTracker@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E0F8B7121885611F000E1BC8 /* FoodTracker@2x.png */; };
+		E0F8B71B1885611F000E1BC8 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = E0F8B7131885611F000E1BC8 /* map.png */; };
+		E0F8B71C1885611F000E1BC8 /* map@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E0F8B7141885611F000E1BC8 /* map@2x.png */; };
+		E0F8B71D1885611F000E1BC8 /* Profile.png in Resources */ = {isa = PBXBuildFile; fileRef = E0F8B7151885611F000E1BC8 /* Profile.png */; };
+		E0F8B71E1885611F000E1BC8 /* Profile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E0F8B7161885611F000E1BC8 /* Profile@2x.png */; };
+		E0F8B71F1885611F000E1BC8 /* Summary.png in Resources */ = {isa = PBXBuildFile; fileRef = E0F8B7171885611F000E1BC8 /* Summary.png */; };
+		E0F8B7201885611F000E1BC8 /* Summary@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E0F8B7181885611F000E1BC8 /* Summary@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +72,31 @@
 		E04C6AB518849986005E90B2 /* HealthTrackerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HealthTrackerTests-Info.plist"; sourceTree = "<group>"; };
 		E04C6AB718849986005E90B2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E04C6AB918849986005E90B2 /* HealthTrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HealthTrackerTests.m; sourceTree = "<group>"; };
+		E04C6AC318849B5B005E90B2 /* SummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SummaryViewController.h; sourceTree = "<group>"; };
+		E04C6AC418849B5B005E90B2 /* SummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SummaryViewController.m; sourceTree = "<group>"; };
+		E04C6AC618849BCB005E90B2 /* FoodTrackerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodTrackerViewController.h; sourceTree = "<group>"; };
+		E04C6AC718849BCB005E90B2 /* FoodTrackerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodTrackerViewController.m; sourceTree = "<group>"; };
+		E04C6AC918849C32005E90B2 /* BMIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMIViewController.h; sourceTree = "<group>"; };
+		E04C6ACA18849C32005E90B2 /* BMIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMIViewController.m; sourceTree = "<group>"; };
+		E04C6ACC18849C51005E90B2 /* FitnessActivityLogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitnessActivityLogViewController.h; sourceTree = "<group>"; };
+		E04C6ACD18849C51005E90B2 /* FitnessActivityLogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FitnessActivityLogViewController.m; sourceTree = "<group>"; };
+		E04C6ACF18849C72005E90B2 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		E04C6AD018849C72005E90B2 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		E04C6AD21884A0AF005E90B2 /* BMI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BMI.png; sourceTree = "<group>"; };
+		E04C6AD31884A0AF005E90B2 /* BMI@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BMI@2x.png"; sourceTree = "<group>"; };
+		E0CFF07A1885E817003A4D47 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		E0F8B70A18855CB9000E1BC8 /* FitnessActivityLog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FitnessActivityLog.png; sourceTree = "<group>"; };
+		E0F8B70B18855CB9000E1BC8 /* FitnessActivityLog@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FitnessActivityLog@2x.png"; sourceTree = "<group>"; };
+		E0F8B70E18855D32000E1BC8 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		E0F8B70F18855D32000E1BC8 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		E0F8B7111885611F000E1BC8 /* FoodTracker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FoodTracker.png; sourceTree = "<group>"; };
+		E0F8B7121885611F000E1BC8 /* FoodTracker@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FoodTracker@2x.png"; sourceTree = "<group>"; };
+		E0F8B7131885611F000E1BC8 /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
+		E0F8B7141885611F000E1BC8 /* map@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map@2x.png"; sourceTree = "<group>"; };
+		E0F8B7151885611F000E1BC8 /* Profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Profile.png; sourceTree = "<group>"; };
+		E0F8B7161885611F000E1BC8 /* Profile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Profile@2x.png"; sourceTree = "<group>"; };
+		E0F8B7171885611F000E1BC8 /* Summary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Summary.png; sourceTree = "<group>"; };
+		E0F8B7181885611F000E1BC8 /* Summary@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Summary@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0CFF07B1885E817003A4D47 /* MapKit.framework in Frameworks */,
 				E04C6A9118849986005E90B2 /* CoreGraphics.framework in Frameworks */,
 				E04C6A9318849986005E90B2 /* UIKit.framework in Frameworks */,
 				E04C6A8F18849986005E90B2 /* Foundation.framework in Frameworks */,
@@ -101,6 +146,7 @@
 		E04C6A8D18849986005E90B2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E0CFF07A1885E817003A4D47 /* MapKit.framework */,
 				E04C6A8E18849986005E90B2 /* Foundation.framework */,
 				E04C6A9018849986005E90B2 /* CoreGraphics.framework */,
 				E04C6A9218849986005E90B2 /* UIKit.framework */,
@@ -119,6 +165,18 @@
 				E04C6AA418849986005E90B2 /* HealthTrackerViewController.m */,
 				E04C6AA618849986005E90B2 /* Images.xcassets */,
 				E04C6A9518849986005E90B2 /* Supporting Files */,
+				E04C6AC318849B5B005E90B2 /* SummaryViewController.h */,
+				E04C6AC418849B5B005E90B2 /* SummaryViewController.m */,
+				E04C6AC618849BCB005E90B2 /* FoodTrackerViewController.h */,
+				E04C6AC718849BCB005E90B2 /* FoodTrackerViewController.m */,
+				E04C6AC918849C32005E90B2 /* BMIViewController.h */,
+				E04C6ACA18849C32005E90B2 /* BMIViewController.m */,
+				E04C6ACC18849C51005E90B2 /* FitnessActivityLogViewController.h */,
+				E04C6ACD18849C51005E90B2 /* FitnessActivityLogViewController.m */,
+				E04C6ACF18849C72005E90B2 /* ProfileViewController.h */,
+				E04C6AD018849C72005E90B2 /* ProfileViewController.m */,
+				E0F8B70E18855D32000E1BC8 /* MapViewController.h */,
+				E0F8B70F18855D32000E1BC8 /* MapViewController.m */,
 			);
 			path = HealthTracker;
 			sourceTree = "<group>";
@@ -126,6 +184,18 @@
 		E04C6A9518849986005E90B2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E04C6AD21884A0AF005E90B2 /* BMI.png */,
+				E0F8B7111885611F000E1BC8 /* FoodTracker.png */,
+				E0F8B7121885611F000E1BC8 /* FoodTracker@2x.png */,
+				E0F8B7131885611F000E1BC8 /* map.png */,
+				E0F8B7141885611F000E1BC8 /* map@2x.png */,
+				E0F8B7151885611F000E1BC8 /* Profile.png */,
+				E0F8B7161885611F000E1BC8 /* Profile@2x.png */,
+				E0F8B7171885611F000E1BC8 /* Summary.png */,
+				E0F8B7181885611F000E1BC8 /* Summary@2x.png */,
+				E0F8B70A18855CB9000E1BC8 /* FitnessActivityLog.png */,
+				E0F8B70B18855CB9000E1BC8 /* FitnessActivityLog@2x.png */,
+				E04C6AD31884A0AF005E90B2 /* BMI@2x.png */,
 				E04C6A9618849986005E90B2 /* HealthTracker-Info.plist */,
 				E04C6A9718849986005E90B2 /* InfoPlist.strings */,
 				E04C6A9A18849986005E90B2 /* main.m */,
@@ -231,6 +301,18 @@
 			files = (
 				E04C6AA718849986005E90B2 /* Images.xcassets in Resources */,
 				E04C6A9918849986005E90B2 /* InfoPlist.strings in Resources */,
+				E0F8B71F1885611F000E1BC8 /* Summary.png in Resources */,
+				E0F8B7201885611F000E1BC8 /* Summary@2x.png in Resources */,
+				E0F8B71E1885611F000E1BC8 /* Profile@2x.png in Resources */,
+				E04C6AD51884A0AF005E90B2 /* BMI@2x.png in Resources */,
+				E04C6AD41884A0AF005E90B2 /* BMI.png in Resources */,
+				E0F8B71B1885611F000E1BC8 /* map.png in Resources */,
+				E0F8B70C18855CB9000E1BC8 /* FitnessActivityLog.png in Resources */,
+				E0F8B70D18855CB9000E1BC8 /* FitnessActivityLog@2x.png in Resources */,
+				E0F8B71D1885611F000E1BC8 /* Profile.png in Resources */,
+				E0F8B7191885611F000E1BC8 /* FoodTracker.png in Resources */,
+				E0F8B71A1885611F000E1BC8 /* FoodTracker@2x.png in Resources */,
+				E0F8B71C1885611F000E1BC8 /* map@2x.png in Resources */,
 				E04C6AA218849986005E90B2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,8 +333,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E04C6A9B18849986005E90B2 /* main.m in Sources */,
+				E04C6AC518849B5B005E90B2 /* SummaryViewController.m in Sources */,
+				E04C6AD118849C72005E90B2 /* ProfileViewController.m in Sources */,
+				E0F8B71018855D32000E1BC8 /* MapViewController.m in Sources */,
+				E04C6ACE18849C51005E90B2 /* FitnessActivityLogViewController.m in Sources */,
+				E04C6AC818849BCB005E90B2 /* FoodTrackerViewController.m in Sources */,
 				E04C6AA518849986005E90B2 /* HealthTrackerViewController.m in Sources */,
 				E04C6A9F18849986005E90B2 /* HealthTrackerAppDelegate.m in Sources */,
+				E04C6ACB18849C32005E90B2 /* BMIViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +549,7 @@
 				E04C6ABF18849986005E90B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E04C6AC018849986005E90B2 /* Build configuration list for PBXNativeTarget "HealthTrackerTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +558,7 @@
 				E04C6AC218849986005E90B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
