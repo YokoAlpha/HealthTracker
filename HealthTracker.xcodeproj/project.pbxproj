@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E0454A711893EEEC00D22C6A /* FoodSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0454A701893EEEC00D22C6A /* FoodSelectionViewController.m */; };
+		E0454A731893FD4A00D22C6A /* SugarAndFats.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0454A721893FD4A00D22C6A /* SugarAndFats.plist */; };
 		E04C6A8F18849986005E90B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E04C6A8E18849986005E90B2 /* Foundation.framework */; };
 		E04C6A9118849986005E90B2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E04C6A9018849986005E90B2 /* CoreGraphics.framework */; };
 		E04C6A9318849986005E90B2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E04C6A9218849986005E90B2 /* UIKit.framework */; };
@@ -33,6 +35,10 @@
 		E0A141A61886DC38006F73EA /* ButtonProtein.png in Resources */ = {isa = PBXBuildFile; fileRef = E0A141A21886DC38006F73EA /* ButtonProtein.png */; };
 		E0A141A71886DC38006F73EA /* ButtonStarch.png in Resources */ = {isa = PBXBuildFile; fileRef = E0A141A31886DC38006F73EA /* ButtonStarch.png */; };
 		E0A141A81886DC38006F73EA /* ButtonVage.png in Resources */ = {isa = PBXBuildFile; fileRef = E0A141A41886DC38006F73EA /* ButtonVage.png */; };
+		E0ACB803189436C600328604 /* DairyAndMeat.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0ACB802189436C600328604 /* DairyAndMeat.plist */; };
+		E0ACB806189444A700328604 /* Vegetable.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0ACB805189444A700328604 /* Vegetable.plist */; };
+		E0ACB80A189449FE00328604 /* Food.m in Sources */ = {isa = PBXBuildFile; fileRef = E0ACB809189449FE00328604 /* Food.m */; };
+		E0ACB80D18944A6000328604 /* FoodDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = E0ACB80C18944A6000328604 /* FoodDataStore.m */; };
 		E0CFF07B1885E817003A4D47 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0CFF07A1885E817003A4D47 /* MapKit.framework */; };
 		E0F8B70C18855CB9000E1BC8 /* FitnessActivityLog.png in Resources */ = {isa = PBXBuildFile; fileRef = E0F8B70A18855CB9000E1BC8 /* FitnessActivityLog.png */; };
 		E0F8B70D18855CB9000E1BC8 /* FitnessActivityLog@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E0F8B70B18855CB9000E1BC8 /* FitnessActivityLog@2x.png */; };
@@ -58,6 +64,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E0454A6F1893EEEC00D22C6A /* FoodSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodSelectionViewController.h; sourceTree = "<group>"; };
+		E0454A701893EEEC00D22C6A /* FoodSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodSelectionViewController.m; sourceTree = "<group>"; };
+		E0454A721893FD4A00D22C6A /* SugarAndFats.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = SugarAndFats.plist; path = FoodData/SugarAndFats.plist; sourceTree = "<group>"; };
 		E04C6A8B18849986005E90B2 /* HealthTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E04C6A8E18849986005E90B2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E04C6A9018849986005E90B2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -94,6 +103,12 @@
 		E0A141A21886DC38006F73EA /* ButtonProtein.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonProtein.png; sourceTree = "<group>"; };
 		E0A141A31886DC38006F73EA /* ButtonStarch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonStarch.png; sourceTree = "<group>"; };
 		E0A141A41886DC38006F73EA /* ButtonVage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonVage.png; sourceTree = "<group>"; };
+		E0ACB802189436C600328604 /* DairyAndMeat.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = DairyAndMeat.plist; path = FoodData/DairyAndMeat.plist; sourceTree = "<group>"; };
+		E0ACB805189444A700328604 /* Vegetable.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Vegetable.plist; path = FoodData/Vegetable.plist; sourceTree = "<group>"; };
+		E0ACB808189449FE00328604 /* Food.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Food.h; path = Model/Food/Food.h; sourceTree = "<group>"; };
+		E0ACB809189449FE00328604 /* Food.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Food.m; path = Model/Food/Food.m; sourceTree = "<group>"; };
+		E0ACB80B18944A6000328604 /* FoodDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FoodDataStore.h; path = Model/Food/FoodDataStore.h; sourceTree = "<group>"; };
+		E0ACB80C18944A6000328604 /* FoodDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FoodDataStore.m; path = Model/Food/FoodDataStore.m; sourceTree = "<group>"; };
 		E0CFF07A1885E817003A4D47 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		E0F8B70A18855CB9000E1BC8 /* FitnessActivityLog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FitnessActivityLog.png; sourceTree = "<group>"; };
 		E0F8B70B18855CB9000E1BC8 /* FitnessActivityLog@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FitnessActivityLog@2x.png"; sourceTree = "<group>"; };
@@ -168,25 +183,14 @@
 		E04C6A9418849986005E90B2 /* HealthTracker */ = {
 			isa = PBXGroup;
 			children = (
+				E0ACB807189449BD00328604 /* FoodModel */,
 				E04C6A9D18849986005E90B2 /* HealthTrackerAppDelegate.h */,
 				E04C6A9E18849986005E90B2 /* HealthTrackerAppDelegate.m */,
 				E04C6AA018849986005E90B2 /* Main.storyboard */,
-				E04C6AA318849986005E90B2 /* HealthTrackerViewController.h */,
-				E04C6AA418849986005E90B2 /* HealthTrackerViewController.m */,
 				E04C6AA618849986005E90B2 /* Images.xcassets */,
+				E0ACB80F18945E7400328604 /* ViewControllers */,
+				E0ACB8041894386200328604 /* FoodData */,
 				E04C6A9518849986005E90B2 /* Supporting Files */,
-				E04C6AC318849B5B005E90B2 /* SummaryViewController.h */,
-				E04C6AC418849B5B005E90B2 /* SummaryViewController.m */,
-				E04C6AC618849BCB005E90B2 /* FoodTrackerViewController.h */,
-				E04C6AC718849BCB005E90B2 /* FoodTrackerViewController.m */,
-				E04C6AC918849C32005E90B2 /* BMIViewController.h */,
-				E04C6ACA18849C32005E90B2 /* BMIViewController.m */,
-				E04C6ACC18849C51005E90B2 /* FitnessActivityLogViewController.h */,
-				E04C6ACD18849C51005E90B2 /* FitnessActivityLogViewController.m */,
-				E04C6ACF18849C72005E90B2 /* ProfileViewController.h */,
-				E04C6AD018849C72005E90B2 /* ProfileViewController.m */,
-				E0F8B70E18855D32000E1BC8 /* MapViewController.h */,
-				E0F8B70F18855D32000E1BC8 /* MapViewController.m */,
 			);
 			path = HealthTracker;
 			sourceTree = "<group>";
@@ -235,6 +239,50 @@
 				E04C6AB618849986005E90B2 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E0ACB8041894386200328604 /* FoodData */ = {
+			isa = PBXGroup;
+			children = (
+				E0454A721893FD4A00D22C6A /* SugarAndFats.plist */,
+				E0ACB802189436C600328604 /* DairyAndMeat.plist */,
+				E0ACB805189444A700328604 /* Vegetable.plist */,
+			);
+			name = FoodData;
+			sourceTree = "<group>";
+		};
+		E0ACB807189449BD00328604 /* FoodModel */ = {
+			isa = PBXGroup;
+			children = (
+				E0ACB808189449FE00328604 /* Food.h */,
+				E0ACB809189449FE00328604 /* Food.m */,
+				E0ACB80B18944A6000328604 /* FoodDataStore.h */,
+				E0ACB80C18944A6000328604 /* FoodDataStore.m */,
+			);
+			name = FoodModel;
+			sourceTree = "<group>";
+		};
+		E0ACB80F18945E7400328604 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E04C6AA318849986005E90B2 /* HealthTrackerViewController.h */,
+				E04C6AA418849986005E90B2 /* HealthTrackerViewController.m */,
+				E04C6AC318849B5B005E90B2 /* SummaryViewController.h */,
+				E04C6AC418849B5B005E90B2 /* SummaryViewController.m */,
+				E04C6AC618849BCB005E90B2 /* FoodTrackerViewController.h */,
+				E04C6AC718849BCB005E90B2 /* FoodTrackerViewController.m */,
+				E04C6AC918849C32005E90B2 /* BMIViewController.h */,
+				E04C6ACA18849C32005E90B2 /* BMIViewController.m */,
+				E04C6ACC18849C51005E90B2 /* FitnessActivityLogViewController.h */,
+				E04C6ACD18849C51005E90B2 /* FitnessActivityLogViewController.m */,
+				E04C6ACF18849C72005E90B2 /* ProfileViewController.h */,
+				E04C6AD018849C72005E90B2 /* ProfileViewController.m */,
+				E0F8B70E18855D32000E1BC8 /* MapViewController.h */,
+				E0F8B70F18855D32000E1BC8 /* MapViewController.m */,
+				E0454A6F1893EEEC00D22C6A /* FoodSelectionViewController.h */,
+				E0454A701893EEEC00D22C6A /* FoodSelectionViewController.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,7 +384,10 @@
 				E0F8B71A1885611F000E1BC8 /* FoodTracker@2x.png in Resources */,
 				E0F8B71C1885611F000E1BC8 /* map@2x.png in Resources */,
 				E04C6AA218849986005E90B2 /* Main.storyboard in Resources */,
+				E0ACB803189436C600328604 /* DairyAndMeat.plist in Resources */,
+				E0ACB806189444A700328604 /* Vegetable.plist in Resources */,
 				E0A141A61886DC38006F73EA /* ButtonProtein.png in Resources */,
+				E0454A731893FD4A00D22C6A /* SugarAndFats.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,11 +408,14 @@
 			files = (
 				E04C6A9B18849986005E90B2 /* main.m in Sources */,
 				E04C6AC518849B5B005E90B2 /* SummaryViewController.m in Sources */,
+				E0ACB80A189449FE00328604 /* Food.m in Sources */,
 				E04C6AD118849C72005E90B2 /* ProfileViewController.m in Sources */,
 				E0F8B71018855D32000E1BC8 /* MapViewController.m in Sources */,
 				E04C6ACE18849C51005E90B2 /* FitnessActivityLogViewController.m in Sources */,
+				E0454A711893EEEC00D22C6A /* FoodSelectionViewController.m in Sources */,
 				E04C6AC818849BCB005E90B2 /* FoodTrackerViewController.m in Sources */,
 				E04C6AA518849986005E90B2 /* HealthTrackerViewController.m in Sources */,
+				E0ACB80D18944A6000328604 /* FoodDataStore.m in Sources */,
 				E04C6A9F18849986005E90B2 /* HealthTrackerAppDelegate.m in Sources */,
 				E04C6ACB18849C32005E90B2 /* BMIViewController.m in Sources */,
 			);

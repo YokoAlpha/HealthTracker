@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Butter</key>
+	<dict>
+		<key>Full fat</key>
+		<array>
+			<string>grams</string>
+		</array>
+	</dict>
+	<key>Candy</key>
+	<dict>
+		<key>Jelly Belly</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Cotton candy</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Skittles</key>
+		<array>
+			<string>grams</string>
+		</array>
+	</dict>
+	<key>Cake</key>
+	<dict>
+		<key>Chocolate Cake</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Brownie</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Carrot Cake</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Tiramisu</key>
+		<array>
+			<string>grams</string>
+		</array>
+	</dict>
+	<key>Chocolate</key>
+	<dict>
+		<key>Cadbury</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Ferrero</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Mars</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Nestle</key>
+		<array>
+			<string>grams</string>
+		</array>
+	</dict>
+	<key>Chocolate bar</key>
+	<dict>
+		<key>Twix</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Kit Kat</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Snickers</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Milky Way</key>
+		<array>
+			<string>grams</string>
+		</array>
+	</dict>
+	<key>Cookies</key>
+	<dict>
+		<key>Archway Cookies</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Belvita</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Berger Cookies</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Brussels cookies</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Chips Deluxe</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Famous Amos</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Gimmee Jimmy&apos;s Cookies</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Great American Cookies</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Maryland Cookies</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Moon pie</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Nilla</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Nutty Bars</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Oreo</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>SnackWells</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Sunshine Biscuits</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Thinsations</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Voortman Cookies</key>
+		<array>
+			<string>grams</string>
+		</array>
+	</dict>
+	<key>Crackers</key>
+	<dict>
+		<key>Bremner Wafer</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Arnott&apos;s Shapes</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Captain&apos;s Wafers</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Carr&apos;s</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Cheddars</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Cheese Nips</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>In a Biskit</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Le Snak</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Pepperidge Farm</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Rice Thins</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Ritz Crackers</key>
+		<array>
+			<string>grams</string>
+		</array>
+	</dict>
+	<key>Crisps</key>
+	<dict>
+		<key>Walkers</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Frazzles</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Pringles</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Doritos</key>
+		<array>
+			<string>grams</string>
+		</array>
+	</dict>
+	<key>Ice Cream</key>
+	<dict>
+		<key>HaagenDazs</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Ben and Jerry&apos;s</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Algida</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Magnum</key>
+		<array>
+			<string>grams</string>
+		</array>
+	</dict>
+	<key>Fast Food</key>
+	<dict>
+		<key>Cheese fries</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Fries </key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Burger</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Mega Burger</key>
+		<array>
+			<string>grams</string>
+		</array>
+	</dict>
+	<key>Fizzy Drinks</key>
+	<dict>
+		<key>CocaCola </key>
+		<array>
+			<string>mL</string>
+		</array>
+		<key>Pepsi</key>
+		<array>
+			<string>mL</string>
+		</array>
+		<key>Mountain Dew</key>
+		<array>
+			<string>mL</string>
+		</array>
+		<key>Fanta</key>
+		<array>
+			<string>mL</string>
+		</array>
+	</dict>
+	<key>Oil</key>
+	<dict>
+		<key>Olive oil </key>
+		<array>
+			<string>mL</string>
+		</array>
+		<key>Sunflower oil</key>
+		<array>
+			<string>mL</string>
+		</array>
+	</dict>
+	<key>Margarine</key>
+	<dict>
+		<key>New item</key>
+		<array/>
+	</dict>
+</dict>
+</plist>

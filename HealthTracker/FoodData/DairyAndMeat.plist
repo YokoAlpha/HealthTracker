@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Chesse</key>
+	<dict>
+		<key>Blue Cheese</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Brie</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Cheddar</key>
+		<array>
+			<string>grams</string>
+		</array>
+	</dict>
+	<key>Milk</key>
+	<dict>
+		<key>Skimmed</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Semi skimmed</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Whole</key>
+		<array>
+			<string>grams</string>
+		</array>
+	</dict>
+	<key>Eggs</key>
+	<dict>
+		<key>Boiled egg</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Scrambled egg</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Poached egg</key>
+		<array>
+			<string>grams</string>
+		</array>
+	</dict>
+	<key>Yogurt</key>
+	<dict>
+		<key>Activia</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Greek style</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Muller</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Natural</key>
+		<array>
+			<string>grams</string>
+		</array>
+	</dict>
+	<key>Chicken</key>
+	<dict>
+		<key>Griled chicken</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Breaded chicken</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Gralic Kievs</key>
+		<array>
+			<string>grams</string>
+		</array>
+	</dict>
+	<key>Duck</key>
+	<dict>
+		<key>Duck Fillets</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Duck Legs</key>
+		<array>
+			<string>grams</string>
+		</array>
+	</dict>
+	<key>Lamb</key>
+	<dict>
+		<key>Lamb Mince</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Lamb Meatballs</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key> Lamb Leg Steak</key>
+		<array>
+			<string>grams</string>
+		</array>
+	</dict>
+	<key>Pork</key>
+	<dict>
+		<key>Pork Chops</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Pork Loin Steaks</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Pork Belly Slices</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Pork Ribs</key>
+		<array>
+			<string>grams</string>
+		</array>
+	</dict>
+	<key>Turkey</key>
+	<dict>
+		<key>Turkey Breast Steaks</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Turkey Thigh </key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Turkey Meatballs</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Turkey Mince</key>
+		<array>
+			<string>grams</string>
+		</array>
+	</dict>
+	<key>Fish</key>
+	<dict>
+		<key>Karp</key>
+		<array>
+			<string>mL</string>
+		</array>
+		<key>Salmon</key>
+		<array>
+			<string>mL</string>
+		</array>
+		<key>Sea Bass</key>
+		<array>
+			<string>mL</string>
+		</array>
+		<key>Tuna</key>
+		<array>
+			<string>mL</string>
+		</array>
+	</dict>
+	<key>Sea Food</key>
+	<dict>
+		<key>Prawns </key>
+		<array>
+			<string>mL</string>
+		</array>
+		<key>Langoustine</key>
+		<array>
+			<string>mL</string>
+		</array>
+        <key>Mussels</key>
+		<array>
+			<string>mL</string>
+		</array>
+		<key>Clams</key>
+		<array>
+			<string>mL</string>
+		</array>
+	</dict>
+</dict>
+</plist>

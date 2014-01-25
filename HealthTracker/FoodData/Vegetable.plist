@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Broccoli</key>
+	<dict>
+		<key>New item</key>
+		<string></string>
+	</dict>
+	<key>Organic Broccoli</key>
+	<array>
+		<string>grams</string>
+	</array>
+	<key>Peas</key>
+	<array>
+		<string>grams</string>
+	</array>
+</dict>
+</plist>

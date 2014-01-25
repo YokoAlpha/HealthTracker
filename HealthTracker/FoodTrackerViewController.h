@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface FoodTrackerViewController : UIViewController
-
+- (IBAction)foodButtonPressed:(id)sender;
 @end
