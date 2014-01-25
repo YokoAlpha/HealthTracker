@@ -28,6 +28,11 @@
 		E04C6AD118849C72005E90B2 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E04C6AD018849C72005E90B2 /* ProfileViewController.m */; };
 		E04C6AD41884A0AF005E90B2 /* BMI.png in Resources */ = {isa = PBXBuildFile; fileRef = E04C6AD21884A0AF005E90B2 /* BMI.png */; };
 		E04C6AD51884A0AF005E90B2 /* BMI@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E04C6AD31884A0AF005E90B2 /* BMI@2x.png */; };
+		E0A141A01886C2DA006F73EA /* ButtonSugarsFat.png in Resources */ = {isa = PBXBuildFile; fileRef = E0A1419F1886C2DA006F73EA /* ButtonSugarsFat.png */; };
+		E0A141A51886DC38006F73EA /* ButtonFruit.png in Resources */ = {isa = PBXBuildFile; fileRef = E0A141A11886DC38006F73EA /* ButtonFruit.png */; };
+		E0A141A61886DC38006F73EA /* ButtonProtein.png in Resources */ = {isa = PBXBuildFile; fileRef = E0A141A21886DC38006F73EA /* ButtonProtein.png */; };
+		E0A141A71886DC38006F73EA /* ButtonStarch.png in Resources */ = {isa = PBXBuildFile; fileRef = E0A141A31886DC38006F73EA /* ButtonStarch.png */; };
+		E0A141A81886DC38006F73EA /* ButtonVage.png in Resources */ = {isa = PBXBuildFile; fileRef = E0A141A41886DC38006F73EA /* ButtonVage.png */; };
 		E0CFF07B1885E817003A4D47 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0CFF07A1885E817003A4D47 /* MapKit.framework */; };
 		E0F8B70C18855CB9000E1BC8 /* FitnessActivityLog.png in Resources */ = {isa = PBXBuildFile; fileRef = E0F8B70A18855CB9000E1BC8 /* FitnessActivityLog.png */; };
 		E0F8B70D18855CB9000E1BC8 /* FitnessActivityLog@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E0F8B70B18855CB9000E1BC8 /* FitnessActivityLog@2x.png */; };
@@ -84,6 +89,11 @@
 		E04C6AD018849C72005E90B2 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		E04C6AD21884A0AF005E90B2 /* BMI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BMI.png; sourceTree = "<group>"; };
 		E04C6AD31884A0AF005E90B2 /* BMI@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BMI@2x.png"; sourceTree = "<group>"; };
+		E0A1419F1886C2DA006F73EA /* ButtonSugarsFat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonSugarsFat.png; sourceTree = "<group>"; };
+		E0A141A11886DC38006F73EA /* ButtonFruit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonFruit.png; sourceTree = "<group>"; };
+		E0A141A21886DC38006F73EA /* ButtonProtein.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonProtein.png; sourceTree = "<group>"; };
+		E0A141A31886DC38006F73EA /* ButtonStarch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonStarch.png; sourceTree = "<group>"; };
+		E0A141A41886DC38006F73EA /* ButtonVage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonVage.png; sourceTree = "<group>"; };
 		E0CFF07A1885E817003A4D47 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		E0F8B70A18855CB9000E1BC8 /* FitnessActivityLog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FitnessActivityLog.png; sourceTree = "<group>"; };
 		E0F8B70B18855CB9000E1BC8 /* FitnessActivityLog@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FitnessActivityLog@2x.png"; sourceTree = "<group>"; };
@@ -184,6 +194,11 @@
 		E04C6A9518849986005E90B2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E0A141A11886DC38006F73EA /* ButtonFruit.png */,
+				E0A141A21886DC38006F73EA /* ButtonProtein.png */,
+				E0A141A31886DC38006F73EA /* ButtonStarch.png */,
+				E0A141A41886DC38006F73EA /* ButtonVage.png */,
+				E0A1419F1886C2DA006F73EA /* ButtonSugarsFat.png */,
 				E04C6AD21884A0AF005E90B2 /* BMI.png */,
 				E0F8B7111885611F000E1BC8 /* FoodTracker.png */,
 				E0F8B7121885611F000E1BC8 /* FoodTracker@2x.png */,
@@ -270,6 +285,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = Gabi;
 				TargetAttributes = {
+					E04C6A8A18849986005E90B2 = {
+						DevelopmentTeam = 2E5XL3YJX2;
+					};
 					E04C6AAB18849986005E90B2 = {
 						TestTargetID = E04C6A8A18849986005E90B2;
 					};
@@ -301,19 +319,24 @@
 			files = (
 				E04C6AA718849986005E90B2 /* Images.xcassets in Resources */,
 				E04C6A9918849986005E90B2 /* InfoPlist.strings in Resources */,
+				E0A141A01886C2DA006F73EA /* ButtonSugarsFat.png in Resources */,
 				E0F8B71F1885611F000E1BC8 /* Summary.png in Resources */,
 				E0F8B7201885611F000E1BC8 /* Summary@2x.png in Resources */,
 				E0F8B71E1885611F000E1BC8 /* Profile@2x.png in Resources */,
 				E04C6AD51884A0AF005E90B2 /* BMI@2x.png in Resources */,
 				E04C6AD41884A0AF005E90B2 /* BMI.png in Resources */,
+				E0A141A81886DC38006F73EA /* ButtonVage.png in Resources */,
 				E0F8B71B1885611F000E1BC8 /* map.png in Resources */,
 				E0F8B70C18855CB9000E1BC8 /* FitnessActivityLog.png in Resources */,
+				E0A141A51886DC38006F73EA /* ButtonFruit.png in Resources */,
+				E0A141A71886DC38006F73EA /* ButtonStarch.png in Resources */,
 				E0F8B70D18855CB9000E1BC8 /* FitnessActivityLog@2x.png in Resources */,
 				E0F8B71D1885611F000E1BC8 /* Profile.png in Resources */,
 				E0F8B7191885611F000E1BC8 /* FoodTracker.png in Resources */,
 				E0F8B71A1885611F000E1BC8 /* FoodTracker@2x.png in Resources */,
 				E0F8B71C1885611F000E1BC8 /* map@2x.png in Resources */,
 				E04C6AA218849986005E90B2 /* Main.storyboard in Resources */,
+				E0A141A61886DC38006F73EA /* ButtonProtein.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,6 +490,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HealthTracker/HealthTracker-Prefix.pch";
 				INFOPLIST_FILE = "HealthTracker/HealthTracker-Info.plist";
@@ -480,6 +504,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HealthTracker/HealthTracker-Prefix.pch";
 				INFOPLIST_FILE = "HealthTracker/HealthTracker-Info.plist";
