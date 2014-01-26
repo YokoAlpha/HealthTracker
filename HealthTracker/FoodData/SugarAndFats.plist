@@ -288,8 +288,10 @@
 	</dict>
 	<key>Margarine</key>
 	<dict>
-		<key>New item</key>
-		<array/>
+		<key>Flora</key>
+		<array>
+			<string>grams</string>
+		</array>
 	</dict>
 </dict>
 </plist>

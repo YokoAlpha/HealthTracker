@@ -7,10 +7,11 @@
 //
 
 #import "FoodSelectionViewController.h"
+#import "FoodDetailViewController.h"
 #import "Food.h"
 
 @interface FoodSelectionViewController ()
-
+@property (nonatomic,strong) Food *foodForDestinationVC;
 @end
 
 @implementation FoodSelectionViewController
@@ -68,7 +69,6 @@
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *MyIdentifier = @"foodCell";
-    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
     
     if (cell == nil)
@@ -85,5 +85,28 @@
     }
     return cell;
 }
+
+- (void)tableView:(UITableView *)tableView
+didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    id food = [self.foods objectAtIndex:indexPath.row];
+    if ([food isKindOfClass:[Food class]])
+    {
+        self.foodForDestinationVC = (Food *)food;
+        [self performSegueWithIdentifier:@"goToFoodDetail" sender:nil];
+    }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue
+                 sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"goToFoodDetail"])//Make sure it is the correct screen
+    {
+        // Get reference to the destination view controller
+        FoodDetailViewController *vc = [segue destinationViewController];
+        vc.foodData = self.foodForDestinationVC;
+    }
+}
+
 
 @end

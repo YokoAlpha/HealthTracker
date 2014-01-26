@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>Banana</key>
+        <dict>
+            <key>Banana juice</key>
+            <array>
+                <string>mL</string>
+            </array>
+            <key>Fresh banana</key>
+            <array>
+                <string>grams</string>
+            </array>
+        </dict>
+        <key>Apple</key>
+        <dict>
+            <key>Apple juice</key>
+            <array>
+                <string>mL</string>
+            </array>
+            <key>Fresh apple</key>
+            <array>
+                <string>grams</string>
+            </array>
+        </dict>
+        <key>Pear</key>
+        <dict>
+            <key>Pear juice</key>
+            <array>
+                <string>mL</string>
+            </array>
+            <key>Fresh pear</key>
+            <array>
+                <string>grams</string>
+            </array>
+        </dict>
+        <key>Orange</key>
+        <dict>
+            <key>Orange juice</key>
+            <array>
+                <string>mL</string>
+            </array>
+            <key>Fresh orange</key>
+            <array>
+                <string>grams</string>
+            </array>
+        </dict>
+        <key>Lemon</key>
+        <dict>
+            <key>Lemon juice</key>
+            <array>
+                <string>mL</string>
+            </array>
+            <key>Fresh lemon</key>
+            <array>
+                <string>grams</string>
+            </array>
+        </dict>
+        <key>Grapefruit</key>
+        <dict>
+            <key>Grapefruit juice</key>
+            <array>
+                <string>mL</string>
+            </array>
+            <key>Fresh grapefruit</key>
+            <array>
+                <string>grams</string>
+            </array>
+        </dict>
+        <key>Pomegranate</key>
+        <dict>
+            <key>Pomegranate juice</key>
+            <array>
+                <string>mL</string>
+            </array>
+            <key>Fresh pomegranate</key>
+            <array>
+                <string>grams</string>
+            </array>
+        </dict>
+        <key>Fig</key>
+        <dict>
+            <key>Fig juice</key>
+            <array>
+                <string>mL</string>
+            </array>
+            <key>Fresh fig</key>
+            <array>
+                <string>grams</string>
+            </array>
+        </dict>
+        <key>Watermelon</key>
+        <dict>
+            <key>Watermelon juice</key>
+            <array>
+                <string>mL</string>
+            </array>
+            <key>Fresh watermelon</key>
+            <array>
+                <string>grams</string>
+            </array>
+        </dict>
+        <key>Melon</key>
+        <dict>
+            <key>Melon juice</key>
+            <array>
+                <string>mL</string>
+            </array>
+            <key>Fresh melon</key>
+            <array>
+                <string>grams</string>
+            </array>
+        </dict>
+        <key>Pineapple</key>
+        <dict>
+            <key>Fresh pineapple</key>
+            <array>
+                <string>grams</string>
+            </array>
+            <key>Pineapple juice</key>
+            <array>
+                <string>mL</string>
+            </array>
+        </dict>
+        <key>Kiwi</key>
+        <dict>
+            <key>Fresh kiwi</key>
+            <array>
+                <string>grams</string>
+            </array>
+            <key>Kiwi juice</key>
+            <array>
+                <string>mL</string>
+            </array>
+        </dict>
+    </dict>
+</plist>
+

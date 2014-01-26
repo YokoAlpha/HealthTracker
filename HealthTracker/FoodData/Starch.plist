@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>Rice</key>
+        <dict>
+            <key>Brown rice</key>
+            <array>
+                <string>grams</string>
+            </array>
+            <key>White rice</key>
+            <array>
+                <string>grams</string>
+            </array>
+        </dict>
+        <key>Potato</key>
+        <dict>
+            <key>Baked potato</key>
+            <array>
+                <string>grams</string>
+            </array>
+            <key>Boiled potato</key>
+            <array>
+                <string>grams</string>
+            </array>
+        </dict>
+        <key>Pasta</key>
+        <dict>
+            <key>Spaghetti</key>
+            <array>
+                <string>grams</string>
+            </array>
+            <key>Tortilla</key>
+            <array>
+                <string>grams</string>
+            </array>
+        </dict>
+        <key>Cereal</key>
+        <dict>
+            <key>Bran flakes</key>
+            <array>
+                <string>grams</string>
+            </array>
+            <key>Lucky Charms</key>
+            <array>
+                <string>grams</string>
+            </array>
+            <key>Cheerios</key>
+            <array>
+                <string>grams</string>
+            </array>
+            <key>Cinnamon Toast Crunch</key>
+            <array>
+                <string>grams</string>
+            </array>
+        </dict>
+        <key>Bread</key>
+        <dict>
+            <key>Italian bread </key>
+            <array>
+                <string>grams</string>
+            </array>
+            <key>Sweet Dinner Rolls</key>
+            <array>
+                <string>grams</string>
+            </array>
+            <key>Whole bread </key>
+            <array>
+                <string>grams</string>
+            </array>
+            <key>White bread</key>
+            <array>
+                <string>grams</string>
+            </array>
+        </dict>
+    </dict>
+</plist>
+

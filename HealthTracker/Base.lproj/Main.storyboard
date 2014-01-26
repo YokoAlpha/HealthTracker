@@ -112,6 +112,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="pzu-O3-o7t" kind="modal" identifier="goToFoodDetail" trigger="accessoryAction" modalTransitionStyle="flipHorizontal" id="fnm-6O-xBa"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -146,7 +149,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V7M-9G-f8z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1869" y="-517"/>
+            <point key="canvasLocation" x="1841" y="-1157"/>
         </scene>
         <!--Food Tracker View Controller - Food Tracker-->
         <scene sceneID="Xix-8m-ca6">
@@ -272,6 +275,47 @@
             </objects>
             <point key="canvasLocation" x="994" y="859"/>
         </scene>
+        <!--Food Detail View Controller-->
+        <scene sceneID="xQY-Vs-iZd">
+            <objects>
+                <viewController id="pzu-O3-o7t" customClass="FoodDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IS0-u6-qaz"/>
+                        <viewControllerLayoutGuide type="bottom" id="4nq-Sa-di0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lxI-hK-LsG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5L-QQ-GiY">
+                                <rect key="frame" x="59" y="32" width="203" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HsD-wA-Znn">
+                                <rect key="frame" x="14" y="28" width="37" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="doneButtonPressed:" destination="pzu-O3-o7t" eventType="touchUpInside" id="iVq-Cw-yWN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="veR-kY-BkY"/>
+                    <connections>
+                        <outlet property="foodLabel" destination="c5L-QQ-GiY" id="YvG-0k-pUq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vBT-iG-iJN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2246" y="-1158"/>
+        </scene>
         <!--Profile View Controller - Profile-->
         <scene sceneID="9VQ-Od-4fD">
             <objects>
@@ -289,7 +333,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GDg-aO-DJg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2275" y="177"/>
+            <point key="canvasLocation" x="2459" y="164"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Q6b-IM-JPn">

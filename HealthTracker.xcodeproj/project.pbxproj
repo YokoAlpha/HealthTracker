@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E038A7B51895296300C5D250 /* FoodDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E038A7B41895296300C5D250 /* FoodDetailViewController.m */; };
 		E0454A711893EEEC00D22C6A /* FoodSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0454A701893EEEC00D22C6A /* FoodSelectionViewController.m */; };
 		E0454A731893FD4A00D22C6A /* SugarAndFats.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0454A721893FD4A00D22C6A /* SugarAndFats.plist */; };
 		E04C6A8F18849986005E90B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E04C6A8E18849986005E90B2 /* Foundation.framework */; };
@@ -39,6 +40,8 @@
 		E0ACB806189444A700328604 /* Vegetable.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0ACB805189444A700328604 /* Vegetable.plist */; };
 		E0ACB80A189449FE00328604 /* Food.m in Sources */ = {isa = PBXBuildFile; fileRef = E0ACB809189449FE00328604 /* Food.m */; };
 		E0ACB80D18944A6000328604 /* FoodDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = E0ACB80C18944A6000328604 /* FoodDataStore.m */; };
+		E0ACB8111894680E00328604 /* Fruit.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0ACB8101894680E00328604 /* Fruit.plist */; };
+		E0ACB81318946BB100328604 /* Starch.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0ACB81218946BB100328604 /* Starch.plist */; };
 		E0CFF07B1885E817003A4D47 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0CFF07A1885E817003A4D47 /* MapKit.framework */; };
 		E0F8B70C18855CB9000E1BC8 /* FitnessActivityLog.png in Resources */ = {isa = PBXBuildFile; fileRef = E0F8B70A18855CB9000E1BC8 /* FitnessActivityLog.png */; };
 		E0F8B70D18855CB9000E1BC8 /* FitnessActivityLog@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E0F8B70B18855CB9000E1BC8 /* FitnessActivityLog@2x.png */; };
@@ -64,6 +67,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E038A7B31895296300C5D250 /* FoodDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodDetailViewController.h; sourceTree = "<group>"; };
+		E038A7B41895296300C5D250 /* FoodDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodDetailViewController.m; sourceTree = "<group>"; };
 		E0454A6F1893EEEC00D22C6A /* FoodSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodSelectionViewController.h; sourceTree = "<group>"; };
 		E0454A701893EEEC00D22C6A /* FoodSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodSelectionViewController.m; sourceTree = "<group>"; };
 		E0454A721893FD4A00D22C6A /* SugarAndFats.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = SugarAndFats.plist; path = FoodData/SugarAndFats.plist; sourceTree = "<group>"; };
@@ -109,6 +114,8 @@
 		E0ACB809189449FE00328604 /* Food.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Food.m; path = Model/Food/Food.m; sourceTree = "<group>"; };
 		E0ACB80B18944A6000328604 /* FoodDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FoodDataStore.h; path = Model/Food/FoodDataStore.h; sourceTree = "<group>"; };
 		E0ACB80C18944A6000328604 /* FoodDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FoodDataStore.m; path = Model/Food/FoodDataStore.m; sourceTree = "<group>"; };
+		E0ACB8101894680E00328604 /* Fruit.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Fruit.plist; path = FoodData/Fruit.plist; sourceTree = "<group>"; };
+		E0ACB81218946BB100328604 /* Starch.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Starch.plist; path = FoodData/Starch.plist; sourceTree = "<group>"; };
 		E0CFF07A1885E817003A4D47 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		E0F8B70A18855CB9000E1BC8 /* FitnessActivityLog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FitnessActivityLog.png; sourceTree = "<group>"; };
 		E0F8B70B18855CB9000E1BC8 /* FitnessActivityLog@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FitnessActivityLog@2x.png"; sourceTree = "<group>"; };
@@ -247,6 +254,8 @@
 				E0454A721893FD4A00D22C6A /* SugarAndFats.plist */,
 				E0ACB802189436C600328604 /* DairyAndMeat.plist */,
 				E0ACB805189444A700328604 /* Vegetable.plist */,
+				E0ACB8101894680E00328604 /* Fruit.plist */,
+				E0ACB81218946BB100328604 /* Starch.plist */,
 			);
 			name = FoodData;
 			sourceTree = "<group>";
@@ -281,6 +290,8 @@
 				E0F8B70F18855D32000E1BC8 /* MapViewController.m */,
 				E0454A6F1893EEEC00D22C6A /* FoodSelectionViewController.h */,
 				E0454A701893EEEC00D22C6A /* FoodSelectionViewController.m */,
+				E038A7B31895296300C5D250 /* FoodDetailViewController.h */,
+				E038A7B41895296300C5D250 /* FoodDetailViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -365,6 +376,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0ACB81318946BB100328604 /* Starch.plist in Resources */,
 				E04C6AA718849986005E90B2 /* Images.xcassets in Resources */,
 				E04C6A9918849986005E90B2 /* InfoPlist.strings in Resources */,
 				E0A141A01886C2DA006F73EA /* ButtonSugarsFat.png in Resources */,
@@ -380,6 +392,7 @@
 				E0A141A71886DC38006F73EA /* ButtonStarch.png in Resources */,
 				E0F8B70D18855CB9000E1BC8 /* FitnessActivityLog@2x.png in Resources */,
 				E0F8B71D1885611F000E1BC8 /* Profile.png in Resources */,
+				E0ACB8111894680E00328604 /* Fruit.plist in Resources */,
 				E0F8B7191885611F000E1BC8 /* FoodTracker.png in Resources */,
 				E0F8B71A1885611F000E1BC8 /* FoodTracker@2x.png in Resources */,
 				E0F8B71C1885611F000E1BC8 /* map@2x.png in Resources */,
@@ -409,6 +422,7 @@
 				E04C6A9B18849986005E90B2 /* main.m in Sources */,
 				E04C6AC518849B5B005E90B2 /* SummaryViewController.m in Sources */,
 				E0ACB80A189449FE00328604 /* Food.m in Sources */,
+				E038A7B51895296300C5D250 /* FoodDetailViewController.m in Sources */,
 				E04C6AD118849C72005E90B2 /* ProfileViewController.m in Sources */,
 				E0F8B71018855D32000E1BC8 /* MapViewController.m in Sources */,
 				E04C6ACE18849C51005E90B2 /* FitnessActivityLogViewController.m in Sources */,

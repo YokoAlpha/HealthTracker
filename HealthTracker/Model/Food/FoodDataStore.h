@@ -11,5 +11,7 @@
 @interface FoodDataStore : NSObject
 - (NSArray *)retrieveSugarAndFats;
 - (NSArray *)retrieveDairyAndMeat;
-- (NSArray *)retrieveVegtables;
+- (NSArray *)retrieveVegetables;
+- (NSArray *)retrieveFruit;
+- (NSArray *)retrieveStarch;
 @end

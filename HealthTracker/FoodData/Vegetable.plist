@@ -2,18 +2,161 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Salad</key>
+	<dict>
+		<key>Spinach</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Rocket</key>
+		<array>
+			<string>grams</string>
+		</array>
+        <key>Watercress</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Caesar Salad</key>
+		<array>
+			<string>grams</string>
+		</array>
+        <key>Sprouts</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>White cabbage</key>
+		<array>
+			<string>grams</string>
+		</array>
+	</dict>
 	<key>Broccoli</key>
 	<dict>
-		<key>New item</key>
-		<string></string>
+		<key>Broccoli juice</key>
+		<array>
+			<string>mL</string>
+		</array>
+		<key>Fresh broccoli</key>
+		<array>
+			<string>grams</string>
+		</array>
 	</dict>
-	<key>Organic Broccoli</key>
-	<array>
-		<string>grams</string>
-	</array>
-	<key>Peas</key>
-	<array>
-		<string>grams</string>
-	</array>
+    <key>Cauliflower</key>
+	<dict>
+		<key>Cauliflower juice</key>
+		<array>
+			<string>mL</string>
+		</array>
+		<key>Fresh cauliflower</key>
+		<array>
+			<string>grams</string>
+		</array>
+	</dict>
+    <key>Carrot</key>
+	<dict>
+		<key>Carrot juice</key>
+		<array>
+			<string>mL</string>
+		</array>
+		<key>Fresh carrots</key>
+		<array>
+			<string>grams</string>
+		</array>
+	</dict>
+    <key>Parsnip</key>
+	<dict>
+		<key>Parsnip juice</key>
+		<array>
+			<string>mL</string>
+		</array>
+		<key>Fresh parsnip</key>
+		<array>
+			<string>grams</string>
+		</array>
+	</dict>
+    <key>Beetroot</key>
+	<dict>
+		<key>Beetroot juice</key>
+		<array>
+			<string>mL</string>
+		</array>
+		<key>Fresh beetroot</key>
+		<array>
+			<string>grams</string>
+		</array>
+	</dict>
+    <key>Onion</key>
+	<dict>
+		<key>Red onion</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Brown onion</key>
+		<array>
+			<string>grams</string>
+		</array>
+	</dict>
+    <key>Leek</key>
+	<dict>
+		<key>Leek juice</key>
+		<array>
+			<string>mL</string>
+		</array>
+		<key>Fresh leek</key>
+		<array>
+			<string>grams</string>
+		</array>
+	</dict>
+    <key>Ginger</key>
+	<dict>
+		<key>Ginger juice</key>
+		<array>
+			<string>mL</string>
+		</array>
+		<key>Fresh ginger</key>
+		<array>
+			<string>grams</string>
+		</array>
+	</dict>
+    <key>Courgettes</key>
+	<dict>
+		<key>Courgettes juice</key>
+		<array>
+			<string>mL</string>
+		</array>
+		<key>Fresh courgettes</key>
+		<array>
+			<string>grams</string>
+		</array>
+	</dict>
+    <key>Sweetcorn</key>
+	<dict>
+		<key>Fresh Sweetcorn</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Sweetcorn juice</key>
+		<array>
+			<string>mL</string>
+		</array>
+	</dict>
+    <key>Mushroom</key>
+	<dict>
+		<key>Oyster Mushrooms</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Shiitake Mushrooms</key>
+		<array>
+			<string>grams</string>
+		</array>
+        <key>Chestnut Mushrooms</key>
+		<array>
+			<string>grams</string>
+		</array>
+		<key>Enoki Mushrooms</key>
+		<array>
+			<string>grams</string>
+		</array>
+	</dict>
 </dict>
 </plist>

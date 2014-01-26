@@ -55,7 +55,7 @@
         FoodDataStore *foodDataStore = [[FoodDataStore alloc]init];
         if (1 == [sender tag])
         {
-            vc.titleLabelName = @"Suger & Fats";
+            vc.titleLabelName = @"Sugar & Fats";
             vc.foods = [[NSMutableArray alloc]initWithArray:[foodDataStore retrieveSugarAndFats]];
 
         }
@@ -66,16 +66,18 @@
         }
         if (3 == [sender tag])
         {
-            vc.titleLabelName = @"Veg";
-            vc.foods = [[NSMutableArray alloc]initWithArray:[foodDataStore retrieveVegtables]];
+            vc.titleLabelName = @"Vegetabless";
+            vc.foods = [[NSMutableArray alloc]initWithArray:[foodDataStore retrieveVegetables]];
         }
         if (4 == [sender tag])
         {
             vc.titleLabelName = @"Fruit";
+            vc.foods = [[NSMutableArray alloc]initWithArray:[foodDataStore retrieveFruit]];
         }
         if (5 == [sender tag])
         {
             vc.titleLabelName = @"Starch";
+            vc.foods = [[NSMutableArray alloc]initWithArray:[foodDataStore retrieveStarch]];
         }
     }
 }

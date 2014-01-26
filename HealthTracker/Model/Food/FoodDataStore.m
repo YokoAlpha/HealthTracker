@@ -13,7 +13,9 @@
 @interface FoodDataStore()
 @property (nonatomic, strong) NSMutableArray *sugarAndFats;
 @property (nonatomic, strong) NSMutableArray *dairyAndMeat;
-@property (nonatomic, strong) NSMutableArray *vegtables;
+@property (nonatomic, strong) NSMutableArray *vegetables;
+@property (nonatomic, strong) NSMutableArray *fruit;
+@property (nonatomic, strong) NSMutableArray *starch;
 
 @end
 
@@ -37,8 +39,12 @@
                          [self transformDictionaryIntoArrayOfFoods:[self loadFromPlist:@"SugarAndFats"]]];
     self.dairyAndMeat = [[NSMutableArray alloc]initWithArray:
                          [self transformDictionaryIntoArrayOfFoods:[self loadFromPlist:@"DairyAndMeat"]]];
-    self.vegtables = [[NSMutableArray alloc]initWithArray:
+    self.vegetables = [[NSMutableArray alloc]initWithArray:
                       [self transformDictionaryIntoArrayOfFoods:[self loadFromPlist:@"Vegetable"]]];
+    self.fruit = [[NSMutableArray alloc]initWithArray:
+                      [self transformDictionaryIntoArrayOfFoods:[self loadFromPlist:@"Fruit"]]];
+    self.starch = [[NSMutableArray alloc]initWithArray:
+                      [self transformDictionaryIntoArrayOfFoods:[self loadFromPlist:@"Starch"]]];
 }
 
 
@@ -94,9 +100,19 @@
     return [self.dairyAndMeat copy];
 }
 
-- (NSArray *)retrieveVegtables
+- (NSArray *)retrieveVegetables
 {
-    return [self.vegtables copy];
+    return [self.vegetables copy];
+}
+
+- (NSArray *)retrieveFruit;
+{
+    return [self.fruit copy];
+}
+
+- (NSArray *)retrieveStarch;
+{
+    return [self.starch copy];
 }
 
 @end
