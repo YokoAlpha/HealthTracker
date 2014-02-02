@@ -28,7 +28,6 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    [self.foodLabel setText:self.foodData.foodName];
     //Setup picker view
     self.pickerData = [[NSMutableArray alloc]init];
     for (NSInteger i = 1; i <201; i++)

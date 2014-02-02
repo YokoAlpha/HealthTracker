@@ -34,7 +34,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.titleLabel setText:self.titleLabelName];
 }
 
 - (void)didReceiveMemoryWarning
@@ -137,6 +136,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     {
         // Get reference to the destination view controller
         FoodDetailViewController *vc = [segue destinationViewController];
+        vc.title = self.foodForDestinationVC.foodName;
         vc.foodData = self.foodForDestinationVC;
     }
 }

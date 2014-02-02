@@ -35,7 +35,7 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    self.numberOfFoodsEatenTodayLabel.text = [NSString stringWithFormat:@"You had %d Food items today",[[HealthTracker sharedHealthTracker]numberOfFoodsEatenForDate:[NSDate date]]];
+    self.numberOfFoodsEatenTodayLabel.text = [NSString stringWithFormat:@"You had %d Food items today",[[HealthTracker sharedHealthTracker]numberOfFoodsEatenForDate:[NSDate date]]];//TODO: Have to add a NSNotification to update this label.
 }
 
 - (void)didReceiveMemoryWarning
@@ -54,33 +54,41 @@
 {
     if ([[segue identifier] isEqualToString:@"gotoFoodList"])//Make sure it is the correct screen
     {
-        // Get reference to the destination view controller
-        FoodSelectionViewController *vc = [segue destinationViewController];
-        FoodDataStore *foodDataStore = [[FoodDataStore alloc]init];
-        if (1 == [sender tag])
+        UINavigationController *naviController = segue.destinationViewController;
+        //Work around for destination being inside navigation controller.
+        for (id targetVC in naviController.viewControllers)
         {
-            vc.titleLabelName = @"Sugar & Fats";
-            vc.foods = [[NSMutableArray alloc]initWithArray:[foodDataStore retrieveSugarAndFats]];
-        }
-        if (2 == [sender tag])
-        {
-            vc.titleLabelName = @"Dairy & Meat";
-            vc.foods = [[NSMutableArray alloc]initWithArray:[foodDataStore retrieveDairyAndMeat]];
-        }
-        if (3 == [sender tag])
-        {
-            vc.titleLabelName = @"Vegetabless";
-            vc.foods = [[NSMutableArray alloc]initWithArray:[foodDataStore retrieveVegetables]];
-        }
-        if (4 == [sender tag])
-        {
-            vc.titleLabelName = @"Fruit";
-            vc.foods = [[NSMutableArray alloc]initWithArray:[foodDataStore retrieveFruit]];
-        }
-        if (5 == [sender tag])
-        {
-            vc.titleLabelName = @"Starch";
-            vc.foods = [[NSMutableArray alloc]initWithArray:[foodDataStore retrieveStarch]];
+            if (YES == [targetVC isKindOfClass:[FoodSelectionViewController class]])
+            {
+                // Get reference to the destination view controller
+                FoodSelectionViewController *vc = (FoodSelectionViewController *)targetVC;
+                FoodDataStore *foodDataStore = [[FoodDataStore alloc]init];
+                if (1 == [sender tag])
+                {
+                    vc.title = @"Sugar & Fats";
+                    vc.foods = [[NSMutableArray alloc]initWithArray:[foodDataStore retrieveSugarAndFats]];
+                }
+                if (2 == [sender tag])
+                {
+                    vc.title = @"Dairy & Meat";
+                    vc.foods = [[NSMutableArray alloc]initWithArray:[foodDataStore retrieveDairyAndMeat]];
+                }
+                if (3 == [sender tag])
+                {
+                    vc.title = @"Vegetabless";
+                    vc.foods = [[NSMutableArray alloc]initWithArray:[foodDataStore retrieveVegetables]];
+                }
+                if (4 == [sender tag])
+                {
+                    vc.title = @"Fruit";
+                    vc.foods = [[NSMutableArray alloc]initWithArray:[foodDataStore retrieveFruit]];
+                }
+                if (5 == [sender tag])
+                {
+                    vc.title = @"Starch";
+                    vc.foods = [[NSMutableArray alloc]initWithArray:[foodDataStore retrieveStarch]];
+                }
+            }
         }
     }
 }

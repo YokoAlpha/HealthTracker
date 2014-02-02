@@ -10,7 +10,6 @@
 #import "Food.h"
 
 @interface FoodDetailViewController : UIViewController <UIPickerViewDelegate>
-@property (nonatomic,strong) IBOutlet UILabel *foodLabel;
 @property (nonatomic,strong) IBOutlet UIPickerView *pickerView;
 @property (nonatomic,strong) Food *foodData;
 @end

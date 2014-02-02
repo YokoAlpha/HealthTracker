@@ -10,9 +10,7 @@
 
 @interface FoodSelectionViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) IBOutlet UITableView *tableview;
-@property (nonatomic,strong) IBOutlet UILabel *titleLabel;
 @property (nonatomic,strong) IBOutlet UIButton *doneButton;
 @property (nonatomic,strong) NSMutableArray *foods;
-@property (nonatomic,strong) NSString *titleLabelName;
 - (IBAction)doneButtonPressed:(id)sender;
 @end
