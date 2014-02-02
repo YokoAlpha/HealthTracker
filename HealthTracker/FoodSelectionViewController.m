@@ -8,6 +8,7 @@
 
 #import "FoodSelectionViewController.h"
 #import "FoodDetailViewController.h"
+#import "FoodDataStore.h"
 #import "Food.h"
 
 @interface FoodSelectionViewController ()
@@ -51,19 +52,40 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;    //TODO: need to specify number sections.
+    return [self.foods count];
 }
 
-
+- (NSString *)tableView:(UITableView *)tableView
+titleForHeaderInSection:(NSInteger)section
+{
+    //Get section array
+    id sectObj = [self.foods objectAtIndex:section];
+    if ([sectObj isKindOfClass:[NSArray class]])
+    {
+        NSArray *sectArray = (NSArray *)sectObj;
+        return [[FoodDataStore foodTypesInArray:sectArray]firstObject];
+    }
+    else
+    {
+        return nil;
+    }
+}
 
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section
 {
-    
-    return [self.foods count];//looks at the number of foods and adds the rows's.
+    //Get section array
+    id sectObj = [self.foods objectAtIndex:section];
+    if ([sectObj isKindOfClass:[NSArray class]])
+    {
+        NSArray *sectArray = (NSArray *)sectObj;
+        return [sectArray count];
+    }
+    else
+    {
+        return 0;
+    }
 }
-
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -76,12 +98,17 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
             reuseIdentifier:MyIdentifier];
     }
-    id food = [self.foods objectAtIndex:indexPath.row];
-    if ([food isKindOfClass:[Food class]])
+    //Get section array
+    id sectObj = [self.foods objectAtIndex:indexPath.section];
+    if ([sectObj isKindOfClass:[NSArray class]])
     {
-        Food *foodObj = (Food *)food;
-        cell.textLabel.text = foodObj.foodName;
-        cell.detailTextLabel.text = foodObj.foodCategory;
+        NSArray *sectArray = (NSArray *)sectObj;
+        id food = [sectArray objectAtIndex:indexPath.row];
+        if ([food isKindOfClass:[Food class]])
+        {
+            Food *foodObj = (Food *)food;
+            cell.textLabel.text = foodObj.foodName;
+        }
     }
     return cell;
 }
@@ -89,11 +116,17 @@
 - (void)tableView:(UITableView *)tableView
 didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    id food = [self.foods objectAtIndex:indexPath.row];
-    if ([food isKindOfClass:[Food class]])
+    //Get section array
+    id sectObj = [self.foods objectAtIndex:indexPath.section];
+    if ([sectObj isKindOfClass:[NSArray class]])
     {
-        self.foodForDestinationVC = (Food *)food;
-        [self performSegueWithIdentifier:@"goToFoodDetail" sender:nil];
+        NSArray *sectArray = (NSArray *)sectObj;
+        id food = [sectArray objectAtIndex:indexPath.row];
+        if ([food isKindOfClass:[Food class]])
+        {
+            self.foodForDestinationVC = (Food *)food;
+            [self performSegueWithIdentifier:@"goToFoodDetail" sender:nil];
+        }
     }
 }
 

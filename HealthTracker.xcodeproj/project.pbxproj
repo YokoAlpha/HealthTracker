@@ -31,6 +31,11 @@
 		E04C6AD118849C72005E90B2 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E04C6AD018849C72005E90B2 /* ProfileViewController.m */; };
 		E04C6AD41884A0AF005E90B2 /* BMI.png in Resources */ = {isa = PBXBuildFile; fileRef = E04C6AD21884A0AF005E90B2 /* BMI.png */; };
 		E04C6AD51884A0AF005E90B2 /* BMI@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E04C6AD31884A0AF005E90B2 /* BMI@2x.png */; };
+		E06BFC1F189E58F900A17F1C /* SharedHealthTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = E06BFC1E189E58F900A17F1C /* SharedHealthTracker.m */; };
+		E06BFC24189E596D00A17F1C /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = E06BFC21189E596D00A17F1C /* Profile.m */; };
+		E06BFC25189E596D00A17F1C /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E06BFC23189E596D00A17F1C /* User.m */; };
+		E0800FEA18982B160022F539 /* AppSummary.png in Resources */ = {isa = PBXBuildFile; fileRef = E0800FE818982B160022F539 /* AppSummary.png */; };
+		E0800FEB18982B160022F539 /* AppSummary@2.png in Resources */ = {isa = PBXBuildFile; fileRef = E0800FE918982B160022F539 /* AppSummary@2.png */; };
 		E0A141A01886C2DA006F73EA /* ButtonSugarsFat.png in Resources */ = {isa = PBXBuildFile; fileRef = E0A1419F1886C2DA006F73EA /* ButtonSugarsFat.png */; };
 		E0A141A51886DC38006F73EA /* ButtonFruit.png in Resources */ = {isa = PBXBuildFile; fileRef = E0A141A11886DC38006F73EA /* ButtonFruit.png */; };
 		E0A141A61886DC38006F73EA /* ButtonProtein.png in Resources */ = {isa = PBXBuildFile; fileRef = E0A141A21886DC38006F73EA /* ButtonProtein.png */; };
@@ -103,6 +108,14 @@
 		E04C6AD018849C72005E90B2 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		E04C6AD21884A0AF005E90B2 /* BMI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BMI.png; sourceTree = "<group>"; };
 		E04C6AD31884A0AF005E90B2 /* BMI@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BMI@2x.png"; sourceTree = "<group>"; };
+		E06BFC1D189E58F900A17F1C /* SharedHealthTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SharedHealthTracker.h; path = Model/UserModel/SharedHealthTracker.h; sourceTree = "<group>"; };
+		E06BFC1E189E58F900A17F1C /* SharedHealthTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SharedHealthTracker.m; path = Model/UserModel/SharedHealthTracker.m; sourceTree = "<group>"; };
+		E06BFC20189E596D00A17F1C /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Profile.h; path = Model/UserModel/Profile.h; sourceTree = "<group>"; };
+		E06BFC21189E596D00A17F1C /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Profile.m; path = Model/UserModel/Profile.m; sourceTree = "<group>"; };
+		E06BFC22189E596D00A17F1C /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Model/UserModel/User.h; sourceTree = "<group>"; };
+		E06BFC23189E596D00A17F1C /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Model/UserModel/User.m; sourceTree = "<group>"; };
+		E0800FE818982B160022F539 /* AppSummary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppSummary.png; sourceTree = "<group>"; };
+		E0800FE918982B160022F539 /* AppSummary@2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppSummary@2.png"; sourceTree = "<group>"; };
 		E0A1419F1886C2DA006F73EA /* ButtonSugarsFat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonSugarsFat.png; sourceTree = "<group>"; };
 		E0A141A11886DC38006F73EA /* ButtonFruit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonFruit.png; sourceTree = "<group>"; };
 		E0A141A21886DC38006F73EA /* ButtonProtein.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonProtein.png; sourceTree = "<group>"; };
@@ -190,13 +203,12 @@
 		E04C6A9418849986005E90B2 /* HealthTracker */ = {
 			isa = PBXGroup;
 			children = (
-				E0ACB807189449BD00328604 /* FoodModel */,
+				E06BFC13189E57C600A17F1C /* Model */,
 				E04C6A9D18849986005E90B2 /* HealthTrackerAppDelegate.h */,
 				E04C6A9E18849986005E90B2 /* HealthTrackerAppDelegate.m */,
 				E04C6AA018849986005E90B2 /* Main.storyboard */,
 				E04C6AA618849986005E90B2 /* Images.xcassets */,
 				E0ACB80F18945E7400328604 /* ViewControllers */,
-				E0ACB8041894386200328604 /* FoodData */,
 				E04C6A9518849986005E90B2 /* Supporting Files */,
 			);
 			path = HealthTracker;
@@ -206,6 +218,8 @@
 			isa = PBXGroup;
 			children = (
 				E0A141A11886DC38006F73EA /* ButtonFruit.png */,
+				E0800FE818982B160022F539 /* AppSummary.png */,
+				E0800FE918982B160022F539 /* AppSummary@2.png */,
 				E0A141A21886DC38006F73EA /* ButtonProtein.png */,
 				E0A141A31886DC38006F73EA /* ButtonStarch.png */,
 				E0A141A41886DC38006F73EA /* ButtonVage.png */,
@@ -248,6 +262,28 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E06BFC12189E57BD00A17F1C /* UserModel */ = {
+			isa = PBXGroup;
+			children = (
+				E06BFC20189E596D00A17F1C /* Profile.h */,
+				E06BFC21189E596D00A17F1C /* Profile.m */,
+				E06BFC22189E596D00A17F1C /* User.h */,
+				E06BFC23189E596D00A17F1C /* User.m */,
+				E06BFC1D189E58F900A17F1C /* SharedHealthTracker.h */,
+				E06BFC1E189E58F900A17F1C /* SharedHealthTracker.m */,
+			);
+			name = UserModel;
+			sourceTree = "<group>";
+		};
+		E06BFC13189E57C600A17F1C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E06BFC12189E57BD00A17F1C /* UserModel */,
+				E0ACB807189449BD00328604 /* FoodModel */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		E0ACB8041894386200328604 /* FoodData */ = {
 			isa = PBXGroup;
 			children = (
@@ -263,6 +299,7 @@
 		E0ACB807189449BD00328604 /* FoodModel */ = {
 			isa = PBXGroup;
 			children = (
+				E0ACB8041894386200328604 /* FoodData */,
 				E0ACB808189449FE00328604 /* Food.h */,
 				E0ACB809189449FE00328604 /* Food.m */,
 				E0ACB80B18944A6000328604 /* FoodDataStore.h */,
@@ -387,11 +424,13 @@
 				E04C6AD41884A0AF005E90B2 /* BMI.png in Resources */,
 				E0A141A81886DC38006F73EA /* ButtonVage.png in Resources */,
 				E0F8B71B1885611F000E1BC8 /* map.png in Resources */,
+				E0800FEB18982B160022F539 /* AppSummary@2.png in Resources */,
 				E0F8B70C18855CB9000E1BC8 /* FitnessActivityLog.png in Resources */,
 				E0A141A51886DC38006F73EA /* ButtonFruit.png in Resources */,
 				E0A141A71886DC38006F73EA /* ButtonStarch.png in Resources */,
 				E0F8B70D18855CB9000E1BC8 /* FitnessActivityLog@2x.png in Resources */,
 				E0F8B71D1885611F000E1BC8 /* Profile.png in Resources */,
+				E0800FEA18982B160022F539 /* AppSummary.png in Resources */,
 				E0ACB8111894680E00328604 /* Fruit.plist in Resources */,
 				E0F8B7191885611F000E1BC8 /* FoodTracker.png in Resources */,
 				E0F8B71A1885611F000E1BC8 /* FoodTracker@2x.png in Resources */,
@@ -419,14 +458,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E06BFC25189E596D00A17F1C /* User.m in Sources */,
 				E04C6A9B18849986005E90B2 /* main.m in Sources */,
 				E04C6AC518849B5B005E90B2 /* SummaryViewController.m in Sources */,
 				E0ACB80A189449FE00328604 /* Food.m in Sources */,
 				E038A7B51895296300C5D250 /* FoodDetailViewController.m in Sources */,
 				E04C6AD118849C72005E90B2 /* ProfileViewController.m in Sources */,
 				E0F8B71018855D32000E1BC8 /* MapViewController.m in Sources */,
+				E06BFC24189E596D00A17F1C /* Profile.m in Sources */,
 				E04C6ACE18849C51005E90B2 /* FitnessActivityLogViewController.m in Sources */,
 				E0454A711893EEEC00D22C6A /* FoodSelectionViewController.m in Sources */,
+				E06BFC1F189E58F900A17F1C /* SharedHealthTracker.m in Sources */,
 				E04C6AC818849BCB005E90B2 /* FoodTrackerViewController.m in Sources */,
 				E04C6AA518849986005E90B2 /* HealthTrackerViewController.m in Sources */,
 				E0ACB80D18944A6000328604 /* FoodDataStore.m in Sources */,

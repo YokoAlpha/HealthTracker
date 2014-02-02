@@ -14,4 +14,7 @@
 - (NSArray *)retrieveVegetables;
 - (NSArray *)retrieveFruit;
 - (NSArray *)retrieveStarch;
++ (NSArray *)foodTypesInArray:(NSArray *)foodsArray;
++ (NSInteger)numberOfFoodsForCategory:(NSString *)category
+                            withArray:(NSArray *)array;
 @end

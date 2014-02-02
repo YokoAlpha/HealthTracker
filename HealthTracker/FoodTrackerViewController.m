@@ -50,14 +50,11 @@
     {
         // Get reference to the destination view controller
         FoodSelectionViewController *vc = [segue destinationViewController];
-        // Setup Array
-        //
         FoodDataStore *foodDataStore = [[FoodDataStore alloc]init];
         if (1 == [sender tag])
         {
             vc.titleLabelName = @"Sugar & Fats";
             vc.foods = [[NSMutableArray alloc]initWithArray:[foodDataStore retrieveSugarAndFats]];
-
         }
         if (2 == [sender tag])
         {

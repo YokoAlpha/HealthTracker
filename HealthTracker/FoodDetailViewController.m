@@ -9,7 +9,7 @@
 #import "FoodDetailViewController.h"
 
 @interface FoodDetailViewController ()
-
+@property (nonatomic,strong) NSMutableArray *pickerData;
 @end
 
 @implementation FoodDetailViewController
@@ -28,6 +28,12 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     [self.foodLabel setText:self.foodData.foodName];
+    //Setup picker view
+    self.pickerData = [[NSMutableArray alloc]init];
+    for (NSInteger i = 1; i <201; i++)
+    {
+        [self.pickerData addObject:[NSNumber numberWithInt:i*10]];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -39,6 +45,56 @@
 - (IBAction)doneButtonPressed:(id)sender
 {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - PickerView Delegate
+
+
+- (void)pickerView:(UIPickerView *)pickerView
+      didSelectRow:(NSInteger)row
+       inComponent:(NSInteger)component
+{
+    //Action when user selects quantity.
+    
+    //Save to shared user profile.
+    
+    //Food + date + quanity.
+}
+
+//Tells how many rows to show
+- (NSInteger)pickerView:(UIPickerView *)pickerView
+numberOfRowsInComponent:(NSInteger)component
+{
+    return [self.pickerData count];
+}
+
+//Tells how many columns to show.
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    return 1;
+}
+
+//Title for each element in picker.
+- (NSString *)pickerView:(UIPickerView *)pickerView
+             titleForRow:(NSInteger)row
+            forComponent:(NSInteger)component
+{
+    NSString *title;
+    NSNumber *numberForRow = [self.pickerData objectAtIndex:row];
+    if ([self.foodData.measurement isEqualToString:@"grams"])
+    {
+        title = [NSString stringWithFormat:@"%dg",[numberForRow intValue]];
+    }
+    else if ([self.foodData.measurement isEqualToString:@"mL"])
+    {
+        title = [NSString stringWithFormat:@"%dml",[numberForRow intValue]];
+    }
+    else
+    {
+        //Food measurement not included in data type
+        title = [NSString stringWithFormat:@"%d",[numberForRow intValue]];
+    }
+    return title;
 }
 
 @end

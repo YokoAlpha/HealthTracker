@@ -92,27 +92,89 @@
 
 - (NSArray *)retrieveSugarAndFats
 {
-    return [self.sugarAndFats copy];
+    return [self foodCategoryArraysWithArray:[self.sugarAndFats copy]];
 }
 
 - (NSArray *)retrieveDairyAndMeat;
 {
-    return [self.dairyAndMeat copy];
+    return [self foodCategoryArraysWithArray:[self.dairyAndMeat copy]];
 }
 
 - (NSArray *)retrieveVegetables
 {
-    return [self.vegetables copy];
+    return [self foodCategoryArraysWithArray:[self.vegetables copy]];
 }
 
 - (NSArray *)retrieveFruit;
 {
-    return [self.fruit copy];
+    return [self foodCategoryArraysWithArray:[self.fruit copy]];
 }
 
 - (NSArray *)retrieveStarch;
 {
-    return [self.starch copy];
+    return [self foodCategoryArraysWithArray:[self.starch copy]];
+}
+
+#pragma mark - Utility Methods.
+
+- (NSArray *)foodCategoryArraysWithArray:(NSArray *)array
+{
+    NSMutableArray *foodCategorySortedArrays = [[NSMutableArray alloc]init];
+    NSArray *foodCategories = [FoodDataStore foodTypesInArray:array];
+    //For each food type that exists
+    for (NSString* foodCategory in foodCategories)
+    {
+        //Create array
+        NSMutableArray *foodTypeArray = [[NSMutableArray alloc]init];
+        //Add food
+        for (Food *food in array)
+        {
+            if ([food.foodCategory isEqualToString:foodCategory])
+            {
+                [foodTypeArray addObject:food];
+            }
+        }
+        //Add array to array of types
+        [foodCategorySortedArrays addObject:foodTypeArray];
+    }
+    return [foodCategorySortedArrays copy];
+}
+
++ (NSArray *)foodTypesInArray:(NSArray *)foodsArray
+{
+    NSMutableArray *differentFoodTypes = [[NSMutableArray alloc]init];
+    for (id foodObj in foodsArray)
+    {
+        if ([foodObj isKindOfClass:[Food class]])
+        {
+            Food *foodCorrectDataType = (Food*)foodObj;
+            [differentFoodTypes addObject:foodCorrectDataType.foodCategory];
+        }
+    }
+    NSMutableArray * unique = [NSMutableArray array];
+    NSMutableSet * processed = [NSMutableSet set];
+    for (NSString * string in differentFoodTypes) {
+        if ([processed containsObject:string] == NO) {
+            [unique addObject:string];
+            [processed addObject:string];
+        }
+    }
+    return [unique copy];
+    //return [[NSOrderedSet orderedSetWithArray:differentFoodTypes] array];
+}
+
++ (NSInteger)numberOfFoodsForCategory:(NSString *)category
+                            withArray:(NSArray *)array
+{
+    NSInteger foodCount = 0;
+    for (Food *foodObj in array)
+    {
+        if ([foodObj.foodCategory isEqualToString:category])
+        {
+            foodCount++;
+        }
+    }
+    return foodCount;
 }
 
 @end
