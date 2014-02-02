@@ -9,5 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface User : NSObject
-
+@property (nonatomic,strong)NSString *name;
+@property (nonatomic,strong)NSString *gender;
+@property (nonatomic,strong)NSDate *dateOfBirth;
 @end
