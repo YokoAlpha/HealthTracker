@@ -39,6 +39,7 @@
 		E06BFC4C189EA69200A17F1C /* HealthTrackerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E06BFC43189EA69200A17F1C /* HealthTrackerViewController.m */; };
 		E06BFC4F189ECA4100A17F1C /* HealthTrackerTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E06BFC4E189ECA4100A17F1C /* HealthTrackerTabBarController.m */; };
 		E06BFC52189ECDDA00A17F1C /* AdditionalSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E06BFC51189ECDDA00A17F1C /* AdditionalSetupViewController.m */; };
+		E07CF31818A693D600D04D23 /* IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E07CF31718A693D600D04D23 /* IntroViewController.m */; };
 		E0800FEA18982B160022F539 /* AppSummary.png in Resources */ = {isa = PBXBuildFile; fileRef = E0800FE818982B160022F539 /* AppSummary.png */; };
 		E0800FEB18982B160022F539 /* AppSummary@2.png in Resources */ = {isa = PBXBuildFile; fileRef = E0800FE918982B160022F539 /* AppSummary@2.png */; };
 		E0A141A01886C2DA006F73EA /* ButtonSugarsFat.png in Resources */ = {isa = PBXBuildFile; fileRef = E0A1419F1886C2DA006F73EA /* ButtonSugarsFat.png */; };
@@ -128,6 +129,8 @@
 		E06BFC4E189ECA4100A17F1C /* HealthTrackerTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HealthTrackerTabBarController.m; path = Controller/HealthTrackerTabBarController.m; sourceTree = "<group>"; };
 		E06BFC50189ECDDA00A17F1C /* AdditionalSetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AdditionalSetupViewController.h; path = Controller/AdditionalSetupViewController.h; sourceTree = "<group>"; };
 		E06BFC51189ECDDA00A17F1C /* AdditionalSetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AdditionalSetupViewController.m; path = Controller/AdditionalSetupViewController.m; sourceTree = "<group>"; };
+		E07CF31618A693D600D04D23 /* IntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IntroViewController.h; path = Controller/IntroViewController.h; sourceTree = "<group>"; };
+		E07CF31718A693D600D04D23 /* IntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IntroViewController.m; path = Controller/IntroViewController.m; sourceTree = "<group>"; };
 		E0800FE818982B160022F539 /* AppSummary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppSummary.png; sourceTree = "<group>"; };
 		E0800FE918982B160022F539 /* AppSummary@2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppSummary@2.png"; sourceTree = "<group>"; };
 		E0A1419F1886C2DA006F73EA /* ButtonSugarsFat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonSugarsFat.png; sourceTree = "<group>"; };
@@ -349,6 +352,8 @@
 				E06BFC4E189ECA4100A17F1C /* HealthTrackerTabBarController.m */,
 				E06BFC50189ECDDA00A17F1C /* AdditionalSetupViewController.h */,
 				E06BFC51189ECDDA00A17F1C /* AdditionalSetupViewController.m */,
+				E07CF31618A693D600D04D23 /* IntroViewController.h */,
+				E07CF31718A693D600D04D23 /* IntroViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -491,6 +496,7 @@
 				E06BFC45189EA69200A17F1C /* FoodTrackerViewController.m in Sources */,
 				E06BFC52189ECDDA00A17F1C /* AdditionalSetupViewController.m in Sources */,
 				E06BFC46189EA69200A17F1C /* FoodDetailViewController.m in Sources */,
+				E07CF31818A693D600D04D23 /* IntroViewController.m in Sources */,
 				E06BFC4F189ECA4100A17F1C /* HealthTrackerTabBarController.m in Sources */,
 				E0ACB80D18944A6000328604 /* FoodDataStore.m in Sources */,
 				E06BFC4C189EA69200A17F1C /* HealthTrackerViewController.m in Sources */,
