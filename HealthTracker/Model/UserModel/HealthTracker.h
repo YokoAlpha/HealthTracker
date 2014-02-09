@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Food.h"
+#import "FoodDescription.h"
 #import "User.h"
 #import "HealthTrackerAppDelegate.h"
 @import CoreData;
@@ -44,13 +44,13 @@ extern NSString *healthTrackerDidUpdateNotification;//Extern used to alow the pr
 /*!
  User added Food using todays date with current time.
  */
-- (void)addConsumedFood:(Food *)food
+- (void)addConsumedFood:(FoodDescription *)food
            withQuantity:(NSInteger)quantity;
 
 /*!
  User added Food using user defined Argument.
  */
-- (void)addConsumedFood:(Food *)food
+- (void)addConsumedFood:(FoodDescription *)food
            withQuantity:(NSInteger)quantity
                  onDate:(NSDate *)date;
 

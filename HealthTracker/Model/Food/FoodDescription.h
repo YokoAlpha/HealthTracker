@@ -1,5 +1,5 @@
 //
-//  Food.h
+//  FoodDescription.h
 //  HealthTracker
 //
 //  Created by Yoko Alpha on 25/01/2014.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Food : NSObject
+@interface FoodDescription : NSObject
 @property (nonatomic,strong) NSString *foodName;
 @property (nonatomic,strong) NSString *foodCategory;
 @property (nonatomic,strong) NSString *measurement;

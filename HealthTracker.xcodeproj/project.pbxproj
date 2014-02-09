@@ -28,6 +28,7 @@
 		E04C6ABA18849986005E90B2 /* HealthTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E04C6AB918849986005E90B2 /* HealthTrackerTests.m */; };
 		E04C6AD41884A0AF005E90B2 /* BMI.png in Resources */ = {isa = PBXBuildFile; fileRef = E04C6AD21884A0AF005E90B2 /* BMI.png */; };
 		E04C6AD51884A0AF005E90B2 /* BMI@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E04C6AD31884A0AF005E90B2 /* BMI@2x.png */; };
+		E04E89A418A7D5F100EE6266 /* Food.m in Sources */ = {isa = PBXBuildFile; fileRef = E04E89A318A7D5F100EE6266 /* Food.m */; };
 		E06BFC24189E596D00A17F1C /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = E06BFC21189E596D00A17F1C /* Profile.m */; };
 		E06BFC25189E596D00A17F1C /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E06BFC23189E596D00A17F1C /* User.m */; };
 		E06BFC28189E835100A17F1C /* HealthTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = E06BFC27189E835100A17F1C /* HealthTracker.m */; };
@@ -53,7 +54,7 @@
 		E0A141A81886DC38006F73EA /* ButtonVage.png in Resources */ = {isa = PBXBuildFile; fileRef = E0A141A41886DC38006F73EA /* ButtonVage.png */; };
 		E0ACB803189436C600328604 /* DairyAndMeat.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0ACB802189436C600328604 /* DairyAndMeat.plist */; };
 		E0ACB806189444A700328604 /* Vegetable.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0ACB805189444A700328604 /* Vegetable.plist */; };
-		E0ACB80A189449FE00328604 /* Food.m in Sources */ = {isa = PBXBuildFile; fileRef = E0ACB809189449FE00328604 /* Food.m */; };
+		E0ACB80A189449FE00328604 /* FoodDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = E0ACB809189449FE00328604 /* FoodDescription.m */; };
 		E0ACB80D18944A6000328604 /* FoodDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = E0ACB80C18944A6000328604 /* FoodDataStore.m */; };
 		E0ACB8111894680E00328604 /* Fruit.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0ACB8101894680E00328604 /* Fruit.plist */; };
 		E0ACB81318946BB100328604 /* Starch.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0ACB81218946BB100328604 /* Starch.plist */; };
@@ -109,6 +110,8 @@
 		E04C6AB918849986005E90B2 /* HealthTrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HealthTrackerTests.m; sourceTree = "<group>"; };
 		E04C6AD21884A0AF005E90B2 /* BMI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BMI.png; sourceTree = "<group>"; };
 		E04C6AD31884A0AF005E90B2 /* BMI@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BMI@2x.png"; sourceTree = "<group>"; };
+		E04E89A218A7D5F100EE6266 /* Food.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Food.h; path = Model/CoreData/Food.h; sourceTree = "<group>"; };
+		E04E89A318A7D5F100EE6266 /* Food.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Food.m; path = Model/CoreData/Food.m; sourceTree = "<group>"; };
 		E06BFC20189E596D00A17F1C /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Profile.h; path = Model/UserModel/Profile.h; sourceTree = "<group>"; };
 		E06BFC21189E596D00A17F1C /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Profile.m; path = Model/UserModel/Profile.m; sourceTree = "<group>"; };
 		E06BFC22189E596D00A17F1C /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Model/UserModel/User.h; sourceTree = "<group>"; };
@@ -150,8 +153,8 @@
 		E0A141A41886DC38006F73EA /* ButtonVage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonVage.png; sourceTree = "<group>"; };
 		E0ACB802189436C600328604 /* DairyAndMeat.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = DairyAndMeat.plist; path = FoodData/DairyAndMeat.plist; sourceTree = "<group>"; };
 		E0ACB805189444A700328604 /* Vegetable.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Vegetable.plist; path = FoodData/Vegetable.plist; sourceTree = "<group>"; };
-		E0ACB808189449FE00328604 /* Food.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Food.h; path = Model/Food/Food.h; sourceTree = "<group>"; };
-		E0ACB809189449FE00328604 /* Food.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Food.m; path = Model/Food/Food.m; sourceTree = "<group>"; };
+		E0ACB808189449FE00328604 /* FoodDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FoodDescription.h; path = Model/Food/FoodDescription.h; sourceTree = "<group>"; };
+		E0ACB809189449FE00328604 /* FoodDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FoodDescription.m; path = Model/Food/FoodDescription.m; sourceTree = "<group>"; };
 		E0ACB80B18944A6000328604 /* FoodDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FoodDataStore.h; path = Model/Food/FoodDataStore.h; sourceTree = "<group>"; };
 		E0ACB80C18944A6000328604 /* FoodDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FoodDataStore.m; path = Model/Food/FoodDataStore.m; sourceTree = "<group>"; };
 		E0ACB8101894680E00328604 /* Fruit.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Fruit.plist; path = FoodData/Fruit.plist; sourceTree = "<group>"; };
@@ -340,10 +343,12 @@
 			isa = PBXGroup;
 			children = (
 				E0ACB8041894386200328604 /* FoodData */,
-				E0ACB808189449FE00328604 /* Food.h */,
-				E0ACB809189449FE00328604 /* Food.m */,
+				E0ACB808189449FE00328604 /* FoodDescription.h */,
+				E0ACB809189449FE00328604 /* FoodDescription.m */,
 				E0ACB80B18944A6000328604 /* FoodDataStore.h */,
 				E0ACB80C18944A6000328604 /* FoodDataStore.m */,
+				E04E89A218A7D5F100EE6266 /* Food.h */,
+				E04E89A318A7D5F100EE6266 /* Food.m */,
 			);
 			name = FoodModel;
 			sourceTree = "<group>";
@@ -508,9 +513,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E04E89A418A7D5F100EE6266 /* Food.m in Sources */,
 				E06BFC25189E596D00A17F1C /* User.m in Sources */,
 				E04C6A9B18849986005E90B2 /* main.m in Sources */,
-				E0ACB80A189449FE00328604 /* Food.m in Sources */,
+				E0ACB80A189449FE00328604 /* FoodDescription.m in Sources */,
 				E06BFC4A189EA69200A17F1C /* FitnessActivityLogViewController.m in Sources */,
 				E06BFC47189EA69200A17F1C /* FoodSelectionViewController.m in Sources */,
 				E06BFC49189EA69200A17F1C /* ProfileViewController.m in Sources */,

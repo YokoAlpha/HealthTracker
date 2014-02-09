@@ -7,6 +7,7 @@
 //
 
 #import "FoodHistoryViewController.h"
+#import "FoodDescription.h"
 #import "Food.h"
 
 @interface FoodHistoryViewController ()
@@ -68,7 +69,7 @@
     if ([rowObj isKindOfClass:[Food class]])
     {
         Food *food = (Food *)rowObj;
-        cell.textLabel.text = food.foodName;
+        cell.textLabel.text = food.name;
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         [dateFormatter setDateFormat:@"EEE', 'dd' 'MMM' 'yyyy'"];
         NSDateFormatter *timeFormatter = [[NSDateFormatter alloc] init];

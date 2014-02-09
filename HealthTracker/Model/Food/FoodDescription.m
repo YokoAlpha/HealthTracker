@@ -1,13 +1,13 @@
 //
-//  Food.m
+//  FoodDescription.m
 //  HealthTracker
 //
 //  Created by Yoko Alpha on 25/01/2014.
 //  Copyright (c) 2014 Yoko. All rights reserved.
 //
 
-#import "Food.h"
+#import "FoodDescription.h"
 
-@implementation Food
+@implementation FoodDescription
 
 @end

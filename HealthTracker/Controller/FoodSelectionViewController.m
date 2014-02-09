@@ -9,10 +9,10 @@
 #import "FoodSelectionViewController.h"
 #import "FoodDetailViewController.h"
 #import "FoodDataStore.h"
-#import "Food.h"
+#import "FoodDescription.h"
 
 @interface FoodSelectionViewController ()
-@property (nonatomic,strong) Food *foodForDestinationVC;
+@property (nonatomic,strong) FoodDescription *foodForDestinationVC;
 @end
 
 @implementation FoodSelectionViewController
@@ -103,9 +103,9 @@ titleForHeaderInSection:(NSInteger)section
     {
         NSArray *sectArray = (NSArray *)sectObj;
         id food = [sectArray objectAtIndex:indexPath.row];
-        if ([food isKindOfClass:[Food class]])
+        if ([food isKindOfClass:[FoodDescription class]])
         {
-            Food *foodObj = (Food *)food;
+            FoodDescription *foodObj = (FoodDescription *)food;
             cell.textLabel.text = foodObj.foodName;
         }
     }
@@ -121,9 +121,9 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     {
         NSArray *sectArray = (NSArray *)sectObj;
         id food = [sectArray objectAtIndex:indexPath.row];
-        if ([food isKindOfClass:[Food class]])
+        if ([food isKindOfClass:[FoodDescription class]])
         {
-            self.foodForDestinationVC = (Food *)food;
+            self.foodForDestinationVC = (FoodDescription *)food;
             [self performSegueWithIdentifier:@"goToFoodDetail" sender:nil];
         }
     }

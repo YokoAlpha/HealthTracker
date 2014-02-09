@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Food.h"
+#import "FoodDescription.h"
 
 @interface FoodDetailViewController : UIViewController <UIPickerViewDelegate>
 @property (nonatomic,strong) IBOutlet UIPickerView *pickerView;
-@property (nonatomic,strong) Food *foodData;
+@property (nonatomic,strong) FoodDescription *foodData;
 @end

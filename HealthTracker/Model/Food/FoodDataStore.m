@@ -8,7 +8,7 @@
 
 
 #import "FoodDataStore.h"
-#import "Food.h"
+#import "FoodDescription.h"
 
 @interface FoodDataStore()
 @property (nonatomic, strong) NSMutableArray *sugarAndFats;
@@ -70,7 +70,7 @@
                 {
                     NSArray *finalFoodArray = (NSArray *)foodArray;
                     //Transform each array into a food
-                    Food *foodObj = [[Food alloc]init];
+                    FoodDescription *foodObj = [[FoodDescription alloc]init];
                     foodObj.foodName = foodDictKey;
                     foodObj.foodCategory = key;
                     foodObj.measurement = [finalFoodArray firstObject];//First element allways measurement type
@@ -127,7 +127,7 @@
         //Create array
         NSMutableArray *foodTypeArray = [[NSMutableArray alloc]init];
         //Add food
-        for (Food *food in array)
+        for (FoodDescription *food in array)
         {
             if ([food.foodCategory isEqualToString:foodCategory])
             {
@@ -145,9 +145,9 @@
     NSMutableArray *differentFoodTypes = [[NSMutableArray alloc]init];
     for (id foodObj in foodsArray)
     {
-        if ([foodObj isKindOfClass:[Food class]])
+        if ([foodObj isKindOfClass:[FoodDescription class]])
         {
-            Food *foodCorrectDataType = (Food*)foodObj;
+            FoodDescription *foodCorrectDataType = (FoodDescription*)foodObj;
             [differentFoodTypes addObject:foodCorrectDataType.foodCategory];
         }
     }
@@ -167,7 +167,7 @@
                             withArray:(NSArray *)array
 {
     NSInteger foodCount = 0;
-    for (Food *foodObj in array)
+    for (FoodDescription *foodObj in array)
     {
         if ([foodObj.foodCategory isEqualToString:category])
         {

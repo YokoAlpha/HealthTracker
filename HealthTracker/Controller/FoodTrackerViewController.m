@@ -33,6 +33,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    [self updateOnScreenElements];//Update on first start to get data from persistent storage.
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateOnScreenElements) name:healthTrackerDidUpdateNotification object:[HealthTracker sharedHealthTracker]];//Adds observer which will be used if the data updates to change the on screen labels.
 }
 

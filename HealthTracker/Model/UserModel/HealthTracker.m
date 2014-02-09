@@ -8,6 +8,7 @@
 
 #import "HealthTracker.h"
 #import "Profile.h"
+#import "Food.h"
 
 NSString *healthTrackerDidUpdateNotification = @"healthTrackerDidUpdateNotification";
 
@@ -58,53 +59,54 @@ NSString *healthTrackerDidUpdateNotification = @"healthTrackerDidUpdateNotificat
 
 #pragma mark - Food
 
-- (void)addConsumedFood:(Food *)food
+- (void)addConsumedFood:(FoodDescription *)food
            withQuantity:(NSInteger)quantity
 {
     [self addConsumedFood:food withQuantity:quantity onDate:[NSDate date]];// reuse function with todays current time.
 }
 
-- (void)addConsumedFood:(Food *)food
+- (void)addConsumedFood:(FoodDescription *)food
            withQuantity:(NSInteger)quantity
                  onDate:(NSDate *)date
 {
-    Food *consumedFood = [[Food alloc]init];
-    //Transfer existing food information.
-    consumedFood.foodName = food.foodName;
-    consumedFood.foodCategory = food.foodCategory;
-    consumedFood.measurement = food.measurement;
-    //Set additional properties.
-    consumedFood.dateConsumed = date;
-    consumedFood.quantityConsumed = [NSNumber numberWithInteger:quantity];
-    [self.testArrayOfFoods addObject:consumedFood];
-    //Add To core data
     NSManagedObjectContext *context = [self managedObjectContext];
-    NSManagedObject *foodInfo = [NSEntityDescription
-                                       insertNewObjectForEntityForName:@"Food"
-                                       inManagedObjectContext:context];
-    [foodInfo setValue:food.foodName forKey:@"name"];
+    Food *foodObjectToAdd = [NSEntityDescription insertNewObjectForEntityForName:@"Food"
+                                      inManagedObjectContext:context];
+    foodObjectToAdd.name = food.foodName;
+    foodObjectToAdd.measurement = food.measurement;
+    foodObjectToAdd.category = food.foodCategory;
+    foodObjectToAdd.dateConsumed = date;
+    foodObjectToAdd.quantityConsumed = [NSNumber numberWithInteger:quantity];
     NSError *error;
-    if (![context save:&error])
-    {
+    if (![context save:&error]) {
         NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
     }
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription
-                                   entityForName:@"Food" inManagedObjectContext:context];
-    [fetchRequest setEntity:entity];
-    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
     [self dataUpdated];
 }
 
 
 - (NSInteger)numberOfFoodsEatenForDate:(NSDate *)date
 {
-    return [self.testArrayOfFoods count];
+    NSManagedObjectContext *context = [self managedObjectContext];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Food"
+                                              inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+    NSError *error;
+    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+    return [fetchedObjects count];
 }
 
 - (NSArray *)allFoodsEaten
 {
-    return self.testArrayOfFoods;
+    NSManagedObjectContext *context = [self managedObjectContext];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Food"
+                                              inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+    NSError *error;
+    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+    return fetchedObjects;
 }
 
 @end
