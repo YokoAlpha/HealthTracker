@@ -10,6 +10,8 @@
 #import "FoodSelectionViewController.h"
 #import "FoodDataStore.h"
 #import "HealthTracker.h"
+#import "FoodHistoryViewController.h"
+
 
 @interface FoodTrackerViewController ()
 
@@ -36,7 +38,8 @@
 
 - (void)updateOnScreenElements
 {
-    self.numberOfFoodsEatenTodayLabel.text = [NSString stringWithFormat:@"You had %d Food items today",[[HealthTracker sharedHealthTracker]numberOfFoodsEatenForDate:[NSDate date]]];}
+    self.numberOfFoodsEatenTodayLabel.text = [NSString stringWithFormat:@"You had %d Food items today",[[HealthTracker sharedHealthTracker]numberOfFoodsEatenForDate:[NSDate date]]];
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -52,9 +55,9 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue
                  sender:(id)sender
 {
+    UINavigationController *naviController = segue.destinationViewController;
     if ([[segue identifier] isEqualToString:@"gotoFoodList"])//Make sure it is the correct screen
     {
-        UINavigationController *naviController = segue.destinationViewController;
         //Work around for destination being inside navigation controller.
         for (id targetVC in naviController.viewControllers)
         {
@@ -88,6 +91,20 @@
                     vc.title = @"Starch";
                     vc.foods = [[NSMutableArray alloc]initWithArray:[foodDataStore retrieveStarch]];
                 }
+            }
+        }
+    }
+    else if ([[segue identifier] isEqualToString:@"modalFoodHistory"])//Make sure it is the correct screen
+    {
+        // Get reference to the destination view controller
+        for (id targetVC in naviController.viewControllers)
+        {
+            if (YES == [targetVC isKindOfClass:[FoodHistoryViewController class]])
+            {
+                // Get reference to the destination view controller
+                FoodHistoryViewController *vc = (FoodHistoryViewController *)targetVC;
+                vc.title = @"Food History";
+                vc.arrayOfPreviousFoods = [[NSArray alloc]initWithArray:[[HealthTracker sharedHealthTracker]allFoodsEaten]];
             }
         }
     }

@@ -74,6 +74,11 @@ NSString *healthTrackerDidUpdateNotification = @"healthTrackerDidUpdateNotificat
     return [self.testArrayOfFoods count];
 }
 
+- (NSArray *)allFoodsEaten
+{
+    return self.testArrayOfFoods;
+}
+
 /*!
  Post notification to show that data set has changed for the health tracker.
  */

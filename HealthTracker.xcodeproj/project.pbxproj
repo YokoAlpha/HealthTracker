@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E03AB6AF18A7894700EA6BCE /* RoundedSummaryView.m in Sources */ = {isa = PBXBuildFile; fileRef = E03AB6AE18A7894700EA6BCE /* RoundedSummaryView.m */; };
 		E03AB6B218A7896500EA6BCE /* CircleSummaryView.m in Sources */ = {isa = PBXBuildFile; fileRef = E03AB6B118A7896500EA6BCE /* CircleSummaryView.m */; };
+		E03AB6B518A7AC2100EA6BCE /* FoodHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E03AB6B418A7AC2100EA6BCE /* FoodHistoryViewController.m */; };
 		E0454A731893FD4A00D22C6A /* SugarAndFats.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0454A721893FD4A00D22C6A /* SugarAndFats.plist */; };
 		E04C6A8F18849986005E90B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E04C6A8E18849986005E90B2 /* Foundation.framework */; };
 		E04C6A9118849986005E90B2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E04C6A9018849986005E90B2 /* CoreGraphics.framework */; };
@@ -83,6 +84,8 @@
 		E03AB6AE18A7894700EA6BCE /* RoundedSummaryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RoundedSummaryView.m; path = View/RoundedSummaryView.m; sourceTree = "<group>"; };
 		E03AB6B018A7896500EA6BCE /* CircleSummaryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CircleSummaryView.h; path = View/CircleSummaryView.h; sourceTree = "<group>"; };
 		E03AB6B118A7896500EA6BCE /* CircleSummaryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CircleSummaryView.m; path = View/CircleSummaryView.m; sourceTree = "<group>"; };
+		E03AB6B318A7AC2100EA6BCE /* FoodHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FoodHistoryViewController.h; path = Controller/FoodHistoryViewController.h; sourceTree = "<group>"; };
+		E03AB6B418A7AC2100EA6BCE /* FoodHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FoodHistoryViewController.m; path = Controller/FoodHistoryViewController.m; sourceTree = "<group>"; };
 		E0454A721893FD4A00D22C6A /* SugarAndFats.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = SugarAndFats.plist; path = FoodData/SugarAndFats.plist; sourceTree = "<group>"; };
 		E04C6A8B18849986005E90B2 /* HealthTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E04C6A8E18849986005E90B2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -372,6 +375,8 @@
 				E06BFC51189ECDDA00A17F1C /* AdditionalSetupViewController.m */,
 				E07CF31618A693D600D04D23 /* IntroViewController.h */,
 				E07CF31718A693D600D04D23 /* IntroViewController.m */,
+				E03AB6B318A7AC2100EA6BCE /* FoodHistoryViewController.h */,
+				E03AB6B418A7AC2100EA6BCE /* FoodHistoryViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -516,6 +521,7 @@
 				E03AB6B218A7896500EA6BCE /* CircleSummaryView.m in Sources */,
 				E06BFC46189EA69200A17F1C /* FoodDetailViewController.m in Sources */,
 				E07CF31818A693D600D04D23 /* IntroViewController.m in Sources */,
+				E03AB6B518A7AC2100EA6BCE /* FoodHistoryViewController.m in Sources */,
 				E06BFC4F189ECA4100A17F1C /* HealthTrackerTabBarController.m in Sources */,
 				E0ACB80D18944A6000328604 /* FoodDataStore.m in Sources */,
 				E06BFC4C189EA69200A17F1C /* HealthTrackerViewController.m in Sources */,

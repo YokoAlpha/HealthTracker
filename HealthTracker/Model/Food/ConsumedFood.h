@@ -9,7 +9,6 @@
 #import "Food.h"
 
 @interface ConsumedFood : Food
-
 @property (nonatomic,strong) NSNumber *quantityConsumed;//NSNumber used for more precision in future.
 @property (nonatomic,strong) NSDate *dateConsumed;
 
