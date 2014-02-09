@@ -57,14 +57,14 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *MyIdentifier = @"foodCell";
+    static NSString *MyIdentifier = @"foodHistoryCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
     if (cell == nil)
     {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                       reuseIdentifier:MyIdentifier];
     }
-    id rowObj = [self.arrayOfPreviousFoods objectAtIndex:indexPath.section];
+    id rowObj = [self.arrayOfPreviousFoods objectAtIndex:indexPath.row];
     if ([rowObj isKindOfClass:[ConsumedFood class]])
     {
         ConsumedFood *food = (ConsumedFood *)rowObj;
