@@ -12,4 +12,6 @@
 @property (nonatomic,strong) NSString *foodName;
 @property (nonatomic,strong) NSString *foodCategory;
 @property (nonatomic,strong) NSString *measurement;
+@property (nonatomic,strong) NSNumber *quantityConsumed;//NSNumber used for more precision in future.
+@property (nonatomic,strong) NSDate *dateConsumed;
 @end

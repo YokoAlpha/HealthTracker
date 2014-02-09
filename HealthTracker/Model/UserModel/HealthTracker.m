@@ -8,7 +8,6 @@
 
 #import "HealthTracker.h"
 #import "Profile.h"
-#import "ConsumedFood.h"
 
 NSString *healthTrackerDidUpdateNotification = @"healthTrackerDidUpdateNotification";
 
@@ -17,6 +16,7 @@ NSString *healthTrackerDidUpdateNotification = @"healthTrackerDidUpdateNotificat
 @end
 
 @implementation HealthTracker
+@synthesize fetchedResultsController, managedObjectContext;
 
 - (id)init
 {
@@ -27,6 +27,8 @@ NSString *healthTrackerDidUpdateNotification = @"healthTrackerDidUpdateNotificat
     }
     return self;
 }
+
+#pragma mark - Overview
 
 + (HealthTracker *)sharedHealthTracker
 {
@@ -39,7 +41,16 @@ NSString *healthTrackerDidUpdateNotification = @"healthTrackerDidUpdateNotificat
     return sharedHealthTracker;
 }
 
+/*!
+ Post notification to show that data set has changed for the health tracker.
+ */
+- (void)dataUpdated
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:healthTrackerDidUpdateNotification object:self];
+}
+
 #pragma mark - User
+
 - (BOOL)addUser:(User *)user
 {
     return YES;
@@ -57,7 +68,7 @@ NSString *healthTrackerDidUpdateNotification = @"healthTrackerDidUpdateNotificat
            withQuantity:(NSInteger)quantity
                  onDate:(NSDate *)date
 {
-    ConsumedFood *consumedFood = [[ConsumedFood alloc]init];
+    Food *consumedFood = [[Food alloc]init];
     //Transfer existing food information.
     consumedFood.foodName = food.foodName;
     consumedFood.foodCategory = food.foodCategory;
@@ -66,8 +77,25 @@ NSString *healthTrackerDidUpdateNotification = @"healthTrackerDidUpdateNotificat
     consumedFood.dateConsumed = date;
     consumedFood.quantityConsumed = [NSNumber numberWithInteger:quantity];
     [self.testArrayOfFoods addObject:consumedFood];
+    //Add To core data
+    NSManagedObjectContext *context = [self managedObjectContext];
+    NSManagedObject *foodInfo = [NSEntityDescription
+                                       insertNewObjectForEntityForName:@"Food"
+                                       inManagedObjectContext:context];
+    [foodInfo setValue:food.foodName forKey:@"name"];
+    NSError *error;
+    if (![context save:&error])
+    {
+        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+    }
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription
+                                   entityForName:@"Food" inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
     [self dataUpdated];
 }
+
 
 - (NSInteger)numberOfFoodsEatenForDate:(NSDate *)date
 {
@@ -77,14 +105,6 @@ NSString *healthTrackerDidUpdateNotification = @"healthTrackerDidUpdateNotificat
 - (NSArray *)allFoodsEaten
 {
     return self.testArrayOfFoods;
-}
-
-/*!
- Post notification to show that data set has changed for the health tracker.
- */
-- (void)dataUpdated
-{
-    [[NSNotificationCenter defaultCenter] postNotificationName:healthTrackerDidUpdateNotification object:self];
 }
 
 @end

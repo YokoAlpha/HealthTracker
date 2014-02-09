@@ -9,10 +9,22 @@
 #import <Foundation/Foundation.h>
 #import "Food.h"
 #import "User.h"
+#import "HealthTrackerAppDelegate.h"
+@import CoreData;
 
 extern NSString *healthTrackerDidUpdateNotification;//Extern used to alow the private variable to be accessed
 
-@interface HealthTracker : NSObject
+@interface HealthTracker : NSObject <NSFetchedResultsControllerDelegate>
+{
+    NSFetchedResultsController *fetchedResultsController;
+    NSManagedObjectContext *managedObjectContext;
+}
+
+@property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
+@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+
+
+#pragma mark - Overview
 
 /*!
  Important method returns global HealthTracker which means it can be used from any class when the app is running.

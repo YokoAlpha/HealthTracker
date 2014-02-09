@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface AdditionalSetupViewController : UIViewController
-
+@property (nonatomic,strong)IBOutlet UISwitch *weekdaySwitch;
+@property (nonatomic,strong)IBOutlet UISwitch *feedBackSwitch;
 @end

@@ -9,7 +9,7 @@
 #import "AdditionalSetupViewController.h"
 
 @interface AdditionalSetupViewController ()
-
+@property (nonatomic) BOOL *relevantFeedback;
 @end
 
 @implementation AdditionalSetupViewController
@@ -40,7 +40,7 @@
 - (IBAction)doneButtonPressed:(id)sender
 {
     [self dismissViewControllerAnimated:YES completion:nil];
-    NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
+    //NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
     //[standardUserDefaults setBool:YES forKey:@"enteredSetupPrefs"];//Make sure setup not shown again.
 }
 
