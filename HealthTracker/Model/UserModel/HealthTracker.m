@@ -10,6 +10,8 @@
 #import "Profile.h"
 #import "ConsumedFood.h"
 
+NSString *healthTrackerDidUpdateNotification = @"healthTrackerDidUpdateNotification";
+
 @interface HealthTracker()
 @property (nonatomic,strong) NSMutableArray *testArrayOfFoods;
 @end
@@ -64,11 +66,20 @@
     consumedFood.dateConsumed = date;
     consumedFood.quantityConsumed = [NSNumber numberWithInteger:quantity];
     [self.testArrayOfFoods addObject:consumedFood];
+    [self dataUpdated];
 }
 
 - (NSInteger)numberOfFoodsEatenForDate:(NSDate *)date
 {
     return [self.testArrayOfFoods count];
+}
+
+/*!
+ Post notification to show that data set has changed for the health tracker.
+ */
+- (void)dataUpdated
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:healthTrackerDidUpdateNotification object:self];
 }
 
 @end

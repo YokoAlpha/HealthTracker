@@ -79,18 +79,21 @@
                                 <rect key="frame" x="62" y="155" width="248" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Food consumed at lunch" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="248" translatesAutoresizingMaskIntoConstraints="NO" id="brq-S5-XD7">
                                 <rect key="frame" x="62" y="184" width="248" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Food consumed at dinner" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="248" translatesAutoresizingMaskIntoConstraints="NO" id="ti3-W9-myU">
                                 <rect key="frame" x="62" y="219" width="248" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="And day for your weekly BMI check" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="271" translatesAutoresizingMaskIntoConstraints="NO" id="Ko8-3J-7mS">
@@ -166,12 +169,12 @@
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">Health Tracker app is designed to improve your health in regards to two aspects: eating habits and fitness activity. Once the app is switched on it will work in background of your iPhone to track your movement and record it so that you can be given feedback on your fitness performance and suggestions on how to improve.  
-Healthy eating is another essential aspect of wellbeing therefore Health App will assist you in recording what they have eaten and then it will evaluate if you had essential daily nutrition. If you didn’t have your “5 a day” app will remind you of it.
-While using the app you will be able to see your progress of increased fitness activity, better eating habits and improved BMI. The Health Tracker app will simply help you to discover when you are active and will help you to better your fitness performance so that without changing your lifestyle you still can improve your health.
+Healthy eating is another essential aspect of wellbeing therefore Health Tracker App will assist you in recording what you have eaten and then it will evaluate if you had your essential daily nutrition. If you didn’t have your “5 a day” app will remind you of it.
+While using the app you will be able to see your progress of increased fitness activity, better eating habits and improved BMI. The Health Tracker app will simply help you to discover when you are active and better your fitness performance so that without changing your lifestyle you still can improve your health.
 </string>
                                         <attributes>
                                             <font key="NSFont" size="16" name="HelveticaNeue-Light"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="10" paragraphSpacingBefore="1" firstLineHeadIndent="30" tailIndent="432" lineHeightMultiple="1.1500000000000004" defaultTabInterval="36">
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="10" paragraphSpacingBefore="1" firstLineHeadIndent="30" tailIndent="432" lineHeightMultiple="1.1500000000000004" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
                                         </attributes>
@@ -183,7 +186,7 @@ While using the app you will be able to see your progress of increased fitness a
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="sFw-Bu-yRm">
-                        <barButtonItem key="rightBarButtonItem" title="Next" id="UE8-do-H2k">
+                        <barButtonItem key="rightBarButtonItem" title="Next" style="done" id="UE8-do-H2k">
                             <connections>
                                 <segue destination="x3j-Zu-Xfh" kind="push" id="Zhn-Bf-nxY"/>
                             </connections>

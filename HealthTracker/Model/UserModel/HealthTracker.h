@@ -10,6 +10,8 @@
 #import "Food.h"
 #import "User.h"
 
+extern NSString *healthTrackerDidUpdateNotification;//Extern used to alow the private variable to be accessed
+
 @interface HealthTracker : NSObject
 
 /*!
@@ -21,7 +23,7 @@
 #pragma mark - User
 /*!
  Function for adding user,
- @return Success of failure of adding.
+ @return Success of failure of adding user.
  */
 - (BOOL)addUser:(User *)user;
 

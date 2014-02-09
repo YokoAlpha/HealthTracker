@@ -31,12 +31,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateOnScreenElements) name:healthTrackerDidUpdateNotification object:[HealthTracker sharedHealthTracker]];//Adds observer which will be used if the data updates to change the on screen labels.
 }
 
-- (void)viewDidAppear:(BOOL)animated
+- (void)updateOnScreenElements
 {
-    self.numberOfFoodsEatenTodayLabel.text = [NSString stringWithFormat:@"You had %d Food items today",[[HealthTracker sharedHealthTracker]numberOfFoodsEatenForDate:[NSDate date]]];//TODO: Have to add a NSNotification to update this label.
-}
+    self.numberOfFoodsEatenTodayLabel.text = [NSString stringWithFormat:@"You had %d Food items today",[[HealthTracker sharedHealthTracker]numberOfFoodsEatenForDate:[NSDate date]]];}
 
 - (void)didReceiveMemoryWarning
 {
