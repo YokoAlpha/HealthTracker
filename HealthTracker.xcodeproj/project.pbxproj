@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E03AB6AF18A7894700EA6BCE /* RoundedSummaryView.m in Sources */ = {isa = PBXBuildFile; fileRef = E03AB6AE18A7894700EA6BCE /* RoundedSummaryView.m */; };
+		E03AB6B218A7896500EA6BCE /* CircleSummaryView.m in Sources */ = {isa = PBXBuildFile; fileRef = E03AB6B118A7896500EA6BCE /* CircleSummaryView.m */; };
 		E0454A731893FD4A00D22C6A /* SugarAndFats.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0454A721893FD4A00D22C6A /* SugarAndFats.plist */; };
 		E04C6A8F18849986005E90B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E04C6A8E18849986005E90B2 /* Foundation.framework */; };
 		E04C6A9118849986005E90B2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E04C6A9018849986005E90B2 /* CoreGraphics.framework */; };
@@ -77,6 +79,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E03AB6AD18A7894700EA6BCE /* RoundedSummaryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoundedSummaryView.h; path = View/RoundedSummaryView.h; sourceTree = "<group>"; };
+		E03AB6AE18A7894700EA6BCE /* RoundedSummaryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RoundedSummaryView.m; path = View/RoundedSummaryView.m; sourceTree = "<group>"; };
+		E03AB6B018A7896500EA6BCE /* CircleSummaryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CircleSummaryView.h; path = View/CircleSummaryView.h; sourceTree = "<group>"; };
+		E03AB6B118A7896500EA6BCE /* CircleSummaryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CircleSummaryView.m; path = View/CircleSummaryView.m; sourceTree = "<group>"; };
 		E0454A721893FD4A00D22C6A /* SugarAndFats.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = SugarAndFats.plist; path = FoodData/SugarAndFats.plist; sourceTree = "<group>"; };
 		E04C6A8B18849986005E90B2 /* HealthTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E04C6A8E18849986005E90B2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -184,6 +190,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E03AB6AC18A7890600EA6BCE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E03AB6AD18A7894700EA6BCE /* RoundedSummaryView.h */,
+				E03AB6AE18A7894700EA6BCE /* RoundedSummaryView.m */,
+				E03AB6B018A7896500EA6BCE /* CircleSummaryView.h */,
+				E03AB6B118A7896500EA6BCE /* CircleSummaryView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		E04C6A8218849986005E90B2 = {
 			isa = PBXGroup;
 			children = (
@@ -219,11 +236,12 @@
 			isa = PBXGroup;
 			children = (
 				E06BFC13189E57C600A17F1C /* Model */,
+				E03AB6AC18A7890600EA6BCE /* View */,
+				E0ACB80F18945E7400328604 /* Controller */,
 				E04C6A9D18849986005E90B2 /* HealthTrackerAppDelegate.h */,
 				E04C6A9E18849986005E90B2 /* HealthTrackerAppDelegate.m */,
 				E04C6AA018849986005E90B2 /* Main.storyboard */,
 				E04C6AA618849986005E90B2 /* Images.xcassets */,
-				E0ACB80F18945E7400328604 /* ViewControllers */,
 				E04C6A9518849986005E90B2 /* Supporting Files */,
 			);
 			path = HealthTracker;
@@ -325,9 +343,10 @@
 			name = FoodModel;
 			sourceTree = "<group>";
 		};
-		E0ACB80F18945E7400328604 /* ViewControllers */ = {
+		E0ACB80F18945E7400328604 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E06BFC3A189EA69200A17F1C /* MapViewController.h */,
 				E06BFC32189EA69200A17F1C /* MapViewController.m */,
 				E06BFC33189EA69200A17F1C /* FoodTrackerViewController.h */,
 				E06BFC34189EA69200A17F1C /* FoodTrackerViewController.m */,
@@ -335,15 +354,14 @@
 				E06BFC36189EA69200A17F1C /* FoodSelectionViewController.m */,
 				E06BFC38189EA69200A17F1C /* FoodDetailViewController.h */,
 				E06BFC35189EA69200A17F1C /* FoodDetailViewController.m */,
-				E06BFC39189EA69200A17F1C /* SummaryViewController.m */,
-				E06BFC3A189EA69200A17F1C /* MapViewController.h */,
 				E06BFC3B189EA69200A17F1C /* SummaryViewController.h */,
+				E06BFC39189EA69200A17F1C /* SummaryViewController.m */,
 				E06BFC3C189EA69200A17F1C /* ProfileViewController.h */,
 				E06BFC3D189EA69200A17F1C /* ProfileViewController.m */,
 				E06BFC3E189EA69200A17F1C /* FitnessActivityLogViewController.h */,
 				E06BFC3F189EA69200A17F1C /* FitnessActivityLogViewController.m */,
-				E06BFC40189EA69200A17F1C /* BMIViewController.m */,
 				E06BFC41189EA69200A17F1C /* BMIViewController.h */,
+				E06BFC40189EA69200A17F1C /* BMIViewController.m */,
 				E06BFC42189EA69200A17F1C /* HealthTrackerViewController.h */,
 				E06BFC43189EA69200A17F1C /* HealthTrackerViewController.m */,
 				E06BFC2F189EA67B00A17F1C /* SetupViewController.h */,
@@ -355,7 +373,7 @@
 				E07CF31618A693D600D04D23 /* IntroViewController.h */,
 				E07CF31718A693D600D04D23 /* IntroViewController.m */,
 			);
-			name = ViewControllers;
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -495,6 +513,7 @@
 				E06BFC28189E835100A17F1C /* HealthTracker.m in Sources */,
 				E06BFC45189EA69200A17F1C /* FoodTrackerViewController.m in Sources */,
 				E06BFC52189ECDDA00A17F1C /* AdditionalSetupViewController.m in Sources */,
+				E03AB6B218A7896500EA6BCE /* CircleSummaryView.m in Sources */,
 				E06BFC46189EA69200A17F1C /* FoodDetailViewController.m in Sources */,
 				E07CF31818A693D600D04D23 /* IntroViewController.m in Sources */,
 				E06BFC4F189ECA4100A17F1C /* HealthTrackerTabBarController.m in Sources */,
@@ -502,6 +521,7 @@
 				E06BFC4C189EA69200A17F1C /* HealthTrackerViewController.m in Sources */,
 				E06BFC44189EA69200A17F1C /* MapViewController.m in Sources */,
 				E04C6A9F18849986005E90B2 /* HealthTrackerAppDelegate.m in Sources */,
+				E03AB6AF18A7894700EA6BCE /* RoundedSummaryView.m in Sources */,
 				E06BFC31189EA67B00A17F1C /* SetupViewController.m in Sources */,
 				E06BFC48189EA69200A17F1C /* SummaryViewController.m in Sources */,
 			);

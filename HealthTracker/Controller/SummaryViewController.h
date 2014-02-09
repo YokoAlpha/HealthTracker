@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CircleSummaryView.h"
 
 @interface SummaryViewController : UIViewController
-
+@property (nonatomic,strong) IBOutlet UIView *topbarView;
+@property (nonatomic,strong) IBOutlet UIView *bottombarView;
+@property (nonatomic,strong) IBOutlet CircleSummaryView *circleView;
 @end
