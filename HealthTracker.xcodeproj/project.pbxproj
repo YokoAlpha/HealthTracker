@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E036342A18B01BEB00D3878A /* BMIAddWeightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E036342918B01BEB00D3878A /* BMIAddWeightViewController.m */; };
 		E03AB6AF18A7894700EA6BCE /* RoundedSummaryView.m in Sources */ = {isa = PBXBuildFile; fileRef = E03AB6AE18A7894700EA6BCE /* RoundedSummaryView.m */; };
 		E03AB6B218A7896500EA6BCE /* CircleSummaryView.m in Sources */ = {isa = PBXBuildFile; fileRef = E03AB6B118A7896500EA6BCE /* CircleSummaryView.m */; };
 		E03AB6B518A7AC2100EA6BCE /* FoodHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E03AB6B418A7AC2100EA6BCE /* FoodHistoryViewController.m */; };
@@ -84,6 +85,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E036342818B01BEB00D3878A /* BMIAddWeightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMIAddWeightViewController.h; path = Controller/BMIAddWeightViewController.h; sourceTree = "<group>"; };
+		E036342918B01BEB00D3878A /* BMIAddWeightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMIAddWeightViewController.m; path = Controller/BMIAddWeightViewController.m; sourceTree = "<group>"; };
 		E03AB6AD18A7894700EA6BCE /* RoundedSummaryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoundedSummaryView.h; path = View/RoundedSummaryView.h; sourceTree = "<group>"; };
 		E03AB6AE18A7894700EA6BCE /* RoundedSummaryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RoundedSummaryView.m; path = View/RoundedSummaryView.m; sourceTree = "<group>"; };
 		E03AB6B018A7896500EA6BCE /* CircleSummaryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CircleSummaryView.h; path = View/CircleSummaryView.h; sourceTree = "<group>"; };
@@ -362,6 +365,10 @@
 		E0ACB80F18945E7400328604 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E06BFC2F189EA67B00A17F1C /* SetupViewController.h */,
+				E06BFC30189EA67B00A17F1C /* SetupViewController.m */,
+				E06BFC50189ECDDA00A17F1C /* AdditionalSetupViewController.h */,
+				E06BFC51189ECDDA00A17F1C /* AdditionalSetupViewController.m */,
 				E06BFC3A189EA69200A17F1C /* MapViewController.h */,
 				E06BFC32189EA69200A17F1C /* MapViewController.m */,
 				E06BFC33189EA69200A17F1C /* FoodTrackerViewController.h */,
@@ -378,12 +385,10 @@
 				E06BFC3F189EA69200A17F1C /* FitnessActivityLogViewController.m */,
 				E06BFC41189EA69200A17F1C /* BMIViewController.h */,
 				E06BFC40189EA69200A17F1C /* BMIViewController.m */,
+				E036342818B01BEB00D3878A /* BMIAddWeightViewController.h */,
+				E036342918B01BEB00D3878A /* BMIAddWeightViewController.m */,
 				E06BFC42189EA69200A17F1C /* HealthTrackerViewController.h */,
 				E06BFC43189EA69200A17F1C /* HealthTrackerViewController.m */,
-				E06BFC2F189EA67B00A17F1C /* SetupViewController.h */,
-				E06BFC30189EA67B00A17F1C /* SetupViewController.m */,
-				E06BFC50189ECDDA00A17F1C /* AdditionalSetupViewController.h */,
-				E06BFC51189ECDDA00A17F1C /* AdditionalSetupViewController.m */,
 				E06BFC4D189ECA4100A17F1C /* HealthTrackerTabBarController.h */,
 				E06BFC4E189ECA4100A17F1C /* HealthTrackerTabBarController.m */,
 				E07CF31618A693D600D04D23 /* IntroViewController.h */,
@@ -528,6 +533,7 @@
 				E06BFC4A189EA69200A17F1C /* FitnessActivityLogViewController.m in Sources */,
 				E06BFC47189EA69200A17F1C /* FoodSelectionViewController.m in Sources */,
 				E06BFC49189EA69200A17F1C /* ProfileViewController.m in Sources */,
+				E036342A18B01BEB00D3878A /* BMIAddWeightViewController.m in Sources */,
 				E03AB6BA18A7C8FF00EA6BCE /* HealthTrackerDatabaseModel.xcdatamodeld in Sources */,
 				E06BFC24189E596D00A17F1C /* Profile.m in Sources */,
 				E06BFC4B189EA69200A17F1C /* BMIViewController.m in Sources */,

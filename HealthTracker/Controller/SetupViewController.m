@@ -8,6 +8,7 @@
 
 #import "SetupViewController.h"
 #import "HealthTracker.h"
+#import "AdditionalSetupViewController.h"
 
 @interface SetupViewController ()
 @property (nonatomic,strong)NSMutableArray *genders;
@@ -68,6 +69,9 @@
 {
     if ([segue.identifier isEqualToString:@"pushToAdditionalSetupInfo"])
     {
+        
+        // Get reference to the destination view controller
+        AdditionalSetupViewController *vc = [segue destinationViewController];
         User *userDetails = [[User alloc]init];
         userDetails.gender = [self.genders objectAtIndex:[self.pickerView selectedRowInComponent:0]];
         //Work out date of birth
@@ -82,7 +86,7 @@
         [dateComponents setYear:year];
         //save date relative from date
         userDetails.dateOfBirth = [calendar dateFromComponents:dateComponents];
-        [[HealthTracker sharedHealthTracker]addUser:userDetails];
+        vc.userDetailsToTransfer = userDetails;
     }
 }
 

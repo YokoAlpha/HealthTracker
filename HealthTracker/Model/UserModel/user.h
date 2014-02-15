@@ -13,5 +13,8 @@
 @property (nonatomic,strong) NSString *gender;
 @property (nonatomic,strong) NSDate *dateOfBirth;
 @property (nonatomic) NSInteger dayForBMICheck;
+@property (nonatomic,strong) NSDate *breakfastReminder;
+@property (nonatomic,strong) NSDate *lunchReminder;
+@property (nonatomic,strong) NSDate *dinnerReminder;
 @property (nonatomic) BOOL releventFeedback;
 @end

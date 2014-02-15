@@ -54,6 +54,7 @@ NSString *healthTrackerDidUpdateNotification = @"healthTrackerDidUpdateNotificat
 
 - (BOOL)addUser:(User *)user
 {
+    //remember for dayForBMICheck position starts at 0
     return YES;
 }
 
