@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AdditionalSetupViewController : UIViewController
-@property (nonatomic,strong)IBOutlet UISwitch *weekdaySwitch;
-@property (nonatomic,strong)IBOutlet UISwitch *feedBackSwitch;
+@interface AdditionalSetupViewController : UIViewController <UIPickerViewDataSource,UIPickerViewDelegate>
+@property (nonatomic,strong)IBOutlet UILabel *breakfastTimeLabel;
+@property (nonatomic,strong)IBOutlet UILabel *lunchTimeLabel;
+@property (nonatomic,strong)IBOutlet UILabel *dinnerTimeLabel;
+@property (nonatomic,strong)IBOutlet UISegmentedControl *weekdaySwitch;
+@property (nonatomic,strong)IBOutlet UISegmentedControl *feedBackSwitch;
+@property (nonatomic,strong)IBOutlet UIView *pickerContainer;
+@property (nonatomic,strong)IBOutlet UIPickerView *picker;
 @end

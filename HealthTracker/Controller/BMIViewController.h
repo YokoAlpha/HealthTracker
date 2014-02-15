@@ -9,4 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface BMIViewController : UIViewController
+@property (nonatomic, strong)IBOutlet UIView * bmiWeightView;
+@property (nonatomic, strong)IBOutlet UIView * bmiWeightInnerView;
 @end

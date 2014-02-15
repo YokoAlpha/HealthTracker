@@ -14,7 +14,8 @@
 
 @implementation BMIViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithNibName:(NSString *)nibNameOrNil
+               bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
@@ -27,6 +28,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    self.bmiWeightView.layer.cornerRadius = 16.0f;
+    self.bmiWeightView.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    self.bmiWeightView.layer.borderWidth = 0.2f;
+    self.bmiWeightInnerView.layer.cornerRadius = 16.0f;
+    self.bmiWeightInnerView.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    self.bmiWeightInnerView.layer.borderWidth = 0.2f;
 }
 
 - (void)didReceiveMemoryWarning
