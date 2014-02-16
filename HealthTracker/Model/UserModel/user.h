@@ -17,4 +17,5 @@
 @property (nonatomic,strong) NSDate *lunchReminder;
 @property (nonatomic,strong) NSDate *dinnerReminder;
 @property (nonatomic) BOOL releventFeedback;
+@property (nonatomic,strong) NSString *measurementSystem;
 @end

@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface ProfileViewController : UIViewController
-
+@property (nonatomic,strong) IBOutlet UISegmentedControl *settingsScreenSelector;
+@property (nonatomic,strong) IBOutlet UIView *containerView;
 @end

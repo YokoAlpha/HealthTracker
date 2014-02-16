@@ -9,6 +9,7 @@
 #import "HealthTracker.h"
 #import "Profile.h"
 #import "Food.h"
+#import "NotificationAdapter.h"
 
 NSString *healthTrackerDidUpdateNotification = @"healthTrackerDidUpdateNotification";
 
@@ -54,8 +55,28 @@ NSString *healthTrackerDidUpdateNotification = @"healthTrackerDidUpdateNotificat
 
 - (BOOL)addUser:(User *)user
 {
-    //remember for dayForBMICheck position starts at 0
+    //remember dayForBMICheck position starts at 0
+    [NotificationAdapter updateLocalNotificationsWithUser:user];
     return YES;
+}
+
+- (User *)retrieveUserData
+{
+    User *mockUser = [[User alloc]init];
+    mockUser.dateOfBirth = [NSDate date];
+    mockUser.gender = @"Female";
+    mockUser.breakfastReminder = [NSDate date];
+    mockUser.lunchReminder = [NSDate date];
+    mockUser.dinnerReminder = [NSDate date];
+    mockUser.releventFeedback = NO;
+    mockUser.dayForBMICheck = 3;
+    mockUser.measurementSystem = @"Imperial";
+    return mockUser;
+}
+
+- (void)updateUser:(User *)user
+{
+    [NotificationAdapter updateLocalNotificationsWithUser:user];
 }
 
 #pragma mark - Food
