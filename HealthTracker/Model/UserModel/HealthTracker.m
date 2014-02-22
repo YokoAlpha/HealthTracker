@@ -68,7 +68,7 @@ NSString *healthTrackerDidUpdateNotification = @"healthTrackerDidUpdateNotificat
     userObjectToAdd.releventFeedback = [NSNumber numberWithBool:user.releventFeedback];
     NSError *error;
     if (![context save:&error]) {
-        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+        NSLog(@"Whoopss, couldn't save: %@", [error localizedDescription]);
     }
     [self dataUpdated];
     //remember dayForBMICheck position starts at 0

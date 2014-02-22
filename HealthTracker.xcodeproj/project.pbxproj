@@ -31,9 +31,8 @@
 		E04C6ABA18849986005E90B2 /* HealthTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E04C6AB918849986005E90B2 /* HealthTrackerTests.m */; };
 		E04C6AD41884A0AF005E90B2 /* BMI.png in Resources */ = {isa = PBXBuildFile; fileRef = E04C6AD21884A0AF005E90B2 /* BMI.png */; };
 		E04C6AD51884A0AF005E90B2 /* BMI@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E04C6AD31884A0AF005E90B2 /* BMI@2x.png */; };
-		E04E89A418A7D5F100EE6266 /* Food.m in Sources */ = {isa = PBXBuildFile; fileRef = E04E89A318A7D5F100EE6266 /* Food.m */; };
 		E06BFC24189E596D00A17F1C /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = E06BFC21189E596D00A17F1C /* Profile.m */; };
-		E06BFC25189E596D00A17F1C /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E06BFC23189E596D00A17F1C /* User.m */; };
+		E06BFC25189E596D00A17F1C /* UserDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = E06BFC23189E596D00A17F1C /* UserDescription.m */; };
 		E06BFC28189E835100A17F1C /* HealthTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = E06BFC27189E835100A17F1C /* HealthTracker.m */; };
 		E06BFC31189EA67B00A17F1C /* SetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E06BFC30189EA67B00A17F1C /* SetupViewController.m */; };
 		E06BFC44189EA69200A17F1C /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E06BFC32189EA69200A17F1C /* MapViewController.m */; };
@@ -61,6 +60,8 @@
 		E0ACB80D18944A6000328604 /* FoodDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = E0ACB80C18944A6000328604 /* FoodDataStore.m */; };
 		E0ACB8111894680E00328604 /* Fruit.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0ACB8101894680E00328604 /* Fruit.plist */; };
 		E0ACB81318946BB100328604 /* Starch.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0ACB81218946BB100328604 /* Starch.plist */; };
+		E0C9B09418B8C91600FA5475 /* Food.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C9B09318B8C91600FA5475 /* Food.m */; };
+		E0C9B09718B8C91600FA5475 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C9B09618B8C91600FA5475 /* User.m */; };
 		E0CFF07B1885E817003A4D47 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0CFF07A1885E817003A4D47 /* MapKit.framework */; };
 		E0E6901918B0FDD70024E0FB /* UserSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E6901818B0FDD70024E0FB /* UserSettingsViewController.m */; };
 		E0E6901C18B0FE120024E0FB /* NotificationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E6901B18B0FE120024E0FB /* NotificationsViewController.m */; };
@@ -121,12 +122,10 @@
 		E04C6AB918849986005E90B2 /* HealthTrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HealthTrackerTests.m; sourceTree = "<group>"; };
 		E04C6AD21884A0AF005E90B2 /* BMI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BMI.png; sourceTree = "<group>"; };
 		E04C6AD31884A0AF005E90B2 /* BMI@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BMI@2x.png"; sourceTree = "<group>"; };
-		E04E89A218A7D5F100EE6266 /* Food.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Food.h; path = Model/CoreData/Food.h; sourceTree = "<group>"; };
-		E04E89A318A7D5F100EE6266 /* Food.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Food.m; path = Model/CoreData/Food.m; sourceTree = "<group>"; };
 		E06BFC20189E596D00A17F1C /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Profile.h; path = Model/UserModel/Profile.h; sourceTree = "<group>"; };
 		E06BFC21189E596D00A17F1C /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Profile.m; path = Model/UserModel/Profile.m; sourceTree = "<group>"; };
-		E06BFC22189E596D00A17F1C /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Model/UserModel/User.h; sourceTree = "<group>"; };
-		E06BFC23189E596D00A17F1C /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Model/UserModel/User.m; sourceTree = "<group>"; };
+		E06BFC22189E596D00A17F1C /* UserDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserDescription.h; path = Model/UserModel/UserDescription.h; sourceTree = "<group>"; };
+		E06BFC23189E596D00A17F1C /* UserDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserDescription.m; path = Model/UserModel/UserDescription.m; sourceTree = "<group>"; };
 		E06BFC26189E835100A17F1C /* HealthTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HealthTracker.h; path = Model/UserModel/HealthTracker.h; sourceTree = "<group>"; };
 		E06BFC27189E835100A17F1C /* HealthTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HealthTracker.m; path = Model/UserModel/HealthTracker.m; sourceTree = "<group>"; };
 		E06BFC2F189EA67B00A17F1C /* SetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SetupViewController.h; path = Controller/SetupViewController.h; sourceTree = "<group>"; };
@@ -170,6 +169,10 @@
 		E0ACB80C18944A6000328604 /* FoodDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FoodDataStore.m; path = Model/Food/FoodDataStore.m; sourceTree = "<group>"; };
 		E0ACB8101894680E00328604 /* Fruit.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Fruit.plist; path = FoodData/Fruit.plist; sourceTree = "<group>"; };
 		E0ACB81218946BB100328604 /* Starch.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Starch.plist; path = FoodData/Starch.plist; sourceTree = "<group>"; };
+		E0C9B09218B8C91600FA5475 /* Food.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Food.h; path = Model/CoreData/Food.h; sourceTree = "<group>"; };
+		E0C9B09318B8C91600FA5475 /* Food.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Food.m; path = Model/CoreData/Food.m; sourceTree = "<group>"; };
+		E0C9B09518B8C91600FA5475 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Model/CoreData/User.h; sourceTree = "<group>"; };
+		E0C9B09618B8C91600FA5475 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Model/CoreData/User.m; sourceTree = "<group>"; };
 		E0CFF07A1885E817003A4D47 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		E0E6901718B0FDD70024E0FB /* UserSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserSettingsViewController.h; path = Controller/UserSettingsViewController.h; sourceTree = "<group>"; };
 		E0E6901818B0FDD70024E0FB /* UserSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserSettingsViewController.m; path = Controller/UserSettingsViewController.m; sourceTree = "<group>"; };
@@ -330,8 +333,8 @@
 			children = (
 				E06BFC20189E596D00A17F1C /* Profile.h */,
 				E06BFC21189E596D00A17F1C /* Profile.m */,
-				E06BFC22189E596D00A17F1C /* User.h */,
-				E06BFC23189E596D00A17F1C /* User.m */,
+				E06BFC22189E596D00A17F1C /* UserDescription.h */,
+				E06BFC23189E596D00A17F1C /* UserDescription.m */,
 			);
 			name = UserModel;
 			sourceTree = "<group>";
@@ -343,7 +346,7 @@
 				E06BFC27189E835100A17F1C /* HealthTracker.m */,
 				E06BFC12189E57BD00A17F1C /* UserModel */,
 				E0ACB807189449BD00328604 /* FoodModel */,
-				E03AB6B818A7C8FF00EA6BCE /* HealthTrackerDatabaseModel.xcdatamodeld */,
+				E0C9B09118B8C77400FA5475 /* Core Data */,
 				E0E6902118B0FF180024E0FB /* NotificationAdapter.h */,
 				E0E6902218B0FF180024E0FB /* NotificationAdapter.m */,
 			);
@@ -370,8 +373,6 @@
 				E0ACB809189449FE00328604 /* FoodDescription.m */,
 				E0ACB80B18944A6000328604 /* FoodDataStore.h */,
 				E0ACB80C18944A6000328604 /* FoodDataStore.m */,
-				E04E89A218A7D5F100EE6266 /* Food.h */,
-				E04E89A318A7D5F100EE6266 /* Food.m */,
 			);
 			name = FoodModel;
 			sourceTree = "<group>";
@@ -410,6 +411,18 @@
 				E0E6901318B0FD390024E0FB /* Profile */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		E0C9B09118B8C77400FA5475 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				E0C9B09218B8C91600FA5475 /* Food.h */,
+				E0C9B09318B8C91600FA5475 /* Food.m */,
+				E0C9B09518B8C91600FA5475 /* User.h */,
+				E0C9B09618B8C91600FA5475 /* User.m */,
+				E03AB6B818A7C8FF00EA6BCE /* HealthTrackerDatabaseModel.xcdatamodeld */,
+			);
+			name = "Core Data";
 			sourceTree = "<group>";
 		};
 		E0E6901318B0FD390024E0FB /* Profile */ = {
@@ -554,9 +567,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E04E89A418A7D5F100EE6266 /* Food.m in Sources */,
-				E06BFC25189E596D00A17F1C /* User.m in Sources */,
+				E06BFC25189E596D00A17F1C /* UserDescription.m in Sources */,
 				E04C6A9B18849986005E90B2 /* main.m in Sources */,
+				E0C9B09418B8C91600FA5475 /* Food.m in Sources */,
 				E0ACB80A189449FE00328604 /* FoodDescription.m in Sources */,
 				E06BFC4A189EA69200A17F1C /* FitnessActivityLogViewController.m in Sources */,
 				E06BFC47189EA69200A17F1C /* FoodSelectionViewController.m in Sources */,
@@ -565,6 +578,7 @@
 				E03AB6BA18A7C8FF00EA6BCE /* HealthTrackerDatabaseModel.xcdatamodeld in Sources */,
 				E06BFC24189E596D00A17F1C /* Profile.m in Sources */,
 				E06BFC4B189EA69200A17F1C /* BMIViewController.m in Sources */,
+				E0C9B09718B8C91600FA5475 /* User.m in Sources */,
 				E06BFC28189E835100A17F1C /* HealthTracker.m in Sources */,
 				E06BFC45189EA69200A17F1C /* FoodTrackerViewController.m in Sources */,
 				E06BFC52189ECDDA00A17F1C /* AdditionalSetupViewController.m in Sources */,
