@@ -1,13 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13B42" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13B42" minimumToolsVersion="Xcode 4.5" iOSVersion="iOS 7.0">
     <entity name="Food" representedClassName="Food" syncable="YES">
         <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="dateConsumed" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="measurement" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="quantityConsumed" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="newRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="hasFood" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES">
+        <attribute name="breakfastReminder" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="dateOfBirth" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="dayForBMICheck" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="dinnerReminder" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="gender" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lunchReminder" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="measurementSystem" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="releventFeedback" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <relationship name="hasFood" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Food" inverseName="newRelationship" inverseEntity="Food" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Food" positionX="-63" positionY="-18" width="128" height="118"/>
+        <element name="Food" positionX="-2736" positionY="1044" width="128" height="133"/>
+        <element name="User" positionX="-3044" positionY="1116" width="128" height="178"/>
     </elements>
 </model>

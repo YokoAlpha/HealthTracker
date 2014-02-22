@@ -72,7 +72,7 @@
         
         // Get reference to the destination view controller
         AdditionalSetupViewController *vc = [segue destinationViewController];
-        User *userDetails = [[User alloc]init];
+        UserDescription *userDetails = [[UserDescription alloc]init];
         userDetails.gender = [self.genders objectAtIndex:[self.pickerView selectedRowInComponent:0]];
         //Work out date of birth
         //gather current calendar

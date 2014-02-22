@@ -8,13 +8,13 @@
 
 #import "UserSettingsViewController.h"
 #import "HealthTracker.h"
-#import "User.h"
+#import "UserDescription.h"
 
 @interface UserSettingsViewController ()
 @property (nonatomic,strong) NSMutableArray *genders;
 @property (nonatomic,strong) NSMutableArray *months;
 @property (nonatomic,strong) NSMutableArray *years;
-@property (nonatomic,strong) User *userData;
+@property (nonatomic,strong) UserDescription *userData;
 @end
 
 @implementation UserSettingsViewController

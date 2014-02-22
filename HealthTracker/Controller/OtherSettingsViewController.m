@@ -10,7 +10,7 @@
 #import "HealthTracker.h"
 
 @interface OtherSettingsViewController ()
-@property (nonatomic,strong)User *userDetails;
+@property (nonatomic,strong)UserDescription *userDetails;
 @end
 
 @implementation OtherSettingsViewController

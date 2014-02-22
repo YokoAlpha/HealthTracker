@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "FoodDescription.h"
-#import "User.h"
+#import "UserDescription.h"
 #import "HealthTrackerAppDelegate.h"
 @import CoreData;
 
@@ -37,12 +37,12 @@ extern NSString *healthTrackerDidUpdateNotification;//Extern used to alow the pr
  Function for adding user,
  @return Success of failure of adding user.
  */
-- (BOOL)addUser:(User *)user;
+- (BOOL)addUser:(UserDescription *)user;
 
-- (void)updateUser:(User *)user;
+- (void)updateUser:(UserDescription *)user;
 
 
-- (User *)retrieveUserData;
+- (UserDescription *)retrieveUserData;
 
 #pragma mark - Food
 

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "User.h"
+#import "UserDescription.h"
 
 @interface AdditionalSetupViewController : UIViewController <UIPickerViewDataSource,UIPickerViewDelegate>
 @property (nonatomic,strong)IBOutlet UILabel *breakfastTimeLabel;
@@ -17,5 +17,5 @@
 @property (nonatomic,strong)IBOutlet UISegmentedControl *feedBackSwitch;
 @property (nonatomic,strong)IBOutlet UIView *pickerContainer;
 @property (nonatomic,strong)IBOutlet UIPickerView *picker;
-@property (nonatomic,strong) User *userDetailsToTransfer;
+@property (nonatomic,strong) UserDescription *userDetailsToTransfer;
 @end

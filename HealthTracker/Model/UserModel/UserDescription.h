@@ -1,5 +1,5 @@
 //
-//  User.h
+//  UserDescription.h
 //  HealthTracker
 //
 //  Created by Yoko Alpha on 02/02/2014.
@@ -8,8 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface User : NSObject
-@property (nonatomic,strong) NSString *name;
+@interface UserDescription : NSObject
 @property (nonatomic,strong) NSString *gender;
 @property (nonatomic,strong) NSDate *dateOfBirth;
 @property (nonatomic) NSInteger dayForBMICheck;

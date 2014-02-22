@@ -1,5 +1,5 @@
 //
-//  User.m
+//  UserDescription.m
 //  HealthTracker
 //
 //  Created by Yoko Alpha on 02/02/2014.
@@ -11,8 +11,8 @@
  
  */
 
-#import "User.h"
+#import "UserDescription.h"
 
-@implementation User
+@implementation UserDescription
 
 @end

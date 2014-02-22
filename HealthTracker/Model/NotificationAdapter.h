@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "User.h"
+#import "UserDescription.h"
 
 @interface NotificationAdapter : NSObject
 
-+ (void)updateLocalNotificationsWithUser:(User *)user;
++ (void)updateLocalNotificationsWithUser:(UserDescription *)user;
 
 @end

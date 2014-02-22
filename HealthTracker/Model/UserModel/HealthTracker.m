@@ -9,6 +9,7 @@
 #import "HealthTracker.h"
 #import "Profile.h"
 #import "Food.h"
+#import "User.h"
 #import "NotificationAdapter.h"
 
 NSString *healthTrackerDidUpdateNotification = @"healthTrackerDidUpdateNotification";
@@ -53,16 +54,31 @@ NSString *healthTrackerDidUpdateNotification = @"healthTrackerDidUpdateNotificat
 
 #pragma mark - User
 
-- (BOOL)addUser:(User *)user
+- (BOOL)addUser:(UserDescription *)user
 {
+    NSManagedObjectContext *context = [self managedObjectContext];
+    User *userObjectToAdd = [NSEntityDescription insertNewObjectForEntityForName:@"User"
+                 inManagedObjectContext:context];
+    userObjectToAdd.gender = user.gender;
+    userObjectToAdd.dateOfBirth = user.dateOfBirth;
+    userObjectToAdd.dayForBMICheck = [NSNumber numberWithInteger:user.dayForBMICheck];
+    userObjectToAdd.breakfastReminder = user.breakfastReminder;
+    userObjectToAdd.lunchReminder = user.lunchReminder;
+    userObjectToAdd.dinnerReminder = user.dinnerReminder;
+    userObjectToAdd.releventFeedback = [NSNumber numberWithBool:user.releventFeedback];
+    NSError *error;
+    if (![context save:&error]) {
+        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+    }
+    [self dataUpdated];
     //remember dayForBMICheck position starts at 0
     [NotificationAdapter updateLocalNotificationsWithUser:user];
     return YES;
 }
 
-- (User *)retrieveUserData
+- (UserDescription *)retrieveUserData
 {
-    User *mockUser = [[User alloc]init];
+    UserDescription *mockUser = [[UserDescription alloc]init];
     mockUser.dateOfBirth = [NSDate date];
     mockUser.gender = @"Female";
     mockUser.breakfastReminder = [NSDate date];
@@ -74,7 +90,7 @@ NSString *healthTrackerDidUpdateNotification = @"healthTrackerDidUpdateNotificat
     return mockUser;
 }
 
-- (void)updateUser:(User *)user
+- (void)updateUser:(UserDescription *)user
 {
     [NotificationAdapter updateLocalNotificationsWithUser:user];
 }

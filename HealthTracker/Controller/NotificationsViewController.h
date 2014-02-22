@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "User.h"
+#import "UserDescription.h"
 #import "HealthTracker.h"
 
 @interface NotificationsViewController : UIViewController <UIPickerViewDataSource,UIPickerViewDelegate>
@@ -18,5 +18,5 @@
 @property (nonatomic,strong)IBOutlet UISegmentedControl *feedBackSwitch;
 @property (nonatomic,strong)IBOutlet UIView *pickerContainer;
 @property (nonatomic,strong)IBOutlet UIPickerView *picker;
-@property (nonatomic,strong) User *userDetailsToTransfer;
+@property (nonatomic,strong) UserDescription *userDetailsToTransfer;
 @end
