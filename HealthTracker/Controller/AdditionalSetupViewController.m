@@ -112,9 +112,7 @@ numberOfRowsInComponent:(NSInteger)component
 - (IBAction)confirmPicker:(id)sender
 {
     /* Build NSDate for reminder */
-    
-    
-    NSDateComponents *comps = [[NSDateComponents alloc] init];
+    NSDateComponents *comps = [[NSCalendar currentCalendar] components:NSDayCalendarUnit | NSMonthCalendarUnit | NSYearCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit fromDate:[NSDate date]];
     [comps setHour:[self.picker selectedRowInComponent:0]];
     [comps setMinute:[self.picker selectedRowInComponent:1]];
     NSCalendar *cal = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
