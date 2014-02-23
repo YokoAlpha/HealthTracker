@@ -7,7 +7,6 @@
 //
 
 #import "HealthTracker.h"
-#import "Profile.h"
 #import "Food.h"
 #import "User.h"
 #import "NotificationAdapter.h"

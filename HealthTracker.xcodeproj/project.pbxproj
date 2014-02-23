@@ -31,7 +31,6 @@
 		E04C6ABA18849986005E90B2 /* HealthTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E04C6AB918849986005E90B2 /* HealthTrackerTests.m */; };
 		E04C6AD41884A0AF005E90B2 /* BMI.png in Resources */ = {isa = PBXBuildFile; fileRef = E04C6AD21884A0AF005E90B2 /* BMI.png */; };
 		E04C6AD51884A0AF005E90B2 /* BMI@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E04C6AD31884A0AF005E90B2 /* BMI@2x.png */; };
-		E06BFC24189E596D00A17F1C /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = E06BFC21189E596D00A17F1C /* Profile.m */; };
 		E06BFC25189E596D00A17F1C /* UserDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = E06BFC23189E596D00A17F1C /* UserDescription.m */; };
 		E06BFC28189E835100A17F1C /* HealthTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = E06BFC27189E835100A17F1C /* HealthTracker.m */; };
 		E06BFC31189EA67B00A17F1C /* SetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E06BFC30189EA67B00A17F1C /* SetupViewController.m */; };
@@ -122,8 +121,6 @@
 		E04C6AB918849986005E90B2 /* HealthTrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HealthTrackerTests.m; sourceTree = "<group>"; };
 		E04C6AD21884A0AF005E90B2 /* BMI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BMI.png; sourceTree = "<group>"; };
 		E04C6AD31884A0AF005E90B2 /* BMI@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BMI@2x.png"; sourceTree = "<group>"; };
-		E06BFC20189E596D00A17F1C /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Profile.h; path = Model/UserModel/Profile.h; sourceTree = "<group>"; };
-		E06BFC21189E596D00A17F1C /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Profile.m; path = Model/UserModel/Profile.m; sourceTree = "<group>"; };
 		E06BFC22189E596D00A17F1C /* UserDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserDescription.h; path = Model/UserModel/UserDescription.h; sourceTree = "<group>"; };
 		E06BFC23189E596D00A17F1C /* UserDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserDescription.m; path = Model/UserModel/UserDescription.m; sourceTree = "<group>"; };
 		E06BFC26189E835100A17F1C /* HealthTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HealthTracker.h; path = Model/UserModel/HealthTracker.h; sourceTree = "<group>"; };
@@ -331,8 +328,6 @@
 		E06BFC12189E57BD00A17F1C /* UserModel */ = {
 			isa = PBXGroup;
 			children = (
-				E06BFC20189E596D00A17F1C /* Profile.h */,
-				E06BFC21189E596D00A17F1C /* Profile.m */,
 				E06BFC22189E596D00A17F1C /* UserDescription.h */,
 				E06BFC23189E596D00A17F1C /* UserDescription.m */,
 			);
@@ -576,7 +571,6 @@
 				E06BFC49189EA69200A17F1C /* ProfileViewController.m in Sources */,
 				E036342A18B01BEB00D3878A /* BMIAddWeightViewController.m in Sources */,
 				E03AB6BA18A7C8FF00EA6BCE /* HealthTrackerDatabaseModel.xcdatamodeld in Sources */,
-				E06BFC24189E596D00A17F1C /* Profile.m in Sources */,
 				E06BFC4B189EA69200A17F1C /* BMIViewController.m in Sources */,
 				E0C9B09718B8C91600FA5475 /* User.m in Sources */,
 				E06BFC28189E835100A17F1C /* HealthTracker.m in Sources */,
