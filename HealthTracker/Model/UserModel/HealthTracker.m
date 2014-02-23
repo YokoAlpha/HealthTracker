@@ -213,6 +213,22 @@ NSString *healthTrackerDidUpdateNotification = @"healthTrackerDidUpdateNotificat
     return [fetchedObjects count];
 }
 
+- (NSInteger)numberOfFiveADayEaten
+{
+    NSManagedObjectContext *context = [self managedObjectContext];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Food"
+                                              inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+    NSError *error;
+    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+    
+    //Use day (parse day and find the number of fruit and veg eaten for that day)
+    
+    return [fetchedObjects count];
+}
+
+
 - (NSArray *)allFoodsEaten
 {
     NSManagedObjectContext *context = [self managedObjectContext];

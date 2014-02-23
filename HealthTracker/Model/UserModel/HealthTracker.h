@@ -61,6 +61,8 @@ extern NSString *healthTrackerDidUpdateNotification;//Extern used to alow the pr
 
 - (NSInteger)numberOfFoodsEatenForDate:(NSDate *)date;
 
+- (NSInteger)numberOfFiveADayEaten;
+
 /*!
  Function for getting all the user consumed foods.
  @return Array on consumed foods.

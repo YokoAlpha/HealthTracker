@@ -7,6 +7,7 @@
 //
 
 #import "SummaryViewController.h"
+#import "HealthTracker.h"
 
 @interface SummaryViewController ()
 
@@ -29,13 +30,45 @@
 	// Do any additional setup after loading the view.
     self.topbarView.layer.cornerRadius = 16.0f;//Add rounded corners to views
     self.bottombarView.layer.cornerRadius = 16.0f;//Add rounded corners to views
-    [self isUserDoingWell:3];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateOnScreenElements) name:healthTrackerDidUpdateNotification object:[HealthTracker sharedHealthTracker]];//Adds observer which will be used if the data updates to change the on screen labels.
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self updateOnScreenElements];
+}
+
+- (void)updateOnScreenElements
+{
+    //Five a day tracking.
+    NSInteger numberOfFiveADay = [[HealthTracker sharedHealthTracker]numberOfFiveADayEaten];
+    NSInteger percentageEaten = (numberOfFiveADay/5)*100;
+    self.fiveADayPercentageLabel.text = [NSString stringWithFormat:@"%d",percentageEaten];
+    float progressBarPlot = percentageEaten/100;
+    if (progressBarPlot > 1.0f)
+    {
+        //Cannot be over 100%
+        progressBarPlot = 1.0f;
+    }
+    [self.fiveADayBar setProgress:progressBarPlot];
+    if (percentageEaten > 0 && percentageEaten <50)
+    {
+        [self fiveADayState:3];//Bad
+    }
+    else if (percentageEaten > 49 && percentageEaten <70)
+    {
+        [self fiveADayState:2];//Ok
+    }
+    else if (percentageEaten > 69 && percentageEaten <=100)
+    {
+        [self fiveADayState:1];//Good
+    }
 }
 
 /*
     Method to show how well the user s
  */
-- (void)isUserDoingWell:(NSInteger)currentState
+- (void)fiveADayState:(NSInteger)currentState
 {
     if (1 == currentState)
     {
