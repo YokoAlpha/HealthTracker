@@ -136,7 +136,7 @@ numberOfRowsInComponent:(NSInteger)component
     NSCalendar *cal = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
     NSDate *date = [cal dateFromComponents:comps];
     /* Build string from current picker selected row position */
-    NSString *time = [NSString stringWithFormat:@"%02d : %02d",[self.picker selectedRowInComponent:0],[self.picker selectedRowInComponent:1]];
+    NSString *time = [NSString stringWithFormat:@"%02d:%02d",[self.picker selectedRowInComponent:0],[self.picker selectedRowInComponent:1]];
     /* Update labels */
     if (1 == self.selectedPicker)
     {
