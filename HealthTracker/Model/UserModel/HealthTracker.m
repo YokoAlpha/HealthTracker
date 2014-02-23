@@ -56,38 +56,89 @@ NSString *healthTrackerDidUpdateNotification = @"healthTrackerDidUpdateNotificat
 
 - (BOOL)addUser:(UserDescription *)user
 {
-    NSManagedObjectContext *context = [self managedObjectContext];
-    User *userObjectToAdd = [NSEntityDescription insertNewObjectForEntityForName:@"User"
-                 inManagedObjectContext:context];
-    userObjectToAdd.gender = user.gender;
-    userObjectToAdd.dateOfBirth = user.dateOfBirth;
-    userObjectToAdd.dayForBMICheck = [NSNumber numberWithInteger:user.dayForBMICheck];
-    userObjectToAdd.breakfastReminder = user.breakfastReminder;
-    userObjectToAdd.lunchReminder = user.lunchReminder;
-    userObjectToAdd.dinnerReminder = user.dinnerReminder;
-    userObjectToAdd.releventFeedback = [NSNumber numberWithBool:user.releventFeedback];
-    NSError *error;
-    if (![context save:&error]) {
-        NSLog(@"Whoopss, couldn't save: %@", [error localizedDescription]);
+    if (0 == [self numberofUsers])
+    {
+        NSManagedObjectContext *context = [self managedObjectContext];
+        User *userObjectToAdd = [NSEntityDescription insertNewObjectForEntityForName:@"User"
+                                                              inManagedObjectContext:context];
+        userObjectToAdd.gender = user.gender;
+        userObjectToAdd.dateOfBirth = user.dateOfBirth;
+        userObjectToAdd.dayForBMICheck = [NSNumber numberWithInteger:user.dayForBMICheck];
+        userObjectToAdd.breakfastReminder = user.breakfastReminder;
+        userObjectToAdd.lunchReminder = user.lunchReminder;
+        userObjectToAdd.dinnerReminder = user.dinnerReminder;
+        userObjectToAdd.releventFeedback = [NSNumber numberWithBool:user.releventFeedback];
+        NSError *error;
+        if (![context save:&error]) {
+            NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+        }
+        [self dataUpdated];
+        //remember dayForBMICheck position starts at 0
+        [NotificationAdapter updateLocalNotificationsWithUser:user];
+        return YES;
     }
-    [self dataUpdated];
-    //remember dayForBMICheck position starts at 0
-    [NotificationAdapter updateLocalNotificationsWithUser:user];
-    return YES;
+    else
+    {
+        NSLog(@"Could not add user as one already exists");
+        [self updateUser:user];//Update user instead.
+        return NO;
+    }
 }
 
 - (UserDescription *)retrieveUserData
 {
-    UserDescription *mockUser = [[UserDescription alloc]init];
-    mockUser.dateOfBirth = [NSDate date];
-    mockUser.gender = @"Female";
-    mockUser.breakfastReminder = [NSDate date];
-    mockUser.lunchReminder = [NSDate date];
-    mockUser.dinnerReminder = [NSDate date];
-    mockUser.releventFeedback = NO;
-    mockUser.dayForBMICheck = 3;
-    mockUser.measurementSystem = @"Imperial";
-    return mockUser;
+    NSManagedObjectContext *context = [self managedObjectContext];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"User"
+                                              inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+    NSError *error;
+    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+    
+    if (fetchedObjects.count != 1)
+    {
+        NSAssert(FALSE, @"There can only be one User currently, terminate app if this is the case");
+    }
+    else
+    {
+        id objectFromUserData = [fetchedObjects firstObject];
+        if ([objectFromUserData isKindOfClass:[User class]])
+        {
+            User *userReturned = (User *)objectFromUserData;
+            UserDescription *newUser = [[UserDescription alloc]init];
+            newUser.gender = userReturned.gender;
+            newUser.dateOfBirth = userReturned.dateOfBirth;
+            newUser.dayForBMICheck = [userReturned.dayForBMICheck integerValue];
+            newUser.breakfastReminder = userReturned.breakfastReminder;
+            newUser.lunchReminder = userReturned.lunchReminder;
+            newUser.dinnerReminder = userReturned.dinnerReminder;
+            newUser.releventFeedback = [userReturned.releventFeedback boolValue];
+            return newUser;
+        }
+    }
+//    UserDescription *mockUser = [[UserDescription alloc]init];
+//    mockUser.dateOfBirth = [NSDate date];
+//    mockUser.gender = @"Female";
+//    mockUser.breakfastReminder = [NSDate date];
+//    mockUser.lunchReminder = [NSDate date];
+//    mockUser.dinnerReminder = [NSDate date];
+//    mockUser.releventFeedback = NO;
+//    mockUser.dayForBMICheck = 3;
+//    mockUser.measurementSystem = @"Imperial";
+    return nil;
+}
+
+- (NSInteger)numberofUsers
+{
+    //Used to make sure that there is only one user.
+    NSManagedObjectContext *context = [self managedObjectContext];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"User"
+                                              inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+    NSError *error;
+    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+    return [fetchedObjects count];
 }
 
 - (void)updateUser:(UserDescription *)user

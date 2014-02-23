@@ -47,8 +47,8 @@
 
 - (IBAction)doneButtonPressed:(id)sender
 {
-    //NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
-    //[standardUserDefaults setBool:YES forKey:@"enteredSetupPrefs"];//Make sure setup not shown again.
+    NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
+    [standardUserDefaults setBool:YES forKey:@"enteredSetupPrefs"];//Make sure setup not shown again.
     //SaveButton states
     BOOL releventFeedback = NO;
     if (0 == self.feedBackSwitch.selectedSegmentIndex)
