@@ -22,6 +22,16 @@
     n2.alertBody = @"Reminder after 90 seconds";
     [[UIApplication sharedApplication] scheduleLocalNotification: n1];
     [[UIApplication sharedApplication] scheduleLocalNotification: n2];
+    
+    
+    // Schedule the notification
+    UILocalNotification* localNotification = [[UILocalNotification alloc] init];
+    localNotification.fireDate = n1.fireDate;
+    localNotification.alertBody = @"Test Notification";
+    localNotification.alertAction = @"Show me the item";
+    localNotification.timeZone = [NSTimeZone defaultTimeZone];
+    localNotification.applicationIconBadgeNumber = [[UIApplication sharedApplication] applicationIconBadgeNumber] + 1;
+    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
 }
 
 @end

@@ -16,6 +16,13 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
     [HealthTracker sharedHealthTracker].managedObjectContext = self.managedObjectContext;//Must ensure that reference has been kept to core data database.
+    //Handle Local notification
+    UILocalNotification *locationNotification = [launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey];// Handle launching from a notification
+    if (locationNotification)
+    {
+        // Set icon badge number to zero
+        application.applicationIconBadgeNumber = 0;
+    }
     return YES;
 }
 					
@@ -44,6 +51,24 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - Local notifications
+
+- (void)application:(UIApplication *)application
+didReceiveLocalNotification:(UILocalNotification *)notification
+{
+    UIApplicationState state = [application applicationState];
+    if (state == UIApplicationStateActive)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Reminder"
+                                                        message:notification.alertBody
+                                                       delegate:self cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
+    // Set icon badge number to zero
+    application.applicationIconBadgeNumber = 0;
 }
 
 #pragma mark - Core Data
