@@ -76,6 +76,9 @@
     //Date labels
     NSDateFormatter *timeFormatter = [[NSDateFormatter alloc] init];
     [timeFormatter setDateFormat:@"HH:mm"];
+    self.breakfastTimeToSet = self.userDetailsToTransfer.breakfastReminder;
+    self.lunchTimeToSet = self.userDetailsToTransfer.lunchReminder;
+    self.dinnerTimeToSet = self.userDetailsToTransfer.dinnerReminder;
     [self.breakfastTimeLabel setText:[timeFormatter stringFromDate:self.userDetailsToTransfer.breakfastReminder]];
     [self.lunchTimeLabel setText:[timeFormatter stringFromDate:self.userDetailsToTransfer.lunchReminder]];
     [self.dinnerTimeLabel setText:[timeFormatter stringFromDate:self.userDetailsToTransfer.dinnerReminder]];

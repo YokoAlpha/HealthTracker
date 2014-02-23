@@ -116,15 +116,6 @@ NSString *healthTrackerDidUpdateNotification = @"healthTrackerDidUpdateNotificat
             return newUser;
         }
     }
-//    UserDescription *mockUser = [[UserDescription alloc]init];
-//    mockUser.dateOfBirth = [NSDate date];
-//    mockUser.gender = @"Female";
-//    mockUser.breakfastReminder = [NSDate date];
-//    mockUser.lunchReminder = [NSDate date];
-//    mockUser.dinnerReminder = [NSDate date];
-//    mockUser.releventFeedback = NO;
-//    mockUser.dayForBMICheck = 3;
-//    mockUser.measurementSystem = @"Imperial";
     return nil;
 }
 
@@ -143,6 +134,43 @@ NSString *healthTrackerDidUpdateNotification = @"healthTrackerDidUpdateNotificat
 
 - (void)updateUser:(UserDescription *)user
 {
+    //Retriveing object
+    NSManagedObjectContext *context = [self managedObjectContext];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"User"
+                                              inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+    NSError *error;
+    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+    
+    /* Get Original object */
+    if (fetchedObjects.count != 1)
+    {
+        NSAssert(FALSE, @"There can only be one User currently, terminate app if this is the case");
+    }
+    else
+    {
+        //Overwrite it
+        id objectFromUserData = [fetchedObjects firstObject];
+        if ([objectFromUserData isKindOfClass:[User class]])
+        {
+            User *userReturned = (User *)objectFromUserData;
+            userReturned.gender = user.gender;
+            userReturned.dateOfBirth = user.dateOfBirth;
+            userReturned.dayForBMICheck = [NSNumber numberWithInteger:user.dayForBMICheck];
+            userReturned.breakfastReminder = user.breakfastReminder;
+            userReturned.lunchReminder = user.lunchReminder;
+            userReturned.dinnerReminder = user.dinnerReminder;
+            userReturned.releventFeedback = [NSNumber numberWithBool:user.releventFeedback];
+            NSError *error = nil;
+            BOOL savedSuccessfully = [self.managedObjectContext save:&error];
+            if (!savedSuccessfully)
+            {
+                NSLog(@"Could not save date change! Reason : %@", [error localizedDescription]);
+            }
+            //Make changes
+        }
+    }
     [NotificationAdapter updateLocalNotificationsWithUser:user];
 }
 
