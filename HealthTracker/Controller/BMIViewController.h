@@ -13,5 +13,8 @@
 @property (nonatomic, strong)IBOutlet UIView * bmiWeightInnerView;
 @property (nonatomic, strong)IBOutlet UILabel * weight;
 @property (nonatomic, strong)IBOutlet UILabel * height;
+@property (nonatomic, strong)IBOutlet UILabel * bmiDescription;
+@property (nonatomic, strong)IBOutlet UILabel * bmiResult;
+@property (nonatomic, strong)IBOutlet UIProgressView * bmiProgressBar;
 
 @end

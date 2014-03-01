@@ -266,10 +266,19 @@ NSString *healthTrackerDidUpdateNotification = @"healthTrackerDidUpdateNotificat
 
 #pragma mark - BMI
 
-- (NSInteger)bmiCount
+- (double)bmiCount
 {
-    //TODO: Calculate this.
-    return 99;
+    //http://www.whathealth.com/bmi/formula.html
+    /*
+     
+    METRIC
+    BMI( kg/m² ) =  weight in kilograms
+                        ————————————
+                      height in meters²
+    */
+    double weight = [self retrieveWeight];
+    double height = [self retrieveHeight];
+    return weight/(height/100*height/100);//need to devide by 100 to get meters
 }
 
 - (void)updateWeight:(double)newWeight
@@ -277,6 +286,7 @@ NSString *healthTrackerDidUpdateNotification = @"healthTrackerDidUpdateNotificat
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     [userDefaults setDouble:newWeight forKey:@"userWeight"];
     [userDefaults synchronize];
+    [self dataUpdated];
 }
 
 - (double)retrieveWeight
@@ -290,6 +300,7 @@ NSString *healthTrackerDidUpdateNotification = @"healthTrackerDidUpdateNotificat
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     [userDefaults setDouble:newHeight forKey:@"userHeight"];
     [userDefaults synchronize];
+    [self dataUpdated];
 }
 
 - (double)retrieveHeight

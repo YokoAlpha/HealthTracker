@@ -115,7 +115,8 @@ numberOfRowsInComponent:(NSInteger)component
 {
     if (0 == component)
     {
-        return [self.arrayOfHeights count];
+//        return [self.arrayOfHeights count];//Imperial
+          return 250;
     }
     if (1 == component)
     {
@@ -129,8 +130,9 @@ numberOfRowsInComponent:(NSInteger)component
 {
     if (0 == component)
     {
-        NSNumber *number = [self.arrayOfHeights objectAtIndex:row];
-        return [NSString stringWithFormat:@"%0.1f",number.doubleValue];
+        //NSNumber *number = [self.arrayOfHeights objectAtIndex:row];
+        //        return [NSString stringWithFormat:@"%0.1f",number.doubleValue];//Imperial
+        return [NSString stringWithFormat:@"%02d",row];
     }
     if (1 == component)
     {
@@ -141,9 +143,12 @@ numberOfRowsInComponent:(NSInteger)component
 
 - (IBAction)confirmButtonPressed:(id)sender
 {
-    double weight = [self.pickerView selectedRowInComponent:0];
-    NSNumber *height = [self.arrayOfHeights objectAtIndex:[self.pickerView selectedRowInComponent:0]];
-    [[HealthTracker sharedHealthTracker] updateHeight:height.doubleValue];
+    double weight = [self.pickerView selectedRowInComponent:1];
+    double height = [self.pickerView selectedRowInComponent:0];
+
+//    NSNumber *height = [self.arrayOfHeights objectAtIndex:[self.pickerView selectedRowInComponent:0]];
+//    [[HealthTracker sharedHealthTracker] updateHeight:height.doubleValue];//Imperial
+    [[HealthTracker sharedHealthTracker] updateHeight:height];
     [[HealthTracker sharedHealthTracker] updateWeight:weight];
 }
 

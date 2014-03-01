@@ -63,10 +63,30 @@
     {
         [self fiveADayState:1];//Good
     }
+    //BMI tracking
+    //https://www.nhlbi.nih.gov/guidelines/obesity/BMI/bmi-m.htm
+    double bmiResult = [HealthTracker sharedHealthTracker].bmiCount;
+    if(bmiResult < 18.5)//UnderWeight
+    {
+        [self bmiState:3];//Bad
+    }
+    else if(bmiResult > 18.4 && bmiResult < 25.0)//Normal Weight
+    {
+        [self bmiState:1];//Good
+    }
+    else if(bmiResult > 24.9 && bmiResult < 30.0)//Overweight
+    {
+        [self bmiState:2];//Still bad
+    }
+    else if(bmiResult > 30.0)//Obesity
+    {
+        [self bmiState:3];//Bad
+    }
+    self.bmiResultLabel.text = [NSString stringWithFormat:@"%0.1f",bmiResult];
 }
 
 /*
-    Method to show how well the user s
+    Method to show how well the user is doing
  */
 - (void)fiveADayState:(NSInteger)currentState
 {
@@ -74,21 +94,53 @@
     {
         //User is doing well
         [self.topbarView setBackgroundColor:[UIColor colorWithRed:216/255.0f green:247/255.0f blue:160/255.0f alpha:1.0f]];
-        [self.bottombarView setBackgroundColor:[UIColor colorWithRed:216/255.0f green:247/255.0f blue:160/255.0f alpha:1.0f]];
-        [self.circleView updateColor:[UIColor colorWithRed:216/255.0f green:247/255.0f blue:160/255.0f alpha:1.0f]];
     }
     else if (2 == currentState)
     {
         //User is doing ok
         self.topbarView.backgroundColor = [UIColor colorWithRed:239/255.0f green:143/255.0f blue:60/255.0f alpha:1.0f];
-        self.bottombarView.backgroundColor = [UIColor colorWithRed:239/255.0f green:143/255.0f blue:60/255.0f alpha:1.0f];
-        [self.circleView updateColor:[UIColor colorWithRed:239/255.0f green:143/255.0f blue:60/255.0f alpha:1.0f]];
     }
     else if (3 == currentState)
     {
         //User is doing bad
         self.topbarView.backgroundColor = [UIColor colorWithRed:237/255.0f green:70/255.0f blue:47/255.0f alpha:1.0f];
+    }
+}
+
+- (void)fitnessState:(NSInteger)currentState
+{
+    if (1 == currentState)
+    {
+        //User is doing well
+        [self.bottombarView setBackgroundColor:[UIColor colorWithRed:216/255.0f green:247/255.0f blue:160/255.0f alpha:1.0f]];
+    }
+    else if (2 == currentState)
+    {
+        //User is doing ok
+        self.bottombarView.backgroundColor = [UIColor colorWithRed:239/255.0f green:143/255.0f blue:60/255.0f alpha:1.0f];
+    }
+    else if (3 == currentState)
+    {
+        //User is doing bad
         self.bottombarView.backgroundColor = [UIColor colorWithRed:237/255.0f green:70/255.0f blue:47/255.0f alpha:1.0f];
+    }
+}
+
+- (void)bmiState:(NSInteger)currentState
+{
+    if (1 == currentState)
+    {
+        //User is doing well
+        [self.circleView updateColor:[UIColor colorWithRed:216/255.0f green:247/255.0f blue:160/255.0f alpha:1.0f]];
+    }
+    else if (2 == currentState)
+    {
+        //User is doing ok
+        [self.circleView updateColor:[UIColor colorWithRed:239/255.0f green:143/255.0f blue:60/255.0f alpha:1.0f]];
+    }
+    else if (3 == currentState)
+    {
+        //User is doing bad
         [self.circleView updateColor:[UIColor colorWithRed:237/255.0f green:70/255.0f blue:47/255.0f alpha:1.0f]];
     }
 }

@@ -303,7 +303,7 @@ While using the app you will be able to see your progress of increased fitness a
                                 <rect key="frame" x="102" y="331" width="117" height="117"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="24" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLN-Wx-hRW">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLN-Wx-hRW">
                                         <rect key="frame" x="10" y="31" width="97" height="55"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="36"/>
@@ -386,6 +386,7 @@ While using the app you will be able to see your progress of increased fitness a
                     </view>
                     <tabBarItem key="tabBarItem" title="Summary" image="AppSummary.png" id="zxN-1b-HUq"/>
                     <connections>
+                        <outlet property="bmiResultLabel" destination="rLN-Wx-hRW" id="kso-LW-pqq"/>
                         <outlet property="bottombarView" destination="dfz-eN-xfm" id="gMs-TI-a7k"/>
                         <outlet property="circleView" destination="H0e-3m-Bdl" id="tJB-Hc-pBN"/>
                         <outlet property="fiveADayBar" destination="KTB-MF-y9j" id="3Xj-Zy-POb"/>
@@ -409,7 +410,7 @@ While using the app you will be able to see your progress of increased fitness a
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your BMI is in healthy/ overweight/ obesity range" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nm1-uk-bv0">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nm1-uk-bv0">
                                 <rect key="frame" x="20" y="85" width="289" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="14"/>
@@ -423,8 +424,8 @@ While using the app you will be able to see your progress of increased fitness a
                                 <rect key="frame" x="0.0" y="146" width="310" height="3"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </progressView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="25" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="glI-QU-Ldu">
-                                <rect key="frame" x="242" y="98" width="46" height="58"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="glI-QU-Ldu">
+                                <rect key="frame" x="204" y="98" width="105" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
                                 <nil key="highlightedColor"/>
@@ -444,7 +445,7 @@ While using the app you will be able to see your progress of increased fitness a
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.0 FT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IcR-V8-4rY">
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0 CM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IcR-V8-4rY">
                                                 <rect key="frame" x="0.0" y="18" width="102" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -491,6 +492,9 @@ While using the app you will be able to see your progress of increased fitness a
                     </view>
                     <navigationItem key="navigationItem" title="BMI" id="nDo-iS-xSX"/>
                     <connections>
+                        <outlet property="bmiDescription" destination="nm1-uk-bv0" id="KaR-yu-As5"/>
+                        <outlet property="bmiProgressBar" destination="esa-TX-Q9O" id="3Vz-Ah-QfV"/>
+                        <outlet property="bmiResult" destination="glI-QU-Ldu" id="NAM-OL-hHk"/>
                         <outlet property="bmiWeightInnerView" destination="1HI-zN-nNa" id="wVk-Ud-9Qc"/>
                         <outlet property="bmiWeightView" destination="7lo-Jm-TB2" id="FeP-6m-ciH"/>
                         <outlet property="height" destination="IcR-V8-4rY" id="c61-eq-N2n"/>
@@ -537,8 +541,8 @@ While using the app you will be able to see your progress of increased fitness a
                                         </subviews>
                                         <color key="backgroundColor" red="0.85854537220000005" green="1" blue="0.79709401329999996" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Height (ft)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kk2-5E-HBb">
-                                        <rect key="frame" x="51" y="17" width="67" height="21"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Height (cm)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kk2-5E-HBb">
+                                        <rect key="frame" x="51" y="17" width="81" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
                                         <nil key="highlightedColor"/>

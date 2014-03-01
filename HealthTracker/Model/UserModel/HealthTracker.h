@@ -75,7 +75,7 @@ extern NSString *healthTrackerDidUpdateNotification;//Extern used to alow the pr
  Function for getting users BMI score.
  @return BMI count.
  */
-- (NSInteger)bmiCount;
+- (double)bmiCount;
 
 - (void)updateWeight:(double)newWeight;
 
