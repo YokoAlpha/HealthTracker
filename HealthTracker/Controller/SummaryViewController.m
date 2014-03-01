@@ -31,6 +31,7 @@
     self.topbarView.layer.cornerRadius = 16.0f;//Add rounded corners to views
     self.bottombarView.layer.cornerRadius = 16.0f;//Add rounded corners to views
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateOnScreenElements) name:healthTrackerDidUpdateNotification object:[HealthTracker sharedHealthTracker]];//Adds observer which will be used if the data updates to change the on screen labels.
+    [self updateOnScreenElements];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -142,6 +143,31 @@
     {
         //User is doing bad
         [self.circleView updateColor:[UIColor colorWithRed:237/255.0f green:70/255.0f blue:47/255.0f alpha:1.0f]];
+    }
+}
+
+- (IBAction)shareButtonPressed:(id)sender
+{
+    //Get screenshot
+    UIWindow *window = [[UIApplication sharedApplication] keyWindow];
+    if ([[UIScreen mainScreen] respondsToSelector:@selector(scale)])
+        UIGraphicsBeginImageContextWithOptions(window.bounds.size, NO, [UIScreen mainScreen].scale);
+    else
+        UIGraphicsBeginImageContext(window.bounds.size);
+    [window.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *screenshot = UIGraphicsGetImageFromCurrentImageContext();
+    //Description
+    double bmiScore = [HealthTracker sharedHealthTracker].bmiCount;
+    NSInteger numberOfFruitAndVeg = [[HealthTracker sharedHealthTracker] numberOfFiveADayEatenForDate:[NSDate date]];
+    NSString *shareDescription = [NSString stringWithFormat:@"My health stats BMI= %0.1f, I have had %d fruit and veg eaten today, fitness score = 0",bmiScore,numberOfFruitAndVeg];
+    if (nil != shareDescription && nil != screenshot)
+    {
+        NSArray *objectsToShare = @[shareDescription,screenshot];
+        UIActivityViewController *controller = [[UIActivityViewController alloc] initWithActivityItems:objectsToShare applicationActivities:nil];
+        NSArray *excludedActivities = @[UIActivityTypePostToWeibo, UIActivityTypePostToTencentWeibo,UIActivityTypeAssignToContact,UIActivityTypeSaveToCameraRoll,UIActivityTypeAddToReadingList,UIActivityTypePostToFlickr,UIActivityTypePostToVimeo];
+        controller.excludedActivityTypes = excludedActivities;
+        // Present the controller
+        [self presentViewController:controller animated:YES completion:nil];
     }
 }
 

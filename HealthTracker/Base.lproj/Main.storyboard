@@ -322,13 +322,13 @@ While using the app you will be able to see your progress of increased fitness a
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="progressTintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </progressView>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="...miles per day" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rhZ-ZB-FG0">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="miles per day" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rhZ-ZB-FG0">
                                         <rect key="frame" x="142" y="7" width="91" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="14"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="26" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6UL-Wv-qFs">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6UL-Wv-qFs">
                                         <rect key="frame" x="112" y="6" width="29" height="23"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -347,7 +347,7 @@ While using the app you will be able to see your progress of increased fitness a
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="progressTintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </progressView>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="...% of 5 a day" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yV1-Bz-4tf">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="% of 5 a day" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yV1-Bz-4tf">
                                         <rect key="frame" x="145" y="7" width="88" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="14"/>
@@ -384,7 +384,13 @@ While using the app you will be able to see your progress of increased fitness a
                         </subviews>
                         <color key="backgroundColor" red="0.93385385232747897" green="1" blue="0.90974887622430689" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Summary" image="AppSummary.png" id="zxN-1b-HUq"/>
+                    <navigationItem key="navigationItem" title="Summary" id="SGQ-54-nwp">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="Giz-XW-5Um">
+                            <connections>
+                                <action selector="shareButtonPressed:" destination="vXZ-lx-hvc" id="8zb-xT-hYT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="bmiResultLabel" destination="rLN-Wx-hRW" id="kso-LW-pqq"/>
                         <outlet property="bottombarView" destination="dfz-eN-xfm" id="gMs-TI-a7k"/>
@@ -396,7 +402,7 @@ While using the app you will be able to see your progress of increased fitness a
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1015" y="-1542"/>
+            <point key="canvasLocation" x="1541" y="-1542"/>
         </scene>
         <!--View Controller - BMI-->
         <scene sceneID="RGg-Cw-zaJ">
@@ -998,7 +1004,7 @@ While using the app you will be able to see your progress of increased fitness a
                         <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="gJf-a6-FQU"/>
+                        <segue destination="HSY-5y-TAX" kind="relationship" relationship="viewControllers" id="gJf-a6-FQU"/>
                         <segue destination="bf7-hP-Gie" kind="relationship" relationship="viewControllers" id="IBD-ki-7SC"/>
                         <segue destination="N5j-m1-iA6" kind="relationship" relationship="viewControllers" id="NcH-X2-VQu"/>
                         <segue destination="Pfr-U9-SgE" kind="relationship" relationship="viewControllers" id="7OR-rM-XC9"/>
@@ -1414,6 +1420,25 @@ While using the app you will be able to see your progress of increased fitness a
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ff1-Nb-4qM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1533" y="2088"/>
+        </scene>
+        <!--Navigation Controller - Summary-->
+        <scene sceneID="60N-X7-bXS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HSY-5y-TAX" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Summary" image="AppSummary.png" id="zxN-1b-HUq"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="REK-nB-VCg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="g2k-GV-XKu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DtO-ja-c6S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1015" y="-1542"/>
         </scene>
     </scenes>
     <resources>
