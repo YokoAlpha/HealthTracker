@@ -36,19 +36,20 @@
 - (void)populateData
 {
     self.sugarAndFats = [[NSMutableArray alloc]initWithArray:
-                         [self transformDictionaryIntoArrayOfFoods:[self loadFromPlist:@"SugarAndFats"]]];
+                         [self transformDictionaryIntoArrayOfFoods:[self loadFromPlist:@"SugarAndFats"] withKind:@"SugarAndFats"]];
     self.dairyAndMeat = [[NSMutableArray alloc]initWithArray:
-                         [self transformDictionaryIntoArrayOfFoods:[self loadFromPlist:@"DairyAndMeat"]]];
+                         [self transformDictionaryIntoArrayOfFoods:[self loadFromPlist:@"DairyAndMeat"] withKind:@"DairyAndMeat"]];
     self.vegetables = [[NSMutableArray alloc]initWithArray:
-                      [self transformDictionaryIntoArrayOfFoods:[self loadFromPlist:@"Vegetable"]]];
+                      [self transformDictionaryIntoArrayOfFoods:[self loadFromPlist:@"Vegetable"] withKind:@"Vegetable"]];
     self.fruit = [[NSMutableArray alloc]initWithArray:
-                      [self transformDictionaryIntoArrayOfFoods:[self loadFromPlist:@"Fruit"]]];
+                      [self transformDictionaryIntoArrayOfFoods:[self loadFromPlist:@"Fruit"] withKind:@"Fruit"]];
     self.starch = [[NSMutableArray alloc]initWithArray:
-                      [self transformDictionaryIntoArrayOfFoods:[self loadFromPlist:@"Starch"]]];
+                      [self transformDictionaryIntoArrayOfFoods:[self loadFromPlist:@"Starch"] withKind:@"Starch"]];
 }
 
 
 - (NSArray *)transformDictionaryIntoArrayOfFoods:(NSDictionary *)dictionary
+                                        withKind:(NSString *)kind;
 {
     NSMutableArray *returnedArray = [[NSMutableArray alloc]init];//To be send back
     NSArray *keys = [dictionary allKeys];
@@ -73,6 +74,7 @@
                     FoodDescription *foodObj = [[FoodDescription alloc]init];
                     foodObj.foodName = foodDictKey;
                     foodObj.foodCategory = key;
+                    foodObj.kind = kind;
                     foodObj.measurement = [finalFoodArray firstObject];//First element allways measurement type
                     [returnedArray addObject:foodObj];
                 }

@@ -41,9 +41,9 @@
 - (void)updateOnScreenElements
 {
     //Five a day tracking.
-    NSInteger numberOfFiveADay = [[HealthTracker sharedHealthTracker]numberOfFiveADayEaten];
-    NSInteger percentageEaten = (numberOfFiveADay/5)*100;
-    self.fiveADayPercentageLabel.text = [NSString stringWithFormat:@"%d",percentageEaten];
+    float numberOfFiveADay = [[HealthTracker sharedHealthTracker]numberOfFiveADayEatenForDate:[NSDate date]];
+    float percentageEaten = (numberOfFiveADay/5)*100;
+    self.fiveADayPercentageLabel.text = [NSString stringWithFormat:@"%0.f",percentageEaten];
     float progressBarPlot = percentageEaten/100;
     if (progressBarPlot > 1.0f)
     {

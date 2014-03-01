@@ -7,6 +7,7 @@
 //
 
 #import "BMIViewController.h"
+#import "HealthTracker.h"
 
 @interface BMIViewController ()
 
@@ -34,6 +35,13 @@
     self.bmiWeightInnerView.layer.cornerRadius = 16.0f;
     self.bmiWeightInnerView.layer.borderColor = [UIColor lightGrayColor].CGColor;
     self.bmiWeightInnerView.layer.borderWidth = 0.2f;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    self.weight.text = [NSString stringWithFormat:@"%0.f KG", [HealthTracker sharedHealthTracker].retrieveWeight];
+    self.height.text = [NSString stringWithFormat:@"%0.1f ft", [HealthTracker sharedHealthTracker].retrieveHeight];
+                        
 }
 
 - (void)didReceiveMemoryWarning

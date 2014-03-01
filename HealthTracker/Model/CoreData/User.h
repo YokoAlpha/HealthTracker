@@ -2,7 +2,7 @@
 //  User.h
 //  HealthTracker
 //
-//  Created by Yoko Alpha on 22/02/2014.
+//  Created by Yoko Alpha on 01/03/2014.
 //  Copyright (c) 2014 Yoko. All rights reserved.
 //
 
@@ -13,14 +13,14 @@
 
 @interface User : NSManagedObject
 
-@property (nonatomic, retain) NSString * gender;
+@property (nonatomic, retain) NSDate * breakfastReminder;
 @property (nonatomic, retain) NSDate * dateOfBirth;
 @property (nonatomic, retain) NSNumber * dayForBMICheck;
-@property (nonatomic, retain) NSDate * breakfastReminder;
-@property (nonatomic, retain) NSDate * lunchReminder;
 @property (nonatomic, retain) NSDate * dinnerReminder;
-@property (nonatomic, retain) NSNumber * releventFeedback;
+@property (nonatomic, retain) NSString * gender;
+@property (nonatomic, retain) NSDate * lunchReminder;
 @property (nonatomic, retain) NSString * measurementSystem;
+@property (nonatomic, retain) NSNumber * releventFeedback;
 @property (nonatomic, retain) NSSet *hasFood;
 @end
 

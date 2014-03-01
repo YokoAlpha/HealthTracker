@@ -192,6 +192,7 @@ NSString *healthTrackerDidUpdateNotification = @"healthTrackerDidUpdateNotificat
     foodObjectToAdd.measurement = food.measurement;
     foodObjectToAdd.category = food.foodCategory;
     foodObjectToAdd.dateConsumed = date;
+    foodObjectToAdd.kind = food.kind;
     foodObjectToAdd.quantityConsumed = [NSNumber numberWithInteger:quantity];
     NSError *error;
     if (![context save:&error]) {
@@ -213,7 +214,7 @@ NSString *healthTrackerDidUpdateNotification = @"healthTrackerDidUpdateNotificat
     return [fetchedObjects count];
 }
 
-- (NSInteger)numberOfFiveADayEaten
+- (NSInteger)numberOfFiveADayEatenForDate:(NSDate *)date
 {
     NSManagedObjectContext *context = [self managedObjectContext];
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
@@ -222,12 +223,34 @@ NSString *healthTrackerDidUpdateNotification = @"healthTrackerDidUpdateNotificat
     [fetchRequest setEntity:entity];
     NSError *error;
     NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
-    
-    //Use day (parse day and find the number of fruit and veg eaten for that day)
-    
-    return [fetchedObjects count];
+    NSInteger numberOfFruitOrVegEaten = 0;
+    for (id obj in fetchedObjects)
+    {
+        Food *food = (Food *)obj;
+        if ([food.kind isEqualToString:@"Vegetable"] || [food.kind isEqualToString:@"Fruit"])
+        {
+            //Use day (parse day and find the number of fruit and veg eaten for that day)
+            //Check if food was eaten today
+            if ([self isSameDayWithDate1:date date2:food.dateConsumed])
+            {
+                numberOfFruitOrVegEaten++;
+            }
+        }
+    }
+    return numberOfFruitOrVegEaten;
 }
 
+- (BOOL)isSameDayWithDate1:(NSDate*)date1
+                     date2:(NSDate*)date2
+{
+    NSCalendar* calendar = [NSCalendar currentCalendar];
+    unsigned unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit |  NSDayCalendarUnit;
+    NSDateComponents* comp1 = [calendar components:unitFlags fromDate:date1];
+    NSDateComponents* comp2 = [calendar components:unitFlags fromDate:date2];
+    return [comp1 day]   == [comp2 day] &&
+    [comp1 month] == [comp2 month] &&
+    [comp1 year]  == [comp2 year];
+}
 
 - (NSArray *)allFoodsEaten
 {
@@ -240,5 +263,40 @@ NSString *healthTrackerDidUpdateNotification = @"healthTrackerDidUpdateNotificat
     NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
     return fetchedObjects;
 }
+
+#pragma mark - BMI
+
+- (NSInteger)bmiCount
+{
+    //TODO: Calculate this.
+    return 99;
+}
+
+- (void)updateWeight:(double)newWeight
+{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setDouble:newWeight forKey:@"userWeight"];
+    [userDefaults synchronize];
+}
+
+- (double)retrieveWeight
+{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    return [userDefaults doubleForKey:@"userWeight"];
+}
+
+- (void)updateHeight:(double)newHeight
+{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setDouble:newHeight forKey:@"userHeight"];
+    [userDefaults synchronize];
+}
+
+- (double)retrieveHeight
+{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    return [userDefaults doubleForKey:@"userHeight"];
+}
+
 
 @end

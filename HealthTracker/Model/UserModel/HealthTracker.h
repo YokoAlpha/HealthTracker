@@ -61,12 +61,28 @@ extern NSString *healthTrackerDidUpdateNotification;//Extern used to alow the pr
 
 - (NSInteger)numberOfFoodsEatenForDate:(NSDate *)date;
 
-- (NSInteger)numberOfFiveADayEaten;
+- (NSInteger)numberOfFiveADayEatenForDate:(NSDate *)date;
 
 /*!
  Function for getting all the user consumed foods.
  @return Array on consumed foods.
  */
 - (NSArray *)allFoodsEaten;
+
+#pragma mark - BMI
+
+/*!
+ Function for getting users BMI score.
+ @return BMI count.
+ */
+- (NSInteger)bmiCount;
+
+- (void)updateWeight:(double)newWeight;
+
+- (double)retrieveWeight;
+
+- (void)updateHeight:(double)newHeight;
+
+- (double)retrieveHeight;
 
 @end

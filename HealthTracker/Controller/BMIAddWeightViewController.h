@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BMIAddWeightViewController : UIViewController
+@interface BMIAddWeightViewController : UIViewController <UIPickerViewDataSource,UIPickerViewDelegate>
 @property (nonatomic, strong)IBOutlet UIView * bmiWeightView;
 @property (nonatomic, strong)IBOutlet UIView * bmiWeightInnerView;
+@property (nonatomic, strong)IBOutlet UIPickerView * pickerView;
+
 @end

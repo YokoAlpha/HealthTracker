@@ -2,7 +2,7 @@
 //  User.m
 //  HealthTracker
 //
-//  Created by Yoko Alpha on 22/02/2014.
+//  Created by Yoko Alpha on 01/03/2014.
 //  Copyright (c) 2014 Yoko. All rights reserved.
 //
 
@@ -12,14 +12,14 @@
 
 @implementation User
 
-@dynamic gender;
+@dynamic breakfastReminder;
 @dynamic dateOfBirth;
 @dynamic dayForBMICheck;
-@dynamic breakfastReminder;
-@dynamic lunchReminder;
 @dynamic dinnerReminder;
-@dynamic releventFeedback;
+@dynamic gender;
+@dynamic lunchReminder;
 @dynamic measurementSystem;
+@dynamic releventFeedback;
 @dynamic hasFood;
 
 @end

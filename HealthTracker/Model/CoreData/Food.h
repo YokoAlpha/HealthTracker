@@ -2,7 +2,7 @@
 //  Food.h
 //  HealthTracker
 //
-//  Created by Yoko Alpha on 22/02/2014.
+//  Created by Yoko Alpha on 01/03/2014.
 //  Copyright (c) 2014 Yoko. All rights reserved.
 //
 
@@ -18,6 +18,7 @@
 @property (nonatomic, retain) NSString * measurement;
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSNumber * quantityConsumed;
+@property (nonatomic, retain) NSString * kind;
 @property (nonatomic, retain) User *newRelationship;
 
 @end
