@@ -12,5 +12,8 @@
 @property (nonatomic, strong)IBOutlet UIView * bmiWeightView;
 @property (nonatomic, strong)IBOutlet UIView * bmiWeightInnerView;
 @property (nonatomic, strong)IBOutlet UIPickerView * pickerView;
+@property (nonatomic, strong)IBOutlet UILabel * heightLabel;
+@property (nonatomic, strong)IBOutlet UILabel * weightLabel;
+
 
 @end

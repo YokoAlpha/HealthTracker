@@ -547,8 +547,8 @@ While using the app you will be able to see your progress of increased fitness a
                                         </subviews>
                                         <color key="backgroundColor" red="0.85854537220000005" green="1" blue="0.79709401329999996" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Height (cm)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kk2-5E-HBb">
-                                        <rect key="frame" x="51" y="17" width="81" height="21"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Height (cm)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kk2-5E-HBb">
+                                        <rect key="frame" x="7" y="17" width="125" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
                                         <nil key="highlightedColor"/>
@@ -581,7 +581,9 @@ While using the app you will be able to see your progress of increased fitness a
                     <connections>
                         <outlet property="bmiWeightInnerView" destination="6Ut-XP-oh4" id="k6T-Ou-AJF"/>
                         <outlet property="bmiWeightView" destination="b5w-0X-6DB" id="0bR-If-vfn"/>
+                        <outlet property="heightLabel" destination="kk2-5E-HBb" id="btm-Uz-oVG"/>
                         <outlet property="pickerView" destination="JMx-ZF-reG" id="cPR-AY-NPm"/>
+                        <outlet property="weightLabel" destination="PzI-oE-JrG" id="xru-kW-PgU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mcx-6D-ex4" userLabel="First Responder" sceneMemberID="firstResponder"/>

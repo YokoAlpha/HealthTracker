@@ -10,7 +10,6 @@
 #import "HealthTracker.h"
 
 @interface BMIAddWeightViewController ()
-@property (nonatomic,strong) NSArray *arrayOfHeights;
 @end
 
 @implementation BMIAddWeightViewController
@@ -19,9 +18,10 @@
                bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
+    if (self)
+    {
         // Custom initialization
-}
+    }
     return self;
 }
 
@@ -29,78 +29,36 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    self.arrayOfHeights = [NSArray arrayWithObjects:@(3.0),
-                           @(3.1),
-                           @(3.2),
-                           @(3.3),
-                           @(3.4),
-                           @(3.5),
-                           @(3.6),
-                           @(3.7),
-                           @(3.8),
-                           @(3.9),
-                           @(3.10),
-                           @(3.11),
-                           @(4.0),
-                           @(4.1),
-                           @(4.2),
-                           @(4.3),
-                           @(4.4),
-                           @(4.5),
-                           @(4.6),
-                           @(4.7),
-                           @(4.8),
-                           @(4.9),
-                           @(4.10),
-                           @(4.11),
-                           @(5.0),
-                           @(5.1),
-                           @(5.2),
-                           @(5.3),
-                           @(5.4),
-                           @(5.5),
-                           @(5.6),
-                           @(5.7),
-                           @(5.8),
-                           @(5.9),
-                           @(5.10),
-                           @(5.11),
-                           @(6.0),
-                           @(6.1),
-                           @(6.2),
-                           @(6.3),
-                           @(6.4),
-                           @(6.5),
-                           @(6.6),
-                           @(6.7),
-                           @(6.8),
-                           @(6.9),
-                           @(6.10),
-                           @(6.11),
-                           @(7.0),
-                           @(7.1),
-                           @(7.2),
-                           @(7.3),
-                           @(7.4),
-                           @(7.5),
-                           @(7.6),
-                           @(7.7),
-                           @(7.8),
-                           @(7.9),
-                           @(7.10),
-                           @(7.11)
-                           , nil];
     self.bmiWeightView.layer.cornerRadius = 16.0f;
     self.bmiWeightView.layer.borderColor = [UIColor lightGrayColor].CGColor;
     self.bmiWeightView.layer.borderWidth = 0.2f;
     self.bmiWeightInnerView.layer.cornerRadius = 16.0f;
     self.bmiWeightInnerView.layer.borderColor = [UIColor lightGrayColor].CGColor;
     self.bmiWeightInnerView.layer.borderWidth = 0.2f;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateOnScreenElements) name:healthTrackerDidUpdateNotification object:[HealthTracker sharedHealthTracker]];//Adds observer which will be used if the data updates to change the on screen labels.
+    [self updateOnScreenElements];
     [self.pickerView selectRow:30 inComponent:0 animated:NO];
     [self.pickerView selectRow:250 inComponent:1 animated:NO];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self updateOnScreenElements];
+}
 
+- (void)updateOnScreenElements
+{
+    if ([[HealthTracker sharedHealthTracker]isMetricSystem])
+    {
+        self.heightLabel.text = @"Height (cm)";
+        self.weightLabel.text = @"Weight (KG)";
+    }
+    else
+    {
+        self.heightLabel.text = @"Height (inch)";
+        self.weightLabel.text = @"Weight (lbs)";
+    }
+}
 
 #pragma mark - PickerView Delegate
 
@@ -115,21 +73,24 @@ numberOfRowsInComponent:(NSInteger)component
 {
     if (0 == component)//Height
     {
-//        return [self.arrayOfHeights count];//Imperial
         if ([[HealthTracker sharedHealthTracker]isMetricSystem])
         {
-          return 250;
+            return 250;//250cm (8 feet is the max height covered)
+        }
+        else
+        {
+            return 314;//314 inches (8 feet is the max height covered)
         }
     }
     if (1 == component)//Weight
     {
         if ([[HealthTracker sharedHealthTracker]isMetricSystem])
         {
-            return 500;//Half a ton (500KG)is the most we track as weight that is seriously heavy
+            return 500;//Half a ton (500KG)is the most tracked as weight that is seriously heavy
         }
         else
         {
-            return 1100;//Half a ton (1100lbs)is the most we track as weight that is seriously heavy
+            return 1100;//Half a ton (1100lbs)is the most tracked as weight that is seriously heavy
         }
     }
     else return 0;
@@ -153,9 +114,6 @@ numberOfRowsInComponent:(NSInteger)component
 {
     double weight = [self.pickerView selectedRowInComponent:1];
     double height = [self.pickerView selectedRowInComponent:0];
-
-//    NSNumber *height = [self.arrayOfHeights objectAtIndex:[self.pickerView selectedRowInComponent:0]];
-//    [[HealthTracker sharedHealthTracker] updateHeight:height.doubleValue];//Imperial
     [[HealthTracker sharedHealthTracker] updateHeight:height];
     [[HealthTracker sharedHealthTracker] updateWeight:weight];
 }

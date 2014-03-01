@@ -211,7 +211,8 @@ NSString *healthTrackerDidUpdateNotification = @"healthTrackerDidUpdateNotificat
     foodObjectToAdd.kind = food.kind;
     foodObjectToAdd.quantityConsumed = [NSNumber numberWithInteger:quantity];
     NSError *error;
-    if (![context save:&error]) {
+    if (![context save:&error])
+    {
         NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
     }
     [self dataUpdated];
@@ -285,16 +286,30 @@ NSString *healthTrackerDidUpdateNotification = @"healthTrackerDidUpdateNotificat
 - (double)bmiCount
 {
     //http://www.whathealth.com/bmi/formula.html
-    /*
-     
-    METRIC
-    BMI( kg/m² ) =  weight in kilograms
-                        ————————————
-                      height in meters²
-    */
-    double weight = [self retrieveWeight];
-    double height = [self retrieveHeight];
-    return weight/(height/100*height/100);//need to devide by 100 to get meters
+    if ([[HealthTracker sharedHealthTracker]isMetricSystem])
+    {
+        /*
+        METRIC
+        BMI( kg/m² ) =  weight in kilograms
+                            ————————————
+                          height in meters²
+        */
+        double weight = [self retrieveWeight];
+        double height = [self retrieveHeight];
+        return weight/(height/100*height/100);//need to devide by 100 to get meters
+    }
+    else
+    {
+        /*
+         Imperial
+         BMI ( lbs/inches² )   =  (weight in pounds * 703 )
+                                        ————————————
+                                      height in inches²
+         */
+        double weight = [self retrieveWeight];
+        double height = [self retrieveHeight];
+        return (weight*703)/(height*height);
+    }
 }
 
 - (void)updateWeight:(double)newWeight

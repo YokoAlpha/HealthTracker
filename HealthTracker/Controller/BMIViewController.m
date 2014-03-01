@@ -54,7 +54,7 @@
     }
     else
     {
-        self.height.text = [NSString stringWithFormat:@"%0.f """, [HealthTracker sharedHealthTracker].retrieveHeight];
+        self.height.text = [NSString stringWithFormat:@"%0.f inch", [HealthTracker sharedHealthTracker].retrieveHeight];
         self.weight.text = [NSString stringWithFormat:@"%0.f lbs", [HealthTracker sharedHealthTracker].retrieveWeight];
     }
 
