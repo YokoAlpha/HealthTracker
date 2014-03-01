@@ -36,6 +36,7 @@
     self.bmiWeightInnerView.layer.borderColor = [UIColor lightGrayColor].CGColor;
     self.bmiWeightInnerView.layer.borderWidth = 0.2f;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateOnScreenElements) name:healthTrackerDidUpdateNotification object:[HealthTracker sharedHealthTracker]];//Adds observer which will be used if the data updates to change the on screen labels.
+    [self updateOnScreenElements];
 }
 
 - (void)updateOnScreenElements

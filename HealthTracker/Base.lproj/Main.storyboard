@@ -417,11 +417,11 @@ While using the app you will be able to see your progress of increased fitness a
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="progress.png" translatesAutoresizingMaskIntoConstraints="NO" id="NVC-Ql-9mP">
-                                <rect key="frame" x="-1" y="114" width="320" height="111"/>
+                                <rect key="frame" x="-3" y="114" width="327" height="111"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progressViewStyle="bar" progress="0.30000000000000016" trackImage="progress.png" translatesAutoresizingMaskIntoConstraints="NO" id="esa-TX-Q9O">
-                                <rect key="frame" x="0.0" y="146" width="310" height="3"/>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progressViewStyle="bar" trackImage="progress.png" translatesAutoresizingMaskIntoConstraints="NO" id="esa-TX-Q9O">
+                                <rect key="frame" x="0.0" y="146" width="320" height="3"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </progressView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="glI-QU-Ldu">
