@@ -67,7 +67,14 @@
         self.bmiDescription.text = @"Your BMI is in obesity range";
     }
     [self.bmiProgressBar setProgress:progressBarPlot];
-    self.bmiResult.text = [NSString stringWithFormat:@"%0.1f",bmiResult];
+    if (isnan(bmiResult))//Result is not a natural number
+    {
+        self.bmiResult.text = @"0";
+    }
+    else
+    {
+        self.bmiResult.text = [NSString stringWithFormat:@"%0.1f",bmiResult];
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated

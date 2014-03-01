@@ -83,7 +83,14 @@
     {
         [self bmiState:3];//Bad
     }
-    self.bmiResultLabel.text = [NSString stringWithFormat:@"%0.1f",bmiResult];
+    if (isnan(bmiResult))//Result is not a natural number
+    {
+        self.bmiResultLabel.text = @"0";
+    }
+    else
+    {
+        self.bmiResultLabel.text = [NSString stringWithFormat:@"%0.1f",bmiResult];
+    }
 }
 
 /*
