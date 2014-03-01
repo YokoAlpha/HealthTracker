@@ -67,6 +67,14 @@ NSString *healthTrackerDidUpdateNotification = @"healthTrackerDidUpdateNotificat
         userObjectToAdd.lunchReminder = user.lunchReminder;
         userObjectToAdd.dinnerReminder = user.dinnerReminder;
         userObjectToAdd.releventFeedback = [NSNumber numberWithBool:user.releventFeedback];
+        if (nil == user.measurementSystem)
+        {
+            userObjectToAdd.measurementSystem = @"Metric";//Default
+        }
+        else
+        {
+            userObjectToAdd.measurementSystem = user.measurementSystem;
+        }
         NSError *error;
         if (![context save:&error]) {
             NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
@@ -112,6 +120,7 @@ NSString *healthTrackerDidUpdateNotification = @"healthTrackerDidUpdateNotificat
             newUser.lunchReminder = userReturned.lunchReminder;
             newUser.dinnerReminder = userReturned.dinnerReminder;
             newUser.releventFeedback = [userReturned.releventFeedback boolValue];
+            newUser.measurementSystem = userReturned.measurementSystem;
             return newUser;
         }
     }
@@ -161,6 +170,7 @@ NSString *healthTrackerDidUpdateNotification = @"healthTrackerDidUpdateNotificat
             userReturned.lunchReminder = user.lunchReminder;
             userReturned.dinnerReminder = user.dinnerReminder;
             userReturned.releventFeedback = [NSNumber numberWithBool:user.releventFeedback];
+            userReturned.measurementSystem = user.measurementSystem;
             NSError *error = nil;
             BOOL savedSuccessfully = [self.managedObjectContext save:&error];
             if (!savedSuccessfully)
@@ -171,6 +181,12 @@ NSString *healthTrackerDidUpdateNotification = @"healthTrackerDidUpdateNotificat
         }
     }
     [NotificationAdapter updateLocalNotificationsWithUser:user];
+}
+
+- (BOOL)isMetricSystem
+{
+    UserDescription *user = [self retrieveUserData];
+    return [user.measurementSystem isEqualToString:@"Metric"];//Returns if the user system is metric.
 }
 
 #pragma mark - Food

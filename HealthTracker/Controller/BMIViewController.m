@@ -39,12 +39,24 @@
     [self updateOnScreenElements];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self updateOnScreenElements];
+}
+
 - (void)updateOnScreenElements
 {
     //Current user weight and height
-    self.weight.text = [NSString stringWithFormat:@"%0.f KG", [HealthTracker sharedHealthTracker].retrieveWeight];
-    //    self.height.text = [NSString stringWithFormat:@"%0.1f ft", [HealthTracker sharedHealthTracker].retrieveHeight];//Imperial
-    self.height.text = [NSString stringWithFormat:@"%0.f CM", [HealthTracker sharedHealthTracker].retrieveHeight];
+    if ([[HealthTracker sharedHealthTracker]isMetricSystem])
+    {
+        self.height.text = [NSString stringWithFormat:@"%0.f CM", [HealthTracker sharedHealthTracker].retrieveHeight];
+        self.weight.text = [NSString stringWithFormat:@"%0.f KG", [HealthTracker sharedHealthTracker].retrieveWeight];
+    }
+    else
+    {
+        self.height.text = [NSString stringWithFormat:@"%0.f """, [HealthTracker sharedHealthTracker].retrieveHeight];
+        self.weight.text = [NSString stringWithFormat:@"%0.f lbs", [HealthTracker sharedHealthTracker].retrieveWeight];
+    }
 
     /* Update BMI labels */
     double bmiResult = [HealthTracker sharedHealthTracker].bmiCount;
@@ -75,11 +87,6 @@
     {
         self.bmiResult.text = [NSString stringWithFormat:@"%0.1f",bmiResult];
     }
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-  
 }
 
 - (void)didReceiveMemoryWarning

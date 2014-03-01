@@ -41,8 +41,9 @@ extern NSString *healthTrackerDidUpdateNotification;//Extern used to alow the pr
 
 - (void)updateUser:(UserDescription *)user;
 
-
 - (UserDescription *)retrieveUserData;
+
+- (BOOL)isMetricSystem;
 
 #pragma mark - Food
 

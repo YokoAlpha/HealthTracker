@@ -49,7 +49,12 @@
 {
     //Update BMI
     UITabBarItem *tbi = (UITabBarItem *)[self.tabBar.items objectAtIndex:1];
-    tbi.badgeValue = [NSString stringWithFormat:@"%d",(NSInteger)[HealthTracker sharedHealthTracker].bmiCount];//TODO: Get accurate BMI count
+    double bmiCount = [HealthTracker sharedHealthTracker].bmiCount;
+    if (isnan(bmiCount))
+    {
+        bmiCount = 0.0;
+    }
+    tbi.badgeValue = [NSString stringWithFormat:@"%d",(NSInteger)bmiCount];//TODO: Get accurate BMI count
 }
 
 - (void)didReceiveMemoryWarning

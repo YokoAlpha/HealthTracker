@@ -113,14 +113,24 @@
 - (NSInteger)pickerView:(UIPickerView *)pickerView
 numberOfRowsInComponent:(NSInteger)component
 {
-    if (0 == component)
+    if (0 == component)//Height
     {
 //        return [self.arrayOfHeights count];//Imperial
+        if ([[HealthTracker sharedHealthTracker]isMetricSystem])
+        {
           return 250;
+        }
     }
-    if (1 == component)
+    if (1 == component)//Weight
     {
-        return 500;
+        if ([[HealthTracker sharedHealthTracker]isMetricSystem])
+        {
+            return 500;//Half a ton (500KG)is the most we track as weight that is seriously heavy
+        }
+        else
+        {
+            return 1100;//Half a ton (1100lbs)is the most we track as weight that is seriously heavy
+        }
     }
     else return 0;
 }
@@ -130,8 +140,6 @@ numberOfRowsInComponent:(NSInteger)component
 {
     if (0 == component)
     {
-        //NSNumber *number = [self.arrayOfHeights objectAtIndex:row];
-        //        return [NSString stringWithFormat:@"%0.1f",number.doubleValue];//Imperial
         return [NSString stringWithFormat:@"%02d",row];
     }
     if (1 == component)

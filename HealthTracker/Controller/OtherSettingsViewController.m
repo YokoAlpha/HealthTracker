@@ -10,7 +10,6 @@
 #import "HealthTracker.h"
 
 @interface OtherSettingsViewController ()
-@property (nonatomic,strong)UserDescription *userDetails;
 @end
 
 @implementation OtherSettingsViewController
@@ -37,16 +36,12 @@
 
 - (void)updateOnScreenElements
 {
-    self.userDetails = [[HealthTracker sharedHealthTracker]retrieveUserData];
-    if ([self.userDetails.measurementSystem isEqualToString:@"Imperial"])
+    UserDescription *userDetails = [[HealthTracker sharedHealthTracker]retrieveUserData];
+    if ([userDetails.measurementSystem isEqualToString:@"Imperial"])
     {
         self.measurementSystem.selectedSegmentIndex = 1;
     }
-    else if ([self.userDetails.measurementSystem isEqualToString:@"Metric"])
-    {
-        self.measurementSystem.selectedSegmentIndex = 0;
-    }
-    else
+    else if ([userDetails.measurementSystem isEqualToString:@"Metric"])
     {
         self.measurementSystem.selectedSegmentIndex = 0;
     }
@@ -60,15 +55,16 @@
 
 - (IBAction)updateOtherSettings:(id)sender
 {
+    UserDescription *userDetails = [[HealthTracker sharedHealthTracker]retrieveUserData];
     if (1 == self.measurementSystem.selectedSegmentIndex)
     {
-        self.userDetails.measurementSystem = @"Imperial";
+        userDetails.measurementSystem = @"Imperial";
     }
     else
     {
-        self.userDetails.measurementSystem = @"Metric";
+        userDetails.measurementSystem = @"Metric";
     }
-    [[HealthTracker sharedHealthTracker]updateUser:self.userDetails];
+    [[HealthTracker sharedHealthTracker]updateUser:userDetails];
 }
 
 @end
