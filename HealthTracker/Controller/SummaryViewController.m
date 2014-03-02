@@ -67,6 +67,10 @@
     //BMI tracking
     //https://www.nhlbi.nih.gov/guidelines/obesity/BMI/bmi-m.htm
     double bmiResult = [HealthTracker sharedHealthTracker].bmiCount;
+    if (isnan(bmiResult))//Result is not a natural number
+    {
+        bmiResult = 0;
+    }
     if(bmiResult < 18.5)//UnderWeight
     {
         [self bmiState:3];//Bad
@@ -83,14 +87,7 @@
     {
         [self bmiState:3];//Bad
     }
-    if (isnan(bmiResult))//Result is not a natural number
-    {
-        self.bmiResultLabel.text = @"0";
-    }
-    else
-    {
-        self.bmiResultLabel.text = [NSString stringWithFormat:@"%0.1f",bmiResult];
-    }
+    self.bmiResultLabel.text = [NSString stringWithFormat:@"%0.1f",bmiResult];
 }
 
 /*
@@ -166,7 +163,7 @@
     //Description
     double bmiScore = [HealthTracker sharedHealthTracker].bmiCount;
     NSInteger numberOfFruitAndVeg = [[HealthTracker sharedHealthTracker] numberOfFiveADayEatenForDate:[NSDate date]];
-    NSString *shareDescription = [NSString stringWithFormat:@"My health stats BMI= %0.1f, I have had %d fruit and veg eaten today, fitness score = 0",bmiScore,numberOfFruitAndVeg];
+    NSString *shareDescription = [NSString stringWithFormat:@"My health stats BMI= %0.1f, I have had %ld fruit and veg eaten today, fitness score = 0",bmiScore,(long)numberOfFruitAndVeg];
     if (nil != shareDescription && nil != screenshot)
     {
         NSArray *objectsToShare = @[shareDescription,screenshot];

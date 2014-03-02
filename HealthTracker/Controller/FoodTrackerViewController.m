@@ -39,7 +39,7 @@
 
 - (void)updateOnScreenElements
 {
-    self.numberOfFoodsEatenTodayLabel.text = [NSString stringWithFormat:@"You had %d of your 5 a day",[[HealthTracker sharedHealthTracker]numberOfFiveADayEatenForDate:[NSDate date]]];
+    self.numberOfFoodsEatenTodayLabel.text = [NSString stringWithFormat:@"You had %ld of your 5 a day",(long)[[HealthTracker sharedHealthTracker]numberOfFiveADayEatenForDate:[NSDate date]]];
 }
 
 - (void)didReceiveMemoryWarning

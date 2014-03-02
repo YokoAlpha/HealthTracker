@@ -156,7 +156,7 @@ numberOfRowsInComponent:(NSInteger)component
     if (2 == component)
     {
         NSNumber *year = [self.years objectAtIndex:row];
-        title = [NSString stringWithFormat:@"%d",[year integerValue]];
+        title = [NSString stringWithFormat:@"%ld",(long)[year integerValue]];
     }
     return title;
 }

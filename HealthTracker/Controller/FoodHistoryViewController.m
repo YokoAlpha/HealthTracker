@@ -85,7 +85,7 @@
         {
             units = @"ml";
         }
-        NSString *amountString = [NSString stringWithFormat:@"%d%@",[food.quantityConsumed integerValue],units];
+        NSString *amountString = [NSString stringWithFormat:@"%ld%@",(long)[food.quantityConsumed integerValue],units];
        
         cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ @ %@ %@",amountString,timeConsumedString,dateConsumedString];
     }

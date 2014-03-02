@@ -101,11 +101,11 @@ numberOfRowsInComponent:(NSInteger)component
 {
     if (0 == component)
     {
-        return [NSString stringWithFormat:@"%02d",row];
+        return [NSString stringWithFormat:@"%02ld",(long)row];
     }
     if (1 == component)
     {
-        return [NSString stringWithFormat:@"%02d",row];
+        return [NSString stringWithFormat:@"%02ld",(long)row];
     }
     else return nil;
 }

@@ -104,7 +104,7 @@ NSString *healthTrackerDidUpdateNotification = @"healthTrackerDidUpdateNotificat
     
     if (fetchedObjects.count != 1)
     {
-        NSAssert(FALSE, @"There can only be one User currently, terminate app if this is the case");
+        //NSAssert(FALSE, @"There can only be one User currently, terminate app if this is the case");
     }
     else
     {

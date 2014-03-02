@@ -32,7 +32,7 @@
     self.pickerData = [[NSMutableArray alloc]init];
     for (NSInteger i = 1; i <201; i++)
     {
-        [self.pickerData addObject:[NSNumber numberWithInt:i*10]];
+        [self.pickerData addObject:[NSNumber numberWithInt:(int)i*10]];
     }
 }
 
