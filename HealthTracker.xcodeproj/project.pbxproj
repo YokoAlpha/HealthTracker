@@ -31,6 +31,7 @@
 		E04C6ABA18849986005E90B2 /* HealthTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E04C6AB918849986005E90B2 /* HealthTrackerTests.m */; };
 		E04C6AD41884A0AF005E90B2 /* BMI.png in Resources */ = {isa = PBXBuildFile; fileRef = E04C6AD21884A0AF005E90B2 /* BMI.png */; };
 		E04C6AD51884A0AF005E90B2 /* BMI@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E04C6AD31884A0AF005E90B2 /* BMI@2x.png */; };
+		E069C65F18D79AA70006F730 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E069C65E18D79AA70006F730 /* CoreLocation.framework */; };
 		E06BFC25189E596D00A17F1C /* UserDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = E06BFC23189E596D00A17F1C /* UserDescription.m */; };
 		E06BFC28189E835100A17F1C /* HealthTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = E06BFC27189E835100A17F1C /* HealthTracker.m */; };
 		E06BFC31189EA67B00A17F1C /* SetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E06BFC30189EA67B00A17F1C /* SetupViewController.m */; };
@@ -121,6 +122,7 @@
 		E04C6AB918849986005E90B2 /* HealthTrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HealthTrackerTests.m; sourceTree = "<group>"; };
 		E04C6AD21884A0AF005E90B2 /* BMI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BMI.png; sourceTree = "<group>"; };
 		E04C6AD31884A0AF005E90B2 /* BMI@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BMI@2x.png"; sourceTree = "<group>"; };
+		E069C65E18D79AA70006F730 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		E06BFC22189E596D00A17F1C /* UserDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserDescription.h; path = Model/UserModel/UserDescription.h; sourceTree = "<group>"; };
 		E06BFC23189E596D00A17F1C /* UserDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserDescription.m; path = Model/UserModel/UserDescription.m; sourceTree = "<group>"; };
 		E06BFC26189E835100A17F1C /* HealthTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HealthTracker.h; path = Model/UserModel/HealthTracker.h; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E069C65F18D79AA70006F730 /* CoreLocation.framework in Frameworks */,
 				E03AB6B718A7C8BD00EA6BCE /* CoreData.framework in Frameworks */,
 				E0CFF07B1885E817003A4D47 /* MapKit.framework in Frameworks */,
 				E04C6A9118849986005E90B2 /* CoreGraphics.framework in Frameworks */,
@@ -250,6 +253,7 @@
 		E04C6A8D18849986005E90B2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E069C65E18D79AA70006F730 /* CoreLocation.framework */,
 				E03AB6B618A7C8BD00EA6BCE /* CoreData.framework */,
 				E0CFF07A1885E817003A4D47 /* MapKit.framework */,
 				E04C6A8E18849986005E90B2 /* Foundation.framework */,
