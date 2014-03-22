@@ -60,7 +60,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *MyIdentifier = @"foodHistoryCell";
+    static NSString *MyIdentifier = @"runCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
     if (cell == nil)
     {
@@ -73,17 +73,15 @@
         Run *run = (Run *)rowObj;
         
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        [dateFormatter setDateFormat:@"EEE', 'dd' 'MMM' 'yyyy'"];
-        NSDateFormatter *timeFormatter = [[NSDateFormatter alloc] init];
-        [timeFormatter setDateFormat:@"hh:mm"];
+        [dateFormatter setDateFormat:@"MMM dd, yyyy - HH:mm"];
         NSString *dateStarted = [dateFormatter stringFromDate:run.runStartTime];
         NSTimeInterval timeInterval = [run.runEndTime timeIntervalSinceDate: run.runStartTime];
         //Convert the time correctly to present
         NSInteger minutes = floor(timeInterval/60);
         NSInteger seconds = round(timeInterval - minutes * 60);
-        NSString *titleForCell = [NSString stringWithFormat:@"%@ Ran for %d:%02d", dateStarted, minutes, seconds];
+        NSString *titleForCell = [NSString stringWithFormat:@"%@", dateStarted];
         cell.textLabel.text = titleForCell;
-        cell.detailTextLabel.text = [NSString stringWithFormat:@"%0.2f Meters",[run.distanceRan doubleValue]];
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"Distance %0.2fM : Time %d:%02d",[run.distanceRan doubleValue] , minutes, seconds];
     }
     return cell;
 }
