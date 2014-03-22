@@ -2,7 +2,7 @@
 //  User.h
 //  HealthTracker
 //
-//  Created by Yoko Alpha on 01/03/2014.
+//  Created by Yoko Alpha on 22/03/2014.
 //  Copyright (c) 2014 Yoko. All rights reserved.
 //
 
@@ -22,6 +22,7 @@
 @property (nonatomic, retain) NSString * measurementSystem;
 @property (nonatomic, retain) NSNumber * releventFeedback;
 @property (nonatomic, retain) NSSet *hasFood;
+@property (nonatomic, retain) NSSet *hasRuns;
 @end
 
 @interface User (CoreDataGeneratedAccessors)
@@ -30,5 +31,10 @@
 - (void)removeHasFoodObject:(Food *)value;
 - (void)addHasFood:(NSSet *)values;
 - (void)removeHasFood:(NSSet *)values;
+
+- (void)addHasRunsObject:(NSManagedObject *)value;
+- (void)removeHasRunsObject:(NSManagedObject *)value;
+- (void)addHasRuns:(NSSet *)values;
+- (void)removeHasRuns:(NSSet *)values;
 
 @end

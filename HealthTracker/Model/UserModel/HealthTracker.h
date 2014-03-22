@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "FoodDescription.h"
 #import "UserDescription.h"
+#import "RunDescription.h"
 #import "HealthTrackerAppDelegate.h"
 @import CoreData;
 
@@ -44,6 +45,11 @@ extern NSString *healthTrackerDidUpdateNotification;//Extern used to alow the pr
 - (UserDescription *)retrieveUserData;
 
 - (BOOL)isMetricSystem;
+
+#pragma mark - Runs
+
+- (void)addCompletedRun:(RunDescription *)run;
+- (NSArray *)allRunsCompleted;
 
 #pragma mark - Food
 

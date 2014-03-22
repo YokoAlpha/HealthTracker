@@ -9,6 +9,7 @@
 #import "HealthTracker.h"
 #import "Food.h"
 #import "User.h"
+#import "Run.h"
 #import "NotificationAdapter.h"
 
 NSString *healthTrackerDidUpdateNotification = @"healthTrackerDidUpdateNotification";
@@ -280,6 +281,36 @@ NSString *healthTrackerDidUpdateNotification = @"healthTrackerDidUpdateNotificat
     NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
     return fetchedObjects;
 }
+
+#pragma mark - Runs
+
+- (void)addCompletedRun:(RunDescription *)run
+{
+    NSManagedObjectContext *context = [self managedObjectContext];
+    Run *runObjectToAdd = [NSEntityDescription insertNewObjectForEntityForName:@"Run" inManagedObjectContext:context];
+    runObjectToAdd.arrayOfRunPoints = run.arrayOfRunPoints;
+    runObjectToAdd.distanceRan = [NSNumber numberWithDouble:run.distanceRan];
+    runObjectToAdd.runStartTime = run.runStartTime;
+    runObjectToAdd.runEndTime = run.runEndTime;
+    NSError *error;
+    if (![context save:&error])
+    {
+        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+    }
+    [self dataUpdated];
+}
+
+- (NSArray *)allRunsCompleted
+{
+    NSManagedObjectContext *context = [self managedObjectContext];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Run" inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+    NSError *error;
+    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+    return fetchedObjects;
+}
+
 
 #pragma mark - BMI
 

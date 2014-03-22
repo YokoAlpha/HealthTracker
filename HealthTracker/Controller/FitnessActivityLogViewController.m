@@ -7,6 +7,8 @@
 //
 
 #import "FitnessActivityLogViewController.h"
+#import "RunDescription.h"
+#import "HealthTracker.h"
 
 @interface FitnessActivityLogViewController ()
 @property (nonatomic,strong) NSTimer *timer;
@@ -135,6 +137,16 @@
     {
         self.resetButton.alpha = 1;
     }
+}
+
+- (IBAction)saveRun:(id)sender
+{
+    RunDescription *rundescriptionToAdd = [[RunDescription alloc]init];
+    rundescriptionToAdd.arrayOfRunPoints = [[NSMutableArray alloc]initWithObjects:@(1.5),@(3.6), nil];
+    rundescriptionToAdd.distanceRan = 4.55;
+    rundescriptionToAdd.runStartTime = [NSDate date];
+    rundescriptionToAdd.runEndTime = [[NSDate date]dateByAddingTimeInterval:3600];
+    [[HealthTracker sharedHealthTracker] addCompletedRun:rundescriptionToAdd];
 }
 
 @end

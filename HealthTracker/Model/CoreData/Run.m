@@ -1,23 +1,21 @@
 //
-//  Food.m
+//  Run.m
 //  HealthTracker
 //
 //  Created by Yoko Alpha on 22/03/2014.
 //  Copyright (c) 2014 Yoko. All rights reserved.
 //
 
-#import "Food.h"
+#import "Run.h"
 #import "User.h"
 
 
-@implementation Food
+@implementation Run
 
-@dynamic category;
-@dynamic dateConsumed;
-@dynamic kind;
-@dynamic measurement;
-@dynamic name;
-@dynamic quantityConsumed;
+@dynamic arrayOfRunPoints;
+@dynamic runEndTime;
+@dynamic runStartTime;
+@dynamic distanceRan;
 @dynamic newRelationship;
 
 @end
