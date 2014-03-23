@@ -12,14 +12,17 @@
 
 @interface FitnessActivityLogViewController ()
 @property (nonatomic,strong) NSTimer *timer;
+@property (nonatomic,strong) RunDescription *runInProgress;
 @end
 
 @implementation FitnessActivityLogViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithNibName:(NSString *)nibNameOrNil
+               bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
+    if (self)
+    {
         // Custom initialization
     }
     return self;
@@ -39,6 +42,14 @@
 
 - (IBAction)startButtonPressed:(id)sender
 {
+    /* Once start button pressed
+        * Need to calculate distance covered (Maybe it needs to be put on screen).
+        * Record start date
+        * Start recording points (map view uses it).
+     */
+    [self startRun];
+    self.runInProgress = [[RunDescription alloc]init];
+    self.runInProgress.runStartTime = [NSDate date];//Started run using current time and date.
     self.timer = [NSTimer scheduledTimerWithTimeInterval:0.01
                                                   target:self
                                                 selector:@selector(showTime)
@@ -47,8 +58,21 @@
     [self buttonStatesWithStartState:NO stopState:YES resetState:NO];
 }
 
+
+- (void)startRun
+{
+    //TODO: kick off polyline drawing, Start recording points
+    [self calculatedDistanceCovered];
+}
+
+- (void)calculatedDistanceCovered
+{
+    
+}
+
 - (IBAction)stopButtonPressed:(id)sender
 {
+    self.runInProgress.runEndTime = [NSDate date];//Ended run using current time and date.
     [self.timer invalidate];
     self.timer = nil;
     [self buttonStatesWithStartState:YES stopState:NO resetState:YES];
@@ -56,13 +80,13 @@
 
 - (IBAction)resetButtonPressed:(id)sender
 {
+    self.runInProgress = nil;
     self.hoursLabel.text = @"0";
     self.minutesLabel.text = @"0";
     self.secondsLabel.text = @"0";
     self.hundredsOfSecondsLabel.text = @"0";
     [self buttonStatesWithStartState:YES stopState:NO resetState:NO];
 }
-
 
 - (void)showTime
 {
@@ -141,12 +165,26 @@
 
 - (IBAction)saveRun:(id)sender
 {
-    RunDescription *rundescriptionToAdd = [[RunDescription alloc]init];
-    rundescriptionToAdd.arrayOfRunPoints = [[NSMutableArray alloc]initWithObjects:@(1.5),@(3.6), nil];
-    rundescriptionToAdd.distanceRan = 4.55;
-    rundescriptionToAdd.runStartTime = [NSDate date];
-    rundescriptionToAdd.runEndTime = [[NSDate date]dateByAddingTimeInterval:3600];
-    [[HealthTracker sharedHealthTracker] addCompletedRun:rundescriptionToAdd];
+    /*
+     Test data
+        RunDescription *rundescriptionToAdd = [[RunDescription alloc]init];
+        rundescriptionToAdd.arrayOfRunPoints = [[NSMutableArray alloc]initWithObjects:@(1.5),@(3.6), nil];
+        rundescriptionToAdd.distanceRan = 4.55;
+        rundescriptionToAdd.runStartTime = [NSDate date];
+        rundescriptionToAdd.runEndTime = [[NSDate date]dateByAddingTimeInterval:3600];
+     */
+    
+    /* Save button pressed
+     * Programatically call stop button (only if end date is nil).
+     * Dump the description object and save it.
+     * Call reset button internally.
+     */
+    if (nil == self.runInProgress.runEndTime)
+    {
+        [self stopButtonPressed:nil];//We ned to stop the run if the run hasn't been completed
+    }
+    [[HealthTracker sharedHealthTracker] addCompletedRun: self.runInProgress];
+    [self resetButtonPressed:nil];
 }
 
 @end
