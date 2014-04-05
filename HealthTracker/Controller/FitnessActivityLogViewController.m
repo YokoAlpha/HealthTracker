@@ -31,8 +31,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
     self.statsContainer.backgroundColor = [UIColor colorWithRed:0 green:.62 blue:.984 alpha:0.3];
+    self.mapView.userTrackingMode = MKUserTrackingModeFollowWithHeading;
+    [self configureRoutes];
 }
 
 - (void)didReceiveMemoryWarning
@@ -187,5 +188,123 @@
     [[HealthTracker sharedHealthTracker] addCompletedRun: self.runInProgress];
     [self resetButtonPressed:nil];
 }
+
+#pragma mark
+#pragma mark Polyline
+
+- (void)configureRoutes
+{
+	MKMapPoint northEastPoint = MKMapPointMake(0.f, 0.f);
+	MKMapPoint southWestPoint = MKMapPointMake(0.f, 0.f);
+    //Convert points into points 2 dimensional array
+	MKMapPoint* pointArray = malloc(sizeof(CLLocationCoordinate2D) * _points.count);
+    for(int index = 0; index < _points.count; index++)
+	{
+        CLLocation *location = [_points objectAtIndex:index];
+        CLLocationDegrees latitude  = location.coordinate.latitude;
+		CLLocationDegrees longitude = location.coordinate.longitude;
+		// Core location created with Lat Long
+		CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(latitude, longitude);
+		MKMapPoint point = MKMapPointForCoordinate(coordinate);
+		if (index == 0)//First point used if no others exist
+        {
+			northEastPoint = point;
+			southWestPoint = point;
+		}
+        else
+        {
+			if (point.x > northEastPoint.x)
+            {
+                northEastPoint.x = point.x;
+            }
+			if(point.y > northEastPoint.y)
+            {
+				northEastPoint.y = point.y;
+            }
+			if (point.x < southWestPoint.x)
+            {
+				southWestPoint.x = point.x;
+            }
+			if (point.y < southWestPoint.y)
+            {
+				southWestPoint.y = point.y;
+            }
+		}
+		pointArray[index] = point;
+	}
+    if (_runRouteLine)
+    {
+        [self.mapView removeOverlay:_runRouteLine];
+    }
+    _runRouteLine = [MKPolyline polylineWithPoints:pointArray count:_points.count];
+	if (nil != _runRouteLine)
+    {
+		[self.mapView addOverlay:_runRouteLine];//Route added to map as an MKOverlay
+	}
+}
+
+#pragma mark
+#pragma mark MKMapViewDelegate
+
+- (void)mapView:(MKMapView *)mapView
+didAddOverlayViews:(NSArray *)overlayViews
+{
+}
+
+- (void)mapView:(MKMapView *)mapView
+didAddAnnotationViews:(NSArray *)views
+{
+}
+
+- (MKOverlayView *)mapView:(MKMapView *)mapView
+            viewForOverlay:(id <MKOverlay>)overlay
+{
+	MKOverlayView* overlayView = nil;
+	if(overlay == _runRouteLine)
+	{
+        if (_runRouteLineView)
+        {
+            [_runRouteLineView removeFromSuperview];
+        }
+        _runRouteLineView = [[MKPolylineView alloc] initWithPolyline:_runRouteLine];
+        _runRouteLineView.fillColor = [UIColor redColor];
+        _runRouteLineView.strokeColor = [UIColor redColor];
+        _runRouteLineView.lineWidth = 10;
+		overlayView =  _runRouteLineView;
+	}
+	return overlayView;
+}
+
+- (void)mapView:(MKMapView *)mapView
+didUpdateUserLocation:(MKUserLocation *)userLocation
+{
+    CLLocation *location = [[CLLocation alloc] initWithLatitude:userLocation.coordinate.latitude
+                                                      longitude:userLocation.coordinate.longitude];
+    if  (userLocation.coordinate.latitude == 0.0f ||
+         userLocation.coordinate.longitude == 0.0f)
+    {
+        return;//Exit if 0 Value
+    }
+    //Watch for runner changing location (we need to be careful how much the runner is moving)
+    if (_points.count > 0)
+    {
+        CLLocationDistance distance = [location distanceFromLocation:_currentLocation];
+        if (distance < 5)
+        {
+            return;
+        }
+    }
+    if (nil == _points)
+    {
+        _points = [[NSMutableArray alloc] init];
+    }
+    [_points addObject:location];
+    _currentLocation = location;
+    [self configureRoutes];
+    CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(userLocation.coordinate.latitude, userLocation.coordinate.longitude);
+    [self.mapView setCenterCoordinate:coordinate animated:YES];
+}
+
+
 
 @end

@@ -32,6 +32,7 @@
     self.bottombarView.layer.cornerRadius = 16.0f;//Add rounded corners to views
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateOnScreenElements) name:healthTrackerDidUpdateNotification object:[HealthTracker sharedHealthTracker]];//Adds observer which will be used if the data updates to change the on screen labels.
     [self updateOnScreenElements];
+    self.animationView = [[AnimationView alloc]init]; //Setup animations
 }
 
 - (void)viewWillAppear:(BOOL)animated

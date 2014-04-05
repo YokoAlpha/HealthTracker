@@ -37,7 +37,6 @@
 		E06BFC25189E596D00A17F1C /* UserDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = E06BFC23189E596D00A17F1C /* UserDescription.m */; };
 		E06BFC28189E835100A17F1C /* HealthTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = E06BFC27189E835100A17F1C /* HealthTracker.m */; };
 		E06BFC31189EA67B00A17F1C /* SetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E06BFC30189EA67B00A17F1C /* SetupViewController.m */; };
-		E06BFC44189EA69200A17F1C /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E06BFC32189EA69200A17F1C /* MapViewController.m */; };
 		E06BFC45189EA69200A17F1C /* FoodTrackerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E06BFC34189EA69200A17F1C /* FoodTrackerViewController.m */; };
 		E06BFC46189EA69200A17F1C /* FoodDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E06BFC35189EA69200A17F1C /* FoodDetailViewController.m */; };
 		E06BFC47189EA69200A17F1C /* FoodSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E06BFC36189EA69200A17F1C /* FoodSelectionViewController.m */; };
@@ -73,6 +72,10 @@
 		E0E639E118F02AC500F87941 /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E639E018F02AC500F87941 /* GraphView.m */; };
 		E0E639EA18F0349200F87941 /* GraphNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E639E918F0349200F87941 /* GraphNavigationController.m */; };
 		E0E639ED18F0376E00F87941 /* PortraitNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E639EC18F0376E00F87941 /* PortraitNavigationController.m */; };
+		E0E639F018F06C3B00F87941 /* AnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E639EF18F06C3B00F87941 /* AnimationView.m */; };
+		E0E639F418F06E5000F87941 /* Ring.png in Resources */ = {isa = PBXBuildFile; fileRef = E0E639F118F06E5000F87941 /* Ring.png */; };
+		E0E639F518F06E5000F87941 /* StarOutline.png in Resources */ = {isa = PBXBuildFile; fileRef = E0E639F218F06E5000F87941 /* StarOutline.png */; };
+		E0E639F618F06E5000F87941 /* Triangle.png in Resources */ = {isa = PBXBuildFile; fileRef = E0E639F318F06E5000F87941 /* Triangle.png */; };
 		E0E6901918B0FDD70024E0FB /* UserSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E6901818B0FDD70024E0FB /* UserSettingsViewController.m */; };
 		E0E6901C18B0FE120024E0FB /* NotificationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E6901B18B0FE120024E0FB /* NotificationsViewController.m */; };
 		E0E6901F18B0FE2A0024E0FB /* OtherSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E6901E18B0FE2A0024E0FB /* OtherSettingsViewController.m */; };
@@ -143,7 +146,6 @@
 		E06BFC27189E835100A17F1C /* HealthTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HealthTracker.m; path = Model/UserModel/HealthTracker.m; sourceTree = "<group>"; };
 		E06BFC2F189EA67B00A17F1C /* SetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SetupViewController.h; path = Controller/SetupViewController.h; sourceTree = "<group>"; };
 		E06BFC30189EA67B00A17F1C /* SetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SetupViewController.m; path = Controller/SetupViewController.m; sourceTree = "<group>"; };
-		E06BFC32189EA69200A17F1C /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapViewController.m; path = Controller/MapViewController.m; sourceTree = "<group>"; };
 		E06BFC33189EA69200A17F1C /* FoodTrackerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FoodTrackerViewController.h; path = Controller/FoodTrackerViewController.h; sourceTree = "<group>"; };
 		E06BFC34189EA69200A17F1C /* FoodTrackerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FoodTrackerViewController.m; path = Controller/FoodTrackerViewController.m; sourceTree = "<group>"; };
 		E06BFC35189EA69200A17F1C /* FoodDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FoodDetailViewController.m; path = Controller/FoodDetailViewController.m; sourceTree = "<group>"; };
@@ -151,7 +153,6 @@
 		E06BFC37189EA69200A17F1C /* FoodSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FoodSelectionViewController.h; path = Controller/FoodSelectionViewController.h; sourceTree = "<group>"; };
 		E06BFC38189EA69200A17F1C /* FoodDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FoodDetailViewController.h; path = Controller/FoodDetailViewController.h; sourceTree = "<group>"; };
 		E06BFC39189EA69200A17F1C /* SummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SummaryViewController.m; path = Controller/SummaryViewController.m; sourceTree = "<group>"; };
-		E06BFC3A189EA69200A17F1C /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = Controller/MapViewController.h; sourceTree = "<group>"; };
 		E06BFC3B189EA69200A17F1C /* SummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SummaryViewController.h; path = Controller/SummaryViewController.h; sourceTree = "<group>"; };
 		E06BFC3C189EA69200A17F1C /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileViewController.h; path = Controller/ProfileViewController.h; sourceTree = "<group>"; };
 		E06BFC3D189EA69200A17F1C /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileViewController.m; path = Controller/ProfileViewController.m; sourceTree = "<group>"; };
@@ -203,6 +204,11 @@
 		E0E639E918F0349200F87941 /* GraphNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GraphNavigationController.m; path = Controller/GraphNavigationController.m; sourceTree = "<group>"; };
 		E0E639EB18F0376E00F87941 /* PortraitNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PortraitNavigationController.h; path = Controller/PortraitNavigationController.h; sourceTree = "<group>"; };
 		E0E639EC18F0376E00F87941 /* PortraitNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PortraitNavigationController.m; path = Controller/PortraitNavigationController.m; sourceTree = "<group>"; };
+		E0E639EE18F06C3B00F87941 /* AnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnimationView.h; path = View/AnimationView.h; sourceTree = "<group>"; };
+		E0E639EF18F06C3B00F87941 /* AnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AnimationView.m; path = View/AnimationView.m; sourceTree = "<group>"; };
+		E0E639F118F06E5000F87941 /* Ring.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Ring.png; path = Images/Particles/Ring.png; sourceTree = "<group>"; };
+		E0E639F218F06E5000F87941 /* StarOutline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = StarOutline.png; path = Images/Particles/StarOutline.png; sourceTree = "<group>"; };
+		E0E639F318F06E5000F87941 /* Triangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Triangle.png; path = Images/Particles/Triangle.png; sourceTree = "<group>"; };
 		E0E6901718B0FDD70024E0FB /* UserSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserSettingsViewController.h; path = Controller/UserSettingsViewController.h; sourceTree = "<group>"; };
 		E0E6901818B0FDD70024E0FB /* UserSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserSettingsViewController.m; path = Controller/UserSettingsViewController.m; sourceTree = "<group>"; };
 		E0E6901A18B0FE120024E0FB /* NotificationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NotificationsViewController.h; path = Controller/NotificationsViewController.h; sourceTree = "<group>"; };
@@ -268,6 +274,8 @@
 				E03AB6B118A7896500EA6BCE /* CircleSummaryView.m */,
 				E0E639DF18F02AC500F87941 /* GraphView.h */,
 				E0E639E018F02AC500F87941 /* GraphView.m */,
+				E0E639EE18F06C3B00F87941 /* AnimationView.h */,
+				E0E639EF18F06C3B00F87941 /* AnimationView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -323,6 +331,7 @@
 		E04C6A9518849986005E90B2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E0E639F718F06E5500F87941 /* Particles */,
 				E0A141A11886DC38006F73EA /* ButtonFruit.png */,
 				E0423C2618AFBF0000747C21 /* button.png */,
 				E0800FE818982B160022F539 /* AppSummary.png */,
@@ -428,8 +437,6 @@
 				E06BFC30189EA67B00A17F1C /* SetupViewController.m */,
 				E06BFC50189ECDDA00A17F1C /* AdditionalSetupViewController.h */,
 				E06BFC51189ECDDA00A17F1C /* AdditionalSetupViewController.m */,
-				E06BFC3A189EA69200A17F1C /* MapViewController.h */,
-				E06BFC32189EA69200A17F1C /* MapViewController.m */,
 				E06BFC33189EA69200A17F1C /* FoodTrackerViewController.h */,
 				E06BFC34189EA69200A17F1C /* FoodTrackerViewController.m */,
 				E06BFC37189EA69200A17F1C /* FoodSelectionViewController.h */,
@@ -488,6 +495,16 @@
 				E0D8975E18E7726B00DF472D /* BMIDescription.m */,
 			);
 			name = BMI;
+			sourceTree = "<group>";
+		};
+		E0E639F718F06E5500F87941 /* Particles */ = {
+			isa = PBXGroup;
+			children = (
+				E0E639F118F06E5000F87941 /* Ring.png */,
+				E0E639F218F06E5000F87941 /* StarOutline.png */,
+				E0E639F318F06E5000F87941 /* Triangle.png */,
+			);
+			name = Particles;
 			sourceTree = "<group>";
 		};
 		E0E6901318B0FD390024E0FB /* Profile */ = {
@@ -591,6 +608,7 @@
 				E0A141A01886C2DA006F73EA /* ButtonSugarsFat.png in Resources */,
 				E0F8B71F1885611F000E1BC8 /* Summary.png in Resources */,
 				E0F8B7201885611F000E1BC8 /* Summary@2x.png in Resources */,
+				E0E639F518F06E5000F87941 /* StarOutline.png in Resources */,
 				E0F8B71E1885611F000E1BC8 /* Profile@2x.png in Resources */,
 				E04C6AD51884A0AF005E90B2 /* BMI@2x.png in Resources */,
 				E04C6AD41884A0AF005E90B2 /* BMI.png in Resources */,
@@ -605,6 +623,7 @@
 				E0F8B70D18855CB9000E1BC8 /* FitnessActivityLog@2x.png in Resources */,
 				E0F8B71D1885611F000E1BC8 /* Profile.png in Resources */,
 				E0800FEA18982B160022F539 /* AppSummary.png in Resources */,
+				E0E639F618F06E5000F87941 /* Triangle.png in Resources */,
 				E0ACB8111894680E00328604 /* Fruit.plist in Resources */,
 				E0F8B7191885611F000E1BC8 /* FoodTracker.png in Resources */,
 				E0F8B71A1885611F000E1BC8 /* FoodTracker@2x.png in Resources */,
@@ -612,6 +631,7 @@
 				E04C6AA218849986005E90B2 /* Main.storyboard in Resources */,
 				E0ACB803189436C600328604 /* DairyAndMeat.plist in Resources */,
 				E0ACB806189444A700328604 /* Vegetable.plist in Resources */,
+				E0E639F418F06E5000F87941 /* Ring.png in Resources */,
 				E0A141A61886DC38006F73EA /* ButtonProtein.png in Resources */,
 				E0454A731893FD4A00D22C6A /* SugarAndFats.plist in Resources */,
 			);
@@ -661,11 +681,11 @@
 				E0E639D518F00B6900F87941 /* Run.m in Sources */,
 				E0ACB80D18944A6000328604 /* FoodDataStore.m in Sources */,
 				E0E6902318B0FF180024E0FB /* NotificationAdapter.m in Sources */,
+				E0E639F018F06C3B00F87941 /* AnimationView.m in Sources */,
 				E0E6901F18B0FE2A0024E0FB /* OtherSettingsViewController.m in Sources */,
 				E0E639EA18F0349200F87941 /* GraphNavigationController.m in Sources */,
 				E06BFC4C189EA69200A17F1C /* HealthTrackerViewController.m in Sources */,
 				3AA4FA7C18DDD1EE00E21BFB /* RunDescription.m in Sources */,
-				E06BFC44189EA69200A17F1C /* MapViewController.m in Sources */,
 				E0E639CF18F00B6800F87941 /* BMI.m in Sources */,
 				E04C6A9F18849986005E90B2 /* HealthTrackerAppDelegate.m in Sources */,
 				E0E639D818F00B6900F87941 /* User.m in Sources */,

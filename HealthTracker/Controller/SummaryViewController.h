@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "CircleSummaryView.h"
+#import "AnimationView.h"
 
 @interface SummaryViewController : UIViewController
 @property (nonatomic,strong) IBOutlet UIView *topbarView;
@@ -16,4 +17,6 @@
 @property (nonatomic,strong) IBOutlet UILabel *bmiResultLabel;
 @property (nonatomic,strong) IBOutlet UIView *bottombarView;
 @property (nonatomic,strong) IBOutlet CircleSummaryView *circleView;
+@property (nonatomic,strong) IBOutlet AnimationView *animationView;
+
 @end
