@@ -334,6 +334,16 @@ While using the app you will be able to see your progress of increased fitness a
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t9d-FI-AM5">
+                                        <rect key="frame" x="0.0" y="0.0" width="253" height="58"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="xmO-E3-fqH" kind="modal" identifier="fitnessGraph" modalTransitionStyle="flipHorizontal" id="CCi-gp-WEr"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.80000001192092896" green="1" blue="0.40000000596046448" alpha="0.54000000000000004" colorSpace="calibratedRGB"/>
                                 <rect key="contentStretch" x="0.050000000000000017" y="0.0" width="1" height="1"/>
@@ -359,6 +369,16 @@ While using the app you will be able to see your progress of increased fitness a
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wh7-Tn-G6D">
+                                        <rect key="frame" x="0.0" y="0.0" width="253" height="53"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="xmO-E3-fqH" kind="modal" identifier="foodGraph" modalTransitionStyle="flipHorizontal" id="Mi8-NE-6VJ"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <rect key="contentStretch" x="0.050000000000000017" y="0.0" width="1" height="1"/>
@@ -381,6 +401,16 @@ While using the app you will be able to see your progress of increased fitness a
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="14"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hMU-ue-80y">
+                                <rect key="frame" x="34" y="315" width="253" height="163"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="xmO-E3-fqH" kind="modal" identifier="bmiGraph" modalTransitionStyle="flipHorizontal" id="ULr-2z-b2Q"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93385385232747897" green="1" blue="0.90974887622430689" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -402,7 +432,39 @@ While using the app you will be able to see your progress of increased fitness a
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1548" y="-2710"/>
+            <point key="canvasLocation" x="2756" y="-3022"/>
+        </scene>
+        <!--Graph View Controller - Graph-->
+        <scene sceneID="RrR-Qs-4gL">
+            <objects>
+                <viewController id="H59-mM-tge" customClass="GraphViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jfe-ns-xQf"/>
+                        <viewControllerLayoutGuide type="bottom" id="T1m-2S-cFK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="H3H-Tn-Roq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U8N-ai-7R5">
+                                <rect key="frame" x="0.0" y="65" width="320" height="503"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Graph" id="nFy-79-qkj">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="p0v-2I-MNM">
+                            <connections>
+                                <action selector="doneButtonPressed:" destination="H59-mM-tge" id="1wm-vR-ctN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JNo-Sr-A7r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3774" y="-3022"/>
         </scene>
         <!--View Controller - BMI-->
         <scene sceneID="RGg-Cw-zaJ">
@@ -1730,6 +1792,24 @@ While using the app you will be able to see your progress of increased fitness a
             </objects>
             <point key="canvasLocation" x="2277" y="-1549"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="FSv-CX-E0Q">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xmO-E3-fqH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rIJ-7e-6ju">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="H59-mM-tge" kind="relationship" relationship="rootViewController" id="Bn2-1V-fXO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X54-IL-YVz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3248" y="-3022"/>
+        </scene>
     </scenes>
     <resources>
         <image name="AppSummary.png" width="32" height="32"/>
@@ -1751,4 +1831,7 @@ While using the app you will be able to see your progress of increased fitness a
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="ULr-2z-b2Q"/>
+    </inferredMetricsTieBreakers>
 </document>

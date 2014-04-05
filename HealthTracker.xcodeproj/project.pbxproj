@@ -69,6 +69,8 @@
 		E0E639D518F00B6900F87941 /* Run.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E639D418F00B6900F87941 /* Run.m */; };
 		E0E639D818F00B6900F87941 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E639D718F00B6900F87941 /* User.m */; };
 		E0E639DB18F0175500F87941 /* BMIHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E639DA18F0175500F87941 /* BMIHistoryViewController.m */; };
+		E0E639DE18F022F500F87941 /* GraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E639DD18F022F500F87941 /* GraphViewController.m */; };
+		E0E639E118F02AC500F87941 /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E639E018F02AC500F87941 /* GraphView.m */; };
 		E0E6901918B0FDD70024E0FB /* UserSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E6901818B0FDD70024E0FB /* UserSettingsViewController.m */; };
 		E0E6901C18B0FE120024E0FB /* NotificationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E6901B18B0FE120024E0FB /* NotificationsViewController.m */; };
 		E0E6901F18B0FE2A0024E0FB /* OtherSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E6901E18B0FE2A0024E0FB /* OtherSettingsViewController.m */; };
@@ -191,6 +193,10 @@
 		E0E639D718F00B6900F87941 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Model/CoreData/User.m; sourceTree = "<group>"; };
 		E0E639D918F0175500F87941 /* BMIHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMIHistoryViewController.h; path = Controller/BMIHistoryViewController.h; sourceTree = "<group>"; };
 		E0E639DA18F0175500F87941 /* BMIHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMIHistoryViewController.m; path = Controller/BMIHistoryViewController.m; sourceTree = "<group>"; };
+		E0E639DC18F022F500F87941 /* GraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GraphViewController.h; path = Controller/GraphViewController.h; sourceTree = "<group>"; };
+		E0E639DD18F022F500F87941 /* GraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GraphViewController.m; path = Controller/GraphViewController.m; sourceTree = "<group>"; };
+		E0E639DF18F02AC500F87941 /* GraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GraphView.h; path = View/GraphView.h; sourceTree = "<group>"; };
+		E0E639E018F02AC500F87941 /* GraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GraphView.m; path = View/GraphView.m; sourceTree = "<group>"; };
 		E0E6901718B0FDD70024E0FB /* UserSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserSettingsViewController.h; path = Controller/UserSettingsViewController.h; sourceTree = "<group>"; };
 		E0E6901818B0FDD70024E0FB /* UserSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserSettingsViewController.m; path = Controller/UserSettingsViewController.m; sourceTree = "<group>"; };
 		E0E6901A18B0FE120024E0FB /* NotificationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NotificationsViewController.h; path = Controller/NotificationsViewController.h; sourceTree = "<group>"; };
@@ -254,6 +260,8 @@
 				E03AB6AE18A7894700EA6BCE /* RoundedSummaryView.m */,
 				E03AB6B018A7896500EA6BCE /* CircleSummaryView.h */,
 				E03AB6B118A7896500EA6BCE /* CircleSummaryView.m */,
+				E0E639DF18F02AC500F87941 /* GraphView.h */,
+				E0E639E018F02AC500F87941 /* GraphView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -440,6 +448,8 @@
 				3AA4FA8718DDF26800E21BFB /* RunHistoryViewController.m */,
 				E0E639D918F0175500F87941 /* BMIHistoryViewController.h */,
 				E0E639DA18F0175500F87941 /* BMIHistoryViewController.m */,
+				E0E639DC18F022F500F87941 /* GraphViewController.h */,
+				E0E639DD18F022F500F87941 /* GraphViewController.m */,
 				E0E6901318B0FD390024E0FB /* Profile */,
 			);
 			name = Controller;
@@ -631,10 +641,12 @@
 				E03AB6B218A7896500EA6BCE /* CircleSummaryView.m in Sources */,
 				E06BFC46189EA69200A17F1C /* FoodDetailViewController.m in Sources */,
 				E0E639DB18F0175500F87941 /* BMIHistoryViewController.m in Sources */,
+				E0E639E118F02AC500F87941 /* GraphView.m in Sources */,
 				E0E6901C18B0FE120024E0FB /* NotificationsViewController.m in Sources */,
 				E07CF31818A693D600D04D23 /* IntroViewController.m in Sources */,
 				E03AB6B518A7AC2100EA6BCE /* FoodHistoryViewController.m in Sources */,
 				E06BFC4F189ECA4100A17F1C /* HealthTrackerTabBarController.m in Sources */,
+				E0E639DE18F022F500F87941 /* GraphViewController.m in Sources */,
 				E0E639D518F00B6900F87941 /* Run.m in Sources */,
 				E0ACB80D18944A6000328604 /* FoodDataStore.m in Sources */,
 				E0E6902318B0FF180024E0FB /* NotificationAdapter.m in Sources */,
