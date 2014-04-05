@@ -55,7 +55,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9qc-ah-f8e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1844" y="-2557"/>
+            <point key="canvasLocation" x="1816" y="-3637"/>
         </scene>
         <!--Additional Setup View Controller-->
         <scene sceneID="o6N-Mj-MXd">
@@ -223,7 +223,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BPD-wf-ijz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2219" y="-2557"/>
+            <point key="canvasLocation" x="2191" y="-3637"/>
         </scene>
         <!--Intro View Controller-->
         <scene sceneID="nlF-Rl-gT7">
@@ -285,7 +285,7 @@ While using the app you will be able to see your progress of increased fitness a
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mec-qn-yzn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1464" y="-2557"/>
+            <point key="canvasLocation" x="1436" y="-3637"/>
         </scene>
         <!--Summary View Controller - Summary-->
         <scene sceneID="ufC-wZ-h7g">
@@ -402,7 +402,7 @@ While using the app you will be able to see your progress of increased fitness a
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1576" y="-1542"/>
+            <point key="canvasLocation" x="1548" y="-2710"/>
         </scene>
         <!--View Controller - BMI-->
         <scene sceneID="RGg-Cw-zaJ">
@@ -478,7 +478,7 @@ While using the app you will be able to see your progress of increased fitness a
                                 <color key="tintColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iAe-Dr-gpp">
-                                <rect key="frame" x="56" y="446" width="196" height="40"/>
+                                <rect key="frame" x="56" y="431" width="196" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="16"/>
                                 <state key="normal" title="Add new weight" backgroundImage="button.png">
@@ -493,6 +493,18 @@ While using the app you will be able to see your progress of increased fitness a
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QET-6T-O6f">
+                                <rect key="frame" x="233" y="482" width="76" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="16"/>
+                                <state key="normal" title="History" backgroundImage="button.png">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="4h8-ht-1qr" kind="modal" id="MOz-Wz-yhU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93385385229999995" green="1" blue="0.9097488762" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -509,7 +521,7 @@ While using the app you will be able to see your progress of increased fitness a
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BLb-em-yOn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1576" y="-844"/>
+            <point key="canvasLocation" x="1548" y="-2012"/>
         </scene>
         <!--Add Weight View Controller - Add New Weight-->
         <scene sceneID="bQv-i3-bTd">
@@ -588,7 +600,7 @@ While using the app you will be able to see your progress of increased fitness a
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mcx-6D-ex4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1986" y="-844"/>
+            <point key="canvasLocation" x="2357" y="-2284"/>
         </scene>
         <!--Fitness Activity Log View Controller - Runs-->
         <scene sceneID="vw5-s2-aR8">
@@ -1120,7 +1132,7 @@ While using the app you will be able to see your progress of increased fitness a
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1G1-Rk-Jej" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1015" y="-2557"/>
+            <point key="canvasLocation" x="987" y="-3637"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mW4-fN-6KT">
@@ -1414,7 +1426,7 @@ While using the app you will be able to see your progress of increased fitness a
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sVS-nV-M28" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1015" y="-844"/>
+            <point key="canvasLocation" x="987" y="-2012"/>
         </scene>
         <!--Other Settings View Controller-->
         <scene sceneID="AjF-WV-S7E">
@@ -1529,7 +1541,7 @@ While using the app you will be able to see your progress of increased fitness a
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DtO-ja-c6S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1015" y="-1542"/>
+            <point key="canvasLocation" x="987" y="-2710"/>
         </scene>
         <!--Navigation Controller - Fitness-->
         <scene sceneID="eFM-Yc-Au4">
@@ -1633,6 +1645,90 @@ While using the app you will be able to see your progress of increased fitness a
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aiF-TD-8Sr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2629" y="355"/>
+        </scene>
+        <!--History View Controller-->
+        <scene sceneID="O9g-na-tNw">
+            <objects>
+                <viewController id="0EZ-aA-cFg" customClass="BMIHistoryViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="D1d-De-2eO"/>
+                        <viewControllerLayoutGuide type="bottom" id="tPX-Gh-JfL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Bnq-FE-MQw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="GqR-I2-YKt">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="bmiCell" textLabel="nUC-in-kHl" detailTextLabel="q9Z-M7-7MP" style="IBUITableViewCellStyleSubtitle" id="NQ9-ql-Xnp">
+                                        <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NQ9-ql-Xnp" id="Yyf-MS-G17">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nUC-in-kHl">
+                                                    <rect key="frame" x="15" y="3" width="34" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="q9Z-M7-7MP">
+                                                    <rect key="frame" x="15" y="25" width="43" height="15"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="0EZ-aA-cFg" id="4ny-q9-iMH"/>
+                                    <outlet property="delegate" destination="0EZ-aA-cFg" id="9iU-UL-5Ox"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dUF-EH-pDC">
+                        <barButtonItem key="leftBarButtonItem" style="done" systemItem="done" id="2Rz-Gk-rwN">
+                            <connections>
+                                <action selector="doneButtonPressed:" destination="0EZ-aA-cFg" id="WOt-m6-bCg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableview" destination="GqR-I2-YKt" id="RA8-l1-8z2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sRa-dt-g6I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2819" y="-1549"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="o9y-3G-tYP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4h8-ht-1qr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="pMu-jq-0Ok"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Lzw-Yf-OBd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0EZ-aA-cFg" kind="relationship" relationship="rootViewController" id="T7o-Jf-iZu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GVD-zJ-Nr9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2277" y="-1549"/>
         </scene>
     </scenes>
     <resources>
