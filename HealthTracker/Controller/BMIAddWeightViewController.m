@@ -116,6 +116,12 @@ numberOfRowsInComponent:(NSInteger)component
     double height = [self.pickerView selectedRowInComponent:0];
     [[HealthTracker sharedHealthTracker] updateHeight:height];
     [[HealthTracker sharedHealthTracker] updateWeight:weight];
+    BMIDescription *bmiResults = [[BMIDescription alloc]init];
+    bmiResults.weight = [NSNumber numberWithDouble:weight];
+    bmiResults.height = [NSNumber numberWithDouble:height];
+    bmiResults.date = [NSDate date];
+    bmiResults.bmiResult = [NSNumber numberWithDouble:[[HealthTracker sharedHealthTracker] bmiCount]];
+    [[HealthTracker sharedHealthTracker] addBMIResult:bmiResults];
 }
 
 - (void)didReceiveMemoryWarning

@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3AA4FA7C18DDD1EE00E21BFB /* RunDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA4FA7B18DDD1EE00E21BFB /* RunDescription.m */; };
-		3AA4FA7F18DDDD4D00E21BFB /* Food.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA4FA7E18DDDD4D00E21BFB /* Food.m */; };
-		3AA4FA8218DDDD4E00E21BFB /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA4FA8118DDDD4E00E21BFB /* User.m */; };
-		3AA4FA8518DDDD4E00E21BFB /* Run.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA4FA8418DDDD4E00E21BFB /* Run.m */; };
 		3AA4FA8818DDF26800E21BFB /* RunHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA4FA8718DDF26800E21BFB /* RunHistoryViewController.m */; };
 		E036342A18B01BEB00D3878A /* BMIAddWeightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E036342918B01BEB00D3878A /* BMIAddWeightViewController.m */; };
 		E03AB6AF18A7894700EA6BCE /* RoundedSummaryView.m in Sources */ = {isa = PBXBuildFile; fileRef = E03AB6AE18A7894700EA6BCE /* RoundedSummaryView.m */; };
@@ -66,6 +63,11 @@
 		E0ACB8111894680E00328604 /* Fruit.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0ACB8101894680E00328604 /* Fruit.plist */; };
 		E0ACB81318946BB100328604 /* Starch.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0ACB81218946BB100328604 /* Starch.plist */; };
 		E0CFF07B1885E817003A4D47 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0CFF07A1885E817003A4D47 /* MapKit.framework */; };
+		E0D8975F18E7726B00DF472D /* BMIDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = E0D8975E18E7726B00DF472D /* BMIDescription.m */; };
+		E0E639CF18F00B6800F87941 /* BMI.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E639CE18F00B6800F87941 /* BMI.m */; };
+		E0E639D218F00B6900F87941 /* Food.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E639D118F00B6900F87941 /* Food.m */; };
+		E0E639D518F00B6900F87941 /* Run.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E639D418F00B6900F87941 /* Run.m */; };
+		E0E639D818F00B6900F87941 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E639D718F00B6900F87941 /* User.m */; };
 		E0E6901918B0FDD70024E0FB /* UserSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E6901818B0FDD70024E0FB /* UserSettingsViewController.m */; };
 		E0E6901C18B0FE120024E0FB /* NotificationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E6901B18B0FE120024E0FB /* NotificationsViewController.m */; };
 		E0E6901F18B0FE2A0024E0FB /* OtherSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E6901E18B0FE2A0024E0FB /* OtherSettingsViewController.m */; };
@@ -95,12 +97,6 @@
 /* Begin PBXFileReference section */
 		3AA4FA7A18DDD1EE00E21BFB /* RunDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RunDescription.h; path = Model/Run/RunDescription.h; sourceTree = "<group>"; };
 		3AA4FA7B18DDD1EE00E21BFB /* RunDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RunDescription.m; path = Model/Run/RunDescription.m; sourceTree = "<group>"; };
-		3AA4FA7D18DDDD4D00E21BFB /* Food.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Food.h; path = Model/CoreData/Food.h; sourceTree = "<group>"; };
-		3AA4FA7E18DDDD4D00E21BFB /* Food.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Food.m; path = Model/CoreData/Food.m; sourceTree = "<group>"; };
-		3AA4FA8018DDDD4E00E21BFB /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Model/CoreData/User.h; sourceTree = "<group>"; };
-		3AA4FA8118DDDD4E00E21BFB /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Model/CoreData/User.m; sourceTree = "<group>"; };
-		3AA4FA8318DDDD4E00E21BFB /* Run.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Run.h; path = Model/CoreData/Run.h; sourceTree = "<group>"; };
-		3AA4FA8418DDDD4E00E21BFB /* Run.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Run.m; path = Model/CoreData/Run.m; sourceTree = "<group>"; };
 		3AA4FA8618DDF26800E21BFB /* RunHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RunHistoryViewController.h; path = Controller/RunHistoryViewController.h; sourceTree = "<group>"; };
 		3AA4FA8718DDF26800E21BFB /* RunHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RunHistoryViewController.m; path = Controller/RunHistoryViewController.m; sourceTree = "<group>"; };
 		E036342818B01BEB00D3878A /* BMIAddWeightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMIAddWeightViewController.h; path = Controller/BMIAddWeightViewController.h; sourceTree = "<group>"; };
@@ -182,6 +178,16 @@
 		E0ACB8101894680E00328604 /* Fruit.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Fruit.plist; path = FoodData/Fruit.plist; sourceTree = "<group>"; };
 		E0ACB81218946BB100328604 /* Starch.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Starch.plist; path = FoodData/Starch.plist; sourceTree = "<group>"; };
 		E0CFF07A1885E817003A4D47 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		E0D8975D18E7726B00DF472D /* BMIDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMIDescription.h; path = Model/BMI/BMIDescription.h; sourceTree = "<group>"; };
+		E0D8975E18E7726B00DF472D /* BMIDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMIDescription.m; path = Model/BMI/BMIDescription.m; sourceTree = "<group>"; };
+		E0E639CD18F00B6800F87941 /* BMI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMI.h; path = Model/CoreData/BMI.h; sourceTree = "<group>"; };
+		E0E639CE18F00B6800F87941 /* BMI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMI.m; path = Model/CoreData/BMI.m; sourceTree = "<group>"; };
+		E0E639D018F00B6900F87941 /* Food.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Food.h; path = Model/CoreData/Food.h; sourceTree = "<group>"; };
+		E0E639D118F00B6900F87941 /* Food.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Food.m; path = Model/CoreData/Food.m; sourceTree = "<group>"; };
+		E0E639D318F00B6900F87941 /* Run.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Run.h; path = Model/CoreData/Run.h; sourceTree = "<group>"; };
+		E0E639D418F00B6900F87941 /* Run.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Run.m; path = Model/CoreData/Run.m; sourceTree = "<group>"; };
+		E0E639D618F00B6900F87941 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Model/CoreData/User.h; sourceTree = "<group>"; };
+		E0E639D718F00B6900F87941 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Model/CoreData/User.m; sourceTree = "<group>"; };
 		E0E6901718B0FDD70024E0FB /* UserSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserSettingsViewController.h; path = Controller/UserSettingsViewController.h; sourceTree = "<group>"; };
 		E0E6901818B0FDD70024E0FB /* UserSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserSettingsViewController.m; path = Controller/UserSettingsViewController.m; sourceTree = "<group>"; };
 		E0E6901A18B0FE120024E0FB /* NotificationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NotificationsViewController.h; path = Controller/NotificationsViewController.h; sourceTree = "<group>"; };
@@ -361,6 +367,7 @@
 			children = (
 				E06BFC26189E835100A17F1C /* HealthTracker.h */,
 				E06BFC27189E835100A17F1C /* HealthTracker.m */,
+				E0D8975C18E7724300DF472D /* BMI */,
 				E06BFC12189E57BD00A17F1C /* UserModel */,
 				E0ACB807189449BD00328604 /* FoodModel */,
 				3AA4FA7918DDD1C000E21BFB /* RunModel */,
@@ -436,15 +443,26 @@
 		E0C9B09118B8C77400FA5475 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
-				3AA4FA7D18DDDD4D00E21BFB /* Food.h */,
-				3AA4FA8318DDDD4E00E21BFB /* Run.h */,
-				3AA4FA8418DDDD4E00E21BFB /* Run.m */,
-				3AA4FA8018DDDD4E00E21BFB /* User.h */,
-				3AA4FA8118DDDD4E00E21BFB /* User.m */,
-				3AA4FA7E18DDDD4D00E21BFB /* Food.m */,
+				E0E639D618F00B6900F87941 /* User.h */,
+				E0E639D718F00B6900F87941 /* User.m */,
+				E0E639D318F00B6900F87941 /* Run.h */,
+				E0E639D418F00B6900F87941 /* Run.m */,
+				E0E639D018F00B6900F87941 /* Food.h */,
+				E0E639D118F00B6900F87941 /* Food.m */,
+				E0E639CD18F00B6800F87941 /* BMI.h */,
+				E0E639CE18F00B6800F87941 /* BMI.m */,
 				E03AB6B818A7C8FF00EA6BCE /* HealthTrackerDatabaseModel.xcdatamodeld */,
 			);
 			name = "Core Data";
+			sourceTree = "<group>";
+		};
+		E0D8975C18E7724300DF472D /* BMI */ = {
+			isa = PBXGroup;
+			children = (
+				E0D8975D18E7726B00DF472D /* BMIDescription.h */,
+				E0D8975E18E7726B00DF472D /* BMIDescription.m */,
+			);
+			name = BMI;
 			sourceTree = "<group>";
 		};
 		E0E6901318B0FD390024E0FB /* Profile */ = {
@@ -590,18 +608,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				E06BFC25189E596D00A17F1C /* UserDescription.m in Sources */,
+				E0D8975F18E7726B00DF472D /* BMIDescription.m in Sources */,
 				E04C6A9B18849986005E90B2 /* main.m in Sources */,
-				3AA4FA7F18DDDD4D00E21BFB /* Food.m in Sources */,
 				E0ACB80A189449FE00328604 /* FoodDescription.m in Sources */,
 				E06BFC4A189EA69200A17F1C /* FitnessActivityLogViewController.m in Sources */,
 				E06BFC47189EA69200A17F1C /* FoodSelectionViewController.m in Sources */,
 				E06BFC49189EA69200A17F1C /* ProfileViewController.m in Sources */,
 				E036342A18B01BEB00D3878A /* BMIAddWeightViewController.m in Sources */,
+				E0E639D218F00B6900F87941 /* Food.m in Sources */,
 				E03AB6BA18A7C8FF00EA6BCE /* HealthTrackerDatabaseModel.xcdatamodeld in Sources */,
 				E06BFC4B189EA69200A17F1C /* BMIViewController.m in Sources */,
 				E06BFC28189E835100A17F1C /* HealthTracker.m in Sources */,
 				3AA4FA8818DDF26800E21BFB /* RunHistoryViewController.m in Sources */,
-				3AA4FA8218DDDD4E00E21BFB /* User.m in Sources */,
 				E06BFC45189EA69200A17F1C /* FoodTrackerViewController.m in Sources */,
 				E06BFC52189ECDDA00A17F1C /* AdditionalSetupViewController.m in Sources */,
 				E0E6901918B0FDD70024E0FB /* UserSettingsViewController.m in Sources */,
@@ -611,14 +629,16 @@
 				E07CF31818A693D600D04D23 /* IntroViewController.m in Sources */,
 				E03AB6B518A7AC2100EA6BCE /* FoodHistoryViewController.m in Sources */,
 				E06BFC4F189ECA4100A17F1C /* HealthTrackerTabBarController.m in Sources */,
-				3AA4FA8518DDDD4E00E21BFB /* Run.m in Sources */,
+				E0E639D518F00B6900F87941 /* Run.m in Sources */,
 				E0ACB80D18944A6000328604 /* FoodDataStore.m in Sources */,
 				E0E6902318B0FF180024E0FB /* NotificationAdapter.m in Sources */,
 				E0E6901F18B0FE2A0024E0FB /* OtherSettingsViewController.m in Sources */,
 				E06BFC4C189EA69200A17F1C /* HealthTrackerViewController.m in Sources */,
 				3AA4FA7C18DDD1EE00E21BFB /* RunDescription.m in Sources */,
 				E06BFC44189EA69200A17F1C /* MapViewController.m in Sources */,
+				E0E639CF18F00B6800F87941 /* BMI.m in Sources */,
 				E04C6A9F18849986005E90B2 /* HealthTrackerAppDelegate.m in Sources */,
+				E0E639D818F00B6900F87941 /* User.m in Sources */,
 				E03AB6AF18A7894700EA6BCE /* RoundedSummaryView.m in Sources */,
 				E06BFC31189EA67B00A17F1C /* SetupViewController.m in Sources */,
 				E06BFC48189EA69200A17F1C /* SummaryViewController.m in Sources */,

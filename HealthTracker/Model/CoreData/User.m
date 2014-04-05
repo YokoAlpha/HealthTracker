@@ -2,12 +2,14 @@
 //  User.m
 //  HealthTracker
 //
-//  Created by Yoko Alpha on 22/03/2014.
+//  Created by Yoko Alpha on 05/04/2014.
 //  Copyright (c) 2014 Yoko. All rights reserved.
 //
 
 #import "User.h"
+#import "BMI.h"
 #import "Food.h"
+#import "Run.h"
 
 
 @implementation User
@@ -20,6 +22,7 @@
 @dynamic lunchReminder;
 @dynamic measurementSystem;
 @dynamic releventFeedback;
+@dynamic hasBMI;
 @dynamic hasFood;
 @dynamic hasRuns;
 

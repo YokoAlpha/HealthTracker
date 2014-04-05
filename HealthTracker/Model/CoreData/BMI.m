@@ -1,21 +1,21 @@
 //
-//  Run.m
+//  BMI.m
 //  HealthTracker
 //
 //  Created by Yoko Alpha on 05/04/2014.
 //  Copyright (c) 2014 Yoko. All rights reserved.
 //
 
-#import "Run.h"
+#import "BMI.h"
 #import "User.h"
 
 
-@implementation Run
+@implementation BMI
 
-@dynamic arrayOfRunPoints;
-@dynamic distanceRan;
-@dynamic runEndTime;
-@dynamic runStartTime;
+@dynamic bmiResult;
+@dynamic date;
+@dynamic height;
+@dynamic weight;
 @dynamic newRelationship;
 
 @end

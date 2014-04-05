@@ -10,6 +10,7 @@
 #import "Food.h"
 #import "User.h"
 #import "Run.h"
+#import "BMI.h"
 #import "NotificationAdapter.h"
 
 NSString *healthTrackerDidUpdateNotification = @"healthTrackerDidUpdateNotification";
@@ -286,14 +287,15 @@ NSString *healthTrackerDidUpdateNotification = @"healthTrackerDidUpdateNotificat
 
 - (void)addCompletedRun:(RunDescription *)run
 {
-    NSManagedObjectContext *context = [self managedObjectContext];
-    Run *runObjectToAdd = [NSEntityDescription insertNewObjectForEntityForName:@"Run" inManagedObjectContext:context];
+    NSManagedObjectContext *context = [self managedObjectContext];//Get managed context
+    Run *runObjectToAdd = [NSEntityDescription insertNewObjectForEntityForName:@"Run" inManagedObjectContext:context];//Create object to be inserted into database.
+    /* Assign properties from refernce class. */
     runObjectToAdd.arrayOfRunPoints = run.arrayOfRunPoints;
     runObjectToAdd.distanceRan = [NSNumber numberWithDouble:run.distanceRan];
     runObjectToAdd.runStartTime = run.runStartTime;
     runObjectToAdd.runEndTime = run.runEndTime;
     NSError *error;
-    if (![context save:&error])
+    if (![context save:&error])//Attempt to save modified context
     {
         NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
     }
@@ -302,17 +304,45 @@ NSString *healthTrackerDidUpdateNotification = @"healthTrackerDidUpdateNotificat
 
 - (NSArray *)allRunsCompleted
 {
-    NSManagedObjectContext *context = [self managedObjectContext];
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Run" inManagedObjectContext:context];
-    [fetchRequest setEntity:entity];
+    NSManagedObjectContext *context = [self managedObjectContext];//Get managed context
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];//Initialise fetch request object
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Run" inManagedObjectContext:context];//Set the entity Run that is being searched for in the current context.
+    [fetchRequest setEntity:entity];//Link entity with request
     NSError *error;
-    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];//Execute fetch request on context while collecting errors.
     return fetchedObjects;
 }
 
 
 #pragma mark - BMI
+
+- (void)addBMIResult:(BMIDescription *)bmiResult
+{
+    NSManagedObjectContext *context = [self managedObjectContext];//Get managed context
+    BMI *bmiObjectToAdd = [NSEntityDescription insertNewObjectForEntityForName:@"BMI" inManagedObjectContext:context];//Create object to be inserted into database.
+    /* Assign properties from refernce class. */
+    bmiObjectToAdd.bmiResult = bmiResult.bmiResult;
+    bmiObjectToAdd.date = bmiResult.date;
+    bmiObjectToAdd.height = bmiResult.height;
+    bmiObjectToAdd.weight = bmiResult.height;
+    NSError *error;
+    if (![context save:&error])//Attempt to save modified context
+    {
+        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+    }
+    [self dataUpdated];
+}
+
+- (NSArray *)allBMIResults
+{
+    NSManagedObjectContext *context = [self managedObjectContext];//Get managed context
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];//Initialise fetch request object
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"BMI" inManagedObjectContext:context];//Set the entity BMI that is being searched for in the current context.
+    [fetchRequest setEntity:entity];//Link entity with request
+    NSError *error;
+    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];//Execute fetch request on context while collecting errors.
+    return fetchedObjects;
+}
 
 - (double)bmiCount
 {

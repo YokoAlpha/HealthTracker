@@ -10,6 +10,7 @@
 #import "FoodDescription.h"
 #import "UserDescription.h"
 #import "RunDescription.h"
+#import "BMIDescription.h"
 #import "HealthTrackerAppDelegate.h"
 @import CoreData;
 
@@ -83,6 +84,10 @@ extern NSString *healthTrackerDidUpdateNotification;//Extern used to alow the pr
  @return BMI count.
  */
 - (double)bmiCount;
+
+- (void)addBMIResult:(BMIDescription *)bmiResult;
+
+- (NSArray *)allBMIResults;
 
 - (void)updateWeight:(double)newWeight;
 

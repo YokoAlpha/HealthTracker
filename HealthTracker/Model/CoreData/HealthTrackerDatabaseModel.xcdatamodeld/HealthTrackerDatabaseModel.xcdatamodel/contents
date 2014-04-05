@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5063" systemVersion="13C64" minimumToolsVersion="Xcode 4.5" iOSVersion="iOS 7.0">
+    <entity name="BMI" representedClassName="BMI" syncable="YES">
+        <attribute name="bmiResult" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="height" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="weight" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="newRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="hasBMI" inverseEntity="User" syncable="YES"/>
+    </entity>
     <entity name="Food" representedClassName="Food" syncable="YES">
         <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="dateConsumed" optional="YES" attributeType="Date" syncable="YES"/>
@@ -25,12 +32,14 @@
         <attribute name="lunchReminder" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="measurementSystem" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="releventFeedback" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <relationship name="hasBMI" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BMI" inverseName="newRelationship" inverseEntity="BMI" syncable="YES"/>
         <relationship name="hasFood" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Food" inverseName="newRelationship" inverseEntity="Food" syncable="YES"/>
         <relationship name="hasRuns" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Run" inverseName="newRelationship" inverseEntity="Run" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Food" positionX="-5994" positionY="783" width="128" height="148"/>
-        <element name="User" positionX="-6284" positionY="875" width="128" height="193"/>
+        <element name="BMI" positionX="-5996" positionY="1233" width="128" height="118"/>
+        <element name="Food" positionX="-5996" positionY="905" width="128" height="148"/>
         <element name="Run" positionX="-5996" positionY="1085" width="128" height="118"/>
+        <element name="User" positionX="-6345" positionY="971" width="128" height="208"/>
     </elements>
 </model>
