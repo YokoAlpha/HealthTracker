@@ -857,7 +857,11 @@ While using the app you will be able to see your progress of increased fitness a
                                 <action selector="saveRun:" destination="N5j-m1-iA6" id="adK-Bl-ici"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="History" style="plain" id="LNO-Fe-iey"/>
+                        <barButtonItem key="rightBarButtonItem" title="History" style="plain" id="LNO-Fe-iey">
+                            <connections>
+                                <segue destination="sfE-Vw-0bM" kind="modal" id="pt9-aL-0fY"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="distanceCovered" destination="sNt-IH-7bx" id="ZAW-st-UG8"/>
@@ -1049,37 +1053,6 @@ While using the app you will be able to see your progress of increased fitness a
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MTL-nE-FUA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1015" y="1624"/>
-        </scene>
-        <!--Map View Controller - Map-->
-        <scene sceneID="2Be-2j-jNM">
-            <objects>
-                <viewController title="Map" id="Owf-DY-7hH" customClass="MapViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="YZa-cW-6Ew"/>
-                        <viewControllerLayoutGuide type="bottom" id="72Z-K7-gWp"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="aG6-kQ-UvE">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tGr-2h-7wY">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <connections>
-                                    <outlet property="delegate" destination="Owf-DY-7hH" id="hlV-Yg-NFY"/>
-                                </connections>
-                            </mapView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Map" image="map.png" id="XFw-52-iPJ"/>
-                    <connections>
-                        <outlet property="mapHealthTracker" destination="tGr-2h-7wY" id="42j-Ek-yZI"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wkI-B4-DAQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2629" y="-348"/>
         </scene>
         <!--Food Detail View Controller-->
         <scene sceneID="xQY-Vs-iZd">
@@ -1714,7 +1687,7 @@ While using the app you will be able to see your progress of increased fitness a
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rHS-s2-lgk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3130" y="320"/>
+            <point key="canvasLocation" x="2706" y="320"/>
         </scene>
         <!--Portrait Navigation Controller-->
         <scene sceneID="mv7-Ay-hio">
@@ -1733,7 +1706,7 @@ While using the app you will be able to see your progress of increased fitness a
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aiF-TD-8Sr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2620" y="320"/>
+            <point key="canvasLocation" x="2196" y="320"/>
         </scene>
         <!--History View Controller-->
         <scene sceneID="O9g-na-tNw">
@@ -1851,7 +1824,6 @@ While using the app you will be able to see your progress of increased fitness a
         <image name="FoodTracker.png" width="32" height="32"/>
         <image name="Profile.png" width="32" height="32"/>
         <image name="button.png" width="238" height="58"/>
-        <image name="map.png" width="32" height="32"/>
         <image name="progress.png" width="266" height="50"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
