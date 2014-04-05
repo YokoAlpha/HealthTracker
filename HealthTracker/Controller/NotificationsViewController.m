@@ -171,7 +171,17 @@ numberOfRowsInComponent:(NSInteger)component
 {
     CGRect newFrame =  self.pickerContainer.frame;
     //set y position to self.height - picker container height
-    newFrame.origin.y = self.view.frame.size.height - self.pickerContainer.frame.size.height;
+    CGSize screenSize = [[UIScreen mainScreen] bounds].size;
+    if (screenSize.height > 480.0f)
+    {
+        /*Do iPhone 5 stuff here.*/
+        newFrame.origin.y = self.view.frame.size.height - self.pickerContainer.frame.size.height;
+    }
+    else
+    {
+        /*Do iPhone Classic stuff here.*/
+        newFrame.origin.y = 160;
+    }
     self.pickerContainer.frame = newFrame;
     [UIView transitionWithView:self.pickerContainer
                       duration:0.6
