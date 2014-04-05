@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@import MapKit;
 
-@interface FitnessActivityLogViewController : UIViewController
-@property (nonatomic,strong) IBOutlet UILabel *distanceRunLabel;
+@interface FitnessActivityLogViewController : UIViewController <MKMapViewDelegate>
+@property (nonatomic,strong) IBOutlet MKMapView *mapView;
 @property (nonatomic,strong) IBOutlet UILabel *hoursLabel;
 @property (nonatomic,strong) IBOutlet UILabel *minutesLabel;
 @property (nonatomic,strong) IBOutlet UILabel *secondsLabel;
@@ -17,4 +18,7 @@
 @property (nonatomic,strong) IBOutlet UIButton *startButton;
 @property (nonatomic,strong) IBOutlet UIButton *stopButton;
 @property (nonatomic,strong) IBOutlet UIButton *resetButton;
+@property (nonatomic,strong) IBOutlet UIView *statsContainer;
+@property (nonatomic,strong) IBOutlet UILabel *distanceCovered;
+
 @end

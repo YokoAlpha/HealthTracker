@@ -32,6 +32,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    self.statsContainer.backgroundColor = [UIColor colorWithRed:0 green:.62 blue:.984 alpha:0.3];
 }
 
 - (void)didReceiveMemoryWarning
