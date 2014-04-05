@@ -443,16 +443,17 @@ While using the app you will be able to see your progress of increased fitness a
                         <viewControllerLayoutGuide type="bottom" id="T1m-2S-cFK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="H3H-Tn-Roq">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U8N-ai-7R5">
-                                <rect key="frame" x="0.0" y="65" width="320" height="503"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U8N-ai-7R5" customClass="GraphView">
+                                <rect key="frame" x="0.0" y="65" width="568" height="255"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" title="Graph" id="nFy-79-qkj">
                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="p0v-2I-MNM">
@@ -461,10 +462,14 @@ While using the app you will be able to see your progress of increased fitness a
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="graphView" destination="U8N-ai-7R5" id="HIe-By-vdg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JNo-Sr-A7r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3774" y="-3022"/>
+            <point key="canvasLocation" x="3882" y="-3022"/>
         </scene>
         <!--View Controller - BMI-->
         <scene sceneID="RGg-Cw-zaJ">
@@ -1178,10 +1183,10 @@ While using the app you will be able to see your progress of increased fitness a
             </objects>
             <point key="canvasLocation" x="176" y="-540"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Portrait Navigation Controller-->
         <scene sceneID="x0U-rx-oyV">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VZe-7B-2jj" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VZe-7B-2jj" customClass="PortraitNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nrm-2i-u6U">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1196,10 +1201,10 @@ While using the app you will be able to see your progress of increased fitness a
             </objects>
             <point key="canvasLocation" x="987" y="-3637"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Portrait Navigation Controller-->
         <scene sceneID="mW4-fN-6KT">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Pbg-i3-tos" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Pbg-i3-tos" customClass="PortraitNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="klg-UU-UdR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1279,10 +1284,10 @@ While using the app you will be able to see your progress of increased fitness a
             </objects>
             <point key="canvasLocation" x="2875" y="1899"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Portrait Navigation Controller-->
         <scene sceneID="wMN-SG-KXr">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BhQ-7Z-nfm" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BhQ-7Z-nfm" customClass="PortraitNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rKh-rB-EYh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1471,10 +1476,10 @@ While using the app you will be able to see your progress of increased fitness a
             </objects>
             <point key="canvasLocation" x="2015" y="2868"/>
         </scene>
-        <!--Navigation Controller - BMI-->
+        <!--Portrait Navigation Controller - BMI-->
         <scene sceneID="Dkw-c2-LCb">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bf7-hP-Gie" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bf7-hP-Gie" customClass="PortraitNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="BMI" image="BMI.png" id="hv7-7I-kTh"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Prg-ux-Ug2">
@@ -1586,10 +1591,10 @@ While using the app you will be able to see your progress of increased fitness a
             </objects>
             <point key="canvasLocation" x="1513" y="2868"/>
         </scene>
-        <!--Navigation Controller - Summary-->
+        <!--Portrait Navigation Controller - Summary-->
         <scene sceneID="60N-X7-bXS">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HSY-5y-TAX" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HSY-5y-TAX" customClass="PortraitNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Summary" image="AppSummary.png" id="zxN-1b-HUq"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="REK-nB-VCg">
@@ -1605,10 +1610,10 @@ While using the app you will be able to see your progress of increased fitness a
             </objects>
             <point key="canvasLocation" x="987" y="-2710"/>
         </scene>
-        <!--Navigation Controller - Fitness-->
+        <!--Portrait Navigation Controller - Fitness-->
         <scene sceneID="eFM-Yc-Au4">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CQk-Ph-TRy" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CQk-Ph-TRy" customClass="PortraitNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Fitness" image="FitnessActivityLog.png" id="RMW-ll-S8E"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="TbU-0m-fbJ">
@@ -1687,12 +1692,12 @@ While using the app you will be able to see your progress of increased fitness a
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rHS-s2-lgk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3139" y="355"/>
+            <point key="canvasLocation" x="3130" y="320"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Portrait Navigation Controller-->
         <scene sceneID="mv7-Ay-hio">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sfE-Vw-0bM" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sfE-Vw-0bM" customClass="PortraitNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Qei-3d-XhE"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CVS-2T-swx">
@@ -1706,7 +1711,7 @@ While using the app you will be able to see your progress of increased fitness a
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aiF-TD-8Sr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2629" y="355"/>
+            <point key="canvasLocation" x="2620" y="320"/>
         </scene>
         <!--History View Controller-->
         <scene sceneID="O9g-na-tNw">
@@ -1773,10 +1778,10 @@ While using the app you will be able to see your progress of increased fitness a
             </objects>
             <point key="canvasLocation" x="2819" y="-1549"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Portrait Navigation Controller-->
         <scene sceneID="o9y-3G-tYP">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4h8-ht-1qr" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4h8-ht-1qr" customClass="PortraitNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="pMu-jq-0Ok"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Lzw-Yf-OBd">
@@ -1792,11 +1797,12 @@ While using the app you will be able to see your progress of increased fitness a
             </objects>
             <point key="canvasLocation" x="2277" y="-1549"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Graph Navigation Controller-->
         <scene sceneID="FSv-CX-E0Q">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xmO-E3-fqH" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xmO-E3-fqH" customClass="GraphNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rIJ-7e-6ju">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

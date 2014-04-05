@@ -71,6 +71,8 @@
 		E0E639DB18F0175500F87941 /* BMIHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E639DA18F0175500F87941 /* BMIHistoryViewController.m */; };
 		E0E639DE18F022F500F87941 /* GraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E639DD18F022F500F87941 /* GraphViewController.m */; };
 		E0E639E118F02AC500F87941 /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E639E018F02AC500F87941 /* GraphView.m */; };
+		E0E639EA18F0349200F87941 /* GraphNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E639E918F0349200F87941 /* GraphNavigationController.m */; };
+		E0E639ED18F0376E00F87941 /* PortraitNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E639EC18F0376E00F87941 /* PortraitNavigationController.m */; };
 		E0E6901918B0FDD70024E0FB /* UserSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E6901818B0FDD70024E0FB /* UserSettingsViewController.m */; };
 		E0E6901C18B0FE120024E0FB /* NotificationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E6901B18B0FE120024E0FB /* NotificationsViewController.m */; };
 		E0E6901F18B0FE2A0024E0FB /* OtherSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E6901E18B0FE2A0024E0FB /* OtherSettingsViewController.m */; };
@@ -197,6 +199,10 @@
 		E0E639DD18F022F500F87941 /* GraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GraphViewController.m; path = Controller/GraphViewController.m; sourceTree = "<group>"; };
 		E0E639DF18F02AC500F87941 /* GraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GraphView.h; path = View/GraphView.h; sourceTree = "<group>"; };
 		E0E639E018F02AC500F87941 /* GraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GraphView.m; path = View/GraphView.m; sourceTree = "<group>"; };
+		E0E639E818F0349200F87941 /* GraphNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GraphNavigationController.h; path = Controller/GraphNavigationController.h; sourceTree = "<group>"; };
+		E0E639E918F0349200F87941 /* GraphNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GraphNavigationController.m; path = Controller/GraphNavigationController.m; sourceTree = "<group>"; };
+		E0E639EB18F0376E00F87941 /* PortraitNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PortraitNavigationController.h; path = Controller/PortraitNavigationController.h; sourceTree = "<group>"; };
+		E0E639EC18F0376E00F87941 /* PortraitNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PortraitNavigationController.m; path = Controller/PortraitNavigationController.m; sourceTree = "<group>"; };
 		E0E6901718B0FDD70024E0FB /* UserSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserSettingsViewController.h; path = Controller/UserSettingsViewController.h; sourceTree = "<group>"; };
 		E0E6901818B0FDD70024E0FB /* UserSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserSettingsViewController.m; path = Controller/UserSettingsViewController.m; sourceTree = "<group>"; };
 		E0E6901A18B0FE120024E0FB /* NotificationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NotificationsViewController.h; path = Controller/NotificationsViewController.h; sourceTree = "<group>"; };
@@ -450,6 +456,10 @@
 				E0E639DA18F0175500F87941 /* BMIHistoryViewController.m */,
 				E0E639DC18F022F500F87941 /* GraphViewController.h */,
 				E0E639DD18F022F500F87941 /* GraphViewController.m */,
+				E0E639E818F0349200F87941 /* GraphNavigationController.h */,
+				E0E639E918F0349200F87941 /* GraphNavigationController.m */,
+				E0E639EB18F0376E00F87941 /* PortraitNavigationController.h */,
+				E0E639EC18F0376E00F87941 /* PortraitNavigationController.m */,
 				E0E6901318B0FD390024E0FB /* Profile */,
 			);
 			name = Controller;
@@ -632,6 +642,7 @@
 				E036342A18B01BEB00D3878A /* BMIAddWeightViewController.m in Sources */,
 				E0E639D218F00B6900F87941 /* Food.m in Sources */,
 				E03AB6BA18A7C8FF00EA6BCE /* HealthTrackerDatabaseModel.xcdatamodeld in Sources */,
+				E0E639ED18F0376E00F87941 /* PortraitNavigationController.m in Sources */,
 				E06BFC4B189EA69200A17F1C /* BMIViewController.m in Sources */,
 				E06BFC28189E835100A17F1C /* HealthTracker.m in Sources */,
 				3AA4FA8818DDF26800E21BFB /* RunHistoryViewController.m in Sources */,
@@ -651,6 +662,7 @@
 				E0ACB80D18944A6000328604 /* FoodDataStore.m in Sources */,
 				E0E6902318B0FF180024E0FB /* NotificationAdapter.m in Sources */,
 				E0E6901F18B0FE2A0024E0FB /* OtherSettingsViewController.m in Sources */,
+				E0E639EA18F0349200F87941 /* GraphNavigationController.m in Sources */,
 				E06BFC4C189EA69200A17F1C /* HealthTrackerViewController.m in Sources */,
 				3AA4FA7C18DDD1EE00E21BFB /* RunDescription.m in Sources */,
 				E06BFC44189EA69200A17F1C /* MapViewController.m in Sources */,
