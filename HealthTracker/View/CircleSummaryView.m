@@ -73,6 +73,7 @@
 - (void)updateColor:(UIColor *)colour
 {
     self.colour = colour;
+    [self.layer display];
 }
 
 @end

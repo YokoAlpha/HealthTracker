@@ -285,6 +285,31 @@ NSString *healthTrackerDidUpdateNotification = @"healthTrackerDidUpdateNotificat
 
 #pragma mark - Runs
 
+- (NSInteger)distanceRanForDate:(NSDate *)date
+{
+    NSManagedObjectContext *context = [self managedObjectContext];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Run"
+                                              inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+    NSError *error;
+    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+    double distanceRanOnDate = 0.0f;
+    for (id obj in fetchedObjects)
+    {
+        Run *run = (Run *)obj;
+        //Make sure dates are not nil
+        if (nil != date && nil != run.runStartTime)
+        {
+            if ([self isSameDayWithDate1:date date2:run.runStartTime])
+            {
+                distanceRanOnDate += [run.distanceRan doubleValue];
+            }
+        }
+    }
+    return distanceRanOnDate;
+}
+
 - (void)addCompletedRun:(RunDescription *)run
 {
     NSManagedObjectContext *context = [self managedObjectContext];//Get managed context

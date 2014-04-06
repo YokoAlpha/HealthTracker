@@ -13,8 +13,10 @@
 @interface SummaryViewController : UIViewController
 @property (nonatomic,strong) IBOutlet UIView *topbarView;
 @property (nonatomic,strong) IBOutlet UIProgressView *fiveADayBar;
+@property (nonatomic,strong) IBOutlet UIProgressView *fitnessBar;
 @property (nonatomic,strong) IBOutlet UILabel *fiveADayPercentageLabel;
 @property (nonatomic,strong) IBOutlet UILabel *bmiResultLabel;
+@property (nonatomic,strong) IBOutlet UILabel *fitnessResultLabel;
 @property (nonatomic,strong) IBOutlet UIView *bottombarView;
 @property (nonatomic,strong) IBOutlet CircleSummaryView *circleView;
 @property (nonatomic,strong) IBOutlet AnimationView *animationView;

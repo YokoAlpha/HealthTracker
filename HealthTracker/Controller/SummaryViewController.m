@@ -89,6 +89,30 @@
         [self bmiState:3];//Bad
     }
     self.bmiResultLabel.text = [NSString stringWithFormat:@"%0.1f",bmiResult];
+    //Fitness (Ideally someone would run 5 miles aday (good))
+    double fitnessResult = [[HealthTracker sharedHealthTracker] distanceRanForDate:[NSDate date]];
+    double percentageRan = (fitnessResult/5.0)*100;
+    float progressBarPlotFitness = percentageRan/100;
+    if (progressBarPlotFitness > 1.0f)
+    {
+        //Cannot be over 100%
+        progressBarPlotFitness = 1.0f;
+    }
+    if (percentageRan < 50)
+    {
+        [self fitnessState:3];//Bad
+    }
+    else if (percentageRan > 49 && percentageRan <70)
+    {
+        [self fitnessState:2];//Ok
+    }
+    else if (percentageRan > 69 && percentageRan <=100)
+    {
+        [self fitnessState:1];//Good
+    }
+    [self.fiveADayBar setProgress:progressBarPlot];
+    self.fitnessResultLabel.text = [NSString stringWithFormat:@"%0.1f",fitnessResult];
+
 }
 
 /*
@@ -123,12 +147,12 @@
     else if (2 == currentState)
     {
         //User is doing ok
-        self.bottombarView.backgroundColor = [UIColor colorWithRed:239/255.0f green:143/255.0f blue:60/255.0f alpha:1.0f];
+        [self.bottombarView setBackgroundColor:[UIColor colorWithRed:239/255.0f green:143/255.0f blue:60/255.0f alpha:1.0f]];
     }
     else if (3 == currentState)
     {
         //User is doing bad
-        self.bottombarView.backgroundColor = [UIColor colorWithRed:237/255.0f green:70/255.0f blue:47/255.0f alpha:1.0f];
+        [self.bottombarView setBackgroundColor:[UIColor colorWithRed:237/255.0f green:70/255.0f blue:47/255.0f alpha:1.0f]];
     }
 }
 

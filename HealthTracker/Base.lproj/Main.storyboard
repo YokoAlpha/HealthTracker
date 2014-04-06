@@ -442,6 +442,8 @@ While using the app you will be able to see your progress of increased fitness a
                         <outlet property="bmiResultLabel" destination="rLN-Wx-hRW" id="kso-LW-pqq"/>
                         <outlet property="bottombarView" destination="dfz-eN-xfm" id="gMs-TI-a7k"/>
                         <outlet property="circleView" destination="H0e-3m-Bdl" id="tJB-Hc-pBN"/>
+                        <outlet property="fitnessBar" destination="7Oy-t4-c4T" id="SVS-Ll-dep"/>
+                        <outlet property="fitnessResultLabel" destination="6UL-Wv-qFs" id="p3N-Q8-u1j"/>
                         <outlet property="fiveADayBar" destination="KTB-MF-y9j" id="3Xj-Zy-POb"/>
                         <outlet property="fiveADayPercentageLabel" destination="6Ki-9s-4l0" id="2ki-oN-KC9"/>
                         <outlet property="topbarView" destination="ooA-Il-k5b" id="UfO-3y-GFL"/>

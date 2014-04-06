@@ -49,7 +49,10 @@ extern NSString *healthTrackerDidUpdateNotification;//Extern used to alow the pr
 
 #pragma mark - Runs
 
+- (NSInteger)distanceRanForDate:(NSDate *)date;
+
 - (void)addCompletedRun:(RunDescription *)run;
+
 - (NSArray *)allRunsCompleted;
 
 #pragma mark - Food
