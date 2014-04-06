@@ -465,13 +465,19 @@ While using the app you will be able to see your progress of increased fitness a
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U8N-ai-7R5" customClass="GraphView">
-                                <rect key="frame" x="0.0" y="65" width="568" height="255"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dAT-Ca-AS5">
+                                <rect key="frame" x="-20" y="65" width="608" height="275"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="dAT-Ca-AS5" secondAttribute="bottom" constant="-20" id="XYh-Z3-zjF"/>
+                            <constraint firstItem="dAT-Ca-AS5" firstAttribute="leading" secondItem="H3H-Tn-Roq" secondAttribute="leading" constant="-20" id="YEF-Yt-cHb"/>
+                            <constraint firstItem="dAT-Ca-AS5" firstAttribute="top" secondItem="jfe-ns-xQf" secondAttribute="bottom" constant="1" id="oa7-Gs-yKU"/>
+                            <constraint firstAttribute="trailing" secondItem="dAT-Ca-AS5" secondAttribute="trailing" constant="-20" id="ufQ-Qz-Wal"/>
+                        </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" title="Graph" id="nFy-79-qkj">
@@ -483,7 +489,7 @@ While using the app you will be able to see your progress of increased fitness a
                     </navigationItem>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <outlet property="graphView" destination="U8N-ai-7R5" id="HIe-By-vdg"/>
+                        <outlet property="scrollView" destination="dAT-Ca-AS5" id="E7E-Q1-6Rk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JNo-Sr-A7r" userLabel="First Responder" sceneMemberID="firstResponder"/>

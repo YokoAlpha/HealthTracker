@@ -13,19 +13,130 @@
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
-    if (self) {
+    if(self)
+    {
         // Initialization code
     }
     return self;
 }
 
-/*
+- (void)drawBarWithPercentage:(float)percentage
+                withXPosition:(float)position
+                   withColour:(UIColor *)colour
+      withPerspectiveLeftSide:(BOOL)isLeftSide//Used to set the 3d effect from the right or left
+{
+    //Work out width of bar
+    float barWidth = BAR_WIDTH;
+    float barMaxHeight = ((self.frame.size.height - (4.0f)) - 5);
+    float barActualHeight = ((barMaxHeight - 20) / 100) * percentage;//Padding needs to be taken off the top (20) of it won't be given 3D effect
+    float boxTopOrigin = 0;
+    if(YES == isLeftSide)
+    {
+        boxTopOrigin = (position * 1.5) + (barWidth / 3);//Left
+        
+    }
+    else
+    {
+        boxTopOrigin = (position * 1.5) - (barWidth / 3);//Right
+    }
+    //Draw bars on screen
+    [colour set];
+    CGContextRef currentContext = UIGraphicsGetCurrentContext();
+    CGContextSetLineWidth(currentContext,1);
+    //Front of Box
+    CGContextMoveToPoint(currentContext,position * 1.5, barMaxHeight);
+    CGContextAddLineToPoint(currentContext,position * 1.5, barMaxHeight - barActualHeight);
+    CGContextAddLineToPoint(currentContext,(position * 1.5) + barWidth, barMaxHeight - barActualHeight);
+    CGContextAddLineToPoint(currentContext,(position * 1.5) + barWidth, barMaxHeight);
+    CGContextAddLineToPoint(currentContext,position * 1.5, barMaxHeight);
+    
+    CGContextFillPath(currentContext);
+    //Top of Box
+    [[self lighterColorForColor:colour
+           withMuchLighterValue:0.2] set];
+    CGContextMoveToPoint(currentContext,position * 1.5, barMaxHeight - barActualHeight);
+    CGContextAddLineToPoint(currentContext,boxTopOrigin, (barMaxHeight - barActualHeight) - barWidth / 8);
+    CGContextAddLineToPoint(currentContext,boxTopOrigin + barWidth, (barMaxHeight - barActualHeight) - barWidth / 8);
+    CGContextAddLineToPoint(currentContext,(position * 1.5) + barWidth, barMaxHeight - barActualHeight);
+    CGContextAddLineToPoint(currentContext,position * 1.5, barMaxHeight - barActualHeight);
+    CGContextFillPath(currentContext);
+    //Left hand side of box
+    [[self lighterColorForColor:colour
+           withMuchLighterValue:0.1] set];
+    if(YES == isLeftSide)
+    {
+        CGContextMoveToPoint(currentContext,(position * 1.5) + barWidth, barMaxHeight - barActualHeight);
+        CGContextAddLineToPoint(currentContext,(position * 1.5) + barWidth * 1.3, (barMaxHeight - barActualHeight) - barWidth / 8);
+        CGContextAddLineToPoint(currentContext,(position * 1.5) + barWidth * 1.3, barMaxHeight - barWidth / 3.2);
+        CGContextAddLineToPoint(currentContext, (position * 1.5) + barWidth, barMaxHeight);
+        CGContextAddLineToPoint(currentContext, (position * 1.5) + barWidth, barMaxHeight - barActualHeight);
+    }
+    else
+    {
+        CGContextMoveToPoint(currentContext,position * 1.5, barMaxHeight - barActualHeight);
+        CGContextAddLineToPoint(currentContext,boxTopOrigin, (barMaxHeight - barActualHeight) - barWidth / 8);
+        CGContextAddLineToPoint(currentContext,(position * 1.5) - (barWidth / 3), barMaxHeight - barWidth / 3.2);
+        CGContextAddLineToPoint(currentContext,position * 1.5, barMaxHeight);
+        CGContextAddLineToPoint(currentContext,position * 1.5, barMaxHeight - barActualHeight);
+    }
+    CGContextFillPath(currentContext);
+    CGContextStrokePath(currentContext);
+}
+
+- (UIColor *)lighterColorForColor:(UIColor *)c
+             withMuchLighterValue:(float)value
+{
+    CGFloat r, g, b, a;
+    if([c getRed:&r green:&g blue:&b alpha:&a])
+    {
+        return [UIColor colorWithRed:MIN(r + value, 1.0)
+                               green:MIN(g + value, 1.0)
+                                blue:MIN(b + value, 1.0)
+                               alpha:a];
+    }
+    return nil;
+}
+
+- (void)setupScreen
+{
+    //Draw bars on screen
+    [[UIColor whiteColor] set];
+    CGContextRef currentContext = UIGraphicsGetCurrentContext();
+    CGContextSetLineWidth(currentContext,4.0f);
+    CGContextMoveToPoint(currentContext,5.0f, 0);
+    CGContextAddLineToPoint(currentContext,5.0f, self.frame.size.height);
+    CGContextMoveToPoint(currentContext,5.0f, self.frame.size.height - (2.0f));
+    CGContextAddLineToPoint(currentContext, self.frame.size.width,self.frame.size.height - (2.0f));
+    CGContextStrokePath(currentContext);
+    
+    //Enlarge view to caiter for more bars
+    NSInteger numberOfBars = 20;
+    float currentXPosition = 20;
+    //Draw result bars
+    for (int i = 0; i <numberOfBars; i++)
+    {
+        BOOL perspective = YES;
+//        if(i % 2)//Modules
+//        {
+//            // odd
+//            perspective = YES;
+//        }
+//        else
+//        {
+//            // even
+//            perspective = NO;
+//        }
+        [self drawBarWithPercentage:arc4random_uniform(100) withXPosition:currentXPosition withColour:[UIColor blueColor] withPerspectiveLeftSide:perspective];
+        currentXPosition += BAR_WIDTH + BAR_SPACEING;
+    }
+}
+
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect
 {
     // Drawing code
+    [self setupScreen];
 }
-*/
 
 @end

@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#define BAR_WIDTH 50.0f
+#define BAR_SPACEING 50.0f
 
 @interface GraphView : UIView
 

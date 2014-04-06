@@ -30,6 +30,14 @@
     // Do any additional setup after loading the view.
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    self.graphView = [[GraphView alloc]initWithFrame:CGRectMake(0, -50, (20 * ((BAR_WIDTH + BAR_SPACEING) + 40)), self.view.frame.size.height - 50)];
+    [self.scrollView addSubview:self.graphView];
+    self.graphView.backgroundColor = [UIColor blackColor];
+    self.scrollView.contentSize = CGSizeMake(self.graphView.frame.size.width, self.graphView.frame.size.height-50);
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
