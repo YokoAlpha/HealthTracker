@@ -33,6 +33,8 @@ extern NSString *healthTrackerDidUpdateNotification;//Extern used to alow the pr
  */
 + (HealthTracker *)sharedHealthTracker;
 
+- (BOOL)isSameDayWithDate1:(NSDate*)date1
+                     date2:(NSDate*)date2;
 
 #pragma mark - User
 /*!

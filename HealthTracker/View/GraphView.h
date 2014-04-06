@@ -15,6 +15,7 @@
 @property (nonatomic, strong) NSArray *arrayOfResultLabel;
 @property (nonatomic, strong) NSString *dataType;
 @property (nonatomic, strong) UIColor *barColor;
+@property (nonatomic) double bmiResult;
 
 
 @end

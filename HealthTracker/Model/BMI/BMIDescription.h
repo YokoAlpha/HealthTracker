@@ -9,9 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @interface BMIDescription : NSObject
-@property (nonatomic, weak) NSNumber * bmiResult;
-@property (nonatomic, weak) NSDate * date;
-@property (nonatomic, weak) NSNumber * height;
-@property (nonatomic, weak) NSNumber * weight;
+@property (nonatomic, strong) NSNumber * bmiResult;
+@property (nonatomic, strong) NSDate * date;
+@property (nonatomic, strong) NSNumber * height;
+@property (nonatomic, strong) NSNumber * weight;
 
 @end

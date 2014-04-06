@@ -94,7 +94,7 @@
     CGContextStrokePath(currentContext);
     //Graph Bar Label
     UILabel *descriptionLabel = [[UILabel alloc]init];
-    descriptionLabel.frame = CGRectMake(boxTopOrigin - BAR_WIDTH, 110, 220, 20);
+    descriptionLabel.frame = CGRectMake((boxTopOrigin - BAR_WIDTH)+20, 110, 220, 20);
     descriptionLabel.text = descriptionText;
     descriptionLabel.adjustsFontSizeToFitWidth = YES;
     descriptionLabel.textAlignment = NSTextAlignmentLeft;
@@ -165,6 +165,41 @@
             else if (percentageToPlot > 69 && percentageToPlot <=100)
             {
                 self.barColor = [UIColor colorWithRed:216/255.0f green:247/255.0f blue:160/255.0f alpha:1.0f];//Good
+            }
+        }
+        else if([self.dataType isEqualToString:@"Food"])
+        {
+            float percentageToPlot = [[self.arrayOfResultValues objectAtIndex:i]floatValue];
+            if (percentageToPlot > 0 && percentageToPlot <50)
+            {
+                self.barColor = [UIColor colorWithRed:237/255.0f green:70/255.0f blue:47/255.0f alpha:1.0f];//Bad
+            }
+            else if (percentageToPlot > 49 && percentageToPlot <70)
+            {
+                self.barColor  = [UIColor colorWithRed:239/255.0f green:143/255.0f blue:60/255.0f alpha:1.0f];//Ok
+            }
+            else if (percentageToPlot > 69 && percentageToPlot <=100)
+            {
+                self.barColor = [UIColor colorWithRed:216/255.0f green:247/255.0f blue:160/255.0f alpha:1.0f];//Good
+            }
+        }
+        else if([self.dataType isEqualToString:@"BMI"])
+        {
+            if(self.bmiResult < 18.5)//UnderWeight
+            {
+                self.barColor = [UIColor colorWithRed:237/255.0f green:70/255.0f blue:47/255.0f alpha:1.0f];//Bad
+            }
+            else if(self.bmiResult > 18.4 && self.bmiResult < 25.0)//Normal Weight
+            {
+                self.barColor = [UIColor colorWithRed:216/255.0f green:247/255.0f blue:160/255.0f alpha:1.0f];//Good
+            }
+            else if(self.bmiResult > 24.9 && self.bmiResult < 30.0)//Overweight
+            {
+                self.barColor  = [UIColor colorWithRed:239/255.0f green:143/255.0f blue:60/255.0f alpha:1.0f];//Ok
+            }
+            else if(self.bmiResult > 30.0)//Obesity
+            {
+                self.barColor = [UIColor colorWithRed:237/255.0f green:70/255.0f blue:47/255.0f alpha:1.0f];//Bad
             }
         }
         [self drawBarWithPercentage:[[self.arrayOfResultValues objectAtIndex:i]floatValue] withXPosition:currentXPosition withColour:self.barColor withDescriptionText:[self.arrayOfResultLabel objectAtIndex:i] withPerspectiveLeftSide:perspective];
