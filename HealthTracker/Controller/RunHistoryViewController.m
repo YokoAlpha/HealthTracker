@@ -81,7 +81,7 @@
         NSInteger seconds = round(timeInterval - minutes * 60);
         NSString *titleForCell = [NSString stringWithFormat:@"%@", dateStarted];
         cell.textLabel.text = titleForCell;
-        cell.detailTextLabel.text = [NSString stringWithFormat:@"Distance %0.2fM : Time %d:%02d",[run.distanceRan doubleValue] , minutes, seconds];
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"Distance %0.2fKM : Time %d:%02d",[run.distanceRan doubleValue] , minutes, seconds];
     }
     return cell;
 }

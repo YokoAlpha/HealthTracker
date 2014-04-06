@@ -94,8 +94,9 @@
     CGContextStrokePath(currentContext);
     //Graph Bar Label
     UILabel *descriptionLabel = [[UILabel alloc]init];
-    descriptionLabel.frame = CGRectMake(boxTopOrigin - BAR_WIDTH, 200, self.frame.size.height, 20);
+    descriptionLabel.frame = CGRectMake(boxTopOrigin - BAR_WIDTH, 110, 220, 20);
     descriptionLabel.text = descriptionText;
+    descriptionLabel.adjustsFontSizeToFitWidth = YES;
     descriptionLabel.textAlignment = NSTextAlignmentLeft;
     [descriptionLabel setTransform:CGAffineTransformMakeRotation(M_PI / 2)];
     [self addSubview:descriptionLabel];
@@ -143,7 +144,30 @@
 //            // even
 //            perspective = NO;
 //        }
-        [self drawBarWithPercentage:[[self.arrayOfResultValues objectAtIndex:i]floatValue] withXPosition:currentXPosition withColour:[UIColor blueColor] withDescriptionText:[self.arrayOfResultLabel objectAtIndex:i] withPerspectiveLeftSide:perspective];
+        
+        //Bar color setup
+        if([self.dataType isEqualToString:@"Run"])
+        {
+            float percentageToPlot = [[self.arrayOfResultValues objectAtIndex:i]floatValue];
+            if(percentageToPlot > 1.0f)
+            {
+                //Cannot be over 100%
+                percentageToPlot = 1.0f;
+            }
+            else if(percentageToPlot < 50)
+            {
+                self.barColor = [UIColor colorWithRed:237/255.0f green:70/255.0f blue:47/255.0f alpha:1.0f];//Bad
+            }
+            else if (percentageToPlot > 49 && percentageToPlot <70)
+            {
+                self.barColor  = [UIColor colorWithRed:239/255.0f green:143/255.0f blue:60/255.0f alpha:1.0f];//Ok
+            }
+            else if (percentageToPlot > 69 && percentageToPlot <=100)
+            {
+                self.barColor = [UIColor colorWithRed:216/255.0f green:247/255.0f blue:160/255.0f alpha:1.0f];//Good
+            }
+        }
+        [self drawBarWithPercentage:[[self.arrayOfResultValues objectAtIndex:i]floatValue] withXPosition:currentXPosition withColour:self.barColor withDescriptionText:[self.arrayOfResultLabel objectAtIndex:i] withPerspectiveLeftSide:perspective];
         currentXPosition += BAR_WIDTH + BAR_SPACEING;
     }
 }

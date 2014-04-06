@@ -48,21 +48,30 @@
         {
             double percentageRan = ([runObj.distanceRan doubleValue]/5.0)*100;
             [arrayOfValues addObject:[NSNumber numberWithDouble:percentageRan]];
-            [arrayOfDescriptions addObject:[NSString stringWithFormat:@"10%% 5.5KM 16/04/2014"]];
+            NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+            [dateFormatter setDateFormat:@"MM/dd/yyyy @ HH:mm"];
+            NSString *dateStarted = [dateFormatter stringFromDate:runObj.runStartTime];
+            NSTimeInterval timeInterval = [runObj.runEndTime timeIntervalSinceDate: runObj.runStartTime];
+            //Convert the time correctly to present
+            NSInteger minutes = floor(timeInterval/60);
+            NSInteger seconds = round(timeInterval - minutes * 60);
+            [arrayOfDescriptions addObject:[NSString stringWithFormat:@"%0.0f%% %0.1fKM  in %d:%02d on %@",percentageRan,[runObj.distanceRan doubleValue],minutes, seconds,dateStarted]];
         }
     }
     if([self.dataType isEqualToString:@"Food"])
     {
         self.graphView.barColor = [UIColor greenColor];
+
     }
     if([self.dataType isEqualToString:@"BMI"])
     {
         self.graphView.barColor = [UIColor redColor];
+        
     }
     //Setup array and copy to view;
     self.graphView.arrayOfResultValues = [arrayOfValues mutableCopy];
     self.graphView.arrayOfResultLabel = [arrayOfDescriptions mutableCopy];
-    
+    self.graphView.dataType = self.dataType;
 }
 
 - (void)viewDidAppear:(BOOL)animated
