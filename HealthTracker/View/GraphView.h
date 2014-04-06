@@ -11,5 +11,9 @@
 #define BAR_SPACEING 50.0f
 
 @interface GraphView : UIView
+@property (nonatomic, strong) NSArray *arrayOfResultValues;
+@property (nonatomic, strong) NSArray *arrayOfResultLabel;
+@property (nonatomic, strong) UIColor *barColor;
+
 
 @end

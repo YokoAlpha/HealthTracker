@@ -12,6 +12,8 @@
 @interface GraphViewController : UIViewController
 @property (nonatomic, strong) IBOutlet GraphView *graphView;
 @property (nonatomic, strong) IBOutlet UIScrollView *scrollView;
+@property (nonatomic, strong) NSArray *dataResults;
+@property (nonatomic, strong) NSString *dataType;
 
 - (IBAction)doneButtonPressed:(id)sender;
 

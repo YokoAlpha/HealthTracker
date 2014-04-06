@@ -8,6 +8,7 @@
 
 #import "SummaryViewController.h"
 #import "HealthTracker.h"
+#import "GraphViewController.h"
 
 @interface SummaryViewController ()
 
@@ -204,6 +205,38 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue
+                 sender:(id)sender
+{
+    UINavigationController *naviController = segue.destinationViewController;
+    //Work around for destination being inside navigation controller.
+    for (id targetVC in naviController.viewControllers)
+    {
+        if (YES == [targetVC isKindOfClass:[GraphViewController class]])
+        {
+            GraphViewController *vc = (GraphViewController *)targetVC;
+            if ([[segue identifier] isEqualToString:@"foodGraph"])//Make sure data is sent to destination controller correctly
+            {
+                vc.title = @"Food Graph";
+                vc.dataResults = [[[HealthTracker sharedHealthTracker] allFoodsEaten]copy];
+                vc.dataType =  @"Food";
+            }
+            if ([[segue identifier] isEqualToString:@"fitnessGraph"])//Make sure data is sent to destination controller correctly
+            {
+                vc.title = @"Runs Graph";
+                vc.dataResults = [[[HealthTracker sharedHealthTracker] allRunsCompleted]copy];
+                vc.dataType =  @"Run";
+            }
+            if ([[segue identifier] isEqualToString:@"bmiGraph"])//Make sure data is sent to destination controller correctly
+            {
+                vc.title = @"BMI Graph";
+                vc.dataResults = [[[HealthTracker sharedHealthTracker] allBMIResults]copy];
+                vc.dataType =  @"BMI";
+            }
+        }
+    }
 }
 
 @end

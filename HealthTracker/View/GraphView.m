@@ -10,6 +10,16 @@
 
 @implementation GraphView
 
+- (id)init
+{
+    self = [super init];
+    if (self != nil)
+    {
+        
+    }
+    return self;
+}
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -23,6 +33,7 @@
 - (void)drawBarWithPercentage:(float)percentage
                 withXPosition:(float)position
                    withColour:(UIColor *)colour
+         withDescriptionText:(NSString *)descriptionText
       withPerspectiveLeftSide:(BOOL)isLeftSide//Used to set the 3d effect from the right or left
 {
     //Work out width of bar
@@ -67,7 +78,7 @@
     {
         CGContextMoveToPoint(currentContext,(position * 1.5) + barWidth, barMaxHeight - barActualHeight);
         CGContextAddLineToPoint(currentContext,(position * 1.5) + barWidth * 1.3, (barMaxHeight - barActualHeight) - barWidth / 8);
-        CGContextAddLineToPoint(currentContext,(position * 1.5) + barWidth * 1.3, barMaxHeight - barWidth / 3.2);
+        CGContextAddLineToPoint(currentContext,(position * 1.5) + barWidth * 1.3, barMaxHeight - barWidth / 7.0);
         CGContextAddLineToPoint(currentContext, (position * 1.5) + barWidth, barMaxHeight);
         CGContextAddLineToPoint(currentContext, (position * 1.5) + barWidth, barMaxHeight - barActualHeight);
     }
@@ -75,12 +86,19 @@
     {
         CGContextMoveToPoint(currentContext,position * 1.5, barMaxHeight - barActualHeight);
         CGContextAddLineToPoint(currentContext,boxTopOrigin, (barMaxHeight - barActualHeight) - barWidth / 8);
-        CGContextAddLineToPoint(currentContext,(position * 1.5) - (barWidth / 3), barMaxHeight - barWidth / 3.2);
+        CGContextAddLineToPoint(currentContext,(position * 1.5) - (barWidth / 3), barMaxHeight - barWidth / 7.0);
         CGContextAddLineToPoint(currentContext,position * 1.5, barMaxHeight);
         CGContextAddLineToPoint(currentContext,position * 1.5, barMaxHeight - barActualHeight);
     }
     CGContextFillPath(currentContext);
     CGContextStrokePath(currentContext);
+    //Graph Bar Label
+    UILabel *descriptionLabel = [[UILabel alloc]init];
+    descriptionLabel.frame = CGRectMake(boxTopOrigin - BAR_WIDTH, 200, self.frame.size.height, 20);
+    descriptionLabel.text = descriptionText;
+    descriptionLabel.textAlignment = NSTextAlignmentLeft;
+    [descriptionLabel setTransform:CGAffineTransformMakeRotation(M_PI / 2)];
+    [self addSubview:descriptionLabel];
 }
 
 - (UIColor *)lighterColorForColor:(UIColor *)c
@@ -110,12 +128,11 @@
     CGContextStrokePath(currentContext);
     
     //Enlarge view to caiter for more bars
-    NSInteger numberOfBars = 20;
     float currentXPosition = 20;
     //Draw result bars
-    for (int i = 0; i <numberOfBars; i++)
+    for (int i = 0; i <self.arrayOfResultValues.count; i++)
     {
-        BOOL perspective = YES;
+        BOOL perspective = NO;
 //        if(i % 2)//Modules
 //        {
 //            // odd
@@ -126,7 +143,7 @@
 //            // even
 //            perspective = NO;
 //        }
-        [self drawBarWithPercentage:arc4random_uniform(100) withXPosition:currentXPosition withColour:[UIColor blueColor] withPerspectiveLeftSide:perspective];
+        [self drawBarWithPercentage:[[self.arrayOfResultValues objectAtIndex:i]floatValue] withXPosition:currentXPosition withColour:[UIColor blueColor] withDescriptionText:[self.arrayOfResultLabel objectAtIndex:i] withPerspectiveLeftSide:perspective];
         currentXPosition += BAR_WIDTH + BAR_SPACEING;
     }
 }
