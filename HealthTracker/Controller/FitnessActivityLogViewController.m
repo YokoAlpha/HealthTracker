@@ -10,6 +10,14 @@
 #import "RunDescription.h"
 #import "HealthTracker.h"
 
+#import <CoreLocation/CoreLocation.h>
+#import <MobileCoreServices/UTCoreTypes.h>
+
+#define kRequiredAccuracy 500.0 //meters
+#define kMaxAge 10.0 //seconds
+#define M_PI   3.14159265358979323846264338327950288   /* pi */
+
+
 @interface FitnessActivityLogViewController ()
 @property (nonatomic,strong) NSTimer *timer;
 @property (nonatomic,strong) RunDescription *runInProgress;
@@ -63,13 +71,26 @@
 
 - (void)startRun
 {
-    //TODO: kick off polyline drawing, Start recording points
-    [self calculatedDistanceCovered];
-}
-
-- (void)calculatedDistanceCovered
-{
-    
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.delegate = self;
+    self.locationManager.desiredAccuracy=kCLLocationAccuracyBestForNavigation;
+    [self.locationManager startUpdatingLocation];
+    [self resetButtonPressed:nil];//Reset all on screen stuff
+    [self configureRoutes];//Setup routes again
+    //Zoom into map
+    CLLocationCoordinate2D ground = _currentLocation.coordinate;
+    ground.latitude = ground.latitude;//Move to left
+    CLLocationCoordinate2D eye = CLLocationCoordinate2DMake(ground.latitude, ground.longitude);
+    MKMapCamera *mapCamera = [MKMapCamera cameraLookingAtCenterCoordinate:ground
+                                                        fromEyeCoordinate:eye
+                                                              eyeAltitude:300];
+    mapCamera.pitch = 30;
+    mapCamera.heading = 90;
+    [self.mapView selectAnnotation:[[self.mapView annotations] firstObject] animated:YES];
+    [UIView animateWithDuration:6 animations:^{
+        self.mapView.camera = mapCamera;
+    }];
+    //Start measuring distance
 }
 
 - (IBAction)stopButtonPressed:(id)sender
@@ -82,12 +103,23 @@
 
 - (IBAction)resetButtonPressed:(id)sender
 {
+    //Reset map drawing
+    _points = nil;
+    _runRouteLine = nil;
+    _runRouteLineView = nil;
     self.runInProgress = nil;
     self.hoursLabel.text = @"0";
     self.minutesLabel.text = @"0";
     self.secondsLabel.text = @"0";
     self.hundredsOfSecondsLabel.text = @"0";
     [self buttonStatesWithStartState:YES stopState:NO resetState:NO];
+    //Reset distance
+    self.distanceCovered.text = @"0";
+    [self.distanceTimer invalidate];
+    self.distanceTimer = nil;
+    self.speed = nil;
+    self.currentSpeed = nil;
+    self.distanceTravelled = 0;
 }
 
 - (void)showTime
@@ -185,6 +217,8 @@
     {
         [self stopButtonPressed:nil];//We ned to stop the run if the run hasn't been completed
     }
+    self.runInProgress.distanceRan = self.distanceTravelled;
+    self.runInProgress.arrayOfRunPoints = [self.points copy];//Make sure the array of points is added for future use.
     [[HealthTracker sharedHealthTracker] addCompletedRun: self.runInProgress];
     [self resetButtonPressed:nil];
 }
@@ -305,6 +339,76 @@ didUpdateUserLocation:(MKUserLocation *)userLocation
     [self.mapView setCenterCoordinate:coordinate animated:YES];
 }
 
+#pragma mark
+#pragma mark Distance covered
 
+- (void)locationManager:(CLLocationManager *)manager
+    didUpdateToLocation:(CLLocation *)newLocation
+           fromLocation:(CLLocation *)oldLocation
+{
+    NSLog(@"Distance travelled in KM= %f",self.distanceTravelled);
+    if(newLocation && oldLocation)
+    {
+        self.distanceTravelled += [self getDistanceInKm:newLocation fromLocation:oldLocation];
+        self.distanceCovered.text = [NSString stringWithFormat:@"%0.1f",self.distanceTravelled];
+    }
+}
+
+- (void)timeIntervalEnded:(NSTimer*)timer
+{
+    self.distanceTravelled = 0;
+    [self startReadingLocation];
+}
+
+- (void)startReadingLocation
+{
+    [self.locationManager startUpdatingLocation];
+}
+
+-(float)getDistanceInKm:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+{
+    float lat1,lon1,lat2,lon2;
+    
+    lat1 = newLocation.coordinate.latitude  * M_PI / 180;
+    lon1 = newLocation.coordinate.longitude * M_PI / 180;
+    
+    lat2 = oldLocation.coordinate.latitude  * M_PI / 180;
+    lon2 = oldLocation.coordinate.longitude * M_PI / 180;
+    
+    float R = 6371;
+    float dLat = lat2-lat1;
+    float dLon = lon2-lon1;
+    
+    float a = sin(dLat/2) * sin(dLat/2) + cos(lat1) * cos(lat2) * sin(dLon/2) * sin(dLon/2);
+    float c = 2 * atan2(sqrt(a), sqrt(1-a));
+    float d = R * c;
+    
+    NSLog(@"Kms-->%f",d);
+    
+    return d;
+}
+
+-(float)getDistanceInMiles:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+{
+    float lat1,lon1,lat2,lon2;
+    
+    lat1 = newLocation.coordinate.latitude  * M_PI / 180;
+    lon1 = newLocation.coordinate.longitude * M_PI / 180;
+    
+    lat2 = oldLocation.coordinate.latitude  * M_PI / 180;
+    lon2 = oldLocation.coordinate.longitude * M_PI / 180;
+    
+    float R = 3963;
+    float dLat = lat2-lat1;
+    float dLon = lon2-lon1;
+    
+    float a = sin(dLat/2) * sin(dLat/2) + cos(lat1) * cos(lat2) * sin(dLon/2) * sin(dLon/2);
+    float c = 2 * atan2(sqrt(a), sqrt(1-a));
+    float d = R * c;
+    
+    NSLog(@"Miles-->%f",d);
+    
+    return d;
+}
 
 @end
