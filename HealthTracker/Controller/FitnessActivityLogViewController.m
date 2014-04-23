@@ -365,7 +365,8 @@ didUpdateUserLocation:(MKUserLocation *)userLocation
     [self.locationManager startUpdatingLocation];
 }
 
--(float)getDistanceInKm:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+-(float)getDistanceInKm:(CLLocation *)newLocation
+           fromLocation:(CLLocation *)oldLocation
 {
     float lat1,lon1,lat2,lon2;
     
@@ -388,7 +389,8 @@ didUpdateUserLocation:(MKUserLocation *)userLocation
     return d;
 }
 
--(float)getDistanceInMiles:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+-(float)getDistanceInMiles:(CLLocation *)newLocation
+              fromLocation:(CLLocation *)oldLocation
 {
     float lat1,lon1,lat2,lon2;
     

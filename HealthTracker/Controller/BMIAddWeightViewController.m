@@ -37,8 +37,8 @@
     self.bmiWeightInnerView.layer.borderWidth = 0.2f;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateOnScreenElements) name:healthTrackerDidUpdateNotification object:[HealthTracker sharedHealthTracker]];//Adds observer which will be used if the data updates to change the on screen labels.
     [self updateOnScreenElements];
-    [self.pickerView selectRow:30 inComponent:0 animated:NO];
-    [self.pickerView selectRow:250 inComponent:1 animated:NO];
+    [self.pickerView selectRow:160 inComponent:0 animated:NO];//Height default selected row
+    [self.pickerView selectRow:60 inComponent:1 animated:NO];//Weight default selected row
 }
 
 - (void)viewWillAppear:(BOOL)animated

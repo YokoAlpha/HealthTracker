@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="GaJ-kj-Jd8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="GaJ-kj-Jd8">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -55,7 +55,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9qc-ah-f8e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1816" y="-3637"/>
+            <point key="canvasLocation" x="1816" y="-3413"/>
         </scene>
         <!--Additional Setup View Controller-->
         <scene sceneID="o6N-Mj-MXd">
@@ -223,7 +223,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BPD-wf-ijz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2191" y="-3637"/>
+            <point key="canvasLocation" x="2191" y="-3413"/>
         </scene>
         <!--Intro View Controller-->
         <scene sceneID="nlF-Rl-gT7">
@@ -285,7 +285,7 @@ While using the app you will be able to see your progress of increased fitness a
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mec-qn-yzn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1436" y="-3637"/>
+            <point key="canvasLocation" x="1436" y="-3413"/>
         </scene>
         <!--Summary View Controller - Summary-->
         <scene sceneID="ufC-wZ-h7g">
@@ -451,7 +451,7 @@ While using the app you will be able to see your progress of increased fitness a
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2756" y="-3022"/>
+            <point key="canvasLocation" x="2756" y="-2734"/>
         </scene>
         <!--Graph View Controller - Graph-->
         <scene sceneID="RrR-Qs-4gL">
@@ -494,7 +494,7 @@ While using the app you will be able to see your progress of increased fitness a
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JNo-Sr-A7r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3882" y="-3022"/>
+            <point key="canvasLocation" x="3882" y="-2734"/>
         </scene>
         <!--View Controller - BMI-->
         <scene sceneID="RGg-Cw-zaJ">
@@ -581,7 +581,7 @@ While using the app you will be able to see your progress of increased fitness a
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TnJ-ZX-4D2">
-                                <rect key="frame" x="154" y="296" width="1" height="48"/>
+                                <rect key="frame" x="154" y="276" width="1" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -923,7 +923,7 @@ While using the app you will be able to see your progress of increased fitness a
                 </view>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VPm-2o-c8M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1541" y="320"/>
+            <point key="canvasLocation" x="1513" y="-64"/>
         </scene>
         <!--Food Selection View Controller-->
         <scene sceneID="7NF-VQ-xUZ">
@@ -984,7 +984,7 @@ While using the app you will be able to see your progress of increased fitness a
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V7M-9G-f8z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2859" y="1195"/>
+            <point key="canvasLocation" x="5155" y="-973"/>
         </scene>
         <!--Food Tracker View Controller - Food Tracker-->
         <scene sceneID="Xix-8m-ca6">
@@ -1077,7 +1077,7 @@ While using the app you will be able to see your progress of increased fitness a
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MTL-nE-FUA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1015" y="1624"/>
+            <point key="canvasLocation" x="3311" y="-544"/>
         </scene>
         <!--Food Detail View Controller-->
         <scene sceneID="xQY-Vs-iZd">
@@ -1135,7 +1135,7 @@ While using the app you will be able to see your progress of increased fitness a
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vBT-iG-iJN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3288" y="1194"/>
+            <point key="canvasLocation" x="5584" y="-974"/>
         </scene>
         <!--Profile View Controller - Profile-->
         <scene sceneID="9VQ-Od-4fD">
@@ -1177,7 +1177,7 @@ While using the app you will be able to see your progress of increased fitness a
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GDg-aO-DJg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="987" y="2804"/>
+            <point key="canvasLocation" x="979" y="700"/>
         </scene>
         <!--Health Tracker Tab Bar Controller-->
         <scene sceneID="Q6b-IM-JPn">
@@ -1219,7 +1219,7 @@ While using the app you will be able to see your progress of increased fitness a
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1G1-Rk-Jej" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="987" y="-3637"/>
+            <point key="canvasLocation" x="987" y="-3413"/>
         </scene>
         <!--Portrait Navigation Controller-->
         <scene sceneID="mW4-fN-6KT">
@@ -1237,7 +1237,7 @@ While using the app you will be able to see your progress of increased fitness a
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PON-U0-PUQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2357" y="1195"/>
+            <point key="canvasLocation" x="4653" y="-973"/>
         </scene>
         <!--Food History View Controller-->
         <scene sceneID="nFz-bS-tuC">
@@ -1302,7 +1302,7 @@ While using the app you will be able to see your progress of increased fitness a
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="igQ-yf-mDD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2875" y="1899"/>
+            <point key="canvasLocation" x="5171" y="-269"/>
         </scene>
         <!--Portrait Navigation Controller-->
         <scene sceneID="wMN-SG-KXr">
@@ -1320,7 +1320,7 @@ While using the app you will be able to see your progress of increased fitness a
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xG3-Ue-fJ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2373" y="1899"/>
+            <point key="canvasLocation" x="4669" y="-269"/>
         </scene>
         <!--Notifications View Controller-->
         <scene sceneID="x6g-ai-biX">
@@ -1494,7 +1494,7 @@ While using the app you will be able to see your progress of increased fitness a
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="doQ-gQ-rWm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2015" y="2868"/>
+            <point key="canvasLocation" x="2007" y="764"/>
         </scene>
         <!--Portrait Navigation Controller - BMI-->
         <scene sceneID="Dkw-c2-LCb">
@@ -1565,7 +1565,7 @@ While using the app you will be able to see your progress of increased fitness a
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Dr-lT-dpF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2441" y="2868"/>
+            <point key="canvasLocation" x="2433" y="764"/>
         </scene>
         <!--User Settings View Controller-->
         <scene sceneID="2Th-uP-NT9">
@@ -1610,7 +1610,7 @@ While using the app you will be able to see your progress of increased fitness a
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ff1-Nb-4qM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1513" y="2868"/>
+            <point key="canvasLocation" x="1505" y="764"/>
         </scene>
         <!--Portrait Navigation Controller - Summary-->
         <scene sceneID="60N-X7-bXS">
@@ -1650,7 +1650,7 @@ While using the app you will be able to see your progress of increased fitness a
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yio-2J-Hbt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1015" y="320"/>
+            <point key="canvasLocation" x="987" y="-64"/>
         </scene>
         <!--Run History View Controller-->
         <scene sceneID="WlR-7o-Qpq">
@@ -1715,7 +1715,7 @@ While using the app you will be able to see your progress of increased fitness a
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rHS-s2-lgk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2706" y="320"/>
+            <point key="canvasLocation" x="2678" y="-64"/>
         </scene>
         <!--Portrait Navigation Controller-->
         <scene sceneID="mv7-Ay-hio">
@@ -1734,7 +1734,7 @@ While using the app you will be able to see your progress of increased fitness a
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aiF-TD-8Sr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2196" y="320"/>
+            <point key="canvasLocation" x="2168" y="-64"/>
         </scene>
         <!--History View Controller-->
         <scene sceneID="O9g-na-tNw">
@@ -1837,7 +1837,7 @@ While using the app you will be able to see your progress of increased fitness a
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X54-IL-YVz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3248" y="-3022"/>
+            <point key="canvasLocation" x="3248" y="-2734"/>
         </scene>
     </scenes>
     <resources>
