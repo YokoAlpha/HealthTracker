@@ -79,7 +79,7 @@
                 }
                 if (3 == [sender tag])
                 {
-                    vc.title = @"Vegetabless";
+                    vc.title = @"Vegetables";
                     vc.foods = [[NSMutableArray alloc]initWithArray:[foodDataStore retrieveVegetables]];
                 }
                 if (4 == [sender tag])
