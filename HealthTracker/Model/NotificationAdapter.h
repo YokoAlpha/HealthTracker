@@ -11,6 +11,6 @@
 
 @interface NotificationAdapter : NSObject
 
-+ (void)updateLocalNotificationsWithUser:(UserDescription *)user;
++ (void)updateLocalNotificationsWithUser:(UserDescription *)user;//Updates user notifications based on user descriptions.
 
 @end

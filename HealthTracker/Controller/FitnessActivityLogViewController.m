@@ -40,8 +40,8 @@
 {
     [super viewDidLoad];
     self.statsContainer.backgroundColor = [UIColor colorWithRed:0 green:.62 blue:.984 alpha:0.3];
-    self.mapView.userTrackingMode = MKUserTrackingModeFollowWithHeading;
-    [self configureRoutes];
+    self.mapView.userTrackingMode = MKUserTrackingModeFollowWithHeading;//Make sure the map view updates as the user moves
+    [self configureRoutes];//Setup on the onscreen elements
 }
 
 - (void)didReceiveMemoryWarning
@@ -64,41 +64,42 @@
                                                   target:self
                                                 selector:@selector(showTime)
                                                 userInfo:nil
-                                                 repeats:YES];
-    [self buttonStatesWithStartState:NO stopState:YES resetState:NO];
+                                                 repeats:YES];//Fick of a timer
+    [self buttonStatesWithStartState:NO stopState:YES resetState:NO];//Setup button states
 }
 
 
 - (void)startRun
 {
-    self.locationManager = [[CLLocationManager alloc] init];
-    self.locationManager.delegate = self;
-    self.locationManager.desiredAccuracy=kCLLocationAccuracyBestForNavigation;
-    [self.locationManager startUpdatingLocation];
+    self.locationManager = [[CLLocationManager alloc] init];//Setup location manager
+    self.locationManager.delegate = self;//Set the delegate to this class
+    self.locationManager.desiredAccuracy=kCLLocationAccuracyBestForNavigation;//Accuracy for run tracking
+    [self.locationManager startUpdatingLocation];//Kick of the location manager
     [self resetButtonPressed:nil];//Reset all on screen stuff
     [self configureRoutes];//Setup routes again
     //Zoom into map
-    CLLocationCoordinate2D ground = _currentLocation.coordinate;
+    CLLocationCoordinate2D ground = _currentLocation.coordinate;//Get the current device location
     ground.latitude = ground.latitude;//Move to left
-    CLLocationCoordinate2D eye = CLLocationCoordinate2DMake(ground.latitude, ground.longitude);
+    CLLocationCoordinate2D eye = CLLocationCoordinate2DMake(ground.latitude, ground.longitude);//Use a 2d eye in the sky to make a cordinae for the current position
     MKMapCamera *mapCamera = [MKMapCamera cameraLookingAtCenterCoordinate:ground
                                                         fromEyeCoordinate:eye
-                                                              eyeAltitude:300];
-    mapCamera.pitch = 30;
-    mapCamera.heading = 90;
-    [self.mapView selectAnnotation:[[self.mapView annotations] firstObject] animated:YES];
+                                                              eyeAltitude:300];//Set a view point at this altitude
+    mapCamera.pitch = 30;//Set angle (3D not supported on all devices)
+    mapCamera.heading = 90;//Set direction
+    [self.mapView selectAnnotation:[[self.mapView annotations] firstObject] animated:YES];//Select the current location
     [UIView animateWithDuration:6 animations:^{
-        self.mapView.camera = mapCamera;
+        self.mapView.camera = mapCamera;//Assign animation in animation block to give zoom effect
     }];
     //Start measuring distance
 }
 
 - (IBAction)stopButtonPressed:(id)sender
 {
+    //Stop recording
     self.runInProgress.runEndTime = [NSDate date];//Ended run using current time and date.
-    [self.timer invalidate];
+    [self.timer invalidate];//Stop update timer
     self.timer = nil;
-    [self buttonStatesWithStartState:YES stopState:NO resetState:YES];
+    [self buttonStatesWithStartState:YES stopState:NO resetState:YES];//Reset button
 }
 
 - (IBAction)resetButtonPressed:(id)sender
@@ -124,6 +125,9 @@
 
 - (void)showTime
 {
+    /*
+     Formats time from components to show on labels
+     */
     int hours = 0;
     int minutes = 0;
     int seconds = 0;
@@ -179,6 +183,7 @@
                          stopState:(BOOL)stopState
                         resetState:(BOOL)resetState
 {
+    //Reset button states
     self.startButton.enabled = startState;
     self.stopButton.enabled = stopState;
     self.resetButton.enabled = resetState;
@@ -217,6 +222,7 @@
     {
         [self stopButtonPressed:nil];//We ned to stop the run if the run hasn't been completed
     }
+    //Save the run to the database and add the distance covered
     self.runInProgress.distanceRan = self.distanceTravelled;
     self.runInProgress.arrayOfRunPoints = [self.points copy];//Make sure the array of points is added for future use.
     [[HealthTracker sharedHealthTracker] addCompletedRun: self.runInProgress];
@@ -228,18 +234,18 @@
 
 - (void)configureRoutes
 {
-	MKMapPoint northEastPoint = MKMapPointMake(0.f, 0.f);
-	MKMapPoint southWestPoint = MKMapPointMake(0.f, 0.f);
+	MKMapPoint northEastPoint = MKMapPointMake(0.f, 0.f);//Make north east point
+	MKMapPoint southWestPoint = MKMapPointMake(0.f, 0.f);//Make south west point
     //Convert points into points 2 dimensional array
-	MKMapPoint* pointArray = malloc(sizeof(CLLocationCoordinate2D) * _points.count);
-    for(int index = 0; index < _points.count; index++)
+	MKMapPoint* pointArray = malloc(sizeof(CLLocationCoordinate2D) * _points.count);//Create a maps array point from the array
+    for(int index = 0; index < _points.count; index++)//For each point
 	{
-        CLLocation *location = [_points objectAtIndex:index];
-        CLLocationDegrees latitude  = location.coordinate.latitude;
-		CLLocationDegrees longitude = location.coordinate.longitude;
+        CLLocation *location = [_points objectAtIndex:index];//Get the location
+        CLLocationDegrees latitude  = location.coordinate.latitude;//Set the latitude
+		CLLocationDegrees longitude = location.coordinate.longitude;//Set the longitude
 		// Core location created with Lat Long
-		CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(latitude, longitude);
-		MKMapPoint point = MKMapPointForCoordinate(coordinate);
+		CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(latitude, longitude);//Create ad coordiate on the aps
+		MKMapPoint point = MKMapPointForCoordinate(coordinate);//Creae a point
 		if (index == 0)//First point used if no others exist
         {
 			northEastPoint = point;
@@ -247,6 +253,7 @@
 		}
         else
         {
+            //Check which area the pointis in and modify x and y
 			if (point.x > northEastPoint.x)
             {
                 northEastPoint.x = point.x;
@@ -268,9 +275,9 @@
 	}
     if (_runRouteLine)
     {
-        [self.mapView removeOverlay:_runRouteLine];
+        [self.mapView removeOverlay:_runRouteLine];//Remove line if allready exists
     }
-    _runRouteLine = [MKPolyline polylineWithPoints:pointArray count:_points.count];
+    _runRouteLine = [MKPolyline polylineWithPoints:pointArray count:_points.count];//Draw all of the points onto a continous polyline
 	if (nil != _runRouteLine)
     {
 		[self.mapView addOverlay:_runRouteLine];//Route added to map as an MKOverlay
@@ -298,12 +305,12 @@ didAddAnnotationViews:(NSArray *)views
 	{
         if (_runRouteLineView)
         {
-            [_runRouteLineView removeFromSuperview];
+            [_runRouteLineView removeFromSuperview];//Remove any existing line
         }
-        _runRouteLineView = [[MKPolylineView alloc] initWithPolyline:_runRouteLine];
-        _runRouteLineView.fillColor = [UIColor redColor];
-        _runRouteLineView.strokeColor = [UIColor redColor];
-        _runRouteLineView.lineWidth = 10;
+        _runRouteLineView = [[MKPolylineView alloc] initWithPolyline:_runRouteLine];//Creat a new line
+        _runRouteLineView.fillColor = [UIColor redColor];//Set its color to red
+        _runRouteLineView.strokeColor = [UIColor redColor];//Set its color to red
+        _runRouteLineView.lineWidth = 10;//Setup the line width
 		overlayView =  _runRouteLineView;
 	}
 	return overlayView;
@@ -313,7 +320,7 @@ didAddAnnotationViews:(NSArray *)views
 didUpdateUserLocation:(MKUserLocation *)userLocation
 {
     CLLocation *location = [[CLLocation alloc] initWithLatitude:userLocation.coordinate.latitude
-                                                      longitude:userLocation.coordinate.longitude];
+                                                      longitude:userLocation.coordinate.longitude];//user location
     if  (userLocation.coordinate.latitude == 0.0f ||
          userLocation.coordinate.longitude == 0.0f)
     {
@@ -322,15 +329,15 @@ didUpdateUserLocation:(MKUserLocation *)userLocation
     //Watch for runner changing location (we need to be careful how much the runner is moving)
     if (_points.count > 0)
     {
-        CLLocationDistance distance = [location distanceFromLocation:_currentLocation];
-        if (distance < 5)
+        CLLocationDistance distance = [location distanceFromLocation:_currentLocation];//get the distance from the location
+        if (distance < 5)//Ignore distances under 5
         {
             return;
         }
     }
     if (nil == _points)
     {
-        _points = [[NSMutableArray alloc] init];
+        _points = [[NSMutableArray alloc] init];//If no points array exists create one
     }
     [_points addObject:location];
     _currentLocation = location;
@@ -362,9 +369,16 @@ didUpdateUserLocation:(MKUserLocation *)userLocation
 
 - (void)startReadingLocation
 {
-    [self.locationManager startUpdatingLocation];
+    [self.locationManager startUpdatingLocation];//Start updating the users location when reading begins
 }
 
+
+/*
+    Created with this guide as documented in report
+ 
+    Techques 2011, Calculating heading between two lat longs, viewed 05 April 2014, <http://www.techques.com/question/1-6007127/Calculating-heading-between-two-latitude-and-longitude-in-iPhone>.
+ 
+ */
 -(float)getDistanceInKm:(CLLocation *)newLocation
            fromLocation:(CLLocation *)oldLocation
 {

@@ -112,6 +112,7 @@ numberOfRowsInComponent:(NSInteger)component
 
 - (IBAction)confirmButtonPressed:(id)sender
 {
+    /* From onscreen input create a BMI result and add it to database */
     double weight = [self.pickerView selectedRowInComponent:1];
     double height = [self.pickerView selectedRowInComponent:0];
     [[HealthTracker sharedHealthTracker] updateHeight:height];

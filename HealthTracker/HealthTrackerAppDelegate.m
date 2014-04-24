@@ -59,13 +59,14 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 - (void)application:(UIApplication *)application
 didReceiveLocalNotification:(UILocalNotification *)notification
 {
+    //Handle notifications that are recieved when the app is opened.
     UIApplicationState state = [application applicationState];
-    if (state == UIApplicationStateActive)
+    if (state == UIApplicationStateActive)//Check the app is open
     {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Reminder"
                                                         message:notification.alertBody
                                                        delegate:self cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
+                                              otherButtonTitles:nil];//Create alert with notification payload
         [alert show];
     }
     // Set icon badge number to zero
@@ -77,15 +78,15 @@ didReceiveLocalNotification:(UILocalNotification *)notification
 //Explicitly write Core Data accessors
 - (NSManagedObjectContext *)managedObjectContext
 {
-    if (managedObjectContext != nil)
+    if (managedObjectContext != nil)//Check we have a managed context
     {
-        return managedObjectContext;
+        return managedObjectContext;//We do so dont bother creating one
     }
-    NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
+    NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];//Create a persistent mediator to manage writing to iPhone file system
     if (coordinator != nil)
     {
-        managedObjectContext = [[NSManagedObjectContext alloc] init];
-        [managedObjectContext setPersistentStoreCoordinator: coordinator];
+        managedObjectContext = [[NSManagedObjectContext alloc] init];//Create new managed context
+        [managedObjectContext setPersistentStoreCoordinator: coordinator];//Assign the coordiantor
     }
     return managedObjectContext;
 }
@@ -94,10 +95,10 @@ didReceiveLocalNotification:(UILocalNotification *)notification
 {
     if (managedObjectModel != nil)
     {
-        return managedObjectModel;
+        return managedObjectModel;//Return existing managed model
     }
-    managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];
-    return managedObjectModel;
+    managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];//Create a new model
+    return managedObjectModel;//Return new model
 }
 
 - (NSPersistentStoreCoordinator *)persistentStoreCoordinator
@@ -107,10 +108,10 @@ didReceiveLocalNotification:(UILocalNotification *)notification
         return persistentStoreCoordinator;
     }
     NSURL *storeUrl = [NSURL fileURLWithPath: [[self applicationDocumentsDirectory]
-                                               stringByAppendingPathComponent: @"HealthTrackerDatabaseModel.sqlite"]];
+                                               stringByAppendingPathComponent: @"HealthTrackerDatabaseModel.sqlite"]];//Create url path to sqlite database
     NSError *error = nil;
     persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc]
-                                  initWithManagedObjectModel:[self managedObjectModel]];
+                                  initWithManagedObjectModel:[self managedObjectModel]];//Initialise with model
     if(![persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType
                                                  configuration:nil URL:storeUrl options:nil error:&error])
     {
@@ -123,7 +124,7 @@ didReceiveLocalNotification:(UILocalNotification *)notification
 
 - (NSString *)applicationDocumentsDirectory
 {
-    return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];//Get the current application file path
 }
 
 @end

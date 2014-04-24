@@ -31,11 +31,12 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    [self updateOnScreenElements];
+    [self updateOnScreenElements];//When the screen loads update the prefs based on user settings
 }
 
 - (void)updateOnScreenElements
 {
+    //Get the current user and check what measurement system they are using
     UserDescription *userDetails = [[HealthTracker sharedHealthTracker]retrieveUserData];
     if ([userDetails.measurementSystem isEqualToString:@"Imperial"])
     {
@@ -55,6 +56,9 @@
 
 - (IBAction)updateOtherSettings:(id)sender
 {
+    /*
+      If the user changes there settings save it to database
+     */
     UserDescription *userDetails = [[HealthTracker sharedHealthTracker]retrieveUserData];
     if (1 == self.measurementSystem.selectedSegmentIndex)
     {

@@ -44,9 +44,9 @@
     //    int currentYear  = [yearComponents year];
     for(int months = 0; months < 12; months++)
     {
-        [self.months addObject:[NSString stringWithFormat:@"%@",[[dateFormatter monthSymbols]objectAtIndex: months]]];
+        [self.months addObject:[NSString stringWithFormat:@"%@",[[dateFormatter monthSymbols]objectAtIndex: months]]];//Add the month name into arrary
     }
-    for (NSInteger i = 1900; i < [yearComponents year]+1; i++)
+    for (NSInteger i = 1900; i < [yearComponents year]+1; i++)//Create all the years that we want into an array
     {
         [self.years addObject:@(i)];
     }
@@ -59,7 +59,7 @@
 
 - (void)updateOnScreenUserData
 {
-    //Gender
+    //Check the current users gender
     if ([self.userData.gender isEqualToString:@"Male"])
     {
         [self.pickerView selectRow:0 inComponent:0 animated:NO];
@@ -74,8 +74,8 @@
     //set date components
     NSInteger year = [dateComponents year];
     NSInteger month = [dateComponents month];
-    [self.pickerView selectRow:month-1 inComponent:1 animated:NO];
-    [self.pickerView selectRow:year-1900 inComponent:2 animated:NO];
+    [self.pickerView selectRow:month-1 inComponent:1 animated:NO];//Sets initial month of birth
+    [self.pickerView selectRow:year-1900 inComponent:2 animated:NO];//Sets inital year of birth
 }
 
 - (void)didReceiveMemoryWarning
@@ -147,25 +147,26 @@ numberOfRowsInComponent:(NSInteger)component
     NSString *title = nil;
     if (0 == component)
     {
-        title = [self.genders objectAtIndex:row];
+        title = [self.genders objectAtIndex:row];//Gets the current gender at picker position
     }
     if (1 == component)
     {
-        title = [self.months objectAtIndex:row];
+        title = [self.months objectAtIndex:row];//Gets the current month at picker position
     }
     if (2 == component)
     {
         NSNumber *year = [self.years objectAtIndex:row];
-        title = [NSString stringWithFormat:@"%ld",(long)[year integerValue]];
+        title = [NSString stringWithFormat:@"%ld",(long)[year integerValue]];//Sets the current yeat ld used as it is 64bit app
     }
     return title;
 }
 
-//Override width for long month names.
+
 -(CGFloat)pickerView:(UIPickerView *)pickerView
    widthForComponent:(NSInteger)component
 
 {
+    //Override width for each column in picker.
     if (component == 0)
     {
         return (self.view.frame.size.width * 27 ) / 100;

@@ -31,23 +31,24 @@
     UIColor *color = nil;
     if (nil == self.colour)
     {
-        color = [UIColor colorWithRed:216/255.0f green:247/255.0f blue:160/255.0f alpha:1.0f];
+        color = [UIColor colorWithRed:216/255.0f green:247/255.0f blue:160/255.0f alpha:1.0f];//Default color
     }
     else
     {
         color = self.colour;
     }
     //Shadow
-    UIColor* shadow = [UIColor blackColor];
-    CGSize shadowOffset = CGSizeMake(0.1, -0.1);
+    UIColor* shadow = [UIColor blackColor];//Creates shadow color
+    CGSize shadowOffset = CGSizeMake(0.1, -0.1);//Creates shadow
     CGFloat shadowBlurRadius = 12.5;
     //Oval Drawing
-    UIBezierPath* ovalPath = [UIBezierPath bezierPathWithOvalInRect: rect];
-    [color setFill];
-    [ovalPath fill];
+    UIBezierPath* ovalPath = [UIBezierPath bezierPathWithOvalInRect: rect];//Draw an circle shape in view
+    [color setFill];//use the custom color
+    [ovalPath fill];//Fill it in
                               
     //Oval Inner Shadow
     CGRect ovalBorderRect = CGRectInset([ovalPath bounds], -shadowBlurRadius, -shadowBlurRadius);
+    //Add insets and offset to give the shadow a nice looks
     ovalBorderRect = CGRectOffset(ovalBorderRect, -shadowOffset.width, -shadowOffset.height);
     ovalBorderRect = CGRectInset(CGRectUnion(ovalBorderRect, [ovalPath bounds]), -1, 1);
     
@@ -63,11 +64,11 @@
                                     shadowBlurRadius, shadow.CGColor);
         [ovalPath addClip];
         CGAffineTransform transform = CGAffineTransformMakeTranslation(-round(ovalBorderRect.size.width), 0);
-        [ovalNegativePath applyTransform:transform];
+        [ovalNegativePath applyTransform:transform];//Transfrom the ovals negative path
         [[UIColor grayColor] setFill];
         [ovalNegativePath fill];
     }
-    CGContextRestoreGState(context);
+    CGContextRestoreGState(context);//Save the context
 }
 
 - (void)updateColor:(UIColor *)colour

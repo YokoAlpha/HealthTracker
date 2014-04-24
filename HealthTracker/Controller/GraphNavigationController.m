@@ -16,7 +16,7 @@
 
 -(NSUInteger)supportedInterfaceOrientations
 {
-    return UIInterfaceOrientationMaskLandscape;
+    return UIInterfaceOrientationMaskLandscape;//Landscape just for graphs.
 }
 
 @end

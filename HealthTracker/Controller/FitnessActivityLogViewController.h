@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 Yoko. All rights reserved.
 //
 
+//New style import modules
 @import MapKit;
 @import CoreLocation;
 
@@ -23,9 +24,9 @@
 
 //Polyline
 @property (nonatomic, retain) NSMutableArray * points;
-@property (nonatomic, retain) MKPolyline * runRouteLine;
+@property (nonatomic, retain) MKPolyline * runRouteLine;//Line drawn on view
 @property (nonatomic, retain) MKPolylineView * runRouteLineView;
-@property (nonatomic, retain) CLLocationManager * locationManager;
+@property (nonatomic, retain) CLLocationManager * locationManager;//Manager to control locations updated
 @property (nonatomic) MKMapRect runRouteRect;
 @property (nonatomic, retain) CLLocation* currentLocation;
 

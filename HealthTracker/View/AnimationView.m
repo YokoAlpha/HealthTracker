@@ -30,6 +30,10 @@
 
 - (void)awakeFromNib
 {
+    /* 
+     This method sets up all of the emitters and configures their behavior
+     
+     */
     CGRect viewBounds = self.layer.bounds;
     // Create the emitter layer
     self.ringEmitter = [CAEmitterLayer layer];
@@ -87,14 +91,14 @@
     //	circle.emitterCells = [NSArray arrayWithObject:star];	// this is SLOW!
     [self.layer addSublayer:self.ringEmitter];
     [self startAnimations];
-    [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(startAnimations) userInfo:nil repeats:YES];//Make sure animations repeat
+    [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(startAnimations) userInfo:nil repeats:YES];//Make sure animations repeats by scheduling a timer every 2 seconds
 }
 
 - (void)startAnimations
 {
     if(nil == self.animationPoints)//Create array if it has not allready been created.
     {
-        self.animationPoints = [NSArray arrayWithObjects:[NSValue valueWithCGPoint:CGPointMake(50, 50)],[NSValue valueWithCGPoint:CGPointMake(50, 50)],[NSValue valueWithCGPoint:CGPointMake(150, 150)],[NSValue valueWithCGPoint:CGPointMake(300, 300)],[NSValue valueWithCGPoint:CGPointMake(0, 300)],[NSValue valueWithCGPoint:CGPointMake(100, 50)],[NSValue valueWithCGPoint:CGPointMake(50, 50)], nil];
+        self.animationPoints = [NSArray arrayWithObjects:[NSValue valueWithCGPoint:CGPointMake(50, 50)],[NSValue valueWithCGPoint:CGPointMake(50, 50)],[NSValue valueWithCGPoint:CGPointMake(150, 150)],[NSValue valueWithCGPoint:CGPointMake(300, 300)],[NSValue valueWithCGPoint:CGPointMake(0, 300)],[NSValue valueWithCGPoint:CGPointMake(100, 50)],[NSValue valueWithCGPoint:CGPointMake(50, 50)], nil];//Array contains all the points on the screen to simulate a touch
         self.currentPointToAnimation = 0;
     }
     //Start animation from point in array

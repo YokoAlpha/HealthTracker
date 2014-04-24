@@ -37,6 +37,11 @@
 
 - (void)setupGraph
 {
+    /*
+     
+     This function sets up the graph view with the style of the data its representing for good code reuse so we dont have 4 different graph view classes
+     
+     */
     self.graphView = [[GraphView alloc]init];
     NSMutableArray *arrayOfValues = [[NSMutableArray alloc]init];
     NSMutableArray *arrayOfDescriptions = [[NSMutableArray alloc]init];
@@ -132,11 +137,11 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    self.graphView.frame = CGRectMake(0, -50, (self.dataResults.count * ((BAR_WIDTH + BAR_SPACEING) + 60)), self.view.frame.size.height - 50);
+    self.graphView.frame = CGRectMake(0, -50, (self.dataResults.count * ((BAR_WIDTH + BAR_SPACEING) + 60)), self.view.frame.size.height - 50);//Creates correctly sized graph
     [self.scrollView addSubview:self.graphView];
     self.graphView.backgroundColor = [UIColor lightGrayColor];
     self.scrollView.backgroundColor = [UIColor lightGrayColor];
-    self.scrollView.contentSize = CGSizeMake(self.graphView.frame.size.width, self.graphView.frame.size.height-50);
+    self.scrollView.contentSize = CGSizeMake(self.graphView.frame.size.width, self.graphView.frame.size.height-50);//Make sure the content is the correct size to hold it so it is scrollable
 }
 
 - (void)didReceiveMemoryWarning

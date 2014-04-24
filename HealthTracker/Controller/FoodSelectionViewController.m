@@ -123,8 +123,8 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
         id food = [sectArray objectAtIndex:indexPath.row];
         if ([food isKindOfClass:[FoodDescription class]])
         {
-            self.foodForDestinationVC = (FoodDescription *)food;
-            [self performSegueWithIdentifier:@"goToFoodDetail" sender:nil];
+            self.foodForDestinationVC = (FoodDescription *)food;//Set the food details screen with the food data
+            [self performSegueWithIdentifier:@"goToFoodDetail" sender:nil];//Go to dood detail screen
         }
     }
 }
@@ -136,8 +136,8 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     {
         // Get reference to the destination view controller
         FoodDetailViewController *vc = [segue destinationViewController];
-        vc.title = self.foodForDestinationVC.foodName;
-        vc.foodData = self.foodForDestinationVC;
+        vc.title = self.foodForDestinationVC.foodName;//Set the title on the second screen
+        vc.foodData = self.foodForDestinationVC;//Transfer data to new screen
     }
 }
 

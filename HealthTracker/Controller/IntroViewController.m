@@ -30,7 +30,7 @@
     [self.textLabel sizeToFit];
 
     self.scrollView.scrollEnabled = YES;
-    self.scrollView.contentSize = CGSizeMake(self.scrollView.contentSize.width, self.textLabel.frame.size.height);
+    self.scrollView.contentSize = CGSizeMake(self.scrollView.contentSize.width, self.textLabel.frame.size.height);//Make sure we can scroll view
 }
 
 - (void)didReceiveMemoryWarning

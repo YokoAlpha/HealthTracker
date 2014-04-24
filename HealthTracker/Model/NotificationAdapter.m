@@ -7,6 +7,7 @@
 //
 
 #import "NotificationAdapter.h"
+//Defines used for easy changing of messages without havign to look through code
 #define OPEN_BUTTON_NAME @"Open"
 #define BREAKFAST_REMINDER @"Enter food consumed for Breakfast"
 #define LUNCH_REMINDER @"Enter food consumed for Lunch"
@@ -18,9 +19,9 @@
 + (void)updateLocalNotificationsWithUser:(UserDescription *)user
 {
     [[UIApplication sharedApplication] cancelAllLocalNotifications];//Cancels all existing local notifications.
-    [self scheduleDailyNotificationForDate:user.breakfastReminder withBody:BREAKFAST_REMINDER withRepeatCalendarUnit:NSCalendarUnitDay];
-    [self scheduleDailyNotificationForDate:user.lunchReminder withBody:LUNCH_REMINDER withRepeatCalendarUnit:NSCalendarUnitDay];
-    [self scheduleDailyNotificationForDate:user.dinnerReminder withBody:DINNER_REMINDER withRepeatCalendarUnit:NSCalendarUnitDay];
+    [self scheduleDailyNotificationForDate:user.breakfastReminder withBody:BREAKFAST_REMINDER withRepeatCalendarUnit:NSCalendarUnitDay];//Schedules a breakfast reminder
+    [self scheduleDailyNotificationForDate:user.lunchReminder withBody:LUNCH_REMINDER withRepeatCalendarUnit:NSCalendarUnitDay];//Schedules a lunchtime reminder
+    [self scheduleDailyNotificationForDate:user.dinnerReminder withBody:DINNER_REMINDER withRepeatCalendarUnit:NSCalendarUnitDay];//Schedules a dinner reminder
     /* Weekly reminder */
     NSDateComponents *comps = [[NSDateComponents alloc] init];
     int weekday = 0;
@@ -53,6 +54,7 @@
     {
         weekday = 1;
     }
+    //Sets up a dummy date object so we can just use the weekday
     [comps setDay:1];
     [comps setWeekday:weekday];
     [comps setMonth:2];
@@ -60,22 +62,23 @@
     [comps setHour:9];
     [comps setMinute:00];
     [comps setSecond:00];
-    NSDate *bmiCheckDate = [[NSCalendar currentCalendar] dateFromComponents:comps];
-    [self scheduleDailyNotificationForDate:bmiCheckDate withBody:BMI_REMINDER withRepeatCalendarUnit:NSWeekCalendarUnit];
+    NSDate *bmiCheckDate = [[NSCalendar currentCalendar] dateFromComponents:comps];//Creates date from the above componenets
+    [self scheduleDailyNotificationForDate:bmiCheckDate withBody:BMI_REMINDER withRepeatCalendarUnit:NSWeekCalendarUnit];//Schedule a bmi notication.
 }
 
 + (void)scheduleDailyNotificationForDate:(NSDate *)date
                                 withBody:(NSString *)body
                   withRepeatCalendarUnit:(NSCalendarUnit)repeatUnit;
 {
-    UILocalNotification  *notification = [[UILocalNotification alloc]init];
-    notification.fireDate = date;
-    notification.alertBody = body;
-    notification.alertAction = OPEN_BUTTON_NAME;
-    notification.soundName = UILocalNotificationDefaultSoundName;
-    notification.applicationIconBadgeNumber = [[UIApplication sharedApplication] applicationIconBadgeNumber] + 1;
-    notification.repeatInterval = NSDayCalendarUnit;
-    [[UIApplication sharedApplication] scheduleLocalNotification:notification];
+    //Function generalised so code was not repeated which is good Object Oriented design.
+    UILocalNotification  *notification = [[UILocalNotification alloc]init];//Create local notification object
+    notification.fireDate = date;//create date for the notication
+    notification.alertBody = body;//Uses the passed body message
+    notification.alertAction = OPEN_BUTTON_NAME;//Use the default open name
+    notification.soundName = UILocalNotificationDefaultSoundName;//Default sound
+    notification.applicationIconBadgeNumber = [[UIApplication sharedApplication] applicationIconBadgeNumber] + 1;//Increment application badge count
+    notification.repeatInterval = NSDayCalendarUnit;//Set how many times this nofication should be repeated
+    [[UIApplication sharedApplication] scheduleLocalNotification:notification];//Schedules the notification on the device
 }
 
 @end

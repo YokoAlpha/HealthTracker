@@ -39,8 +39,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)updateNotifications:(id)sender
+- (IBAction)updateNotifications:(id)sender//When user presses save
 {
+    //Check relevant feedback
     BOOL releventFeedback = NO;
     if (0 == self.feedBackSwitch.selectedSegmentIndex)
     {
@@ -52,18 +53,19 @@
         //NO
         releventFeedback = NO;
     }
+    //Get the changed user details and assign them to local object
     self.userDetailsToTransfer.releventFeedback = releventFeedback;
     self.userDetailsToTransfer.dayForBMICheck = self.weekdaySwitch.selectedSegmentIndex;
     self.userDetailsToTransfer.breakfastReminder = self.breakfastTimeToSet;
     self.userDetailsToTransfer.lunchReminder = self.lunchTimeToSet;
     self.userDetailsToTransfer.dinnerReminder = self.dinnerTimeToSet;
-    [[HealthTracker sharedHealthTracker]updateUser:self.userDetailsToTransfer];
+    [[HealthTracker sharedHealthTracker]updateUser:self.userDetailsToTransfer];//save to user details which will write to database
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)updateOnscreenElements
 {
-    self.userDetailsToTransfer = [[HealthTracker sharedHealthTracker]retrieveUserData];//Get current data
+    self.userDetailsToTransfer = [[HealthTracker sharedHealthTracker]retrieveUserData];//Get current user data
     if (YES == self.userDetailsToTransfer.releventFeedback)
     {
         [self.feedBackSwitch setSelectedSegmentIndex:0];
@@ -72,8 +74,8 @@
     {
         [self.feedBackSwitch setSelectedSegmentIndex:1];
     }
+    //Setup initial valies
     [self.weekdaySwitch setSelectedSegmentIndex:self.userDetailsToTransfer.dayForBMICheck];
-    //Date labels
     NSDateFormatter *timeFormatter = [[NSDateFormatter alloc] init];
     [timeFormatter setDateFormat:@"HH:mm"];
     self.breakfastTimeToSet = self.userDetailsToTransfer.breakfastReminder;
@@ -86,6 +88,7 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
+    //Update onscreen UIWhen loaded and change some labels to fit
     [self updateOnscreenElements];
     [self.breakfastTimeLabel sizeToFit];
     [self.lunchTimeLabel sizeToFit];
@@ -94,6 +97,7 @@
 
 - (IBAction)notificationButtonPressed:(id)sender
 {
+    //When this is called the picker will move onto the screen
     UIButton *notificationButton = (UIButton *)sender;
     //Get the tag from the button pressed
     self.selectedPicker = notificationButton.tag;
@@ -169,6 +173,7 @@ numberOfRowsInComponent:(NSInteger)component
 
 - (void)showPicker
 {
+    //Moves the picker onto screen by using a transition and altering its cordinates
     CGRect newFrame =  self.pickerContainer.frame;
     //set y position to self.height - picker container height
     CGSize screenSize = [[UIScreen mainScreen] bounds].size;
@@ -192,6 +197,7 @@ numberOfRowsInComponent:(NSInteger)component
 
 - (void)hidePicker
 {
+    //Moves the picker off screen by using a transition and altering its cordinates 
     CGRect newFrame =  self.pickerContainer.frame;
     //set y position to self.height + picker container height
     newFrame.origin.y = self.view.frame.size.height + self.pickerContainer.frame.size.height;

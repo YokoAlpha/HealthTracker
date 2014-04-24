@@ -34,6 +34,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.title = @"Notifications";
+    //Intitially selected row in column
     [self.picker selectRow:11 inComponent:0 animated:NO];
     [self.picker selectRow:29 inComponent:1 animated:NO];
     [self hidePicker];

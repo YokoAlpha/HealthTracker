@@ -194,7 +194,7 @@
     {
         NSArray *objectsToShare = @[shareDescription,screenshot];
         UIActivityViewController *controller = [[UIActivityViewController alloc] initWithActivityItems:objectsToShare applicationActivities:nil];
-        NSArray *excludedActivities = @[UIActivityTypePostToWeibo, UIActivityTypePostToTencentWeibo,UIActivityTypeAssignToContact,UIActivityTypeSaveToCameraRoll,UIActivityTypeAddToReadingList,UIActivityTypePostToFlickr,UIActivityTypePostToVimeo];
+        NSArray *excludedActivities = @[UIActivityTypePostToWeibo, UIActivityTypePostToTencentWeibo,UIActivityTypeAssignToContact,UIActivityTypeSaveToCameraRoll,UIActivityTypeAddToReadingList,UIActivityTypePostToFlickr,UIActivityTypePostToVimeo];//Exclude these types of sharing
         controller.excludedActivityTypes = excludedActivities;
         // Present the controller
         [self presentViewController:controller animated:YES completion:nil];

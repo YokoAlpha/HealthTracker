@@ -35,6 +35,9 @@
 
 - (void)populateData
 {
+    /*
+     These methods use other functions to populate the arrays correctly with all the various food types
+     */
     self.sugarAndFats = [[NSMutableArray alloc]initWithArray:
                          [self transformDictionaryIntoArrayOfFoods:[self loadFromPlist:@"SugarAndFats"] withKind:@"SugarAndFats"]];
     self.dairyAndMeat = [[NSMutableArray alloc]initWithArray:
@@ -92,6 +95,10 @@
     return [[NSDictionary alloc] initWithContentsOfFile:path];
 }
 
+/*
+  Methods for making the food categories available.
+ */
+
 - (NSArray *)retrieveSugarAndFats
 {
     return [self foodCategoryArraysWithArray:[self.sugarAndFats copy]];
@@ -144,30 +151,34 @@
 
 + (NSArray *)foodTypesInArray:(NSArray *)foodsArray
 {
-    NSMutableArray *differentFoodTypes = [[NSMutableArray alloc]init];
-    for (id foodObj in foodsArray)
+    NSMutableArray *differentFoodTypes = [[NSMutableArray alloc]init];//Stores just the categories in an array
+    for (id foodObj in foodsArray)//For each object in array
     {
-        if ([foodObj isKindOfClass:[FoodDescription class]])
+        if ([foodObj isKindOfClass:[FoodDescription class]])//Check its a food
         {
             FoodDescription *foodCorrectDataType = (FoodDescription*)foodObj;
-            [differentFoodTypes addObject:foodCorrectDataType.foodCategory];
+            [differentFoodTypes addObject:foodCorrectDataType.foodCategory];//Add the category string into the new different array
         }
     }
-    NSMutableArray * unique = [NSMutableArray array];
-    NSMutableSet * processed = [NSMutableSet set];
-    for (NSString * string in differentFoodTypes) {
-        if ([processed containsObject:string] == NO) {
+    NSMutableArray * unique = [NSMutableArray array];///Setup unique array
+    NSMutableSet * processed = [NSMutableSet set];//Create processed set
+    for (NSString * string in differentFoodTypes)//For each category in the different food types array
+    {
+        if ([processed containsObject:string] == NO)//Check if it has not allready been added
+        {
+            //Add Category string into both arrays
             [unique addObject:string];
             [processed addObject:string];
         }
     }
-    return [unique copy];
+    return [unique copy];//Returns the number of unique food types in the given array
     //return [[NSOrderedSet orderedSetWithArray:differentFoodTypes] array];
 }
 
 + (NSInteger)numberOfFoodsForCategory:(NSString *)category
                             withArray:(NSArray *)array
 {
+    //Searches through all the foods and finds how many of them are for each category
     NSInteger foodCount = 0;
     for (FoodDescription *foodObj in array)
     {
