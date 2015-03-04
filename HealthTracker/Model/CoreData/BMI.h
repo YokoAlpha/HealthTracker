@@ -2,8 +2,8 @@
 //  BMI.h
 //  HealthTracker
 //
-//  Created by Yoko Alpha on 05/04/2014.
-//  Copyright (c) 2014 Yoko. All rights reserved.
+//  Created by Yoko Alpha on 04/03/2015.
+//  Copyright (c) 2015 Yoko. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -17,6 +17,6 @@
 @property (nonatomic, retain) NSDate * date;
 @property (nonatomic, retain) NSNumber * height;
 @property (nonatomic, retain) NSNumber * weight;
-@property (nonatomic, retain) User *newRelationship;
+@property (nonatomic, retain) User *relationship;
 
 @end

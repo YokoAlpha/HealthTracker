@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3AA4FA7C18DDD1EE00E21BFB /* RunDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA4FA7B18DDD1EE00E21BFB /* RunDescription.m */; };
 		3AA4FA8818DDF26800E21BFB /* RunHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA4FA8718DDF26800E21BFB /* RunHistoryViewController.m */; };
+		E0120A3B196D90CE00BA28E5 /* HealthTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = E0120A3A196D90CE00BA28E5 /* HealthTracker.m */; };
 		E036342A18B01BEB00D3878A /* BMIAddWeightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E036342918B01BEB00D3878A /* BMIAddWeightViewController.m */; };
 		E03AB6AF18A7894700EA6BCE /* RoundedSummaryView.m in Sources */ = {isa = PBXBuildFile; fileRef = E03AB6AE18A7894700EA6BCE /* RoundedSummaryView.m */; };
 		E03AB6B218A7896500EA6BCE /* CircleSummaryView.m in Sources */ = {isa = PBXBuildFile; fileRef = E03AB6B118A7896500EA6BCE /* CircleSummaryView.m */; };
@@ -55,6 +56,10 @@
 		E0A141A61886DC38006F73EA /* ButtonProtein.png in Resources */ = {isa = PBXBuildFile; fileRef = E0A141A21886DC38006F73EA /* ButtonProtein.png */; };
 		E0A141A71886DC38006F73EA /* ButtonStarch.png in Resources */ = {isa = PBXBuildFile; fileRef = E0A141A31886DC38006F73EA /* ButtonStarch.png */; };
 		E0A141A81886DC38006F73EA /* ButtonVage.png in Resources */ = {isa = PBXBuildFile; fileRef = E0A141A41886DC38006F73EA /* ButtonVage.png */; };
+		E0A7BB631AA7B47E00FDC511 /* BMI.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A7BB621AA7B47E00FDC511 /* BMI.m */; };
+		E0A7BB661AA7B47E00FDC511 /* Run.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A7BB651AA7B47E00FDC511 /* Run.m */; };
+		E0A7BB691AA7B47E00FDC511 /* Food.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A7BB681AA7B47E00FDC511 /* Food.m */; };
+		E0A7BB6C1AA7B47E00FDC511 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A7BB6B1AA7B47E00FDC511 /* User.m */; };
 		E0ACB803189436C600328604 /* DairyAndMeat.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0ACB802189436C600328604 /* DairyAndMeat.plist */; };
 		E0ACB806189444A700328604 /* Vegetable.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0ACB805189444A700328604 /* Vegetable.plist */; };
 		E0ACB80A189449FE00328604 /* FoodDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = E0ACB809189449FE00328604 /* FoodDescription.m */; };
@@ -63,10 +68,6 @@
 		E0ACB81318946BB100328604 /* Starch.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0ACB81218946BB100328604 /* Starch.plist */; };
 		E0CFF07B1885E817003A4D47 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0CFF07A1885E817003A4D47 /* MapKit.framework */; };
 		E0D8975F18E7726B00DF472D /* BMIDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = E0D8975E18E7726B00DF472D /* BMIDescription.m */; };
-		E0E639CF18F00B6800F87941 /* BMI.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E639CE18F00B6800F87941 /* BMI.m */; };
-		E0E639D218F00B6900F87941 /* Food.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E639D118F00B6900F87941 /* Food.m */; };
-		E0E639D518F00B6900F87941 /* Run.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E639D418F00B6900F87941 /* Run.m */; };
-		E0E639D818F00B6900F87941 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E639D718F00B6900F87941 /* User.m */; };
 		E0E639DB18F0175500F87941 /* BMIHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E639DA18F0175500F87941 /* BMIHistoryViewController.m */; };
 		E0E639DE18F022F500F87941 /* GraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E639DD18F022F500F87941 /* GraphViewController.m */; };
 		E0E639E118F02AC500F87941 /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E639E018F02AC500F87941 /* GraphView.m */; };
@@ -107,6 +108,7 @@
 		3AA4FA7B18DDD1EE00E21BFB /* RunDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RunDescription.m; path = Model/Run/RunDescription.m; sourceTree = "<group>"; };
 		3AA4FA8618DDF26800E21BFB /* RunHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RunHistoryViewController.h; path = Controller/RunHistoryViewController.h; sourceTree = "<group>"; };
 		3AA4FA8718DDF26800E21BFB /* RunHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RunHistoryViewController.m; path = Controller/RunHistoryViewController.m; sourceTree = "<group>"; };
+		E0120A3A196D90CE00BA28E5 /* HealthTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HealthTracker.m; sourceTree = "<group>"; };
 		E036342818B01BEB00D3878A /* BMIAddWeightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMIAddWeightViewController.h; path = Controller/BMIAddWeightViewController.h; sourceTree = "<group>"; };
 		E036342918B01BEB00D3878A /* BMIAddWeightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMIAddWeightViewController.m; path = Controller/BMIAddWeightViewController.m; sourceTree = "<group>"; };
 		E03AB6AD18A7894700EA6BCE /* RoundedSummaryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoundedSummaryView.h; path = View/RoundedSummaryView.h; sourceTree = "<group>"; };
@@ -175,6 +177,14 @@
 		E0A141A21886DC38006F73EA /* ButtonProtein.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonProtein.png; sourceTree = "<group>"; };
 		E0A141A31886DC38006F73EA /* ButtonStarch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonStarch.png; sourceTree = "<group>"; };
 		E0A141A41886DC38006F73EA /* ButtonVage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonVage.png; sourceTree = "<group>"; };
+		E0A7BB611AA7B47E00FDC511 /* BMI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMI.h; path = Model/CoreData/BMI.h; sourceTree = "<group>"; };
+		E0A7BB621AA7B47E00FDC511 /* BMI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMI.m; path = Model/CoreData/BMI.m; sourceTree = "<group>"; };
+		E0A7BB641AA7B47E00FDC511 /* Run.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Run.h; path = Model/CoreData/Run.h; sourceTree = "<group>"; };
+		E0A7BB651AA7B47E00FDC511 /* Run.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Run.m; path = Model/CoreData/Run.m; sourceTree = "<group>"; };
+		E0A7BB671AA7B47E00FDC511 /* Food.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Food.h; path = Model/CoreData/Food.h; sourceTree = "<group>"; };
+		E0A7BB681AA7B47E00FDC511 /* Food.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Food.m; path = Model/CoreData/Food.m; sourceTree = "<group>"; };
+		E0A7BB6A1AA7B47E00FDC511 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Model/CoreData/User.h; sourceTree = "<group>"; };
+		E0A7BB6B1AA7B47E00FDC511 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Model/CoreData/User.m; sourceTree = "<group>"; };
 		E0ACB802189436C600328604 /* DairyAndMeat.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = DairyAndMeat.plist; path = FoodData/DairyAndMeat.plist; sourceTree = "<group>"; };
 		E0ACB805189444A700328604 /* Vegetable.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Vegetable.plist; path = FoodData/Vegetable.plist; sourceTree = "<group>"; };
 		E0ACB808189449FE00328604 /* FoodDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FoodDescription.h; path = Model/Food/FoodDescription.h; sourceTree = "<group>"; };
@@ -186,14 +196,6 @@
 		E0CFF07A1885E817003A4D47 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		E0D8975D18E7726B00DF472D /* BMIDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMIDescription.h; path = Model/BMI/BMIDescription.h; sourceTree = "<group>"; };
 		E0D8975E18E7726B00DF472D /* BMIDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMIDescription.m; path = Model/BMI/BMIDescription.m; sourceTree = "<group>"; };
-		E0E639CD18F00B6800F87941 /* BMI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMI.h; path = Model/CoreData/BMI.h; sourceTree = "<group>"; };
-		E0E639CE18F00B6800F87941 /* BMI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMI.m; path = Model/CoreData/BMI.m; sourceTree = "<group>"; };
-		E0E639D018F00B6900F87941 /* Food.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Food.h; path = Model/CoreData/Food.h; sourceTree = "<group>"; };
-		E0E639D118F00B6900F87941 /* Food.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Food.m; path = Model/CoreData/Food.m; sourceTree = "<group>"; };
-		E0E639D318F00B6900F87941 /* Run.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Run.h; path = Model/CoreData/Run.h; sourceTree = "<group>"; };
-		E0E639D418F00B6900F87941 /* Run.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Run.m; path = Model/CoreData/Run.m; sourceTree = "<group>"; };
-		E0E639D618F00B6900F87941 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Model/CoreData/User.h; sourceTree = "<group>"; };
-		E0E639D718F00B6900F87941 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Model/CoreData/User.m; sourceTree = "<group>"; };
 		E0E639D918F0175500F87941 /* BMIHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMIHistoryViewController.h; path = Controller/BMIHistoryViewController.h; sourceTree = "<group>"; };
 		E0E639DA18F0175500F87941 /* BMIHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMIHistoryViewController.m; path = Controller/BMIHistoryViewController.m; sourceTree = "<group>"; };
 		E0E639DC18F022F500F87941 /* GraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GraphViewController.h; path = Controller/GraphViewController.h; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 		E04C6A8218849986005E90B2 = {
 			isa = PBXGroup;
 			children = (
+				E0120A3A196D90CE00BA28E5 /* HealthTracker.m */,
 				E04C6A9418849986005E90B2 /* HealthTracker */,
 				E04C6AB318849986005E90B2 /* HealthTrackerTests */,
 				E04C6A8D18849986005E90B2 /* Frameworks */,
@@ -475,15 +478,15 @@
 		E0C9B09118B8C77400FA5475 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
-				E0E639D618F00B6900F87941 /* User.h */,
-				E0E639D718F00B6900F87941 /* User.m */,
-				E0E639D318F00B6900F87941 /* Run.h */,
-				E0E639D418F00B6900F87941 /* Run.m */,
-				E0E639D018F00B6900F87941 /* Food.h */,
-				E0E639D118F00B6900F87941 /* Food.m */,
-				E0E639CD18F00B6800F87941 /* BMI.h */,
-				E0E639CE18F00B6800F87941 /* BMI.m */,
 				E03AB6B818A7C8FF00EA6BCE /* HealthTrackerDatabaseModel.xcdatamodeld */,
+				E0A7BB6A1AA7B47E00FDC511 /* User.h */,
+				E0A7BB6B1AA7B47E00FDC511 /* User.m */,
+				E0A7BB671AA7B47E00FDC511 /* Food.h */,
+				E0A7BB681AA7B47E00FDC511 /* Food.m */,
+				E0A7BB641AA7B47E00FDC511 /* Run.h */,
+				E0A7BB651AA7B47E00FDC511 /* Run.m */,
+				E0A7BB611AA7B47E00FDC511 /* BMI.h */,
+				E0A7BB621AA7B47E00FDC511 /* BMI.m */,
 			);
 			name = "Core Data";
 			sourceTree = "<group>";
@@ -567,11 +570,11 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = HealthTracker;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = Gabi;
 				TargetAttributes = {
 					E04C6A8A18849986005E90B2 = {
-						DevelopmentTeam = 2E5XL3YJX2;
+						DevelopmentTeam = HV6GV68W4Q;
 					};
 					E04C6AAB18849986005E90B2 = {
 						TestTargetID = E04C6A8A18849986005E90B2;
@@ -652,6 +655,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0A7BB6C1AA7B47E00FDC511 /* User.m in Sources */,
+				E0A7BB691AA7B47E00FDC511 /* Food.m in Sources */,
 				E06BFC25189E596D00A17F1C /* UserDescription.m in Sources */,
 				E0D8975F18E7726B00DF472D /* BMIDescription.m in Sources */,
 				E04C6A9B18849986005E90B2 /* main.m in Sources */,
@@ -660,10 +665,10 @@
 				E06BFC47189EA69200A17F1C /* FoodSelectionViewController.m in Sources */,
 				E06BFC49189EA69200A17F1C /* ProfileViewController.m in Sources */,
 				E036342A18B01BEB00D3878A /* BMIAddWeightViewController.m in Sources */,
-				E0E639D218F00B6900F87941 /* Food.m in Sources */,
 				E03AB6BA18A7C8FF00EA6BCE /* HealthTrackerDatabaseModel.xcdatamodeld in Sources */,
 				E0E639ED18F0376E00F87941 /* PortraitNavigationController.m in Sources */,
 				E06BFC4B189EA69200A17F1C /* BMIViewController.m in Sources */,
+				E0A7BB661AA7B47E00FDC511 /* Run.m in Sources */,
 				E06BFC28189E835100A17F1C /* HealthTracker.m in Sources */,
 				3AA4FA8818DDF26800E21BFB /* RunHistoryViewController.m in Sources */,
 				E06BFC45189EA69200A17F1C /* FoodTrackerViewController.m in Sources */,
@@ -678,17 +683,15 @@
 				E03AB6B518A7AC2100EA6BCE /* FoodHistoryViewController.m in Sources */,
 				E06BFC4F189ECA4100A17F1C /* HealthTrackerTabBarController.m in Sources */,
 				E0E639DE18F022F500F87941 /* GraphViewController.m in Sources */,
-				E0E639D518F00B6900F87941 /* Run.m in Sources */,
 				E0ACB80D18944A6000328604 /* FoodDataStore.m in Sources */,
 				E0E6902318B0FF180024E0FB /* NotificationAdapter.m in Sources */,
 				E0E639F018F06C3B00F87941 /* AnimationView.m in Sources */,
+				E0A7BB631AA7B47E00FDC511 /* BMI.m in Sources */,
 				E0E6901F18B0FE2A0024E0FB /* OtherSettingsViewController.m in Sources */,
 				E0E639EA18F0349200F87941 /* GraphNavigationController.m in Sources */,
 				E06BFC4C189EA69200A17F1C /* HealthTrackerViewController.m in Sources */,
 				3AA4FA7C18DDD1EE00E21BFB /* RunDescription.m in Sources */,
-				E0E639CF18F00B6800F87941 /* BMI.m in Sources */,
 				E04C6A9F18849986005E90B2 /* HealthTrackerAppDelegate.m in Sources */,
-				E0E639D818F00B6900F87941 /* User.m in Sources */,
 				E03AB6AF18A7894700EA6BCE /* RoundedSummaryView.m in Sources */,
 				E06BFC31189EA67B00A17F1C /* SetupViewController.m in Sources */,
 				E06BFC48189EA69200A17F1C /* SummaryViewController.m in Sources */,
@@ -699,6 +702,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0120A3B196D90CE00BA28E5 /* HealthTracker.m in Sources */,
 				E04C6ABA18849986005E90B2 /* HealthTrackerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -745,7 +749,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -784,7 +787,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -822,6 +824,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HealthTracker/HealthTracker-Prefix.pch";
 				INFOPLIST_FILE = "HealthTracker/HealthTracker-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -836,6 +839,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HealthTracker/HealthTracker-Prefix.pch";
 				INFOPLIST_FILE = "HealthTracker/HealthTracker-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -844,7 +848,6 @@
 		E04C6AC118849986005E90B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HealthTracker.app/HealthTracker";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -867,7 +870,6 @@
 		E04C6AC218849986005E90B2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HealthTracker.app/HealthTracker";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

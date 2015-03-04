@@ -13,7 +13,6 @@
 #import <CoreLocation/CoreLocation.h>
 #import <MobileCoreServices/UTCoreTypes.h>
 
-#define kRequiredAccuracy 500.0 //meters
 #define kMaxAge 10.0 //seconds
 #define M_PI   3.14159265358979323846264338327950288   /* pi */
 
@@ -73,7 +72,8 @@
 {
     self.locationManager = [[CLLocationManager alloc] init];//Setup location manager
     self.locationManager.delegate = self;//Set the delegate to this class
-    self.locationManager.desiredAccuracy=kCLLocationAccuracyBestForNavigation;//Accuracy for run tracking
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;//Accuracy for run tracking
+    [self.locationManager requestAlwaysAuthorization];
     [self.locationManager startUpdatingLocation];//Kick of the location manager
     [self resetButtonPressed:nil];//Reset all on screen stuff
     [self configureRoutes];//Setup routes again
@@ -132,12 +132,11 @@
     int minutes = 0;
     int seconds = 0;
     int hundredths = 0;
-    NSArray *timeArray = [NSArray arrayWithObjects:self.hundredsOfSecondsLabel.text, self.secondsLabel.text, self.minutesLabel.text, self.hoursLabel.text, nil];
-    int startCount = [timeArray count] - 1;
-    for (startCount; startCount >= 0;startCount--)
+    NSArray *timeArray = @[self.hundredsOfSecondsLabel.text, self.secondsLabel.text, self.minutesLabel.text, self.hoursLabel.text];
+    for (NSInteger i = 3; i >= 0;i--)
     {
-        int timeComponent = [[timeArray objectAtIndex:startCount] intValue];
-        switch (startCount)
+        int timeComponent = [[timeArray objectAtIndex:i] intValue];
+        switch (i)
         {
             case 3:
                 hours = timeComponent;
@@ -369,6 +368,7 @@ didUpdateUserLocation:(MKUserLocation *)userLocation
 
 - (void)startReadingLocation
 {
+    [self.locationManager requestAlwaysAuthorization];
     [self.locationManager startUpdatingLocation];//Start updating the users location when reading begins
 }
 

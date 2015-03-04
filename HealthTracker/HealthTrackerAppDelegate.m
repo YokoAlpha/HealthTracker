@@ -17,6 +17,10 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     // Override point for customization after application launch.
     [HealthTracker sharedHealthTracker].managedObjectContext = self.managedObjectContext;//Must ensure that reference has been kept to core data database.
     //Handle Local notification
+    if([application respondsToSelector:@selector(registerUserNotificationSettings:)])
+    {
+        [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil]];
+    }
     UILocalNotification *locationNotification = [launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey];// Handle launching from a notification
     if (locationNotification)
     {

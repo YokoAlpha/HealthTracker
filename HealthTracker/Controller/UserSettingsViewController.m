@@ -70,12 +70,17 @@
     }
     //GetYearDetails
     NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSDateComponents *dateComponents = [calendar components:(NSWeekdayCalendarUnit | NSYearCalendarUnit | NSMonthCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSWeekCalendarUnit) fromDate:self.userData.dateOfBirth];
-    //set date components
-    NSInteger year = [dateComponents year];
-    NSInteger month = [dateComponents month];
-    [self.pickerView selectRow:month-1 inComponent:1 animated:NO];//Sets initial month of birth
-    [self.pickerView selectRow:year-1900 inComponent:2 animated:NO];//Sets inital year of birth
+    if(nil != self.userData.dateOfBirth)
+    {
+        //Check if data not empty.
+        NSDateComponents *dateComponents = [calendar components:(NSWeekdayCalendarUnit | NSYearCalendarUnit | NSMonthCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSWeekCalendarUnit) fromDate:self.userData.dateOfBirth];
+        //set date components
+        NSInteger year = [dateComponents year];
+        NSInteger month = [dateComponents month];
+        [self.pickerView selectRow:month-1 inComponent:1 animated:NO];//Sets initial month of birth
+        [self.pickerView selectRow:year-1900 inComponent:2 animated:NO];//Sets inital year of birth
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning

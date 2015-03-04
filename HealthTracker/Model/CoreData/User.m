@@ -2,8 +2,8 @@
 //  User.m
 //  HealthTracker
 //
-//  Created by Yoko Alpha on 05/04/2014.
-//  Copyright (c) 2014 Yoko. All rights reserved.
+//  Created by Yoko Alpha on 04/03/2015.
+//  Copyright (c) 2015 Yoko. All rights reserved.
 //
 
 #import "User.h"
