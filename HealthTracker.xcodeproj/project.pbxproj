@@ -66,6 +66,7 @@
 		E0ACB80D18944A6000328604 /* FoodDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = E0ACB80C18944A6000328604 /* FoodDataStore.m */; };
 		E0ACB8111894680E00328604 /* Fruit.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0ACB8101894680E00328604 /* Fruit.plist */; };
 		E0ACB81318946BB100328604 /* Starch.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0ACB81218946BB100328604 /* Starch.plist */; };
+		E0C127921C7BB13C0065DE2F /* Launch_Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0C127911C7BB13C0065DE2F /* Launch_Screen.storyboard */; };
 		E0CFF07B1885E817003A4D47 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0CFF07A1885E817003A4D47 /* MapKit.framework */; };
 		E0D8975F18E7726B00DF472D /* BMIDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = E0D8975E18E7726B00DF472D /* BMIDescription.m */; };
 		E0E639DB18F0175500F87941 /* BMIHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E639DA18F0175500F87941 /* BMIHistoryViewController.m */; };
@@ -193,6 +194,7 @@
 		E0ACB80C18944A6000328604 /* FoodDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FoodDataStore.m; path = Model/Food/FoodDataStore.m; sourceTree = "<group>"; };
 		E0ACB8101894680E00328604 /* Fruit.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Fruit.plist; path = FoodData/Fruit.plist; sourceTree = "<group>"; };
 		E0ACB81218946BB100328604 /* Starch.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Starch.plist; path = FoodData/Starch.plist; sourceTree = "<group>"; };
+		E0C127911C7BB13C0065DE2F /* Launch_Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launch_Screen.storyboard; sourceTree = "<group>"; };
 		E0CFF07A1885E817003A4D47 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		E0D8975D18E7726B00DF472D /* BMIDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMIDescription.h; path = Model/BMI/BMIDescription.h; sourceTree = "<group>"; };
 		E0D8975E18E7726B00DF472D /* BMIDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMIDescription.m; path = Model/BMI/BMIDescription.m; sourceTree = "<group>"; };
@@ -323,6 +325,7 @@
 				E03AB6AC18A7890600EA6BCE /* View */,
 				E0ACB80F18945E7400328604 /* Controller */,
 				E04C6A9D18849986005E90B2 /* HealthTrackerAppDelegate.h */,
+				E0C127911C7BB13C0065DE2F /* Launch_Screen.storyboard */,
 				E04C6A9E18849986005E90B2 /* HealthTrackerAppDelegate.m */,
 				E04C6AA018849986005E90B2 /* Main.storyboard */,
 				E04C6AA618849986005E90B2 /* Images.xcassets */,
@@ -570,12 +573,9 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = HealthTracker;
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = Gabi;
 				TargetAttributes = {
-					E04C6A8A18849986005E90B2 = {
-						DevelopmentTeam = HV6GV68W4Q;
-					};
 					E04C6AAB18849986005E90B2 = {
 						TestTargetID = E04C6A8A18849986005E90B2;
 					};
@@ -636,6 +636,7 @@
 				E0ACB806189444A700328604 /* Vegetable.plist in Resources */,
 				E0E639F418F06E5000F87941 /* Ring.png in Resources */,
 				E0A141A61886DC38006F73EA /* ButtonProtein.png in Resources */,
+				E0C127921C7BB13C0065DE2F /* Launch_Screen.storyboard in Resources */,
 				E0454A731893FD4A00D22C6A /* SugarAndFats.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -763,6 +764,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -825,6 +827,7 @@
 				GCC_PREFIX_HEADER = "HealthTracker/HealthTracker-Prefix.pch";
 				INFOPLIST_FILE = "HealthTracker/HealthTracker-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gabi.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -840,6 +843,7 @@
 				GCC_PREFIX_HEADER = "HealthTracker/HealthTracker-Prefix.pch";
 				INFOPLIST_FILE = "HealthTracker/HealthTracker-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gabi.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -861,6 +865,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "HealthTrackerTests/HealthTrackerTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gabi.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -879,6 +884,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HealthTracker/HealthTracker-Prefix.pch";
 				INFOPLIST_FILE = "HealthTrackerTests/HealthTrackerTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gabi.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
