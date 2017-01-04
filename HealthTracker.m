@@ -5,7 +5,6 @@
 //  Created by Yoko Alpha on 09/07/2014.
 //  Copyright (c) 2014 Yoko. All rights reserved.
 //
-
 #import <XCTest/XCTest.h>
 
 @interface HealthTracker : XCTestCase
