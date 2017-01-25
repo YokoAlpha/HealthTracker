@@ -5,7 +5,6 @@
 //  Created by Yoko Alpha on 13/01/2014.
 //  Copyright (c) 2014 Yoko. All rights reserved.
 //
-
 #import "HealthTrackerAppDelegate.h"
 #import "SetupViewController.h"
 
@@ -27,6 +26,23 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
         // Set icon badge number to zero
         application.applicationIconBadgeNumber = 0;
     }
+
+    self.client = [PTPusher pusherWithKey:@"1d20cc3df3af5e9a63a2" delegate:self encrypted:YES cluster:@"eu"];
+    
+    // subscribe to channel and bind to event
+    PTPusherChannel *channel = [self.client subscribeToChannelNamed:@"my-channel"];
+    
+    [channel bindToEventNamed:@"my-event" handleWithBlock:^(PTPusherEvent *channelEvent) {
+        // channelEvent.data is a NSDictianary of the JSON object received
+        NSString *message = [channelEvent.data objectForKey:@"message"];
+        UIAlertView *alertview = [[UIAlertView alloc] initWithTitle:@"Message recieved"
+    message:message
+    delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alertview show];
+        NSLog(@"message received: %@", message);
+    }];
+    
+    [self.client connect];
     return YES;
 }
 					

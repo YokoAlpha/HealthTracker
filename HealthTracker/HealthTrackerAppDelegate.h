@@ -5,6 +5,7 @@
 //  Created by Yoko Alpha on 13/01/2014.
 //  Copyright (c) 2014 Yoko. All rights reserved.
 //
+#import <Pusher/Pusher.h>
 
 #import <UIKit/UIKit.h>
 #import "HealthTracker.h"
@@ -17,6 +18,8 @@
     NSManagedObjectContext *managedObjectContext;
     NSPersistentStoreCoordinator *persistentStoreCoordinator;
 }
+@property (nonatomic, strong) PTPusher *client;
+
 #pragma mark - Core data
 @property (nonatomic, retain, readonly) NSManagedObjectModel *managedObjectModel;
 @property (nonatomic, retain, readonly) NSManagedObjectContext *managedObjectContext;
