@@ -34,7 +34,7 @@ Managed subclasses were used to allow quick generation of model classes from the
 
 The running screen makes extensive use of apples MapKit and Core location framework. It was decided that it would be appropriate to separate the different functions that make up a run to make it easier to develop the feature. For this many example apps were created. The app uses “MKUserTrackingModeFollowWithHeading” when the app is loaded to follow the user location, without this the map would not update its map viewpoint when the user moved. A location manager is setup to keep track of significant changes in location, which then triggers delegate methods which health tracker uses to plot the polyline and calculate distance.
 
-##Future development
+## Future development
 
 1. Add achievements for going faster or eating less carbohydrates etc
 2. Use iOS10 Fitness features to be explored with new APIS and devices.
